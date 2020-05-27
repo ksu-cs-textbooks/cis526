@@ -4,7 +4,7 @@ pre: "5. "
 weight: 50
 date: 2018-08-24T10:53:26-05:00
 ---
-Modern websites are displayed on a wide variety of devices, with screen sizes from 640x480 pixels (VGA resolution) to 3840x2160 pixels (4K resolution). It should be obvious therefore that one-size-fits-all approach to laying out web applications does not work well.  Instead, the current best practice is a technqiue known as [Responsive Design](https://en.wikipedia.org/wiki/Responsive_web_design).  When using this strategy your web app should automatically adjusts the layout of the page based on how large the device screen it is rendered on.
+Modern websites are displayed on a wide variety of devices, with screen sizes from 640x480 pixels (VGA resolution) to 3840x2160 pixels (4K resolution). It should be obvious therefore that one-size-fits-all approach to laying out web applications does not work well.  Instead, the current best practice is a technique known as [Responsive Web Design](https://en.wikipedia.org/wiki/Responsive_web_design).  When using this strategy your web app should automatically adjusts the layout of the page based on how large the device screen it is rendered on.
 
 ## Media Queries
 
