@@ -1,13 +1,17 @@
 +++
-title = "Introduction"
+title = "CIS 526 Course Information"
 date = 2018-08-24T10:53:05-05:00
-weight = 5
+weight = 1
 chapter = true
 pre = "<b>0. </b>"
 +++
 
-### Chapter 0
+### Forward
 
-# INTRODUCTION
+# CIS 526 Course Information
 
-Course Introductory Material for CIS 526 Online
+Getting Oriented 
+
+{{% notice noiframe %}}
+This textbook was authored for the **CIS 526 - Web Application Development** course at Kansas State University.  This front matter is specific to that course.  If you are not enrolled in the course, please disregard this section.
+{{% /notice %}}
