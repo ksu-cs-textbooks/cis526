@@ -74,9 +74,9 @@ In addition to the tag name, tags can have _attributes_ embedded within them. Th
 
 This allows the image to be downloaded and displayed within the browser:
 
-<img src="{{<static "images/Light_Bulb_or_Idea_Flat_Icon_Vector.svg">}}" alt="Light Bulb">
+<img src="{{<static "Light_Bulb_or_Idea_Flat_Icon_Vector.svg">}}" alt="Light Bulb">
 
-Note that the `img` element is another void tag.  Also, `img` elements should always have an `alt` attribute set - this is text that is displayed if the image cannot be downloaded, and is also read by a screen reader when viewed by the visually impaired.
+Note that the `<img>` element is another void tag.  Also, `<img>` elements should always have an `alt` attribute set - this is text that is displayed if the image cannot be downloaded, and is also read by a screen reader when viewed by the visually impaired.
 
 Attributes come in the form of key-value pairs, with the key and value separated by an equal sign (`=`) and the individual attributes and the tag name separated by whitespace.  Attributes can only appear in an opening or void tag.  Some attributes (like `readonly`) do not need a value.  
 
@@ -84,4 +84,3 @@ There should be no spaces between the attribute key, the equal sign (`=`), and t
 
 Additionally, while there are specific attributes defined within the HTML standard that browsers know how to interpret, specific technologies like Angular and React add their own, custom attributes.  Any attribute a browser does not know is simply ignored by the browser.
 
-{Check It!|assessment}(free-text-auto-3681872174)

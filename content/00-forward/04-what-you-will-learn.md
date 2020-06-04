@@ -9,6 +9,8 @@ date: 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 526 - Web Application Development** course at Kansas State University.  This front matter is specific to that course.  If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
+The following is an outline of the topics we will be covering and when.
+
 Week 1: Web Application Fundamentals
 * Module: Exploring the Document Object Model<br>
     * Readings 1.1-1.4

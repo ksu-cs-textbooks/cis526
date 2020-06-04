@@ -22,8 +22,6 @@ This textbook was authored for the **CIS 526 - Web Application Development** cou
 * [K-State Office of Student Life](https://www.k-state.edu/studentlife/)
 * [K-State Report It](https://www.k-state.edu/report/)
 
-#### Script
-
 As you work on the materials in this course, you may run into questions or problems and need assistance. This video reviews the various types of help available to you in this course.
 
 First and foremost, anytime you have a questions or need assistance in the course, please post in the course RocketChat room. It is the best place to go to get help with anything related to this course, from the tutorials and projects to issues with Codio and Canvas. Before you post on RocketChat, take a minute to look around and make sure the question has not already been posted before. It will save everyone quite a bit of time.

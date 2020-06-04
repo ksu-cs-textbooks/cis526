@@ -12,8 +12,9 @@ page = [ "HTML", "Iframeable", "Teleprompter"]
 section = [ "HTML", "Iframeable", "Teleprompter"]
 
 [params]
+  textbookURL = "https://cs.ksu.edu/~nhbean/cis526"
   editURL = "https://gitlab.cs.ksu.edu/nhbean/cis526-textbook/tree/master/content/"
-  description = "K-State CS Hugo Framework"
+  description = "CIS 526 Textbook"
   author = "Nathan H. Bean"
   showVisitedLinks = false
   themeVariant = "purple"

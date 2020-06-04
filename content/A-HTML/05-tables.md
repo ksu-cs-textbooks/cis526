@@ -55,7 +55,6 @@ A table requires a _lot_ of elements to be nested in a specific manner.  It is b
 
 It renders as:
 
-|||create 
 <table>
   <thead>
     <tr>
@@ -98,8 +97,6 @@ It renders as:
     </tr>
   </tbody>
 </table>
-
-|||
 
 Tables should _only_ be used for displaying tabular data.  There was a time, not long ago, when early web developers used them to create layouts by cutting images into segments and inserting them into table cells.  __This is very bad practice!__  It will not display as expected in all browsers, and wreaks havoc with screen readers for the visually impaired.  Instead, pages should be laid out with CSS, as is discussed in the CSS layouts section.
 
