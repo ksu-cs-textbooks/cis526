@@ -1,13 +1,13 @@
 +++
 title = "Introduction to Node"
 date = 2018-08-24T10:53:05-05:00
-weight = 30
+weight = 40
 chapter = true
-pre = "<b>3. </b>"
+pre = "<b>4. </b>"
 +++
 
-### Chapter 2
+### Chapter 4
 
 # Introduction to Node
 
-JavaScript executing on the server
+JavaScript on the Server

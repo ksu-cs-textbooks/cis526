@@ -54,7 +54,7 @@ An ID selector is proceeded by a hash (`#`) and applies to the HTML element that
 <p id="lead">This paragraph has an id of "lead"</p>
 ```
 
-Would be matched by:
+would be matched by:
 
 ```css 
 #lead {
@@ -75,7 +75,7 @@ The asterisk (`*`) is the universal selector, and applies to all elements.  It i
 }
 ```
 
-Sets all element margins and paddings to 0 instead of a browser default.  Later rules can then apply specific margins and padding.
+sets all element margins and paddings to 0 instead of a browser default.  Later rules can then apply specific margins and padding.
 
 ### Attribute Selector 
 
@@ -87,7 +87,7 @@ The attribute selector is wrapped in square brackets (`[]`) and selects HTML ele
 }
 ```
 
-Will make any element with a `readonly` attribute have gray text.  The value can also be specified exactly, i.e.
+will make any element with a `readonly` attribute have gray text.  The value can also be specified exactly, i.e.
 
 ```css
 [href="www.k-state.edu"]

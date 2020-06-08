@@ -176,4 +176,3 @@ var newBody = oldBody.replace(/^([\d\s\w]+|"[\d\s\w,]+"),(\d+),(\d+'\d+)"$/gm, c
 
 And our `newBody` variable contains the revised file body (we'll talk about how to _get_ the file body in the first place, either in the browser or with Node, later on).
 
-{Check It!|assessment}(free-text-auto-1254026637)
