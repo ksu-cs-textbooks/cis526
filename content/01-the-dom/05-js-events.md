@@ -25,7 +25,7 @@ It's basically an infinite loop that responds to messages, one message at a time
 
 Here we see not just the event loop, but also the _event queue_.  This is a queue that holds events until the event loop is ready to process them.  It works like the first-in-first-out queues you built in your data structures course (although it may also consider priorities of events).  
 
-On the far right are some commoon sources for JavaScript events - user input, the network, and timers.  These are often managed by the operating system, and with modern multiple-processor computers can happen _concurrently_, i.e. _at the same time_.  This is one reason the queue is so important - it allows JavaScript to process the events _one at a time_.  
+On the far right are some comoon sources for JavaScript events - user input, the network, and timers.  These are often managed by the operating system, and with modern multiple-processor computers can happen _concurrently_, i.e. _at the same time_.  This is one reason the queue is so important - it allows JavaScript to process the events _one at a time_.  
 
 When the JavaScript VM has finished executing its current work, it pulls the next event from the event queue.  This event is processed by the corresponding _event listener_ function that either 1) you wrote, or 2) is the default action.  If neither exists, the event is discarded.
 
@@ -64,7 +64,7 @@ There are many kinds of events in JavaScript; you can find a complete list in th
 
 * [focus](https://developer.mozilla.org/en-US/docs/Web/Events/focus) triggered when an input gains focus (is the currently selected input)
 
-* [blur](https://developer.mozilla.org/en-US/docs/Web/Events/blur) triggered when an input looses focus
+* [blur](https://developer.mozilla.org/en-US/docs/Web/Events/blur) triggered when an input loses focus
 
 * [click](https://developer.mozilla.org/en-US/docs/Web/Events/click) The primary mouse button was clicked.  On old browsers this might trigger for any button
 
@@ -72,7 +72,7 @@ There are many kinds of events in JavaScript; you can find a complete list in th
 
 * [mousedown](https://developer.mozilla.org/en-US/docs/Web/Events/mousedown) A mouse button was pressed
 
-* [mouseup](https://developer.mozilla.org/en-US/docs/Web/Events/mouseup) A mosue button was released
+* [mouseup](https://developer.mozilla.org/en-US/docs/Web/Events/mouseup) A mouse button was released
 
 ## Timers
 

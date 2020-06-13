@@ -1,7 +1,7 @@
 ---
 title: "AJAX"
-pre: "11. "
-weight: 110
+pre: "5. "
+weight: 50
 date: 2018-08-24T10:53:26-05:00
 ---
 
@@ -21,13 +21,13 @@ The `XMLHttpRequest` object is modeled after how the `window` object makes web r
 
 #### XMLHttpRequest Properties 
 
-The XMLHttpRequest object also has a number of properties that are helpful:
+The XMLHttpRequest object aslo has a number of properties that are helpful:
 
 * `readyState` - the current state of the property
 * `response` - the body of the response, an `ArrayBuffer`, `Blob`, `Document`, or `DOMString` based on the value of the `responseType`
 * `responseType` - the mime type of response
 * `status` - returns an unsigned short with the HTTP response status (or 0 if the response has not been recieved)
-* `statusText` - returns a string containing the response string fro the server, i.e. `"200 OK"`
+* `statuText` - returns a string containing the response string fro the server, i.e. `"200 OK"`
 * `timeout` - the number of milliseconds the request can take before being terminated
 
 
@@ -156,7 +156,6 @@ jQuery.ajax("https://imgs.xkcd.com/comics/blogofractal.png", {
 });
 ```
 
-Many developers found this all-in-one approach simpler than working directly with `XMLHttpRequest` objects.  The W3C adopted some of these ideas into the Fetch API.
+Many developers found this all-in-one approach simpler than working directly with `XMLHttpRequest` objects.  The W3C adopted some of these ideas into the Fetch API, which we'll take a look at shortly.
 
 {{% /notice %}}
-

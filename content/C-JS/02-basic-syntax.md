@@ -5,49 +5,7 @@ weight: 20
 date: 2018-08-24T10:53:26-05:00
 ---
 
-<style>
-  .console {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    box-sizing: border-box;
-    z-index: 1000;
-    width: 100%;
-    height: 30vh;
-    background-color: #8451a1;
-    padding: 1rem;
-    transform: translateY(calc(30vh - 5px));
-    transition: transform 2s;
-  }
-  .console iframe {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-  }
-  .console > .console-tab {
-    position: absolute;
-    top: -1.2rem;
-    right: 0px;
-    color: white;
-    background-color: #8451a1;
-    padding: 0 2rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .console.active {
-    transform: none;
-  }
-</style>
-<div class="console">
-<div class="console-tab">CONSOLE</div>
-<iframe src="https://jsconsole.com/"></iframe>
-</div>
-<script>
-  document.querySelector('.console-tab').addEventListener('click', (event) => {
-    console.log(event);
-    event.target.parentElement.classList.toggle('active');
-  });
-</script>
+{{< console >}}
 
 Because Netscape was adopting Java at the same time they were developing what would become JavaScript, there was a push to make the syntax stay somewhat consistent between the two languages.  As a result, JavaScript has much of the look and feel of an imperative language like C, C#, or Java. 
 

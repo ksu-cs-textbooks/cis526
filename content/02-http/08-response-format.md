@@ -25,7 +25,7 @@ The _HTTP-Version_ indicates the version of the HTTP protocol that is being used
 
 _SP_ refers to a space character.
 
-The _Status-Code_ is a three-digit numeric representation of the response status. Common codes include 200 (OK), 403 (Not Found), and 500 (Server Error).
+The _Status-Code_ is a three-digit numeric representation of the response status. Common codes include 200 (OK), 404 (Not Found), and 500 (Server Error).
 
 The _Reason-Phrase_ is a plain-text explanation of the status code.
 

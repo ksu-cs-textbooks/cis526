@@ -57,7 +57,7 @@ A discussion of the full syntax can be found in the [MDN Documenation](https://d
 
 The JavaScript langauge provides a JSON object with two very useful functions: [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) and [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse).  The first converts any JavaScript variable into a JSON string.  Similarly, the second method parses a JSON string and returns what it represents.
 
-## JSON and Other Languages
+{{% notice info %}}
 
 While JSON was developed in conjunction with JavaScript, it has become a popular exchange format for other languages as well.  There are parsing libraries for most major programming languages that can convert JSON strings into native objects:
 
@@ -68,3 +68,5 @@ While JSON was developed in conjunction with JavaScript, it has become a popular
 * [C++](https://github.com/nlohmann/json)
 
 Some (like the Python one) are core language features.  Others are open-source projects.  There are many more available, just search the web!
+
+{{% /notice %}}

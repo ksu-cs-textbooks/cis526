@@ -1,11 +1,22 @@
 ---
-title: "Node Modules"
-pre: "6. "
-weight: 60
+title: "Modules"
+pre: "4. "
+weight: 40
 date: 2018-08-24T10:53:26-05:00
 ---
 
 One major feature Node introduced to JavaScript was the ability to encapsulate code into separate files using _modules_.  The approach adopted by Node is the  __CommonJS__ module pattern. 
+
+{{% notice warning %}}
+Node's use of modules predates ECMA6's adoption of modules, and the CommonJS approach Node adopted is fundamentally different than the ECMA6 version.  For Node 10 (installed on your Codio Box), ECMA6 modules are an experimental feature that has to be enabled with a flag when invoking the node command, i.e.:
+
+```text 
+$ node --experimental-modules [file to run]
+```
+
+In later versions of Node (12-14) ECMA6 modules can be used without the flag by the module file the _.mjs_ extension.  However, this approach is still considered experimental.
+
+{{% /notice %}}
 
 ## Writing a Module 
 A module is simply a JavaScript file (typically saved with a _js_ extension).  Code within the module is locally scoped to the module; code intended to be accessed outside of the module must be explicitly _exported_ by assigning it to the `module.exports` parameter.  This example exports a function to print "Hello World":

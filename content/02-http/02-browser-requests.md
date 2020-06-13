@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 Before we get too deep in the details of what a request is, and how it works, let's explore the primary kind of request you're already used to making - requests originating from a browser.  Every time you use a browser to browse the Internet, you are creating a series of HTTP (or HTTPS) requests that travel across the networks between you and a web server, which responds to your requests.
 
-To help illustrate how these requests are made, we'll once again turn to our developer tools.  Open the example page <a href='{{<static "examples/1.3.1/index.html">}}' target='_blank'>this link</a>.  On that tab, open your developer tools with `CTRL + SHIFT + i` or by right-clicking the page and selecting "Inspect" from the context menu.  Then choose the "Network" tab:
+To help illustrate how these requests are made, we'll once again turn to our developer tools.  Open the example page <a href='{{<static "examples/1.2.1/index.html">}}' target='_blank'>this link</a>.  On that tab, open your developer tools with `CTRL + SHIFT + i` or by right-clicking the page and selecting "Inspect" from the context menu.  Then choose the "Network" tab:
 
 ![Selecting the network tab in the developer tools]({{<static "images/2.2.1.png">}})
 
