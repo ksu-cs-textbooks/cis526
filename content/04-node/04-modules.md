@@ -10,7 +10,7 @@ One major feature Node introduced to JavaScript was the ability to encapsulate c
 {{% notice warning %}}
 Node's use of modules predates ECMA6's adoption of modules, and the CommonJS approach Node adopted is fundamentally different than the ECMA6 version.  For Node 10 (installed on your Codio Box), ECMA6 modules are an experimental feature that has to be enabled with a flag when invoking the node command, i.e.:
 
-```text 
+```
 $ node --experimental-modules [file to run]
 ```
 

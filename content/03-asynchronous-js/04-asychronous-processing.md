@@ -23,7 +23,9 @@ setTimeout(()=>{
 console.log("I just set a timer.");
 ```
 
-What will be printed first?  The "Timer expired!" message or the "I just set a timer." message?  You can try running this code in the console.
+What will be printed first?  The "Timer expired!" message or the "I just set a timer." message?  
+
+See for yourself - try running this code in the console (you can click the "console" tab below to open it).
 
 The answer is that "I just set a timer" will _always_ be printed first, because the second message won't be printed until the event loop pulls the timer message off the queue, and the line printing "I just set a timer" is executed as part of this pass in the event loop.  The `setTimeout()` and `setInterval()` functions are what we call _asynchronous_ functions, as they trigger an asynchronous process.  Once that process is triggered, execution immediately continues within the event loop, while the triggered process runs in parallel.  Asynchronous functions typically take a function as an argument, known as a _callback function_, which will be triggered when the message corresponding to the asynchronous process is pulled off the event queue.
 
@@ -31,6 +33,6 @@ The answer is that "I just set a timer" will _always_ be printed first, because 
 Any code appearing after a call to an asynchronous function will be executed immedately after the asynchonous function is invoked, regardless of how quickly the asynchronous process generates its message and adds it to the event queue.
 {{% /notice %}}
 
-As JavaScript was expanded to take on new functionality, this asynchronous mechanism was re-used.  Next, we'll take a look at an example of this in the use of AJAX to make HTTP and HTTPS requests.
+As JavaScript was expanded to take on new functionality, this asynchronous mechanism was re-used.  Next, we'll take a look at an example of this in the use of _web workers_.
 
 {{< console >}}

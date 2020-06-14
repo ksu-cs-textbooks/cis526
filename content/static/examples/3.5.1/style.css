@@ -1,0 +1,15 @@
+.squares {
+    display: flex;
+    flex-direction: row;
+}
+
+.squares > div {
+    width: 100px;
+    height: 100px;
+    margin: 1rem;
+    background-color: gray;
+}
+
+.squares > div.active {
+    background-color: blue;
+}

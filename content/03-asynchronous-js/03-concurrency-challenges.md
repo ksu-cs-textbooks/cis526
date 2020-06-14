@@ -19,4 +19,4 @@ Or consider image data.  Applying a filter to an image is a computationally cost
 
 There are many different approaches that can be used to manage this challenge.  One is the use of locks - locking a section of memory so only one thread can access it while it makes changes.  In the filter example, the grayscale filter could lock the image data, forcing the blur filter to wait until it finishes.  Locks work well, but must be carefully designed to avoid race conditions - where two threads cannot move forward because the other thread has already locked a resource the blocked thread needs to finish its work.
 
-Asynchronous processing is another potential solution, which we'll look at next.
+Asynchronous programming is another potential solution, which we'll look at next.
