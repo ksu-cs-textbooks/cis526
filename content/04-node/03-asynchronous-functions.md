@@ -38,3 +38,25 @@ If `err` is a __truthy__ value (any non-falsey value, in this case an Exception 
 
 ## Common Asynchronous Misconceptions
 It is very important to understand that the callback is _executed at a future point in time_, and execution continues to further lines of code. Consider this example:
+
+```js
+var contents;
+fs.readFile("example.txt", function(err, data) {
+  contents = data;
+});
+console.log(data);
+```
+
+Assuming the file _example.txt_ contains only the line `"hello world"`, what do you think is printed?
+
+You might think that it would be `"hello world"`, but the `console.log(data)` happens _before_ the callback function is executed, so it will be `undefined`.  If you wanted to print the file contents, you would have to instead do something like:
+
+```js
+var contents;
+fs.readFile("example.txt", function(err, data) {
+  contents = data;
+  console.log(data);
+});
+```
+
+Because the logging now happens _inside_ the callback value, it will only occur _after_ the file has been read, and the results added to the event queue, which is where the `data` variable is initialized.
