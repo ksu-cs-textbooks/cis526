@@ -5,7 +5,7 @@ weight: 70
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Most Node packages are made available as [git](https://git-scm.com) repositories, and _npm_ has built-in support for using git.
+Most Node packages are made available as [git](https://git-scm.com) repositories, and npm has built-in support for using git.
 
 ## The Repository Property
 In your _package.json_ file, you can specify a `"repository"` property, which specifies where the repository for this project exists.  Consider the following example of the npm command-line interface package:

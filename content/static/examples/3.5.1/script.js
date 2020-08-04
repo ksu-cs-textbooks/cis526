@@ -10,7 +10,6 @@ function stall(seconds) {
         if(Date.now() > endTime) break;
     }
 }
-
  
 /**
  * When the calculate-in-main button is clicked,
