@@ -31,4 +31,4 @@ In the Basic authentication scheme, the content of the `Authorization` header is
 Base64 encoding is easy to undo, so you should only use HTTP Basic Authentication with the `https` protocol, which encrypts the request headers.  Otherwise, anyone along the path the user's request travels can capture and decrypt the user's credentials.
 {{% /notice %}}
 
-The standard also defines other authorization schemes, but none are widely used today.  Instead, most web developers have opted to build authentication directly into their web application. We'll discuss several of the most common approaches used today next.
+The standard also defines other authorization schemes, but none are widely used today.  Instead, most web developers have opted to build authentication directly into their web application. We'll discuss several of the most common approaches next.

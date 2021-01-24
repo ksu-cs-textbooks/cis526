@@ -170,7 +170,7 @@ html(lang="en")
                 Parent directory
 ```
 
-Concise templating langauges can significantly reduce the amount of typing invovled in creating web pages, but they come with a trade-off.  As you can see from the code above, learning Pug effectively requires you to learn a new programming language, including its own iteration and conditional syntax.
+Concise templating languages can significantly reduce the amount of typing involved in creating web pages, but they come with a trade-off.  As you can see from the code above, learning Pug effectively requires you to learn a new programming language, including its own iteration and conditional syntax.
 
 
 {{% notice info %}}

@@ -5,7 +5,7 @@ weight: 80
 date: 2018-08-24T10:53:26-05:00
 ---
 
-While many HTTP libraries will process the entire incoming request before passing control to the program, Node's `http` module takes a different approach.  It constructs and passes the `http.IncomingMessage` and `http.ServerResponse` objects as soon as it has recieved the header portion of the request.  This means the body may still be being transmitted to the server as you start to process the request.
+While many HTTP libraries will process the entire incoming request before passing control to the program, Node's `http` module takes a different approach.  It constructs and passes the `http.IncomingMessage` and `http.ServerResponse` objects as soon as it has received the header portion of the request.  This means the body may still be being transmitted to the server as you start to process the request.
 
 This is fine for GET requests, as they don't have a body.  But for requests that _do_ have a body, it means you have to process the incoming data yourself.
 

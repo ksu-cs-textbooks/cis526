@@ -23,12 +23,10 @@ As you look at each module, you’ll see that it gives quite a bit of informatio
 
 Within each module is a set of items, which must be completed in listed order. Under each item you’ll see information about what you must do in order to complete that item. For many of them, it will simply say “view,” which means you must view the item at least once to continue. Others may say “contribute,” “submit,” or give a minimum score required to continue. For assignments, it also helpfully gives the number of points available, and the due date.
 
-Let’s click on the first item, Course Introduction, to get started. You’ve already been to this page by this point. Course pages will primarily consist of readings covering the content of the course.  Some may also include an embedded video; in this case the video will be followed by slides and a downloadable version of the viedeo, and a rough script for quick reference - as is the case for this page.
+Let’s click on the first item, Course Introduction, to get started. You’ve already been to this page by this point. Course pages will primarily consist of readings covering the content of the course.  Some may also include an embedded video; in this case the video will be followed by slides and a downloadable version of the video, and a rough script for quick reference - as is the case for this page.
 
 When you are ready to move to the next step in a module, click the “Next” button at the bottom of the page. Canvas will automatically add “Next” and “Previous” buttons to each piece of content which is accessed through the Modules section, which makes it very easy to work through the course content. I’ll click through a couple of items here.
 
 At any point, you may click on the Modules link in the menu to the left to return to the Modules section of the site. You’ll notice that I’ve viewed the first few items in the first module, so I can access more items here. This is handy if you want to go back and review the content you’ve already seen, or if you leave and want to resume where you left off. Canvas will put green checkmarks to the right of items you’ve completed.
-
-Continuing down the menu to the left, you’ll find links to the **RocketChat** chat room for this course. If you have any questions about an assignment or would like to discuss any topic with your fellow classmates, this is a great place to do so. We’ll talk more about RocketChat in just a second.
 
 Finally, you’ll find the usual Canvas links to view your **Grades** in the course, as well as **People** listing instructors, TAs, and fellow students taking the course.

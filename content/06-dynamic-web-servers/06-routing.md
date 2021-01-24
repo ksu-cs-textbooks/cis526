@@ -23,7 +23,7 @@ Now that we're thinking of the URL as a tool for passing information to the serv
 
 ![A diagram of a URL]({{<static "images/6.3.1.png">}})
 
-The **protocol** is the protocol used for communication, and the **host** is the domain or IP address of the server.  Note that these are _not_ included in Node's `req.url` parameter, as these are used to find the right server and talk to it using the right protcol - by the time your Node server is generating the `req` object, the request has already found your server and is communicating with the protocol.  
+The **protocol** is the protocol used for communication, and the **host** is the domain or IP address of the server.  Note that these are _not_ included in Node's `req.url` parameter, as these are used to find the right server and talk to it using the right protocol - by the time your Node server is generating the `req` object, the request has already found your server and is communicating with the protocol.  
 
 This is also why when we've been parsing `req.url` with the [URL]() object, we've supplied a host and protocol of `http://localhost`:
 
@@ -43,7 +43,7 @@ Clearly our URL can clearly convey a lot of data to our server. But that's not t
 
 ## Request Method, Revisited
 
-In addition, we also recieve the HTTP Method used for the request, i.e. GET, POST, PATCH, PUT, or DELETE. These again map back to the traditional role of a web server as a file server - GET retrieves a resource, POST uploads one, PATCH and PUT modify one, and DELETE removes it. But we can also create, read, update, and destroy _virtual_ resources, i.e. resources generated and stored on the server that are _not_ files.  We'll talk more about this when we discuss persistent storage.
+In addition, we also receive the HTTP Method used for the request, i.e. GET, POST, PATCH, PUT, or DELETE. These again map back to the traditional role of a web server as a file server - GET retrieves a resource, POST uploads one, PATCH and PUT modify one, and DELETE removes it. But we can also create, read, update, and destroy _virtual_ resources, i.e. resources generated and stored on the server that are _not_ files.  We'll talk more about this when we discuss persistent storage.
 
 ## Headers, Revisited 
 

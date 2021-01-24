@@ -13,7 +13,7 @@ The term **session** appears a _lot_ in web development, and can mean different 
 
 For example, when your web client make a request from a web server, it opens a Transmission Control Protocol (TCP) session to the server, and sends the HTTP request across this connection.  The session stays open until all the packets of the request are sent, and those of the response are recieved.  In HTTP 1.1, the session can stay open for more than a single request-response pair, as it is anticipated a HTML page request will be followed by requests for resources (CSS, JavaScript, images, etc.) embedded in the page.  HTTP 2.0 takes this farther, allowing the server to _push_ these additional resources to the client.
 
-The sessions we are discussing here are implemented at a higer level than TCP sessions (though they are hosted by the TCP session), and represent a single website visitor interacting with the server.
+The sessions we are discussing here are implemented at a higher level than TCP sessions (though they are hosted by the TCP session), and represent a single website visitor interacting with the server.
 
 {{% /notice %}}
 
@@ -25,7 +25,7 @@ There are three basic session techniques you will likely encounter in web develo
 
 In a cookie session, the session information is completely stored within the cookie.  This has the benefit that no state information needs to be stored on the server, and it is easy to implement.  
 
-There are several downsides to the cookie session.  The first is that it comes with a limited amount of reliable storage (the standard suggests that browsers support a minimum cookie size of 4096 bytes per cookie, but there is no hard requirement).  Second, cookies are somewhat vulnerable, as they can be intercepted in-transit, and they can also be recovered from a browser's cookie storage by a knowledgable adversary.
+There are several downsides to the cookie session.  The first is that it comes with a limited amount of reliable storage (the standard suggests that browsers support a minimum cookie size of 4096 bytes per cookie, but there is no hard requirement).  Second, cookies are somewhat vulnerable, as they can be intercepted in-transit, and they can also be recovered from a browser's cookie storage by a knowledgeable adversary.
 
 ## In-Memory Cookies
 
@@ -55,7 +55,7 @@ var session = sessions[sessionID];
 
 Because the session data is never sent in its raw form to the client, it is more secure.  However, the session can still be hijacked by a malicious user who copies the cookie or guesses a valid session id.  To counter this, all requests should be updated to use secure protocol (https) and the cookie should be encrypted.
 
-Also, in-memory sessions are lost when the server reboots (as they are held in volitale memory).  They should also be cleaned out periodically, as each session consumes working memory, and if a session is more than an hour old it probably will not be used again.
+Also, in-memory sessions are lost when the server reboots (as they are held in volatile memory).  They should also be cleaned out periodically, as each session consumes working memory, and if a session is more than an hour old it probably will not be used again.
 
 ## Database Cookies 
 

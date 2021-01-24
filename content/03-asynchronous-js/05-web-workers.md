@@ -49,7 +49,7 @@ You can use `worker.addEventListener()` to add these, or you can assign your eve
 * `Worker.onmessage` - triggered when the `message` event happens
 * `Worker.onmessageerror` - triggered when the `messageerror` event happens
 
-Additonally, there is an error handler property:
+Additionally, there is an error handler property:
 
 * `Worker.onerror`
 
@@ -65,7 +65,7 @@ worker.onmessage = function(event){
 }
 ```
 
-If the message was succesfully deserialized, it's `data` property contains the content of the message, which can be any valid JavaScript value (an int, string, array, object, etc). This gives us a great deal of flexibility.  If you need to send more than one type of message, a common strategy is to send a JavaScript object with a type property, and additional properties as needed, i.e.:
+If the message was successfully deserialized, it's `data` property contains the content of the message, which can be any valid JavaScript value (an int, string, array, object, etc). This gives us a great deal of flexibility.  If you need to send more than one type of message, a common strategy is to send a JavaScript object with a type property, and additional properties as needed, i.e.:
 
 ```js
 var messageData1 = {
@@ -103,7 +103,7 @@ Whatever data we send as the message is _copied_ into the web worker's memory us
 
 ## The Web Worker Context
 
-For the JavaScript executing in the web worker, the context is a bit different.  First, there is no document object model, as the web worker cannot make changes to the user interface.  Likewise there is no global `window` object.  However, many of the normal global functions and properties _not_ related to the user interface are available, see [functions and classes avaialble to web workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers) for details.  
+For the JavaScript executing in the web worker, the context is a bit different.  First, there is no document object model, as the web worker cannot make changes to the user interface.  Likewise there is no global `window` object.  However, many of the normal global functions and properties _not_ related to the user interface are available, see [functions and classes available to web workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers) for details.  
 
 The web worker has its own unique global scope, so any variables declared in your main thread won't exist here.  Likewise, varibles declared in the worker will not exist in the main scope either.  The global scope of the worker has mirror events and properties to the `Worker` - we can listen for messages from the main thread using the `onmessage` and `onmessageerror` properties, and send messages back to the main thread with `postMessage()`.  
 
@@ -146,6 +146,6 @@ Workers can also send AJAX requests, and spawn additional web workers!  In the c
 
 The web workers we've discussed up to this point are basic _dedicated workers_.  There are also several other kinds of specialized web workers:
 
-* Shared workers are shared between several scripts, possibly even running in different `<iframe>` elements.  These are more complex than a dedicated worker and commuinicate via ports.  See mdn's [SharedWorker](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker) article for information.
+* Shared workers are shared between several scripts, possibly even running in different `<iframe>` elements.  These are more complex than a dedicated worker and communicate via ports.  See MDN's [SharedWorker](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker) article for information.
 * Service workers act as proxy servers between the server and the web app, for the purpose of allowing web apps to be used offline.  We'll discuss these later in the semester, but you can read up on them in hte mdn [ServiceWorker](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API) article.
 * Audio workers allow for direct scripting of audio processing within a web worker context.  See the mdn [AudioWorker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#Audio_Workers) article for details.

@@ -15,6 +15,6 @@ In short, the best passwords are actually _pass phrases_ - a combination of word
 
 Think back to our SQL discussions - we can declare text in two ways - a VARCHAR (which has a set maximum length), or TEXT (which can be any size).  These roughly correspond to _value_ and _reference_ types in a programming language - VARCHARS are stored inline with table data, while TEXT entries are stored separately, and an address of their location is stored in the table.  If we're retrieving thousands or millions of rows including TEXT values, we have to pull those values from their disparate locations - adding overhead to the query.  VARCHARS we get with the row for no extra time cost.  So storing passwords as a VARCHAR would give better performance, and limiting them to a small size (by imposing a character limit) would save on storage requirements.
 
-In the modern web, with storage costs as low as they are, there is no excuse for clinging to short passwords with arcane requriements.  If you are going to force your users to meet any rules for your password system, it should be a _minimum length_.
+In the modern web, with storage costs as low as they are, there is no excuse for clinging to short passwords with arcane requirements.  If you are going to force your users to meet any rules for your password system, it should be a _minimum length_.
 
-Or, we can side-step the issue entirely, by passing responsiblity for authentication to a third party.  We'll look at these strategies next.
+Or, we can side-step the issue entirely, by passing responsibility for authentication to a third party.  We'll look at these strategies next.

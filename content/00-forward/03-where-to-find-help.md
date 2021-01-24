@@ -32,7 +32,7 @@ Beyond RocketChat, there are a few resources you should be aware of. First, if y
 
 Similarly, if you have any issues using the Codio platform, you are welcome to refer to their online documentation. Their support staff offers a quick and easy chat interface where you can ask questions and get feedback within a few minutes.
 
-For issues with the RocketChat platform, feel free to email one of the instructors directly if you are unable to post directly on RocketChat itself for some reason.
+For issues with the Discord platform, feel free to email one of the instructors directly if you are unable to post directly on Discord itself for some reason.
 
 If you have issues with the technical content of the course, specifically related to completing the tutorials and projects, there are several resources available to you. First and foremost, make sure you consult the vast amount of material available in the course modules, including the links to resources. Usually, most answers you need can be found there.
 

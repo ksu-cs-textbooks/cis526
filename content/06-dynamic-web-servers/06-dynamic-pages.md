@@ -29,7 +29,7 @@ function serveTime(req, res) {
 }
 ```
 
-But let's expand our thinking to tackle a more invovled website
+But let's expand our thinking to tackle a more involved website
 
 
 With a template library, we can start thinking about how to better structure our software to produce the web pages that our dynamic web application consists of.  The template library can be used to produce the HTML we need to serve, now we need to consider exactly which templates to use, in what combination, and what data needs to be provided to them.  

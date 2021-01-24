@@ -17,7 +17,7 @@ This textbook was authored for the **CIS 526 - Web Application Development** cou
 * [Textbook]({{<param textbookURL>}})
 
 ## Welcome Message 
-Hello students, and welcome to CIS 526 – Web App Design.  My name is Nathan Bean, and I will be your instructor for this course.  I wanted to breifly discuss the structure and delivery of the course here, and you can find more detail in the sections to come.
+Hello students, and welcome to CIS 526 – Web App Design.  My name is Nathan Bean, and I will be your instructor for this course.  I wanted to briefly discuss the structure and delivery of the course here, and you can find more detail in the sections to come.
 
 Of important note is that we are packing a lot of content into an eight-week summer course.  This will be a significant amount of work, and you will need to stay on top of it.  I recommend putting aside 10 to 20 hours every week to work on the class.  Remember, whomever does the work does the learning - so you'll need to put in the work.
 
@@ -35,7 +35,7 @@ We'll also be using the departmental RocketChat server heavily for communication
 
 ### Videos
 
-You may have had online courses where the professor recorded their regular in-class lectures and uploaded them as one-hour videos.  I hated that as a student, and I think it is a poor pedagogical strategy.  When I give you video materials, I will strive to keep them short, succinct, and do enough post-processing that they flow reasonably well.  I’ll also post them through Youtube, so you can speed them up if you like.
+You may have had online courses where the professor recorded their regular in-class lectures and uploaded them as one-hour videos.  I hated that as a student, and I think it is a poor pedagogical strategy.  When I give you video materials, I will strive to keep them short, succinct, and do enough post-processing that they flow reasonably well.  I’ll also post them through YouTube, so you can speed them up if you like.
 
 ### Readings
 
@@ -43,11 +43,11 @@ But most of the topics I would normally cover in a lecture will be done through 
 
 ### Tutorials
 
-Additionally, I will be making a number of step-by-step tutorials working through a particular challenge related to the week’s content.  The tutorials will often directly relate to some aspect of the week’s project, so there is some real value to working through them, especially if you are uncomfortable with the assignment requirements.  I will offer help if you get stuck on a tutorial, just as I will for assignments.  So don’t hesitate to ask.  And, just like the readings, you can submit a tutorial as many times as you need.  Each tutorial will offer automated feedback leetting you know if you've missed anything.
+Additionally, I will be making a number of step-by-step tutorials working through a particular challenge related to the week’s content.  The tutorials will often directly relate to some aspect of the week’s project, so there is some real value to working through them, especially if you are uncomfortable with the assignment requirements.  I will offer help if you get stuck on a tutorial, just as I will for assignments.  So don’t hesitate to ask.  And, just like the readings, you can submit a tutorial as many times as you need.  Each tutorial will offer automated feedback letting you know if you've missed anything.
 
 ### Projects 
 
-Throughout the semester we will be creating a web application for the Kansas CS for All website.  This non-profit organization was created to support Kansas preK-12 teachers in bringing computer science education into our states' classrooms.  I've chosen this project becuase it intersects with two domains you most likely are familiar with - the K-12 educational system, and computer science.  Moreover, Professor Josh Weese, Russell Feldhausen, and myself are three of the core organizers of the Kansas CS for All organization, so there is a chance your solution could be adopted as the "official" web application.  How would that be for a résumé piece?
+Throughout the semester we will be creating a web application for the Kansas CS for All website.  This non-profit organization was created to support Kansas preK-12 teachers in bringing computer science education into our states' classrooms.  I've chosen this project because it intersects with two domains you most likely are familiar with - the K-12 educational system, and computer science.  Moreover, Professor Josh Weese, Russell Feldhausen, and myself are three of the core organizers of the Kansas CS for All organization, so there is a chance your solution could be adopted as the "official" web application.  How would that be for a résumé piece?
 
 ### Office Hours 
 

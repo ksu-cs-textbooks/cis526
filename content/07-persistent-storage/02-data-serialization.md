@@ -12,7 +12,7 @@ const fs = require('fs');
 
 /** @module database 
  * A simple in-memory database implementation, 
- * providing a mechasim for getting and saving 
+ * providing a mechanism for getting and saving 
  * a database object
  */ 
 module.exports = { get, set };
@@ -34,7 +34,7 @@ function get() {
 
 /** @function set()
  * Saves the provided object as the database data, 
- * overrwiting the current object
+ * overwriting the current object
  * @param {object} newData - the object to save 
  * @param {function} callback - triggered after save 
  */
@@ -103,6 +103,6 @@ Notice that with this refactoring, we are using the same pattern common to the N
 
 This database implementation is still pretty basic - we retrieve an entire object rather than just the portion of the database we need, and we write the entire database on every change as well.  If our database gets to be very large, this will become an expensive operation.
 
-There is also a lot of missed opportunity for optmizing how we get the specific data we need.  As you have learned in your algorithms and data structures course, the right search algorithm, coupled with the right data structure, can vastly improve how quickly your program can run.  If we think about the work that a webserver does, the retrieval of data for building dynamic HTML based on it is easily one of the most time-consuming aspects, so optimizing here can make each page creation move much faster.  Faster page creation means shorter response times, and more users served per minute with less processing power.  That, in turn means less electrictiy, less bandwidth, and less hardware is required to run your website.  In heavily utilized websites, this can equate to a lot of savings!  And for websites hosted on elastic hosting services (those that only charge for the resources you use), it can also result in signifcant savings.
+There is also a lot of missed opportunity for optmizing how we get the specific data we need.  As you have learned in your algorithms and data structures course, the right search algorithm, coupled with the right data structure, can vastly improve how quickly your program can run.  If we think about the work that a webserver does, the retrieval of data for building dynamic HTML based on it is easily one of the most time-consuming aspects, so optimizing here can make each page creation move much faster.  Faster page creation means shorter response times, and more users served per minute with less processing power.  That, in turn means less electricity, less bandwidth, and less hardware is required to run your website.  In heavily utilized websites, this can equate to a lot of savings!  And for websites hosted on elastic hosting services (those that only charge for the resources you use), it can also result in significant savings.
 
 Thus, we might want to spend more time developing a robust database program that would offer these kinds of optimizations.  Or, we could do what most full-stack developers do, and use an already existing database program that was designed with these kinds of optimizations in mind.  We'll take a look at that approach next.

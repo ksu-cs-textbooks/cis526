@@ -5,7 +5,7 @@ weight: 50
 date: 2018-08-24T10:53:26-05:00
 ---
 
-It should be no surpise that JavaScript features events - after all, we've already seen how the [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) interface allows us to attach event listeners to elements in the DOM tree.  What might not be clear yet is how events are handled by JavaScript.  JavaScript uses an _event loop_ to process events.  This is similar to Windows and other operating systems also handle events. 
+It should be no surprise that JavaScript features events - after all, we've already seen how the [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) interface allows us to attach event listeners to elements in the DOM tree.  What might not be clear yet is how events are handled by JavaScript.  JavaScript uses an _event loop_ to process events.  This is similar to Windows and other operating systems also handle events. 
 
 An event loop expressed in code looks something like:
 
@@ -19,13 +19,13 @@ function main
 end function
 ```
 
-It's basically an infinite loop that responds to messages, one message at a time.  It might be more useful to see a visual respresentation:
+It's basically an infinite loop that responds to messages, one message at a time.  It might be more useful to see a visual representation:
 
 ![The JS Event Loop]({{<static "images/1.6.1.png">}})
 
 Here we see not just the event loop, but also the _event queue_.  This is a queue that holds events until the event loop is ready to process them.  It works like the first-in-first-out queues you built in your data structures course (although it may also consider priorities of events).  
 
-On the far right are some comoon sources for JavaScript events - user input, the network, and timers.  These are often managed by the operating system, and with modern multiple-processor computers can happen _concurrently_, i.e. _at the same time_.  This is one reason the queue is so important - it allows JavaScript to process the events _one at a time_.  
+On the far right are some common sources for JavaScript events - user input, the network, and timers.  These are often managed by the operating system, and with modern multiple-processor computers can happen _concurrently_, i.e. _at the same time_.  This is one reason the queue is so important - it allows JavaScript to process the events _one at a time_.  
 
 When the JavaScript VM has finished executing its current work, it pulls the next event from the event queue.  This event is processed by the corresponding _event listener_ function that either 1) you wrote, or 2) is the default action.  If neither exists, the event is discarded.
 
@@ -102,8 +102,8 @@ You might be wondering why.  You might wonder if it is equivalent to:
 doSomething();
 ```
 
-And while it might appear that way, the answer is _no_.  Remember, `setTimeout()` creates an event in the event queue that executes after the specificed delay.  Thus, `doSomething()` will execute _immediately_, but `setTimout(doSomething())` will continue to execute all code _after_ the line until execution finishes, and _then_ will invoke `doSomething()`.  
+And while it might appear that way, the answer is _no_.  Remember, `setTimeout()` creates an event in the event queue that executes after the specified delay.  Thus, `doSomething()` will execute _immediately_, but `setTimeout(doSomething())` will continue to execute all code _after_ the line until execution finishes, and _then_ will invoke `doSomething()`.  
 
-Thus, JavaScript programmers often use this technique to trigger an action immedately after the current code finishes executing.
+Thus, JavaScript programmers often use this technique to trigger an action immediately after the current code finishes executing.
 
 {{% /notice %}}

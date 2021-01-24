@@ -47,6 +47,6 @@ There are three kinds of modules you can load in Node: 1) core libraries, 2) npm
 
 Core libraries are part of Node.  Examples are the _fs_ (file system) library, the _http_ library, and the _crypto_ library.  A full list of libraries can be found in the [Node documentation](https://nodejs.org/api/). Node libraries are required using their name as as the argument, i.e. `require('fs')` will require the filesystem library.
 
-Npm packages are typically open-source libraries created by the community and are downloaded using the Node Package Manager (npm).  These are installed either globally, or within a _node_modules_ folder created by npm within your project.  Npm modules are required by thier package name, i.e. `require('wepback')` will load the webpack package.  
+Npm packages are typically open-source libraries created by the community and are downloaded using the Node Package Manager (npm).  These are installed either globally, or within a _node_modules_ folder created by npm within your project.  Npm modules are required by their package name, i.e. `require('wepback')` will load the webpack package.  
 
 User-written modules are loaded from the filesystem, and are typically located in your project directory or subdirectories within it.  They are required using the filepath to their file, i.e. `require('./hello.js`).  It is important to use the period-slash (`./`) indicating current directory to distinguish files from npm packages.

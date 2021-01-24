@@ -9,7 +9,7 @@ Before a web request can be made, the browser needs to know where the resource r
 
 {{% notice info %}}
 __URLs and URIs__
-The terms URL and URI are often used interchangeably in practice.  However, a URL is a specific subset of URIs that indicate _how to retrieve a resource over a network_; while a URI identifies a unique resource, it does not necessarily indicate how to retrieve it.  For example, a book's ISBN can be respresented as a URI in the form _urn:isbn:0130224189_.  But this URI cannot be put into a browser's Location to retrive the associated book.
+The terms URL and URI are often used interchangeably in practice.  However, a URL is a specific subset of URIs that indicate _how to retrieve a resource over a network_; while a URI identifies a unique resource, it does not necessarily indicate how to retrieve it.  For example, a book's ISBN can be represented as a URI in the form _urn:isbn:0130224189_.  But this URI cannot be put into a browser's Location to retrieve the associated book.
 {{% /notice %}}
 
 A URI consists of several parts, according to the definition (elements in brackets are optional):
@@ -20,7 +20,7 @@ URI = scheme:[//[userinfo@]host[:port]]path[?query][#fragment]
 
 Let's break this down into individual parts:
 
-__scheme:__ The scheme refers to the resource is identified and (potentailly) accessed.  For web development, the primary schemes we deal with are _http_ (hyper-text transfer protocol), _https_ (secure hyper-text transfer protocol), and _file_ (indicating a file opened from the local computer).  
+__scheme:__ The scheme refers to the resource is identified and (potentially) accessed.  For web development, the primary schemes we deal with are _http_ (hyper-text transfer protocol), _https_ (secure hyper-text transfer protocol), and _file_ (indicating a file opened from the local computer).  
 
 __userinfo:__ The userinfo is used to identify a specific user.  It consists of a username optionally followed by a colon (`:`) and password.  We will discuss its use in the section on HTTP authentication, but note that this approach is rarely used today, and carries potential security risks.
 
@@ -32,7 +32,7 @@ __path:__ The path refers to the path to the desired resource on the server.  It
 
 __query:__ The query consists of optional collection of key-value pairs (expressed as key:value), separated by ampersands (`&`), and proceeded by a question mark (`?`).  The query string is used to supply modifiers to the requested resource (for example, applying a filter or searching for a term).  
 
-__fragment:__ The fragment is an optional string proceeded by a hashtag (`#`).  It identifies a portion of the resource to retrive.  It is most often used to auto-scroll to a section of an HTML document, and also for navigation in some single-page web applications.
+__fragment:__ The fragment is an optional string proceeded by a hashtag (`#`).  It identifies a portion of the resource to retrieve.  It is most often used to auto-scroll to a section of an HTML document, and also for navigation in some single-page web applications.
 
 
 Thus, the URL `https://google.com` indicates we want to use the secure HTTP scheme to access the server at google.com using its port 443.  This should retrieve Google's main page.

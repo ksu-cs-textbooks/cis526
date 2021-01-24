@@ -15,7 +15,7 @@ And that is just to _display_ posts.  What about when we want our blog software 
 
 ## Representational State Transfer (REST)
 
-Roy Fielding tackled this issue in [Chapter 5](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) of his Ph.D. dissertation "Architectural Styles and the Design of Network-based Software Artchitectures."  He recognized that increasingly dynamic web servers were dealing with _resources_ that could be created, updated, read, and destroyed, much like the resources in database systems (not surprisingly, many of these resources were persistently stored in such a database system).  These operations are so pervasive in database systems that we have an acyronym for them: CRUD.
+Roy Fielding tackled this issue in [Chapter 5](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) of his Ph.D. dissertation "Architectural Styles and the Design of Network-based Software Architectures."  He recognized that increasingly dynamic web servers were dealing with _resources_ that could be created, updated, read, and destroyed, much like the resources in database systems (not surprisingly, many of these resources were persistently stored in such a database system).  These operations are so pervasive in database systems that we have an acronym for them: CRUD.
 
 Roy mapped these CRUD methods to a HTTP URL + Method pattern he called **Re**presentational **S**tate **T**ransfer (or REST).  This pattern provided a well-defined way to express CRUD operations as HTTP requests.
 
@@ -89,8 +89,8 @@ The `:id` corresponds to an actual identifier of a specific resource - most ofte
   </tr>
 </table>
 
-Notice that we now have _two_ wildcards for most routes, one corresponding to the `post` and one to the `commment`.
+Notice that we now have _two_ wildcards for most routes, one corresponding to the `post` and one to the `comment`.
 
 If we didn't want to support an operation, for example, _updating_ comments, we could just omit that route.
 
-REST was so strightforward and corresponded so well to how many web servers were operating, that it quickly became a widely adopted technique in the web world.  When you hear of a RESTful API or RESTful routes, we are referring to using this pattern in the URLs of a site.
+REST was so straightforward and corresponded so well to how many web servers were operating, that it quickly became a widely adopted technique in the web world.  When you hear of a RESTful API or RESTful routes, we are referring to using this pattern in the URLs of a site.

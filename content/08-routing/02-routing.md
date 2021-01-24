@@ -5,11 +5,11 @@ weight: 20
 date: 2018-08-24T10:53:26-05:00
 ---
 
-In web development, routing refers to the process of matching an incoming request with generating the appropriate response.  For most web servers (and definitely for Node-based ones), we abstract the process of generating the response into a function.  We often call these functions _endpoints_ as thier purpose is to serve the response, effectively ending the processing of an incoming request with an appropriate response.
+In web development, routing refers to the process of matching an incoming request with generating the appropriate response.  For most web servers (and definitely for Node-based ones), we abstract the process of generating the response into a function.  We often call these functions _endpoints_ as their purpose is to serve the response, effectively ending the processing of an incoming request with an appropriate response.
 
 With a Node webserver, endpoint functions typically take in a `req` (an instance of http.IncomingMessage) and `res` (an instance of http.ServerResponse) objects. These objects form an abstraction around the HTTP request and response.  
 
-Routing in a Node webserver therefore consists of examining the properties of the `req` object and determining which endpoint function to invoke.  Up to this point, we've done this logic in a `handleRequest()` function, in a farily ad-hoc way.  Consider what we might need to do for a dynamically generated blog - we'd need to serve static files (like CSS and JS files), as well as dynamically generated pages for blog posts and the home page.  What might our `handleRequest()` look like in that case?
+Routing in a Node webserver therefore consists of examining the properties of the `req` object and determining which endpoint function to invoke.  Up to this point, we've done this logic in a `handleRequest()` function, in a fairly ad-hoc way.  Consider what we might need to do for a dynamically generated blog - we'd need to serve static files (like CSS and JS files), as well as dynamically generated pages for blog posts and the home page.  What might our `handleRequest()` look like in that case?
 
 Let's assume we have a `serveHome()` function to serve the home page, a `serveFile()` function to serve static files, and a `servePost()` function to serve dynamically generated posts.  Determining if the request is for the homepage is easy, as we know the path should just be a forward slash:
 

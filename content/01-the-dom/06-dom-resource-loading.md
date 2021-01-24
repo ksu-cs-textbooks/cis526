@@ -100,4 +100,4 @@ image.src = 'smile.png';
 
 Notice too that we add the event listener _before_ we set the `src` attribute.  If we did it the other way around, the resource may already be loaded before the listener takes effect - and it would never be invoked!
 
-However, this approach can be cumbersome, and limits us to what resources can be bound to HTML elements.  For more flexiblity, we need to make the request directly, using AJAX. We'll take a look at doing so after we cover HTTP in more depth.
+However, this approach can be cumbersome, and limits us to what resources can be bound to HTML elements.  For more flexibility, we need to make the request directly, using AJAX. We'll take a look at doing so after we cover HTTP in more depth.

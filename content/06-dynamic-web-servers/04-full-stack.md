@@ -45,9 +45,9 @@ Clearly, there are a _lot_ of possible combinations of technologies to create a 
 
 Microsoft has thier own traditional stack **ASP.NET**, which is built on Windows Server (the OS), IIS (Internet Information Services, the webserver), a .NET language like C# or Visual Basic, and MSSQL. With the launch of .NET Core, you can now also build a .NET stack running on a Linux OS.
 
-Additonally, frameworks like [Django](https://www.djangoproject.com/), [Ruby on Rails](https://rubyonrails.org/), [Express](https://expressjs.com/), [Laravel](https://laravel.com/), etc. often incorporate preferred stacks (though some parts, specifically the server and database, can typically be swapped out).  We'll discuss web serve frameworks in the next chapter.
+Additionally, frameworks like [Django](https://www.djangoproject.com/), [Ruby on Rails](https://rubyonrails.org/), [Express](https://expressjs.com/), [Laravel](https://laravel.com/), etc. often incorporate preferred stacks (though some parts, specifically the server and database, can typically be swapped out).  We'll discuss web serve frameworks in the next chapter.
 
-For the rest of this chapter, we'll discuss the tehniques used by full-stack developers in building dynamic web servers.
+For the rest of this chapter, we'll discuss the techniques used by full-stack developers in building dynamic web servers.
 
 {{% notice info %}}
 Somewhat confusingly, cloud technologies often replace the traditional webserver role completely, leaving the client-side JavaScript talking to a number of web services.  We'll discuss this approach in a few chapters.

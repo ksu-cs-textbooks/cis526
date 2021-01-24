@@ -50,7 +50,7 @@ Try moving your mouse around the nodes in the DOM tree, and you'll see the corre
 
 Try right-clicking on the `<h1>` node and selecting 'edit text'.  Change the text to "Hello Browser DOM".  See how it changes the page?  
 
-The page is rendered from the DOM, so editing the DOM changes how the page appears.  However, the initial structure of the DOM is dervied from the loaded HTML.  This means if we refresh the page, any changes we made to the DOM using the developer tools will be lost, and the page will return to its original state.  Give it a try - hit the refresh button.
+The page is rendered from the DOM, so editing the DOM changes how the page appears.  However, the initial structure of the DOM is derived from the loaded HTML.  This means if we refresh the page, any changes we made to the DOM using the developer tools will be lost, and the page will return to its original state.  Give it a try - hit the refresh button.
 
 {{% notice note %}}
 For convenience, this textbook will use the [Chrome browser](https://www.google.com/chrome) for all developer tool reference images and discussions, but the other browsers offer much of the same functionality.  If you prefer to use a different browser's web tools, look up the details in that browser's documentation.

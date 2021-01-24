@@ -16,10 +16,10 @@ This textbook was authored for the **CIS 526 - Web Application Development** cou
 * **Office:** DUE 2216
 * **Phone:** (785)483-9264 (Call/Text)
 * **Website:** [https://nathanhbean.com](https://nathanhbean.com)
-* **Virtual Office Hours:** By appointment via [Zoom](ksu.zoom.us).  Schedule a meeting via email or RocketChat
+* **Virtual Office Hours:** By appointment via [Zoom](ksu.zoom.us).  Schedule a meeting via email or Discord
 
 ### Preferred Methods of Communication:
-* **Chat:** Quick questions via Rocket Chat are the preferred means of communication.   Questions whose answers may benefit the class I would encourage you to post in the` #cis526` channel, as this keeps a public history your classmates can review.  More personal questions should be direct messaged to `@nhbean`.
+* **Chat:** Quick questions via Discord are the preferred means of communication.   Questions whose answers may benefit the class I would encourage you to post in the` #cis526` channel, as this keeps a public history your classmates can review.  More personal questions should be direct messaged to `@Nathan Bean`.
 * **Email:** For questions outside of this course, email to nhbean@ksu.edu is preferred.
 * **Phone/Text:** 785-483-9264 _Emergencies only!_ I will do my best to respond as quickly as I can.
 
@@ -117,7 +117,7 @@ In particular you are encouraged to use:
 
 This course offers an instructor-written textbook, which is broken up into a specific reading order and interleaved with activities and quizzes in the modules. It can also be directly accessed at [{{< param textbookURL >}}]({{< param textbookURL >}}).
 
-Students who would like additional textbooks should refer to resources available on the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offerd by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
+Students who would like additional textbooks should refer to resources available on the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
 
 ### Subject to Change
 
@@ -129,7 +129,7 @@ Kansas State University has an Honor and Integrity System based on personal inte
 
 **For this course, a violation of the Honor Pledge will result in an automatic 0 for the assignment and the violation will be reported to the Honor System. A second violation will result in an XF in the course.**
 
-In this course, _unauthorized aid_ broadly consists of _giving or reciving code to complete assignments_.  This could be code you share with a classmate, code you have asked a third party to write for you, or code you have found online or elsewhere.  
+In this course, _unauthorized aid_ broadly consists of _giving or receiving code to complete assignments_.  This could be code you share with a classmate, code you have asked a third party to write for you, or code you have found online or elsewhere.  
 
 Authorized aid - which is not a violation of the honor policy - includes
 using the code snippets provided in the course materials, discussing strategies and techniques with classmates, instructors, TAs, and mentors. Additionally, you may use code snippets and algorithms found in textbooks and web sources if you clearly label them with comments indicating where the code came from and how it is being used in your project.
