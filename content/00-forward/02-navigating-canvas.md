@@ -9,7 +9,7 @@ date: 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 526 - Web Application Development** course at Kansas State University.  This front matter is specific to that course.  If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-This course makes extensive use of several features of Canvas which you may or may not have worked with before. To give you the best experience in this course, this video will briefly describe those features and the best way to access them.
+This course makes extensive use of several features of Canvas which you may or may not have worked with before. To give you the best experience in this course, this page will briefly describe those features and the best way to access them.
 
 When you first access the course on Canvas, you will be shown this homepage, with my contact information and any important information about the course. This is a quick, easy reference for you if you ever need to get in touch with me.
 

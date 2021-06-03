@@ -29,9 +29,9 @@ First, we will be using K-State Online (canvas) more heavily than you probably a
 
 A second tool we’ll be making heavy use of is the Codio platform.  Codio is also an online learning tool, but one meant specifically for programmers.  It combines content delivery with an online IDE (Integrated Development Environment), and each unit in Codio runs on a virtual machine running Linux that you have full root level access to.  This is an inordinately powerful tool for learning web development, especially when you consider the vast majority of web applications are hosted on Linux servers.  Another great benefit is that if you have a question about an error you’re encountering in your code, and you’d like me to take a look – you don’t have to send me code snippets or screenshots in an email.  Just a description of your problem, because I can open your project in Codio and have direct access to your work. This also means I can give you faster and more accurate feedback – not a bad thing when we’re trying to cover as much as we are.
 
-### RocketChat
+### Discord
 
-We'll also be using the departmental RocketChat server heavily for communications.  Our first assignment is an icebreaker – introducing ourselves in the `#cis526` channel.  Why, you wonder?  Am I a sadist?  Well, no.  One of the biggest differences in online courses is that it is often just you interacting with the course content the instructor has developed.  It can be almost as if you were taking the class by yourself.  That’s great in some ways, but it can also suck in others.  So by introducing ourselves, we have an idea of who else is in the course – the same way you could look across the classroom and see your fellow students.
+We'll also be using the departmental Discord server heavily for communications.  Our first assignment is an icebreaker – introducing ourselves in the `#cis526` channel.  Why, you wonder?  Am I a sadist?  Well, no.  One of the biggest differences in online courses is that it is often just you interacting with the course content the instructor has developed.  It can be almost as if you were taking the class by yourself.  That’s great in some ways, but it can also suck in others.  So by introducing ourselves, we have an idea of who else is in the course – the same way you could look across the classroom and see your fellow students.
 
 ### Videos
 
@@ -47,7 +47,7 @@ Additionally, I will be making a number of step-by-step tutorials working throug
 
 ### Projects 
 
-Throughout the semester we will be creating a web application for the Kansas CS for All website.  This non-profit organization was created to support Kansas preK-12 teachers in bringing computer science education into our states' classrooms.  I've chosen this project because it intersects with two domains you most likely are familiar with - the K-12 educational system, and computer science.  Moreover, Professor Josh Weese, Russell Feldhausen, and myself are three of the core organizers of the Kansas CS for All organization, so there is a chance your solution could be adopted as the "official" web application.  How would that be for a résumé piece?
+Throughout the semester we will be creating a full-stack web application for "Community Chest".  This is a burgeoning non-profit organization looking to place "exchange" bins around Manhattan where people can donate small items to benefit the needy.  Our web application will provide locations for the bins, and guidance for what people need and have to share.
 
 ### Office Hours 
 
@@ -55,4 +55,4 @@ I will be holding office hours virtually over Zoom, by appointment and possibly 
 
 ### Tea Time Office Hours
 
-The CS Faculty and Support staff are also holding bi-weekly virtual _tea time_ meetings this summer, where we talk about any subjects _except_ the course.  This is a good chance to meet more of your faculty in an informal setting and ask questions you may have about the industry, field, etc.  Tea time hours will be posted in RocketChat and as a Canvas announcement.
+The CS Faculty and Support staff are also holding bi-weekly virtual _tea time_ meetings this summer, where we talk about any subjects _except_ the course.  This is a good chance to meet more of your faculty in an informal setting and ask questions you may have about the industry, field, etc.  Tea time hours will be posted in Discord and as a Canvas announcement.

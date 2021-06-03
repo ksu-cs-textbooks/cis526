@@ -11,6 +11,10 @@ This textbook was authored for the **CIS 526 - Web Application Development** cou
 
 The following is an outline of the topics we will be covering and when.
 
+{{% notice warning %}}
+This course is still under development, so some of the content listed here may change before we reach that module.
+{{% /notice %}}
+
 Week 1: Web Application Fundamentals
 * Module: Exploring the Document Object Model<br>
     * Readings 1.1-1.4
