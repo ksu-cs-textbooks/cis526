@@ -5,7 +5,7 @@ weight: 60
 date: 2018-08-24T10:53:26-05:00
 ---
 
-{{ <console> }}
+{{< console >}}
 
 JavaScript implements its asynchronous nature through _callbacks_ - functions that are invoked when an asynchronous process completes.  We see this in our discussion of timers like `setTimeout()` and with our web workers with the `onmessage` event handler.  These demonstrate two possible ways of setting a callback.  With `setTimeout()` we pass the callback as a function parameter, i.e.:
 
