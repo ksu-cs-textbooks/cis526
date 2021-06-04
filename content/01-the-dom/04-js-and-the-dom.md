@@ -134,5 +134,5 @@ The above example, rewritten in JQuery, might be:
 $('p').text('Tra-la-la').appendTo('div.banner');
 ```
 
-While modern browsers are much more consistent at supporting standardized JavaScript, JQuery remains a popular library and one you will likely encounter.  Thus, while this text focuses on 'vanilla' JavaScript, we'll also occasonally call out JQuery approaches in blocks like this one.
+While modern browsers are much more consistent at supporting standardized JavaScript, JQuery remains a popular library and one you will likely encounter.  Thus, while this text focuses on 'vanilla' JavaScript, we'll also occasionally call out JQuery approaches in blocks like this one.
 {{% /notice %}}

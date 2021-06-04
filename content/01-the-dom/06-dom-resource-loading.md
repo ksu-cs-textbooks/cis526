@@ -4,7 +4,7 @@ pre: "6. "
 weight: 60
 date: 2018-08-24T10:53:26-05:00
 ---
-One of the important aspects of working with HTML is understanding that an HTML page is _more_ than just the HTML.  It also invovles a collection of resources that are external to the HTML document, but displayed or utilized by the document.  These include elements like `<link>`, `<script>`, `<video>`, `<img>`, and `<source>` with `src` or `href` attributes set.
+One of the important aspects of working with HTML is understanding that an HTML page is _more_ than just the HTML.  It also involves a collection of resources that are external to the HTML document, but displayed or utilized by the document.  These include elements like `<link>`, `<script>`, `<video>`, `<img>`, and `<source>` with `src` or `href` attributes set.
 
 As the DOM tree is parsed and loaded and these external resources are encountered, the browser requests those resources as well.  Modern browsers typically make these requests in parallel for faster loading times.  
 
@@ -48,7 +48,7 @@ window.addEventListener = function(event) {
 Ensures the JQuery library is available before your code is run.
 
 {{% notice info %}}
-JavaScript is an extremely flexible langauge that has evolved over time.  One side effect of this evolution is that there are often multiple ways to express the same idea.  For example, listening for the `window`'s `'load'` event can be written many different ways:
+JavaScript is an extremely flexible language that has evolved over time.  One side effect of this evolution is that there are often multiple ways to express the same idea.  For example, listening for the `window`'s `'load'` event can be written many different ways:
 
 ```javascript
 // Using the onload property

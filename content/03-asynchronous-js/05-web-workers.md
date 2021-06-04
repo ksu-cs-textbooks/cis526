@@ -13,7 +13,7 @@ while(true) {
 }
 ```
 
-This loop has no possible exit condition, so if you ran it in the browser, it would run infinitely long... and the page would never respond to user input, becuase you'd never pull any events of the event queue.  One of the important discoveries in computer science, the [Halting Problem](https://en.wikipedia.org/wiki/Halting_problem) tackles exactly this issue - and Alan Turing's proof shows that a program to determine if another program will halt for all possible programs _cannot_ be written.  
+This loop has no possible exit condition, so if you ran it in the browser, it would run infinitely long... and the page would never respond to user input, because you'd never pull any events of the event queue.  One of the important discoveries in computer science, the [Halting Problem](https://en.wikipedia.org/wiki/Halting_problem) tackles exactly this issue - and Alan Turing's proof shows that a program to determine if another program will halt for all possible programs _cannot_ be written.  
 
 Thus, browsers instead post warning messages after execution has run for a significant amount of time, like this one:
 
