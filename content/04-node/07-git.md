@@ -17,7 +17,7 @@ In your _package.json_ file, you can specify a `"repository"` property, which sp
 }
 ```
 
-For many open-source projects, the repository is located on Github, a GitHub gist, BitBucket, or a Gitlab instance.  These can be specified with a shorthand, which matches the corresponding `npm install` argument:
+For many open-source projects, the repository is located on Github, a GitHub gist, BitBucket, or a GitLab instance.  These can be specified with a shorthand, which matches the corresponding `npm install` argument:
 
 ```json
 "repository": "npm/npm"
@@ -51,7 +51,7 @@ logs
 *.log
 ```
 
-You may also want to look at Github's boilerplate [Node .gitigore template](https://github.com/github/gitignore/blob/master/Node.gitignore), which adds additional rules based on many popular Node frameworks (adding an ignore for a file or directory that doesn't exist in your project is harmless).
+You may also want to look at GitHub's boilerplate [Node .gitignore template](https://github.com/github/gitignore/blob/master/Node.gitignore), which adds additional rules based on many popular Node frameworks (adding an ignore for a file or directory that doesn't exist in your project is harmless).
 
 The _.gitignore_ file should ideally be added before the repository has been created, as files already under version control override _.gitignore_ rules.
 
@@ -70,10 +70,10 @@ The `init` command adds the current directory structure (less that specified in 
 $git add .
 ```
 
-Once staged, we can commit the inital version of our package with a git `commit` command:
+Once staged, we can commit the initial version of our package with a git `commit` command:
 
 ```text
-$ git commit -a -m "Inital commit"
+$ git commit -a -m "Initial commit"
 ```
 
 The `-a` flag indicates we are committing _all currently staged files_, alternatively you can commit files one-at-a-time, if you only want to commit one or a few files.  The `-m` file indicates we are also adding a commit message, which follows in quotes ("").  If we don't use this flag, then git will open a text editor to write the commit message in.  For the Linux platform, the default is _vi_, a powerful command line text editor that has a bit of a learning curve.  If you find vi has launched on you and you are uncertain how to proceed, follow these steps:

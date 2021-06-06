@@ -60,3 +60,7 @@ fs.readFile("example.txt", function(err, data) {
 ```
 
 Because the logging now happens _inside_ the callback value, it will only occur _after_ the file has been read, and the results added to the event queue, which is where the `data` variable is initialized.
+
+{{% notice info %}}
+[Promises]({{<ref "03-asynchronous-js/07-promises">}}) and the [async/await]({{<ref "03-asynchronous-js/08-async-await">}}) keywords covered in the previous chapter are both attempts to sidestep these misconceptions by introducing new objects and syntax that provide more familiar abstractions to programmers.
+{{% /notice %}}

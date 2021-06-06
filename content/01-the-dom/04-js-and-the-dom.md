@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 The DOM tree is also accessible from JavaScript running in the page.  It is accessed through the global [window](https://developer.mozilla.org/en-US/docs/Web/API/Window) object, i.e. `window.document` or `document`.
 
-Let's use the 'Console' tab of the developer tools to access this object.  Open the previous example page again from <a href='{{<static "images/1.3.2.png">}}' target='_blank'>this link</a>.  Click the console tab to open the expanded console, or use the console area in the bottom panel of the elements tab:
+Let's use the 'Console' tab of the developer tools to access this object.  Open the previous example page again from <a href='{{<static "examples/1.3.1/index.html">}}' target='_blank'>this link</a>.  Click the console tab to open the expanded console, or use the console area in the bottom panel of the elements tab:
 
 ![The console tab in the developer tools]({{<static "images/1.4.1.png">}})
 

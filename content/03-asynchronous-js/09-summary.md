@@ -10,4 +10,4 @@ We saw how this approach allows for multi-threaded programs in the browser throu
 
 Finally, we examined the callback mechanism used for asynchronous processing in JavaScript, and explored two common abstractions used to make it more programmer-friendly: promises and the async/await keywords.  
 
-In the next chapter,we'll explore Node.js, a server-side implementation of the JavaScript engine that makes heavy use of the JavaScript asynchronous model.
+In the next chapter, we'll explore Node.js, a server-side implementation of the JavaScript engine that makes heavy use of the JavaScript asynchronous model.
