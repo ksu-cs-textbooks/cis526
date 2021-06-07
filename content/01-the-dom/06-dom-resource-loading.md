@@ -39,10 +39,10 @@ $('#popup').show();
 But if the JQuery library isn't loaded yet, the `$` is not defined, and this logic will crash the JavaScript interpreter.  Any remaining JavaScript will be ignored, and your page won't work as expected.  But re-writing that to trigger after all resources have loaded, i.e.:
 
 ```javascript 
-window.addEventListener = function(event) {
+window.addEventListener('loal', function(event) {
     // This code only is executed once all resources have been loaded
     $('#popup').show();
-}
+});
 ```
 
 Ensures the JQuery library is available before your code is run.
