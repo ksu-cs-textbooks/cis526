@@ -89,7 +89,10 @@ Letter grades will be assigned following the standard scale:
 * 90% - 100% → A
 * 80% - 89.99% → B
 * 70% - 79.99% → C
-* 60% - 59.99% → F
+* 60% - 59.99% → D*
+* 50% - 0% → F
+
+_* Note that CS Majors must earn a C or better to use this course for their degree._
 
 ### Late Work
 
