@@ -25,7 +25,7 @@ There are additional 200 status codes.  See the [MDN Documentation](https://deve
 
 ### 3XX Status Codes 
 
-Codes in the 300's indicate redirects.  These should be used in conjunction with a `Location` response header to notify the user-agent where to redirect. The two most common are:
+Codes in the 300's indicate redirects.  These should be used in conjunction with a `Location` response header to notify the user-agent where to redirect. The three most common are:
 
 __`301 Moved Permanently`__ Indicates the requested resource is now permanently available at a different URI.  The new URI should be provided in the response, and the user-agent may want to update bookmarks and caches.
 
