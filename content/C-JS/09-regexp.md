@@ -5,6 +5,8 @@ weight: 90
 date: 2018-08-24T10:53:26-05:00
 ---
 
+{{< console >}}
+
 The JavaScript [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) prototype has some very powerful methods, such as [String.prototype.includes()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes) which recognizes when a string contains a substring - i.e.:
 
 ```js
