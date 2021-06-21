@@ -13,7 +13,7 @@ You will most likely use the information contained within the `http.IncomingMess
 
 Some of its properties we might use:
 
-* The `req.method` parameter indicates what [HTTP method]({{rel "02-http/04-request-methods"}}) the request is using.  For example, if the method is `"GET"`, we would expect that the client is requesting a resource like an HTML page or image file.  If it were a `"POST"` request, we would think they are submitting something.
+* The `req.method` parameter indicates what [HTTP method]({{<ref "02-http/04-request-methods">}}) the request is using.  For example, if the method is `"GET"`, we would expect that the client is requesting a resource like an HTML page or image file.  If it were a `"POST"` request, we would think they are submitting something.
 
 * The `req.url` parameter indicates the specific resource path the client is requesting, i.e. `"/about.html"` suggests they are looking for the "about" page.  The url can have more parts than just the path.  It also can contain a query string and a hash string.  We'll talk more about these soon.
 
