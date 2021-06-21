@@ -47,7 +47,7 @@ In addition, we also receive the HTTP Method used for the request, i.e. GET, POS
 
 ## Headers, Revisited 
 
-We can also convey additional information for the server to consider as part of the request headers.  This is usually used to convey information tangental to the request, like authentication and cookies.  We'll also discuss this a bit further on.
+We can also convey additional information for the server to consider as part of the request headers.  This is usually used to convey information tangential to the request, like authentication and cookies.  We'll also discuss this a bit further on.
 
 ## Routing
 

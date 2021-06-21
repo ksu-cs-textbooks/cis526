@@ -19,7 +19,7 @@ Some of its properties we might use:
 
 * The `req.headers` parameter contains all the headers that were set on this particular request.  Of specific interest are _authentication_ headers (which help say who is behind the request and determine if the server should allow the request), and _cookie_ headers.  We'll talk more about this a bit further into the course, when we introduce the associated concepts.
 
-Generally, we use properties in combination to determine what the correct response is.  As a programmer, you probably already realize that this decsion-making process must involve some sort of [control flow](https://en.wikipedia.org/wiki/Control_flow) structure, like an [if statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or [switch case statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch).
+Generally, we use properties in combination to determine what the correct response is.  As a programmer, you probably already realize that this decision-making process must involve some sort of [control flow](https://en.wikipedia.org/wiki/Control_flow) structure, like an [if statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or [switch case statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch).
 
 Let's say we only want to handle `"GET"` requests for the files _index.html_, _site.css_, and _site.js_.  We could write our request handler using both an `if else` statement and a `switch` statement:
 
@@ -57,9 +57,9 @@ There are a number of properties and methods defined in the `http.ServerResponse
 * [ServerResponse.statusCode](https://nodejs.org/api/http.html#http_response_statuscode) can be used to manually set the status code
 * [ServerResponse.statusMessage](https://nodejs.org/api/http.html#http_response_statusmessage) can be used to manually set the status message.  If the code is set but not the message, the default message for the code is used.
 * [ServerResponse.setHeader()](https://nodejs.org/api/http.html#http_response_setheader_name_value) adds a header with the supplied name and value (the first and second parameters)
-* [ServerResponse.end()](https://nodejs.org/api/http.html#http_response_end_data_encoding_callback) sends the request using the curently set status and headers.  Takes an optional parameter which is the response body; if this parameter is supplied, an optional second parameter specifying the encoding can also be used.  A final optional callback can be supplied that is called when sending the stream is complete.
+* [ServerResponse.end()](https://nodejs.org/api/http.html#http_response_end_data_encoding_callback) sends the request using the currently set status and headers.  Takes an optional parameter which is the response body; if this parameter is supplied, an optional second parameter specifying the encoding can also be used.  A final optional callback can be supplied that is called when sending the stream is complete.
 
-Consider the **501 Not Implemented** response in our example above.  We need to send the 501 status code, but there is no need for a body or addtional headers.  We could use the `req.statusCode` property to set the property, and the `req.end()` method to send it:
+Consider the **501 Not Implemented** response in our example above.  We need to send the 501 status code, but there is no need for a body or additional headers.  We could use the `req.statusCode` property to set the property, and the `req.end()` method to send it:
 
 ```js
     // TODO: Serve a 501 Not Implemented response
@@ -83,7 +83,7 @@ The sending of a response with a body is a bit more involved.  For example, to s
     });
 ```
 
-Notice too, that we need to account for the possibility of an error while loading the file _index.html_.  If this happens, we send a **500 Server Error** status code indicating that something went wrong, and it happend on _our_ end, not because of a problem in the way the client formatted the request.  Notice too that we use a `return` to prevent executing the rest of our code.
+Notice too, that we need to account for the possibility of an error while loading the file _index.html_.  If this happens, we send a **500 Server Error** status code indicating that something went wrong, and it happened on _our_ end, not because of a problem in the way the client formatted the request.  Notice too that we use a `return` to prevent executing the rest of our code.
 
 We also supply the length of the response body, which will be the same as the buffer length or the length of a string sent as the body.  Binary data for the web is counted in octects (eight bits) which conveniently is also how Node buffers are sized and the size of a JavaScript character.  
 
@@ -107,7 +107,7 @@ Serving the css file using this approach would look like:
 You can use any combination of these approaches to send responses.
 {{% notice warning %}}
 Some important considerations:
-* Be aware that you can only send _one_ reponse per request.  Once a response is sent, the connection to the client is effectively closed.  Thus, once `resonse.end()` has been invoked, it will log an error if it is attempted again.  
+* Be aware that you can only send _one_ response per request.  Once a response is sent, the connection to the client is effectively closed.  Thus, once `response.end()` has been invoked, it will log an error if it is attempted again.  
 * The `response.writeHead()` method actually streams the head to the client.  Thus, you cannot run `response.setHeader()` or set `response.statusCode` or `response.statusMessage` after it has been set.
 * Similarly, any change to the response object after `response.end()` has been invoked will log an error, as you cannot change the response once it's sent.
 {{% /notice %}}

@@ -11,7 +11,7 @@ If HTTP is stateless, how do e-commerce websites manage to keep track of the con
 
 The term **session** appears a _lot_ in web development, and can mean different things in different contexts.  But there is a common thread in each - a session is a form of connection between the client and server.
 
-For example, when your web client make a request from a web server, it opens a Transmission Control Protocol (TCP) session to the server, and sends the HTTP request across this connection.  The session stays open until all the packets of the request are sent, and those of the response are recieved.  In HTTP 1.1, the session can stay open for more than a single request-response pair, as it is anticipated a HTML page request will be followed by requests for resources (CSS, JavaScript, images, etc.) embedded in the page.  HTTP 2.0 takes this farther, allowing the server to _push_ these additional resources to the client.
+For example, when your web client make a request from a web server, it opens a Transmission Control Protocol (TCP) session to the server, and sends the HTTP request across this connection.  The session stays open until all the packets of the request are sent, and those of the response are received.  In HTTP 1.1, the session can stay open for more than a single request-response pair, as it is anticipated a HTML page request will be followed by requests for resources (CSS, JavaScript, images, etc.) embedded in the page.  HTTP 2.0 takes this farther, allowing the server to _push_ these additional resources to the client.
 
 The sessions we are discussing here are implemented at a higher level than TCP sessions (though they are hosted by the TCP session), and represent a single website visitor interacting with the server.
 

@@ -5,7 +5,7 @@ weight: 20
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Before we dig too deeply into dynamic web servers, we should reveiw our technologies used in the web.  On the client side, we have HTML, CSS, and JavaScript.  Managing communication between the client and server, we have HTTP.  But on the server side of the equation, what standard web technologies do we use?
+Before we dig too deeply into dynamic web servers, we should review our technologies used in the web.  On the client side, we have HTML, CSS, and JavaScript.  Managing communication between the client and server, we have HTTP.  But on the server side of the equation, what standard web technologies do we use?
 
 ![The Web Technologies]({{<static "images/5.2.1.png">}})
 

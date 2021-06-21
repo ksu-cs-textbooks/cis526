@@ -115,7 +115,7 @@ Making sessions expire quickly can help mitigate some of the risk, especially wh
 
 But non-physical access (such as a compromised computer) can lift a cookie while it is in use.  Regenerating a session identifier (assuming you are using the first strategy) on each login can help, especially if you prompt users to log in before allowing especially risky actions.  Adding some additional tracking information like the originating IP address to the session and prompting the user to validate a session by logging back in when this changes can also help.
 
-Be aware that these strategies can also be very frustrating for users who are prompted to sign in repeatedly.  As aways, you need to balance security concerns with user satisfaction for the kind of activities your application supports.
+Be aware that these strategies can also be very frustrating for users who are prompted to sign in repeatedly.  As always, you need to balance security concerns with user satisfaction for the kind of activities your application supports.
 
 ### Combinations of the Above
 
