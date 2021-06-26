@@ -3,6 +3,7 @@ title: "HTML Templates"
 pre: "5. "
 weight: 50
 date: 2018-08-24T10:53:26-05:00
+draft: true
 ---
 
 While full-stack developers may have chafed at the restrictions imposed by server pages, there was one aspect that came to be greatly valued - the ability to embed script directly in HTML, and have it evaluated and concatenated into the HTML text.
@@ -10,11 +11,11 @@ While full-stack developers may have chafed at the restrictions imposed by serve
 ## Template Libraries
 This is where template libraries come in.  A template library allows you to write your HTML content _as HTML in a separate file_ with a special syntax to inject dynamic programming script.  This is often some variation of `<>` or `{}`.  This approach allows you to validate the HTML, as the script portions are ignored as unknown tags (when using `<>`) or as static text.
 
-When the server is running, these templates are rendered, evaluating any code and suppling the applicable variables. This process generates the HTML snippet.  
+When the server is running, these templates are rendered, evaluating any code and supplying the applicable variables. This process generates the HTML snippet.  
 
 This is similar to what server pages do. However, server pages represent an _integrated_ approach - the server page framework defined all aspects of how you could interact with the OS, the web server, and other programs.  In contrast, a template library provides the option of using templates within any project - obviously for generating HTML as part of a dynamic website, but potentially for other kinds of applications as well.  
 
-Thus, a template rendering library gives us a lot of flexibilty in how and when we use it. For example, in using the [Embedded JavaScript](https://ejs.co/) template library, we could rewrite our directory listing as:
+Thus, a template rendering library gives us a lot of flexibility in how and when we use it. For example, in using the [Embedded JavaScript](https://ejs.co/) template library, we could rewrite our directory listing as:
 
 ```html
 <!doctype html>
@@ -59,7 +60,7 @@ ejs.renderFile("templates/directory-listing.ejs", data, function(err, html){
 While this may _seem_ like just as much work as the concatenation approach, where it really shines is the ability to combine multiple templates, separating parts of the pages out into different, reusable template files.  These are typically separated into two categories based on how they are used, _partials_ and _layouts_.
 
 ### Partials
-A partial is simply a _part_ of a larger page.  For example, the entries we are rendering in the listing could be defined in thier own template file, _directory-listing-entry.ejs_:
+A partial is simply a _part_ of a larger page.  For example, the entries we are rendering in the listing could be defined in their own template file, _directory-listing-entry.ejs_:
 
 ```html
 <a href="<%= path %">

@@ -3,6 +3,7 @@ title: "Sessions"
 pre: "10. "
 weight: 100
 date: 2018-08-24T10:53:26-05:00
+draft: true
 ---
 
 If HTTP is stateless, how do e-commerce websites manage to keep track of the contents of your shopping cart as you navigate from page to page? The answer is the use of a _session_ - a technique by which state is added to a web application.

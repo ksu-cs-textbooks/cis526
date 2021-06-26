@@ -1,7 +1,7 @@
 ---
 title: "Request Body"
-pre: "8. "
-weight: 80
+pre: "7. "
+weight: 70
 date: 2018-08-24T10:53:26-05:00
 ---
 
@@ -11,7 +11,7 @@ This is fine for GET requests, as they don't have a body.  But for requests that
 
 To do so, there are three events made available in the [http.IncomingMessage](https://nodejs.org/api/http.html#http_class_http_incomingmessage) object: `data`, `end`, and `error`.
 
-The `data` event occurs whenever a new chunk of the body is available, and that chunk is passed to the event listener.  The `end` event occurs once all the chunks have been recieved.  And the `error` event occurs when something goes wrong.  The chunks are [Buffer](https://nodejs.org/api/buffer.html) objects, and are always received in order.  
+The `data` event occurs whenever a new chunk of the body is available, and that chunk is passed to the event listener.  The `end` event occurs once all the chunks have been received.  And the `error` event occurs when something goes wrong.  The chunks are [Buffer](https://nodejs.org/api/buffer.html) objects, and are always received in order.  
 
 Thus, we need to collect each chunk from each `data` event, and join them together into a single buffer at the `end` event.  Thus, the basic scaffold for doing so is:
 

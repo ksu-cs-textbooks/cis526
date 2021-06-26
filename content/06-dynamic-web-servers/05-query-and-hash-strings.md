@@ -1,9 +1,10 @@
 ---
 title: "Query and Hash Strings"
-pre: "6. "
-weight: 60
+pre: "5. "
+weight: 50
 date: 2018-08-24T10:53:26-05:00
 ---
+
 Query strings (aka search strings) are the part of the URL that appear after the `?` and before the optional `#`.  The hash string is the portion of the url after the `#`.  We've mentioned them a bit before, but as we dig into dynamic web servers it makes sense to do a deeper dive, as this is where they really come into play.
 
 ## The Hash String
@@ -12,7 +13,7 @@ First, let's briefly visit the hash string.  It's traditional use is to indicate
 With the advent of single-page apps, it has come to serve additional purposes; but we'll talk about those when we visit that topic in a future chapter.
 
 ## The Query/Search String
-Now, the Query string is a vital tool for dynamic web pages, as it conveys information _beyond_ the specific resource being asked for to the server.  Consider what a dynamic webserver does - it takes an incoming request, and sends a response.  In many ways, this is similar to a function call - you invoke a function, and it returns a value.  With this in mind, the path of the URL is like the function name, and the query string becomes its _parameters_.  
+Now, the query string is a vital tool for dynamic web pages, as it conveys information _beyond_ the specific resource being asked for to the server.  Consider what a dynamic webserver does - it takes an incoming request, and sends a response.  In many ways, this is similar to a function call - you invoke a function, and it returns a value.  With this in mind, the path of the URL is like the function name, and the query string becomes its _parameters_.  
 
 Much like parameters have a name and a value, the query string is composed of key/value pairs.  Between the key and value of each pair is a `=`, and between the pairs is a `&`.  Because the `=` and `&` character now have a special meaning, any that appear in the key or value are swapped with a special percent value, i.e. `&` becomes `%26` and `=` becomes `%3D`. Similarly, other characters that have special meanings in URLs are likewise swapped.  This is known as URL or percent encoding, and you can see the swapped values in the table below:
 

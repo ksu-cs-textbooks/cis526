@@ -3,6 +3,7 @@ title: "Cookies"
 pre: "9. "
 weight: 90
 date: 2018-08-24T10:53:26-05:00
+draft: true
 ---
 
 HTML was designed as a _stateless_ protocol.  This means that there is no expectation for the server to keep track of prior requests made to it.  Each incoming HTTP request is effectively treated as if it is the _first_ request ever made to the server.

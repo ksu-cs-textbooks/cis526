@@ -3,6 +3,7 @@ title: "Routing"
 pre: "4. "
 weight: 40
 date: 2018-08-24T10:53:26-05:00
+draft: true
 ---
 
 A second major item to consider with dynamic web servers is how to respond to incoming requests.  With static web servers, it is pretty simple - we map the virtual path supplied by the URL to a file path on the file server.  But the URL supplied in a request _doesn't_ have to correspond to any real object on the server - we can create any object we want, and send it back.

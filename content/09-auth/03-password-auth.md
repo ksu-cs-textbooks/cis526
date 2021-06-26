@@ -36,5 +36,5 @@ The downside is that it takes longer to log a user in using this strategy, but i
 This brings us to the second half of the username/password approach - we have to implement some form of user session. To do user sessions, we must also employ cookies. By their nature, cookies are not as secure as we might like, but there are some strategies we can use to make them more secure.  First, we should specify the cookies using the `Secure` and `HttpOnly` attributes, and the `SameSite` attribute set to `Strict`.  Moreover, the values set in the cookie should also be encrypted before being set (in this case, with a two-way encryption).  Commonly, only the session id or user id will be included in the cookie, while the actual session data will be stored server-side in memory or in a sessions table.
 
 {{% notice warning %}}
-As with HTTP Authentication (and indeed, all authentication approaches) password-based authentcation should only be used with HTTPS connections.  
+As with HTTP Authentication (and indeed, all authentication approaches) password-based authentication should only be used with HTTPS connections.  
 {{% /notice %}}

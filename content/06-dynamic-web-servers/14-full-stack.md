@@ -3,6 +3,7 @@ title: "Full Stack Development"
 pre: "4. "
 weight: 40
 date: 2018-08-24T10:53:26-05:00
+draft: true
 ---
 
 Server pages represented one approach to tackling the dynamic web server challenge, and one that was especially suitable for those web developers who primarily worked with static HTML, CSS, and JavaScript backgrounds.  But for those that were already programmers, the server page approach could feel confining.  Instead, these programmers wanted more control over the web server and its working parts.
@@ -16,7 +17,7 @@ For a dynamic web server, we can separate the needed functionality into three pr
 3. Providing persistent data storage
 
 ## Serving Static Content
-We've already discussed file servers extensively, and even discussed some options for optimizing thier performance - like caching the most frequently requested files.  There are a number of software packages that have been developed and optimized for this task.  Some of the best known are:
+We've already discussed file servers extensively, and even discussed some options for optimizing their performance - like caching the most frequently requested files.  There are a number of software packages that have been developed and optimized for this task.  Some of the best known are:
 
 * [The Apache HTTP Server Project](https://httpd.apache.org/), an open-source server project originally launched in 1995, and consistently the most popular server software on the Internet.  The CS department website is hosted on an Apache server, as is your personal web site on the departmental server.
 * [Internet Information Services (IIS)](https://www.iis.net/), Microsoft's flagship web server bundled with the Windows Server operating system.
