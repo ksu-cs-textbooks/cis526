@@ -9,7 +9,7 @@ HTML was designed as a _stateless_ protocol.  This means that there is no expect
 
 This was an important consideration for making the web possible.  Consider what would happen if our server needed to keep track of what every visitor did on the site - especially when you have _thousands_ of unique visitors every second?  You would need a lot of memory, and a mechanism to tell which user is which. That's a lot of extra requirements to getting a web server working.
 
-But at the same time, you probably recognize that many of the websites you use every day _must be doing just that_.  If you use Office 365 or Google Docs, they manage to store your documents, and not serve you someone else's when you log in.  When you visit an online store and place products in your shopping basket, they remain there as you navigate around the site, loadin new pages.  So how are these websites providing state?
+But at the same time, you probably recognize that many of the websites you use every day _must be doing just that_.  If you use Office 365 or Google Docs, they manage to store your documents, and not serve you someone else's when you log in.  When you visit an online store and place products in your shopping basket, they remain there as you navigate around the site, loading new pages.  So how are these websites providing state?
 
 The answer that was adopted as a W3C standard - [RFC 2695](https://tools.ietf.org/html/rfc6265) is _cookies_.  Cookies are nothing more than text that is sent along with HTTP Requests and Responses.  A server can ask a client to store a cookie with a `Set-Cookie` header.  From that point on, any request the client makes of that server will include a `Cookie` header with the cookie information.  
 
@@ -95,7 +95,7 @@ Using Secure HTTP helps prevent cookies from being intercepted during transit, a
 
 A good general strategy is to store as little of importance in the cookie as possible. This also helps keep the size of a site's cookies down, which means less traffic across the network, and less to store on a user's computer.  The RFC suggests browsers support a minimum size of 4096 bytes per cookie - but this is not a requirement.
 
-But where do we store the session information, if not in the cookie?  This is the subject of the next section, {{<ref "06-dynamic-web-servers/10-sessions.md">}}.  This strategy usually entails storing nothing more than a session identifier in the cookie, and storing the actual data that corresponds to that session identifier on the server.  Effectively, we make our server _statefull_ instead of _stateless_.
+But where do we store the session information, if not in the cookie?  This is the subject of the next section, {{<ref "06-dynamic-web-servers/09-sessions.md">}}.  This strategy usually entails storing nothing more than a session identifier in the cookie, and storing the actual data that corresponds to that session identifier on the server.  Effectively, we make our server _statefull_ instead of _stateless_.
 
 ### Encrypting Cookie Values
 

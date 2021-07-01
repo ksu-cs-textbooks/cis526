@@ -1,16 +1,15 @@
 ---
 title: "Full Stack Development"
-pre: "4. "
-weight: 40
+pre: "12. "
+weight: 120
 date: 2018-08-24T10:53:26-05:00
-draft: true
 ---
 
-Server pages represented one approach to tackling the dynamic web server challenge, and one that was especially suitable for those web developers who primarily worked with static HTML, CSS, and JavaScript backgrounds.  But for those that were already programmers, the server page approach could feel confining.  Instead, these programmers wanted more control over the web server and its working parts.
+Server pages represented one approach to tackling the dynamic web server challenge, and one that was especially suitable for those web developers who primarily worked with static HTML, CSS, and JavaScript backgrounds.  
 
-Of course, writing a brand-new web server from the ground up is an exhausting and expensive proposition.  So most developers adopted existing technologies that were highly optimized to play a specific role, and wrote server code that would utilize them while adding the dynamic portions.  
+For those that were already skilled programmers, the custom server approach provided less confinement and greater control.  But it came at a cost - the programmer had to author the entire server.  Writing a server from scratch is both a _lot_ of work, and also introduces many more points where design issues can lead to poor performance and vulnerable web apps.
 
-For a dynamic web server, we can separate the needed functionality into three primary areas:
+Thus, a third approach was developed, which leveraged existing and well-suited technologies to handle some aspects of the web app needs.  We can separate the needed functionality into three primary areas, each of which is tackled with a different technology:
 
 1. Serving static content
 2. Creating and serving dynamic content 
@@ -30,6 +29,17 @@ Some interpreted programming languages are typically managed by a web server lik
 
 In contrast, other languages are more commonly used to write a web server that handles _both_ static and dynamic content.  This includes more system-oriented languages like [C/C++](https://isocpp.org/), [Java](https://www.java.com/), and [Go](https://golang.org/)and more interpreted languages like [Node.js](https://nodejs.org/).
 
+In either case, the programming language is often combined with a _framework_ written in that language that provides support for building a web application.  Some of the best-known frameworks (and their languages) are:
+
+* [Express](https://expressjs.com/) (JavaScript)
+* [Laravel](https://laravel.com/) (PHP)
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/) (Python)
+* [Django](https://www.djangoproject.com/) (Python)
+* [ASP.NET](https://dotnet.microsoft.com/apps/aspnet) (C#)
+* [Ruby on Rails](https://rubyonrails.org/) (Ruby)
+* [Grails](https://grails.org/) (Java/Groovy)
+* [Phoenix](https://www.phoenixframework.org/) (Elixir)
+
 ## Providing Persistent Data Storage
 While a file system is the traditional route for persistent storage of data in files, as we saw in our discussion of static file servers, holding data in memory can vastly improve server performance.  However, memory is _volatile_ (it is flushed when the hardware is powered down), so an ideal system combines long-term, file-based storage with in-memory caching. Additionally, _structured access_ to that data (allowing it to be queried systematically and efficiently) can also greatly improve performance of a webserver.
 
@@ -46,9 +56,7 @@ Clearly, there are a _lot_ of possible combinations of technologies to create a 
 
 Microsoft has their own traditional stack **ASP.NET**, which is built on Windows Server (the OS), IIS (Internet Information Services, the webserver), a .NET language like C# or Visual Basic, and MSSQL. With the launch of .NET Core, you can now also build a .NET stack running on a Linux OS.
 
-Additionally, frameworks like [Django](https://www.djangoproject.com/), [Ruby on Rails](https://rubyonrails.org/), [Express](https://expressjs.com/), [Laravel](https://laravel.com/), etc. often incorporate preferred stacks (though some parts, specifically the server and database, can typically be swapped out).  We'll discuss web serve frameworks in the next chapter.
-
-For the rest of this chapter, we'll discuss the techniques used by full-stack developers in building dynamic web servers.
+Additionally, frameworks like [Django](https://www.djangoproject.com/), [Ruby on Rails](https://rubyonrails.org/), [Express](https://expressjs.com/), [Laravel](https://laravel.com/), etc. often incorporate preferred stacks (though some parts, specifically the server and database, can typically be swapped out). 
 
 {{% notice info %}}
 Somewhat confusingly, cloud technologies often replace the traditional webserver role completely, leaving the client-side JavaScript talking to a number of web services.  We'll discuss this approach in a few chapters.

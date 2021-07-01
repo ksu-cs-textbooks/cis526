@@ -1,9 +1,8 @@
 ---
-title: "HTML Templates"
-pre: "5. "
-weight: 50
+title: "Template Rendering"
+pre: "10. "
+weight: 100
 date: 2018-08-24T10:53:26-05:00
-draft: true
 ---
 
 While full-stack developers may have chafed at the restrictions imposed by server pages, there was one aspect that came to be greatly valued - the ability to embed script directly in HTML, and have it evaluated and concatenated into the HTML text.
@@ -193,4 +192,4 @@ A newer approach, popularized by the [React](https://reactjs.org/) framework, em
 
 This represents a move away from the separation of concerns we described earlier.  It often incorporates aspects of [declarative programming](https://en.wikipedia.org/wiki/Declarative_programming) rather than thinking of programming in terms of control flow.  This component-based approach also lends itself to developing [progressive web applications](https://en.wikipedia.org/wiki/Progressive_web_application), which only download the script needed to run the portion of the app the user is interacting with at a given time.
 
-As this approach is significantly different from the more traditional templating libraries, we'll discuss these ideas in the next chapter.
+As this approach is significantly different from the more traditional templating libraries, we'll discuss these ideas in a later chapter.
