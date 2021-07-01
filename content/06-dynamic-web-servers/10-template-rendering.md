@@ -5,7 +5,7 @@ weight: 100
 date: 2018-08-24T10:53:26-05:00
 ---
 
-While full-stack developers may have chafed at the restrictions imposed by server pages, there was one aspect that came to be greatly valued - the ability to embed script directly in HTML, and have it evaluated and concatenated into the HTML text.
+While skilled programmers may have chafed at the restrictions imposed by server pages, there was one aspect that came to be greatly valued - the ability to embed script directly in HTML, and have it evaluated and concatenated into the HTML text.
 
 ## Template Libraries
 This is where template libraries come in.  A template library allows you to write your HTML content _as HTML in a separate file_ with a special syntax to inject dynamic programming script.  This is often some variation of `<>` or `{}`.  This approach allows you to validate the HTML, as the script portions are ignored as unknown tags (when using `<>`) or as static text.
