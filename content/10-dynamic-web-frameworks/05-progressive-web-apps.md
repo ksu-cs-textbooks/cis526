@@ -14,4 +14,4 @@ A PWA is always served with https.  Also, many features that a PWA might want to
 A service worker is a JavaScript script (much like the web workers we learned about earlier) that manages communication between the app running in the browser and the network.  Most specifically, it is used to cache information for when the network is unavailable, which can allow your app to run offline.
 
 ## Manifest File 
-The manifest is a JSON file that describes the application (much like the Node package.json) that provides the details necessary to load the app and "install" it on mobile devices.
+The manifest is a JSON file that describes the application (much like the Node package.json) that provides the details necessary to load the app and "install" it on mobile devices.  Note that installing essentially means running a locally cached copy of the website.

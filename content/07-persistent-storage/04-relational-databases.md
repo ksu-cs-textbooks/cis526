@@ -36,7 +36,7 @@ Relational databases (also called SQL databases) provide a highly-structured sto
 
 Relational databases are often called SQL databases as we use _Structured Query Language (SQL)_ to communicate with them.  This is a domain-specific language similar to the LINQ you learned about in CIS 400 (actually, LINQ derives much of its syntax from SQL).  Queries are streamed to a relational database across a socket or other connection, much like HTTP requests and responses are.  The response is received also as text which must be parsed to be used.
 
-SQL is used to contruct the structure of the database.  For example, we could create the above table with the SQL command:
+SQL is used to construct the structure of the database.  For example, we could create the above table with the SQL command:
 
 ```sql 
 CREATE TABLE persons (
