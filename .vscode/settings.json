@@ -4,5 +4,6 @@
         "serializable",
         "situationally",
         "transpilation"
-    ]
+    ],
+    "explorer.sortOrder": "mixed"
 }
