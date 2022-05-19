@@ -13,7 +13,7 @@ This textbook was authored for the **CIS 526 - Web Application Development** cou
 
 ## Course Resources
 
-* [Syllabus]({{<ref "00-forward/06-syllabus.md">}})
+* [Syllabus]({{<ref "00-forward/06-syllabus">}})
 * [Textbook]({{<param textbookURL>}})
 
 ## Welcome Message 
