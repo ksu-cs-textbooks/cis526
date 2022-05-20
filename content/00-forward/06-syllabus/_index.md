@@ -141,6 +141,8 @@ In this class, there is a tremendous amount of new skills to develop in a short 
 
 Any work submitted and graded after the due date is subject to a deduction of **10% of the total points possible on the assignment for each day** that the assignment is late. For example, if an assignment is due on a Friday and is submitted the following Tuesday, it will be subject to a reduction of 40% of the total points possible, or 10% for each class day it was late. _These late penalties will be automatically entered by Canvas - contact the instructor if any grades appear to be incorrect._
 
+These deductions will only be applied to grades above 50% of the total points on the assignment. So, if you scored higher than 50%, your grade will be reduced by the late penalty down to a minimum grade of 50%. If you scored lower than 50% on the assignment, no deductions will be applied.
+
 However, even if a module is not submitted on time, it must still be completed before a student is allowed to begin the next module. So, students should take care not to get too far behind, as it may be very difficult to catch up.
 
 All course work must be submitted, and all interactively graded materials must be graded with the instructor, on or before the last day of the semester in which the student is enrolled in the course in order for it to be graded on time. No late work will be accepted after that date.
