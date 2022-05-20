@@ -11,6 +11,9 @@ This textbook was authored for the **CIS 526 - Web Application Development** cou
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6LQVVQCm8VY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<!-- TODO Rerecord Video -->
+<!-- TODO Rewrite Script -->
+
 ## Course Resources
 
 * [Syllabus]({{<ref "00-forward/06-syllabus">}})
@@ -23,7 +26,7 @@ Of important note is that we are packing a lot of content into an eight-week sum
 
 ### Canvas
 
-First, we will be using K-State Online (canvas) more heavily than you probably are used to.  I've also stripped out a lot of the Canvas tools that we simply aren't using to focusu on those we are.  I am dividing the course into weeks, each of which is contained in a module in Canvas, and listed in the order I would suggest you explore the content.  Thus, you can look at each week’s module to see what you need to accomplish.  Additionally, all authoritative due dates will appear in Canvas.  You can see them in the sidebar, and also under the assignment listings.
+First, we will be using K-State Online (canvas) more heavily than you probably are used to.  I've also stripped out a lot of the Canvas tools that we simply aren't using to focus on those we are.  I am dividing the course into weeks, each of which is contained in a module in Canvas, and listed in the order I would suggest you explore the content.  Thus, you can look at each week’s module to see what you need to accomplish.  Additionally, all authoritative due dates will appear in Canvas.  You can see them in the sidebar, and also under the assignment listings.
 
 ### Codio
 

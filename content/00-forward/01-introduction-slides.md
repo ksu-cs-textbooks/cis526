@@ -3,8 +3,8 @@ type: "reveal"
 hidden: true
 ---
 <section>
-	<h2>Welcome to CIS 527</h2><br>Enterprise Systems Administration<br><br>
-	<h2>Welcome to CC 510</h2><br>Computer Systems Administration
+	<h2>Welcome to CIS 526</h2><br>Web Application Development<br><br>
+	<h2>Welcome to CC 515</h2><br>Full Stack Web Development
 </section>
 <section>
 	<h3>Russell Feldhausen</h3>
@@ -21,28 +21,27 @@ hidden: true
 </section>
 <section>
 	<h3>Content Credits</h3>
-	Seth Galitzer - sgsax AT ksu DOT edu<br>
-	Many Previous TAs & Students
+	Nathan Bean - nhbean AT ksu DOT edu<br>
 </section>
 <section>
 	<h3>Course Structure</h3>
 	<ul>
-		<li>7 Lab Modules + Final Project</li>
+		<li>8 Lab Modules</li>
+		<li>6 Milestones
 		<li>Gated - Must Complete in Order</li>
 		<li><b>==One Module Due Each Week==</b></li>
 		<li>Can Work Ahead At Your Own Pace</li>
-		<li>Interactive Lab Grading</li>
-		<li>Complete by July 30, 2021</li>
+		<li>Complete by July 29, 2022</li>
 	</ul>
 </section>
 <section>
 	<h3>Module 0 - Course Introduction</h3>
 	<ul>
-		<li>Navigating Canvas & YouTube</li>
+		<li>Navigating Canvas, Codio & YouTube</li>
 		<li>Syllabus</li>
 		<li>Introduce Yourself!</li>
 		<li>0 - Course Readiness Quiz</li>
-		<li>Extra Credit - Bug Bounty</li>
+		<li>Extra Credit - Bug Bounty & Helping Hands</li>
 	</ul>
 </section>
 <section>
@@ -58,10 +57,9 @@ hidden: true
 <section>
 	<h3>Grading</h3>
 	<ul>
-		<li>70% Lab Assignments (10% Each)</li>
-		<li>10% Quizzes (0.66% Each)</li>
-		<li>10% Discussions (2% Each)
-		<li>10% Final Project</li>
+		<li>25% - Activities & Quizzes</li>
+		<li>35% - Tutorials</li>
+		<li>40% - Projects</li>
 		<li>Some Extra Credit Available<br>(Bug Bounty)</li>
 	</ul>
 	<p>Standard 90-80-70-60 grading scale</p>
@@ -80,16 +78,14 @@ hidden: true
 		<li>~6 Hrs. Content per Module</li>
 		<li>1 - 6 Hrs. Lab Work per Module</li>
 		<li>6 Hrs. Content +<br>6 Hrs. Lab per Week</li>
-		<li>Labs Graded by Instructor/GTA</li>
+		<li>Graded by Instructor/GTA</li>
 		<li>Office Hours (Virtual)</li>
 	</ul>
 </section>
 <section>
 	<h3>Required Supplies</h3>
 	<ul>
-		<li>Personal Computer</li>
-		<li>Plenty of RAM and CPU Power</li>
-		<li>Virtual Machine Software</li>
+		<li>Modern Web Browser</li>
 		<li>High-Speed Internet Connection</li>
 		<li><i>Concerns? Ask Instructor</i></li>
 	</ul>
@@ -106,7 +102,7 @@ hidden: true
 		<li>Read the Syllabus</li>
 		<li>Post in the <i>Introduce Yourself!</i> Discussion</li>
 		<li>Complete the <i>Course Readiness Quiz</i></li>
-		<li>Read the <i>Extra Credit - Bug Bounty</i> Assignment</li>
+		<li>Read the <i>Extra Credit</i> Assignments</li>
 	</ul>
 </section>
 <section>
