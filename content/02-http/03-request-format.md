@@ -65,4 +65,7 @@ It is also acceptable to have no body - this is commonly the case with a GET req
 The HTTP/1.1 request definition can be found in [W3C RFC 2616 Section 5](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5)
 {{% /notice %}}
 
+{{% notice tip %}}
+You can see a live demonstration of making a manual HTTP request using telnet in the [CIS 527 Textbook](https://textbooks.cs.ksu.edu/cis527/3-core-networking-services/13-http/)
+{{% /notice %}}
 

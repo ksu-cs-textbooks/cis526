@@ -45,8 +45,7 @@ You should see a new panel open in your browser, and under its 'elements' tab th
 
 ![The Elements tab of the Chrome Developer Tools]({{<static "images/1.2.2.png" >}})
 
-Collapsed nodes can be expanded by clicking on the arrow next to them.  
-Try moving your mouse around the nodes in the DOM tree, and you'll see the corresponding element highlighted in the page.  You can also _dynamically edit_ the DOM tree from the elements tab by right-clicking on a node.
+Collapsed nodes can be expanded by clicking on the arrow next to them. Try moving your mouse around the nodes in the DOM tree, and you'll see the corresponding element highlighted in the page.  You can also _dynamically edit_ the DOM tree from the elements tab by right-clicking on a node.
 
 Try right-clicking on the `<h1>` node and selecting 'edit text'.  Change the text to "Hello Browser DOM".  See how it changes the page?  
 

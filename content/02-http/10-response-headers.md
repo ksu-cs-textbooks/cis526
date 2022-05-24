@@ -15,7 +15,7 @@ indicates to the browser that this content will expire June 12, 2019 at 8AM Cent
 
 Note that response headers are a subset of _message headers_ that apply specifically to requests.  As we've seen there are also message headers that apply only to HTTP requests, and some that apply to both.
 
-As HTTP is intended as an extensible protocol, there are a _lot_ of potential headers.  IANA maintains the [offical list of message headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml) as well as [a list of proposed message headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml).  You can also find a categorized list in the [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+As HTTP is intended as an extensible protocol, there are a _lot_ of potential headers.  IANA maintains the [official list of message headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml) as well as [a list of proposed message headers](https://www.iana.org/assignments/message-headers/message-headers.xhtml).  You can also find a categorized list in the [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
 
 While there are many possible response headers, some of the more commonly used are:
 

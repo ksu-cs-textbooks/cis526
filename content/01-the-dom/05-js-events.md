@@ -52,11 +52,11 @@ An important takeaway from the discussion of the event loop is that the actual p
 
 However, JavaScript _does_ retain many of the benefits of concurrency within its model.  For example, when the DOM is loading and encounters an element referencing an external resource (i.e. a `video`, `img`, `link`, or `script` element), it triggers a request to retrieve that resource through the browser.  The browser does so _while the JavaScript code continues executing_.  When the resource is fully downloaded by the browser, it creates a `'load'` event with the details, and adds it to the JavaScript event queue.  Multiple files are therefore downloaded _concurrently_, but our JavaScript handles the results one-by-one in a single-threaded manner.
 
-Think of the JavaScript event loop as a busy manager that only works on one thing at a time.  He might send several workers out to get information.  When they return, they form a line in front of his desk and wait patiently.  Once he finishes the task he has been working on, he takes the report from the first worker in line, and starts doing what he needs to do with the returned information.  Once he finishes that, he has the second employee report, and so on.
+Think of the JavaScript event loop as a busy manager that only works on one thing at a time.  The manager might send several workers out to get information.  When they return, they form a line in front of the manager's desk and wait patiently.  Once the manager is finished with the task they have been working on, they take the report from the first worker in line, and starts doing what is needed to be done with the returned information.  Once the manager finishes that, the next employee will report, and so on.
 
 ## Common Events
 
-There are many kinds of events in JavaScript; you can find a complete list in the [mdn docs](https://developer.mozilla.org/en-US/docs/Web/Events).  However some of the ones you will likely find yourself using are:
+There are many kinds of events in JavaScript; you can find a complete list in the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/Events).  However some of the ones you will likely find yourself using are:
 
 * [load](https://developer.mozilla.org/en-US/docs/Web/Events/load) - Triggered when a resource (i.e. an image, video, stylesheet, script) has finished loading.  You can also listen for the load event on the `document` itself; here it will be triggered after _all_ the resources on the page are loaded.
 
@@ -84,7 +84,7 @@ setTimeout(function() { console.log("Hello time!")}, 3000);
 
 You will notice that the [setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) method takes a function to execute at that future point in time, much like attaching an event handler.  The second argument is the number of milliseconds in the future for this event to occur.  The timer works like an event, when the time expires, a corresponding event is added to the event queue, to trigger the delayed function.  
 
-An important side-effect of this approach is that you only know the timer's result won't happen _before_ the delay you specify, but if the JavaScript vm is engaged in a long-running process, it may be longer before your timer event is triggered.
+An important side-effect of this approach is that you only know the timer's result won't happen _before_ the delay you specify, but if the JavaScript virtual machine is engaged in a long-running process, it may be longer before your timer event is triggered.
 
 For events you need to do on a regular interval, use [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) instead.  This will invoke the supplied function at each elapsing of the supplied interval.  It also returns a unique id that can be supplied to [clearInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval) to stop the timed event.
 

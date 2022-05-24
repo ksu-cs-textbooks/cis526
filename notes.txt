@@ -18,7 +18,31 @@ Installed:
 * .NET 6.0 SDK and Runtime: https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#1804
 * `sqlite3`
 
-NOTE! You MUST symlink the node installed by NVM to the /usr/local/bin folder.
+NOTE! You MUST symlink the node installed by NVM to the /usr/local/bin folder. That is the easiest way to make it the default version of node. This will need to be updated each time node is updated through NVM.
 
 Use `which node` to find the path, then update in this command:
 `sudo ln -s /home/codio/.nvm/versions/node/v16.15.0/bin/node /usr/local/bin/node`
+
+Installed the following global Node packages:
+
+* `ansi-to-html`
+* `https://github.com/cis526-codio/avow` (Custom library by Nathan)
+* `axios`
+* `cheerio`
+* `es6-promise`
+* `highlight`
+* `jest`
+* `jest-cli`
+* `jquery`
+* `phantomjs-prebuilt` (note: I could not get the default `phantomjs` package to install properly)
+* `showdown`
+
+Use `npm install -g --force <package>` to install packages globally. They will be in the `/home/codio/.nvm/versions/node/v16.15.0/lib/node_modules/` folder. 
+
+To add these packages to the node path, each autograder references a script in this location: `/etc/profile.d/nodejs.sh`. So, on the stack, create that file with the following content:
+
+```bash
+export NODE_PATH=/home/codio/.nvm/versions/node/v16.15.0/lib/node_modules/
+```
+
+Update the path above to match the node version. This file will need to be created as root and given execute permissions `sudo chmod a+x nodejs.sh`

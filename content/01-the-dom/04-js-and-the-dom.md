@@ -81,7 +81,7 @@ Much easier than `document.body.firstElementChild.firstElementChild` isn't it?
 
 ## Manipulating DOM Elements
 
-All HTML elements in the DOM also implement the [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) interface, which also provides acccess to the element's attributes and styling.  So when we retrieve an element from the DOM tree, we can modify these.
+All HTML elements in the DOM also implement the [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) interface, which also provides access to the element's attributes and styling.  So when we retrieve an element from the DOM tree, we can modify these.
 
 Let's tweak the color of the `<h1>` element we saved a reference to in the `header` variable:
 
