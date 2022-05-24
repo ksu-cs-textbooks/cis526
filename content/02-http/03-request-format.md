@@ -27,7 +27,7 @@ _SP_ refers to the space character.
 
 The _Request-URI_ is a Universal Request Indicator, and is typically a URL or can be the asterisk character (\*), which refers to the server instead of a specific resource. 
 
-_HTTP-Verson_ refers to the version of the HTTP protocol that will be used for the request.  Currently three versions of the protocol exist: `HTTP/1.0`, `HTTP/1.1`, and `HTTP/2.0`.  Most websites currently use HTTP/1.1 (HTTP/2.0 introduces many changes to make HTTP more efficient, at the cost of human readability.  Currently it is primarily used by high-traffic websites).
+_HTTP-Version_ refers to the version of the HTTP protocol that will be used for the request.  Currently three versions of the protocol exist: `HTTP/1.0`, `HTTP/1.1`, and `HTTP/2.0`.  Most websites currently use HTTP/1.1 (HTTP/2.0 introduces many changes to make HTTP more efficient, at the cost of human readability.  Currently it is primarily used by high-traffic websites).
 
 Finally, the _CRLF_ indicates a carriage return followed by a line feed.
 
@@ -64,8 +64,3 @@ It is also acceptable to have no body - this is commonly the case with a GET req
 {{% notice info %}}
 The HTTP/1.1 request definition can be found in [W3C RFC 2616 Section 5](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html#sec5)
 {{% /notice %}}
-
-{{% notice tip %}}
-You can see a live demonstration of making a manual HTTP request using telnet in the [CIS 527 Textbook](https://textbooks.cs.ksu.edu/cis527/3-core-networking-services/13-http/)
-{{% /notice %}}
-
