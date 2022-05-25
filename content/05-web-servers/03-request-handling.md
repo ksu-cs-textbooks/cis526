@@ -85,7 +85,7 @@ The sending of a response with a body is a bit more involved.  For example, to s
 
 Notice too, that we need to account for the possibility of an error while loading the file _index.html_.  If this happens, we send a **500 Server Error** status code indicating that something went wrong, and it happened on _our_ end, not because of a problem in the way the client formatted the request.  Notice too that we use a `return` to prevent executing the rest of our code.
 
-We also supply the length of the response body, which will be the same as the buffer length or the length of a string sent as the body.  Binary data for the web is counted in octects (eight bits) which conveniently is also how Node buffers are sized and the size of a JavaScript character.  
+We also supply the length of the response body, which will be the same as the buffer length or the length of a string sent as the body.  Binary data for the web is counted in octets (eight bits) which conveniently is also how Node buffers are sized and the size of a JavaScript character.  
 
 ## Chaining writeHead() and end()
 

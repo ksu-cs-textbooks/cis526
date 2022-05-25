@@ -25,7 +25,7 @@ Let's break down what each part means.  First, the enclosing forward slashes (`/
 
 ## Writing Regular Expressions and Scriptular 
 
-As you can see, regular expressions make use of a decent number of special characters, and can be tricky to write.  One of the greatest tools in your arsenal when dealing with Regular Expressions is the web app <a href="https://scriptular.com/" target="_blank">Scriptular.com</a> (click the link to open it in a new tab).  It lists characters with special meanings for regular expressions on the right, and provides an interactive editor on the left, where you can try out regular expressions against target text. 
+As you can see, regular expressions make use of a decent number of special characters, and can be tricky to write.  One of the greatest tools in your arsenal when dealing with Regular Expressions are web apps such as <a href="https://scriptular.com/" target="_blank">Scriptular.com</a> or <a href="https://regex101.com/" target="_blank">Regex101</a>(click the link to open it in a new tab).  It lists characters with special meanings for regular expressions on the right, and provides an interactive editor on the left, where you can try out regular expressions against target text. 
 
 You can, of course, do the same thing on the console, but I find that using Scriptular to prototype regular expressions is faster.  You can also clone the [Scriptular Github repo](https://github.com/jonmagic/scriptular) and use it locally rather than on the internet.  A word of warning, however, always test your regular expressions in the context you are going to use them - sometimes something that works in Scriptular doesn't quite in the field (especially with older browsers and Node versions).
 

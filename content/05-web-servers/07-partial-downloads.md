@@ -5,7 +5,7 @@ weight: 70
 date: 2018-08-24T10:53:26-05:00
 ---
 
-While we normally think of downloading an entire file from the web, there are some situations where it makes sense to download only _part_ of a file.  One case is with a large file download that gets interrupted - it makes a lot of sense to start downloading the remaining bytes from where you left off, rather han starting over again. A second case is when you are streaming media; often the user may not watch or listen to the entire media file, so why download the bytes they don't need?  Or if it is a live stream, we explicitly _can't_ download the entire thing, because later parts do not yet exist!
+While we normally think of downloading an entire file from the web, there are some situations where it makes sense to download only _part_ of a file.  One case is with a large file download that gets interrupted - it makes a lot of sense to start downloading the remaining bytes from where you left off, rather than starting over again. A second case is when you are streaming media; often the user may not watch or listen to the entire media file, so why download the bytes they don't need?  Or if it is a live stream, we explicitly _can't_ download the entire thing, because later parts do not yet exist!
 
 ## Range Headers
 
