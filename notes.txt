@@ -18,6 +18,8 @@ Installed:
 * .NET 6.0 SDK and Runtime: https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu#1804
 * `sqlite3`
 
+After installing NVM, install the latest version of NodeJS LTS (v16.15.0 as of this writing)
+
 NOTE! You MUST symlink the node installed by NVM to the /usr/local/bin folder. That is the easiest way to make it the default version of node. This will need to be updated each time node is updated through NVM.
 
 Use `which node` to find the path, then update in this command:
@@ -33,9 +35,13 @@ Installed the following global Node packages:
 * `highlight`
 * `jest`
 * `jest-cli`
+* `jest-environment-jsdom`
+    * Any existing `jest.config.json` files may need the following added: `"testEnvironment": "jsdom"`
 * `jquery`
 * `phantomjs-prebuilt` (note: I could not get the default `phantomjs` package to install properly)
 * `showdown`
+* `https://github.com/cis526-codio/codio-css-utils` (Custom fork of https://bitbucket.org/dwarfy/codio-css-utils/src/master/)
+* `chalk@4.1.2` (newer versions of Chalk are pure ESM which doesn't play nice with current autograder. See https://github.com/microsoft/TypeScript/issues/46930)
 
 Use `npm install -g --force <package>` to install packages globally. They will be in the `/home/codio/.nvm/versions/node/v16.15.0/lib/node_modules/` folder. 
 

@@ -19,3 +19,18 @@ The Node event loop is divided into a series of phases - each queues the associa
 ![JavaScript ]({{<static "images/4.2.2.png">}})
 
 For a more detailed breakdown of the Node event loop, check out [this blog post](https://medium.com/the-node-js-collection/what-you-should-know-to-really-understand-the-node-js-event-loop-and-its-metrics-c4907b19da4c) by Daniel Khan or the [Node Event Loop Documentation](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/).
+
+## Console
+
+To produce output on the terminal, Node provides a global instance of a [Console](https://nodejs.org/api/console.html) called `console` that is accessible throughout the code. The typical way to produce text output on the terminal in Node is using the `console.log()` method. 
+
+Node actually defines multiple log functions corresponding to different _log levels_, indicating the importance of the message.  These are (in order of severity, least to most):
+
+1. `console.debug()`
+2. `console.info()`
+3. `console.warn()`
+4. `console.error()`
+
+These are all aliases for `console.log()` (`console.debug()` and `console.info()`) or `console.error()` (`console.warn()` and `console.error()`).  They don't really do anything different, which might lead you to wonder why they exist...
+
+But remember, JavaScript is a _dynamic_ language, so we can re-define the `console` object with our own custom implementation that _does_ do something unique with these various versions.  But because they exist, they can _also_ be used with the built-in console.  This way our code can be compatible with both approaches!

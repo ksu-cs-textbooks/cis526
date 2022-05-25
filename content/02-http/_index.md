@@ -10,4 +10,4 @@ pre = "<b>2. </b>"
 
 # Hyper-Text Transfer Protocol
 
-Ettiquette for Web Servers and Clients
+Etiquette for Web Servers and Clients

@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 {{< console >}}
 
-Promises replace the callback mechanism with a JavaScript object, a `Promise`.  In many ways, this is similar to the `XMLHttpRequest` object that is at the heart of [AJAX](<ref "c-js/11-ajax">).  You can think of it as a state machine that is in one of three states: _pending_, _fullfilled_, or _rejected_.  
+Promises replace the callback mechanism with a JavaScript object, a `Promise`.  In many ways, this is similar to the `XMLHttpRequest` object that is at the heart of [AJAX](<ref "c-js/11-ajax">).  You can think of it as a state machine that is in one of three states: _pending_, _fulfilled_, or _rejected_.  
 
 A promise can be created by wrapping an asynchronous call within a new `Promise` object.  For example, we can turn a `setTimeout()` into a promise with:
 
@@ -110,7 +110,7 @@ Now when we run this code, the error is handled by our `catch()`.  We're still p
 Let's try one more - an array that _cannot_ be averaged, i.e.:
 
 ```js
-computeAverage(['A', 'bannana', true])
+computeAverage(['A', 'banana', true])
     .then(average => console.log("The average is", average))
     .catch(err => console.error("Encountered an error:", err));
 ```
@@ -180,7 +180,7 @@ webapp.get('/login', (req, res))
     .then(hash => {
         if(hash === user.passwordHash)
             res.setCookie({user: user});
-            res.end(200, "Logged in succesfully");
+            res.end(200, "Logged in successfully");
         else 
             res.end(403, "Unknown username/password combo");
     })

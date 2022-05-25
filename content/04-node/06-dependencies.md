@@ -39,6 +39,6 @@ In addition to regular dependencies, we can specify dependencies we only need du
 
 {{% notice info %}}
 ## The NPM Registry 
-There are many ways to connect with dependencies, but one of the easiest and most popular is to use the [NPM Registry](https://www.npmjs.com/), a searchable, online directory of npm packages maintained by npm, Inc. You can search for keywords and (hopefully) fin a project that fits your needs.
+There are many ways to connect with dependencies, but one of the easiest and most popular is to use the [NPM Registry](https://www.npmjs.com/), a searchable, online directory of npm packages maintained by npm, Inc. You can search for keywords and (hopefully) find a project that fits your needs.
 {{% /notice %}}
 

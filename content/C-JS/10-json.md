@@ -4,7 +4,6 @@ pre: "10. "
 weight: 100
 date: 2018-08-24T10:53:26-05:00
 ---
-{{< console >}}
 
 JSON is an acronym for _JavaScript Object Notation_, a serialization format that was developed in conjunction with ECMAScript 3.  It is a standard format, as set by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). 
 
@@ -12,7 +11,7 @@ JSON is an acronym for _JavaScript Object Notation_, a serialization format that
 Essentially, it is a format for transmitting JavaScript objects.  Consider the JavaScript object literal notation:
 
 ```js
-var whilma = {
+var wilma = {
   name: "Wilma Flintstone",
   relationship: "wife"
 }
@@ -25,7 +24,7 @@ var fred = {
   name: "Fred Flintstone",
   job: "Quarry Worker",
   payRate: 8,
-  dependents: [whilma, pebbles]
+  dependents: [wilma, pebbles]
 }
 ```
 
@@ -50,7 +49,7 @@ If we were to express the same object in JSON:
 }
 ```
 
-As you probably notice, the two are very similar.  Two differences probably stand out: First, references (like whilma and pebbles) are replaced with a JSON representation of their values.  And second, all property names (the keys) are expressed as strings, not JavaScript symbols.
+As you probably notice, the two are very similar.  Two differences probably stand out: First, references (like wilma and pebbles) are replaced with a JSON representation of their values.  And second, all property names (the keys) are expressed as strings, not JavaScript symbols.
 
 A discussion of the full syntax can be found in the [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) and also at [json.org](https://json.org/).
 
@@ -160,3 +159,6 @@ var guyClone.mother.hobbies.push("Skydiving");
 The original `guy`'s mother will be unchanged, i.e. it will _not_ include Skydiving in her hobbies.
 
 {{% /notice %}}
+
+
+{{< console >}}
