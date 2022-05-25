@@ -25,6 +25,9 @@ NOTE! You MUST symlink the node installed by NVM to the /usr/local/bin folder. T
 Use `which node` to find the path, then update in this command:
 `sudo ln -s /home/codio/.nvm/versions/node/v16.15.0/bin/node /usr/local/bin/node`
 
+You'll need to do the same for `npm` as well:
+`sudo ln -s /home/codio/.nvm/versions/node/v16.15.0/bin/npm /usr/local/bin/npm`
+
 Installed the following global Node packages:
 
 * `ansi-to-html`
