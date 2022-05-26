@@ -6,9 +6,13 @@
         "flexbox",
         "Flintstone",
         "mousedown",
+        "posix",
+        "querystring",
         "serializable",
         "situationally",
-        "transpilation"
+        "templating",
+        "transpilation",
+        "webservers"
     ],
     "explorer.sortOrder": "mixed"
 }
