@@ -149,3 +149,5 @@ SELECT * FROM persons INNER JOIN jobs_persons ON persons.id = jobs_persons.perso
 ```
 
 While this may seem less convenient than the ActiveRecord or Entity Framework approaches, it is immediately clear to a seasoned SQL programmer what the tables involved are and how they are related.  Moreover, a good SQL programmer can often write a more efficient query than an ORM library can generate.
+
+<!-- TODO Talk about Knex and Objection.js? -->

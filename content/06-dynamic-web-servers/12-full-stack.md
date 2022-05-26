@@ -27,7 +27,7 @@ Creating and serving dynamic content is typically done by writing a custom appli
 
 Some interpreted programming languages are typically managed by a web server like Apache, which utilizes plug-ins to run [PHP](https://cwiki.apache.org/confluence/display/HTTPD/PHP), [Ruby](https://www.modruby.net/), or [Python](http://modpython.org/). Similarly, IIS runs ASP.NET program scripts written in C# or Visual Basic. This helps offset some of the time penalty incurred by creating the dynamic content with an interpreted programming language, as static content benefits from the server optimizations.
 
-In contrast, other languages are more commonly used to write a web server that handles _both_ static and dynamic content.  This includes more system-oriented languages like [C/C++](https://isocpp.org/), [Java](https://www.java.com/), and [Go](https://golang.org/)and more interpreted languages like [Node.js](https://nodejs.org/).
+In contrast, other languages are more commonly used to write a web server that handles _both_ static and dynamic content.  This includes more system-oriented languages like [C/C++](https://isocpp.org/), [Java](https://www.java.com/), and [Go](https://golang.org/) and more interpreted languages like [Node.js](https://nodejs.org/).
 
 In either case, the programming language is often combined with a _framework_ written in that language that provides support for building a web application.  Some of the best-known frameworks (and their languages) are:
 
@@ -38,12 +38,13 @@ In either case, the programming language is often combined with a _framework_ wr
 * [ASP.NET](https://dotnet.microsoft.com/apps/aspnet) (C#)
 * [Ruby on Rails](https://rubyonrails.org/) (Ruby)
 * [Grails](https://grails.org/) (Java/Groovy)
+* [Spring](https://spring.io/) (Java)
 * [Phoenix](https://www.phoenixframework.org/) (Elixir)
 
 ## Providing Persistent Data Storage
 While a file system is the traditional route for persistent storage of data in files, as we saw in our discussion of static file servers, holding data in memory can vastly improve server performance.  However, memory is _volatile_ (it is flushed when the hardware is powered down), so an ideal system combines long-term, file-based storage with in-memory caching. Additionally, _structured access_ to that data (allowing it to be queried systematically and efficiently) can also greatly improve performance of a webserver.
 
-This role is typically managed by some flavor of database application.  Relational databases like the open-source [MySQL](https://www.mysql.com/) and [PostgresSQL](https://www.postgresql.org/), and closed-source [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-2019) and [Oracle Database](https://www.oracle.com/database/) remain popular options.  However, NoSQL databases like [MongoDB](https://www.mongodb.com/) and [CouchDB](https://couchdb.apache.org/) are gaining a greater market share and are ideal for certain kinds of applications. Cloud-based persistence solutions like [Google Firebase](https://firebase.google.com/) are also providing new alternatives.
+This role is typically managed by some flavor of database application.  Relational databases like the open-source [MySQL](https://www.mysql.com/) and [PostgresSQL](https://www.postgresql.org/), and closed-source [SQL Server](https://www.microsoft.com/en-us/sql-server/) and [Oracle Database](https://www.oracle.com/database/) remain popular options.  However, NoSQL databases like [MongoDB](https://www.mongodb.com/) and [CouchDB](https://couchdb.apache.org/) are gaining a greater market share and are ideal for certain kinds of applications. Cloud-based persistence solutions like [Google Firebase](https://firebase.google.com/) are also providing new alternatives.
 
 ## The Stack
 This combination of software, programming language, along with the operating system running them have come to be referred to as a **stack**.  Web developers who understood and worked with all of the parts came to be known as **full-stack developers**.  

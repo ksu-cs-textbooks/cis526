@@ -34,7 +34,7 @@ Relational databases (also called SQL databases) provide a highly-structured sto
   </tbody>
 </table>
 
-Relational databases are often called SQL databases as we use _Structured Query Language (SQL)_ to communicate with them.  This is a domain-specific language similar to the LINQ you learned about in CIS 400 (actually, LINQ derives much of its syntax from SQL).  Queries are streamed to a relational database across a socket or other connection, much like HTTP requests and responses are.  The response is received also as text which must be parsed to be used.
+Relational databases are often called SQL databases as we use _Structured Query Language (SQL)_ to communicate with them.  This is a domain-specific language similar to the LINQ you may have learned about in CIS 400 (actually, LINQ derives much of its syntax from SQL).  Queries are streamed to a relational database across a socket or other connection, much like HTTP requests and responses are.  The response is received also as text which must be parsed to be used.
 
 SQL is used to construct the structure of the database.  For example, we could create the above table with the SQL command:
 
@@ -52,7 +52,7 @@ SQL is also used to _query_ the database.  For example, to find all people with 
 SELECT * FROM persons WHERE last='Smith';
 ```
 
-You will learn more about writing SQL queries in the CIS 580 course.  You can also find an excellent guide on [W3C schools](https://www.w3schools.com/sql/), with interactive tutorials.  We'll briefly cover some of the most important aspects of relational databases for web developers here, but you would be wise to seek out additional learning opportunities.  Understanding relational databases well can make a great deal of difference in how performant your web applications are.
+You will learn more about writing SQL queries in the CIS 560 or CC 520 course.  You can also find an excellent guide on [W3C schools](https://www.w3schools.com/sql/), with interactive tutorials.  We'll briefly cover some of the most important aspects of relational databases for web developers here, but you would be wise to seek out additional learning opportunities.  Understanding relational databases well can make a great deal of difference in how performant your web applications are.
 
 The key to performance in relational databases is the use of _keys_ and _indices_.  A key is a column whose values are unique (not allowed to be repeated).  For example, the `id` column in the table above is a key.  Specifically, it is a sequential primary key - for each row we add to the table it increases, and its value is determined by the database.  Note the jump from `1` to `3` - there is no guarantee the keys will always be exactly one more than the previous one (though it commonly is), and if we delete rows from a table, the keys remain the same.  
 
@@ -188,17 +188,17 @@ Because more than one person can have the same job, and we might want to look up
       <td>1</td>
     </tr>
     <tr>
-      <td>0</td>
+      <td>1</td>
       <td>2</td>
       <td>2</td>
     </tr>
     <tr>
-      <td>0</td>
+      <td>2</td>
       <td>3</td>
       <td>1</td>
     </tr>
     <tr>
-      <td>0</td>
+      <td>3</td>
       <td>3</td>
       <td>3</td>
     </tr>

@@ -176,8 +176,7 @@ Concise templating languages can significantly reduce the amount of typing invol
 {{% notice info %}}
 EJS is just one template library available in JavaScript.  Some of the most popular ones include:
 
-* [Moustache](https://mustache.github.io/)
-* [Underscore](http://underscorejs.org/)
+* [Mustache](https://mustache.github.io/)
 * [Handlebars](https://handlebarsjs.com/)
 * [Nunjucks](https://mozilla.github.io/nunjucks/)
 * [Underscore](http://underscorejs.org/)

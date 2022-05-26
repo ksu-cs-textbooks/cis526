@@ -44,7 +44,7 @@ Our naive concatenation approach then creates _two_ SQL commands:
 SELECT * FROM people WHERE last='bob'; UPDATE users SET admin=true WHERE username='saavyhacker';
 ```
 
-When we run this query, our savvy hacker just made themselves an admin on our site (assuming our database has a users table with an admin column we use to determine thier role)!
+When we run this query, our savvy hacker just made themselves an admin on our site (assuming our database has a users table with an admin column we use to determine their role)!
 
 This is just the tip of the iceberg for SQL injection attacks - there are many, many variations on the theme.
 
