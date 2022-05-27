@@ -3,7 +3,7 @@ type: "reveal"
 hidden: true
 ---
 <section>
-	<h2>CIS 527 / CC 510</h2><br><br>Where to Find Help
+	<h2>CIS 526 / CC 515</h2><br><br>Where to Find Help
 </section>
 <section>
   <h3>Assignment Issues</h3>

@@ -12,6 +12,7 @@ This textbook was authored for the **CIS 526 - Web Application Development** cou
 <!-- Rerecord Video? -->
 
 #### Resources
+* [Slides]({{< relref "/00-forward/03-where-to-find-help-slides.md" >}})
 * [K-State IT Help Desk](https://www.k-state.edu/its/helpdesk/) - Email [helpdesk@ksu.edu](mailto:helpdesk@ksu.edu)
 * [Syllabus]({{<ref "00-forward/06-syllabus">}})
 * [K-State Online Canvas Help](http://public.online.k-state.edu/help/)
