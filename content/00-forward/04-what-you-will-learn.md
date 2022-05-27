@@ -15,105 +15,119 @@ The following is an outline of the topics we will be covering and when.
 This course is still under development, so some of the content listed here may change before we reach that module.
 {{% /notice %}}
 
-<!-- TODO Review -->
+#### Week 1: Web Application Foundations
 
-Week 1: Web Application Fundamentals
-* Module: Exploring the Document Object Model<br>
-    * Readings 1.1-1.4
-    * [Tutorial] Creating a Dialog 
-* Module: Responsive Design
-    * Readings chapter 1.5-1.6
+* The Document Object Model
+    * Chapter 1
+    * [Tutorial] Creating a Dialog
+* HTTP
+    * Chapter 2
+    * [Activity] Making Manual HTTP Requests
+* Responsive Design
+    * Chapter B
     * [Tutorial] Responsive Card Layout
-* Module: HTTP
-    * Readings (HTTP Protocol, DOM Page Loads, JSON)
-    * [Activity] Manual HTTP Request with Webcat?
-    * [Tutorial] List contents of a database retrieved from static JSON file
-* Project:
-    * Expanding card layout using JSON data fetched from the server 
-    * CSTA standards page?
+* Project Milestone 1
+    * Card Layout
+    * Accessing Data from a Web API
 
-Week 2: Advanced JavaScript
-* Module: The Asynchronous Advantage
-    * Readings (event loop, asynchronous processing, web workers)
-    * [Tutorial] Image filters
-* Module: Introduction to Node
-    * Readings (node, packages, modules, dependencies)
-    * [Tutorial] Markdown file conversion
-* Module: ECMA6 
-    * Readings (classes, modules, promises, async/await, transpiling)
-    * [Tutorial] Using Webpack?
-* Project: 
-    * Filtering and Searching the CSTA standards Page
+#### Week 2: Advanced JavaScript
 
-Week 3: Web Server Fundamentals 
-* Module: A Basic Webserver
-    * Readings (Node HTTP library, request-response pattern)
-    * [Tutorial] A Node Fileserver
-* Module: HTTP Requests from JavaScript 
-    * Readings (AJAX, Fetch, APIs)
-    * [Tutorial] Dynamic TODO list
-* Module: Dynamic Webserver
-    * Readings (Routing, Regular Expressions)
-    * [Tutorial] Serving Markdown as HTML
-* Project:
-    * Moving the CSTA page to a dynamic Node server
+* JSON and AJAX
+    * [Activity] Working with JSON
+    * [Activity] Making an AJAX Request
+* Asynchronous JavaScript
+    * Chapter 3
+    * [Tutorial] Web Workers
+* Introduction to Node
+    * Chapter 4
+    * [Tutorial] Your First Package
+    * [Activity] Fun with Files
+* Project Milestone 2
+    * Request Data via AJAX
+    * Dynamically Render Page
 
-Week 4: Data and the Web
-* Module: Relational Databases
-    * Readings (SQL, ORMs, full-text search)
-    * [Tutorial] Working with Massive
-* Module: APIs
-    * Readings (CRUD, REST, Postman)
-    * [Tutorial] Exposing a database through an API
-* Module: Parsing Form Data
-    * Readings (form serialization formats)
-    * [Tutorial] Writing a body parser
-* Project:
-    * Integrating a database
-    * CSTA Resources page?
+#### Week 3: Web Servers
 
-Week 5: The Dynamic Web App
-* Module: Adding Persistence
-    * Readings (Cookies, local storage, session strategies)
-    * [Tutorial] A shopping cart
-* Module: HTML Templates
-    * Readings (Template libraries, Component-Based Design)
-    * [Tutorial] Rendering templates
-* Module: Parsing Multipart Form Data
-    * Readings (form serialization formats)
-    * [Tutorial] Writing a body parser
-* Project:
-    * Adding Profile pages
+* Basic Web Server
+    * Chapter 5
+    * [Tutorial] Hello Web
+* File Server Basics
+    * Chapter 5 (cont.)
+    * [Tutorial] Node File Server
+* Directory Listing
+    * Chapter 5 (cont.)
+    * [Tutorial] Directory Listing
+* Partial Downloads
+    * Chapter 5 (cont.)
+    * Chapter C
+    * [Activity] Regular Expressions
+    * [Tutorial] Streaming Media
+* Project Milestone 3
+    * Refactor Project to Node
 
-Week 6: Securing your App
-* Module: Basic Password Authentication
-    * Readings (encryption, password hashing, salt and pepper)
-    * [Tutorial] writing basic password auth
-* Module: Delegating Authority
-    * Readings (CAS, OAUTH)
-    * [Tutorial] CAS authentication
-* Module: Javascript Web Tokens 
-    * Readings (JWT)
-    * [Tutorial] Creating JWTs
-* Project:
-    * Adding user accounts
+#### Week 4: Dynamic Web Servers
 
-Week 7: Single Page Apps
-* Progressive Web Apps
-    * Readings (PWA, PWA Tools)
-    * [Tutorial] Convert a single-page app to a PWA
-* Module: Introduction to React
-    * Readings (Component-Based React, the Shadow DOM, Declarative rendering, JSX)
-    * [Tutorial] A first React App
-* Project:
-    * Adding a forum
+* Server Pages
+    * Chapter 6
+    * [Exercise] ECMAScript Server Pages
+    * [Tutiroal] Image Gallery
+* Uploading Data
+    * Chapter 6 (cont.)
+    * [Exercise] Uploading Form Data
+    * [Exercise] Uploading Files
+* Adding State
+    * Chapter 6 (cont.)
+    * [Activity] Fun with Cookies
+    * [Tutorial] Gallery Favorites
 
+#### Week 5: Full Stack Development
 
-Week 8: A Survey of Popular Web Frameworks
-* Express
-* React
-* Ruby on Rails
-* Laravel
-* Flask
-* Django
-* MVC
+* Templates
+    * Chapter 6 (cont.)
+    * [Tutorial] Node Directory Listing in EJS
+    * [Exercise] A Template By Another Name
+* Full Stack Development
+    * Chapter 6 (cont.)
+* Persistent Storage
+    * Chapter 7
+    * [Tutorial] Blog Part 1
+* Routing
+    * Chapter 8
+    * [Tutorial] Blog Part 2
+    * [Tutorial] Blog Part 3
+* Project Milestone 4
+    * REfactor to Express
+    * Add API Endpoints
+    * Handle Requests for Items
+    * Templates
+
+#### Week 6: Web Frameworks
+
+* Authentication
+    * Chapter 9
+    * [Tutorial] Blog Part 4
+    * [Tutorial] Blog Part 5
+* APIs
+    * Chapter 8 (cont.)
+    * [Tutorial] Blog Part 6
+    * [Exercise] Web Hook Demo
+* Web Frameworks
+    * Chapter 10
+    * [Tutorial] Single Page App Part 1
+    * [Tutorial] Single Page App Part 2
+* Project Milestone 5
+    * Implement Authentication
+    * Restrict Form Access to Authenticated Users
+
+#### Week 7 & 8: Potpourri
+
+* Single Sign On
+    * Chapter 9 (cont.)
+    * [Tutorial] CAS Authentication
+* ASP.NET MVC
+    * [Tutorial] ASP.NET MVC
+* React & Websockets
+    * [Tutorial] React Chat App
+* Project Milestone 6
+    * Mark Requests Complete
+    * Administrator Role & Tasks

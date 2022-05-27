@@ -9,7 +9,7 @@ Once again, we'll return to the request-response pattern diagram.
 
 ![The Request-Response Pattern]({{<static "images/8.0.1.png">}})
 
-We revist this diagram because it is so central to how HTTP servers work.  At the heart, a server's primary responsibility is to respond to an incoming request.  Thus, in _writing_ a web server, our primary task is to determine what to respond with.  With static web servers, the answer is pretty simple - we map the virtual path supplied by the URL to a file path on the file server.  But the URL supplied in a request _doesn't_ have to correspond to any real object on the server - we can create any object we want, and send it back.
+We revisit this diagram because it is so central to how HTTP servers work.  At the heart, a server's primary responsibility is to respond to an incoming request.  Thus, in _writing_ a web server, our primary task is to determine what to respond with.  With static web servers, the answer is pretty simple - we map the virtual path supplied by the URL to a file path on the file server.  But the URL supplied in a request _doesn't_ have to correspond to any real object on the server - we can create any object we want, and send it back.
 
 In our examples, we've built several functions that build specific kinds of responses.  Our `serveFile()` function serves a response representing a static file.  Our `listDirectory()` function generates an index for a directory, or if the directory contained a `index.html` file, served it instead.  And our dynamic `servePost()` from our blog served a dynamically generated HTML page that drew data from a database.
 

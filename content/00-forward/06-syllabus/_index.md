@@ -97,9 +97,9 @@ There is no shortcut to becoming a great programmer or web developer. Only by **
 
 In theory, each student begins the course with an A. As you submit work, you can either maintain your A (for good work) or chip away at it (for less adequate or incomplete work). In practice, each student starts with 0 points in the gradebook and works upward toward a final point total earned out of the possible number of points. IIn this course, each assignment constitutes a a portion of the final grade, as detailed below:
 
-* 25% - Activities & Quizzes
+* 15% - Activities & Quizzes
 * 35% - Tutorials
-* 40% - Projects
+* 50% - Projects
 
 Up to 5% of the total grade in the course is available as extra credit.  See the **Extra Credit - Bug Bounty** and **Extra Credit - Helping Hand** assignments for details.
 

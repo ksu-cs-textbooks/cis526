@@ -20,6 +20,14 @@ hidden: true
 	</p>
 </section>
 <section>
+	<h3>Communication</h3>
+	<ul>
+		<li>Discord - Course Questions, Discussions, etc</li>
+		<li>Email - Personal Issues, Grading Questions, To-dos, etc</li>
+		<li><i>Email is official, Discord is more flexible</i></li>
+	</ul>
+</section>
+<section>
 	<h3>Content Credits</h3>
 	Nathan Bean - nhbean AT ksu DOT edu<br>
 </section>
@@ -57,9 +65,9 @@ hidden: true
 <section>
 	<h3>Grading</h3>
 	<ul>
-		<li>25% - Activities & Quizzes</li>
+		<li>15% - Activities & Quizzes</li>
 		<li>35% - Tutorials</li>
-		<li>40% - Projects</li>
+		<li>50% - Projects</li>
 		<li>Some Extra Credit Available<br>(Bug Bounty)</li>
 	</ul>
 	<p>Standard 90-80-70-60 grading scale</p>

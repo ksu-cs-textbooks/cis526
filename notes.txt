@@ -45,6 +45,7 @@ Installed the following global Node packages:
 * `showdown`
 * `https://github.com/cis526-codio/codio-css-utils` (Custom fork of https://bitbucket.org/dwarfy/codio-css-utils/src/master/)
 * `chalk@4.1.2` (newer versions of Chalk are pure ESM which doesn't play nice with current autograder. See https://github.com/microsoft/TypeScript/issues/46930)
+* `better-sqlite3`
 
 Use `npm install -g --force <package>` to install packages globally. They will be in the `/home/codio/.nvm/versions/node/v16.15.0/lib/node_modules/` folder. 
 

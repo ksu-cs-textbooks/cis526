@@ -26,7 +26,7 @@ Where we use the _entire title_ as part of the URL! This makes it more human-rea
 ```js
 public handleRequest(req, res) {
     
-    // Separate the pathame from the url 
+    // Separate the pathname from the url 
     const pathname = new URL(req.url, "http://localhost").pathname;
 
     // Determine if the request is for the index page
@@ -41,3 +41,5 @@ public handleRequest(req, res) {
 ```
 
 With this regular expression, we've effectively built a wildcard into our URL.  Any URL with a pattern `/posts/[postname]` will be treated as a post!
+
+<!-- TODO Check Regex - correct slashes? -->

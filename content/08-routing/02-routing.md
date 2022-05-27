@@ -41,14 +41,14 @@ If we make all our posts use the url `/posts`, we could use the query string to 
 ```js
 public handleRequest(req, res) {
     
-    // Separate the pathame from the url 
+    // Separate the pathname from the url 
     const pathname = new URL(req.url, "http://localhost").pathname;
 
     // Determine if the request is for the index page
     if(pathname === '/') return serveHome(req, res);
 
     // Determine if the request is for a post 
-    if(pathame === '/post') return servePost(req, res);
+    if(pathname === '/post') return servePost(req, res);
 
     // Treat all other requests as a file 
     serveFile(req, res);
