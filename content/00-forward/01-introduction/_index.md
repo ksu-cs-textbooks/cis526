@@ -9,14 +9,15 @@ date: 2018-08-24T10:53:26-05:00
 This textbook was authored for the **CIS 526 - Web Application Development** course at Kansas State University.  This front matter is specific to that course.  If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
-{{% youtube 6LQVVQCm8VY %}}
+{{% youtube WsaNGD65858 %}}
 
-[Previous Versions]({{<relref "./old">}})
+<!-- 6LQVVQCm8VY -->
 
 <!-- TODO Rerecord Video -->
 
 ## Course Resources
 
+* [Previous Versions]({{<relref "./old">}})
 * [Slides]({{<ref "./slides">}})
 * [Syllabus]({{<ref "00-forward/06-syllabus">}})
 * [Textbook]({{<param textbookURL>}})
