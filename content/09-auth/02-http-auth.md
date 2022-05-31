@@ -15,7 +15,7 @@ However, the use of authentication URLS is now highly discouraged and has been s
 
 ![The HTTP Authentication process]({{<static "images/9.2.1.png">}})
 
-As you can see, when the client makes a request that requires authentication, the server issues a **401 Unauthorized** status code, along with an `WWW-Authenticate` header specifying the authentication scheme.  This prompts the browser to request the user credintials via a dialog (much like the one created by the JavaScript functions `alert()`, `confirm()`, and `prompt()`).  If the user supplies credentials, the request is re-sent, with those credentials included in an `Authentication` header.  The server then decides, based on the credentials, if it will allow the request (typically a **200** response), or refuse (a **403 Unauthorized** response).
+As you can see, when the client makes a request that requires authentication, the server issues a **401 Unauthorized** status code, along with an `WWW-Authenticate` header specifying the authentication scheme.  This prompts the browser to request the user credentials via a dialog (much like the one created by the JavaScript functions `alert()`, `confirm()`, and `prompt()`).  If the user supplies credentials, the request is re-sent, with those credentials included in an `Authentication` header.  The server then decides, based on the credentials, if it will allow the request (typically a **200** response), or refuse (a **403 Unauthorized** response).
 
 The `WWW-Authenticate` header looks like:
 
@@ -25,7 +25,7 @@ WWW-Authenticate: [type] realm=[realm]
 
 Where `[type]` is the authentication scheme (`Basic` being the most common), and `realm` describing the protected part of the server.
 
-In the Basic authentication scheme, the content of the `Authorization` header is the string `[username]:[password]` encoded in [base64](https://en.wikipedia.org/wiki/Base64), where `[username]` is the users' username, and `[password]` is thier password.
+In the Basic authentication scheme, the content of the `Authorization` header is the string `[username]:[password]` encoded in [base64](https://en.wikipedia.org/wiki/Base64), where `[username]` is the users' username, and `[password]` is their password.
 
 {{% notice warning %}}
 Base64 encoding is easy to undo, so you should only use HTTP Basic Authentication with the `https` protocol, which encrypts the request headers.  Otherwise, anyone along the path the user's request travels can capture and decrypt the user's credentials.
