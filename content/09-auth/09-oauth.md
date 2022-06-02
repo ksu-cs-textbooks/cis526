@@ -24,5 +24,7 @@ Notice the big difference here between CAS and SAML is that the app server doesn
 
 OAuth is sometimes referred to as pseudo-identity, as its real purpose is to provide access to the services of the identity provider.  OpenID is another standard built on top of OAuth that goes one step farther - issuing an authentication certificate certifying the identity of the user.  A comparison of the two processes appears in the graphic below:
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/OpenIDvs.Pseudo-identityusingOAuth.svg/512px-OpenIDvs.Pseudo-identityusingOAuth.svg.png" alt="Oauth"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/32/OpenIDvs.Pseudo-AuthenticationusingOAuth.svg" alt="Oauth"/> [^1]
+
+[^1]: File:OpenIDvs.Pseudo-AuthenticationusingOAuth.svg. (2020, October 22). Wikimedia Commons, the free media repository. Retrieved 15:38, June 2, 2022 from https://commons.wikimedia.org/w/index.php?title=File:OpenIDvs.Pseudo-AuthenticationusingOAuth.svg&oldid=496954680.
 
