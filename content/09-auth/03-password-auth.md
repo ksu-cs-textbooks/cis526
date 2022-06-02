@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 One of the more common approaches used in modern dynamic webservers - especially those that are already using a database - is to have each user create an account and log in with a username and password.  The primary difference in this approach from the HTTP Basic one is that:
 
-1. the webserver provides a login page with a form for submitting the username/password (allowing it to be customized to match the site)
+1. The webserver provides a login page with a form for submitting the username/password (allowing it to be customized to match the site)
 2. On an successful authentication, a cookie is used to persist the user's session, rather than re-submitting the `Authentication` header
 
 The actual difference in your server code between the two approaches is not that large.
