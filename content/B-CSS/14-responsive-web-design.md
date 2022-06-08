@@ -72,8 +72,8 @@ This strategy helps legacy websites reasonably appear on mobile devices.  Howeve
 
 For a responsive design to work, it is critical that this `<meta>` element be included, and use the exact syntax specified.
 
-## Avanced CSS Layouts
+## Advanced CSS Layouts
 
-Finally, responsive designs tend to make heavy use of two new CSS layout strategies - [The Flexible Box Module (flex)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and the [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout).  These two layout tools allow for easily changing layouts within media queries - even allowing for the rearanging of elements!
+Finally, responsive designs tend to make heavy use of two new CSS layout strategies - [The Flexible Box Module (flex)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and the [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout).  These two layout tools allow for easily changing layouts within media queries - even allowing for the rearranging of elements!
 
 Two great visual resources for learning the ins and outs of these layouts are CSS Trick's [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) and [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/).  In fact, you may want to bookmark these now.
