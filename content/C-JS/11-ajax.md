@@ -11,10 +11,10 @@ Asynchronous JavaScript and XML (AJAX) is a term coined by Jesse James Garrett t
 
 The `XMLHttpRequest` object is modeled after how the `window` object makes web requests.  You can think of it as a state machine that can be in one of several possible states, defined by both a constant and an unsigned short value: 
 
-* **UNSENT** or **0** The client has been created, but no request has been made.  Analogus to a just-opened browser before you type an address in the address bar.
-* **OPENED** or **1** The request has been made, but the response has not been recieved.  The browser analogue would be you have just pressed enter after typing the address.
-* **HEADERS_RECIEVED** or **2** The first part of the response has been processed.  We'll talk about headers in the next chapter.
-* **LOADING** or **3** The content of the response is being downloaded.  In the browser, this would be the stage where the HTML is being recieved and parsed into the DOM.
+* **UNSENT** or **0** The client has been created, but no request has been made.  Analogous to a just-opened browser before you type an address in the address bar.
+* **OPENED** or **1** The request has been made, but the response has not been received.  The browser analogue would be you have just pressed enter after typing the address.
+* **HEADERS_RECEIVED** or **2** The first part of the response has been processed.  We'll talk about headers in the next chapter.
+* **LOADING** or **3** The content of the response is being downloaded.  In the browser, this would be the stage where the HTML is being received and parsed into the DOM.
 * **DONE** or **4** The resource is fully loaded.  In the DOM, this would be equivalent to the `'load'` event.
 
 ![The XMLHttpRequest ready states]({{<static "images/3.8.1.png">}})
@@ -26,7 +26,7 @@ The XMLHttpRequest object also has a number of properties that are helpful:
 * `readyState` - the current state of the property
 * `response` - the body of the response, an `ArrayBuffer`, `Blob`, `Document`, or `DOMString` based on the value of the `responseType`
 * `responseType` - the mime type of response
-* `status` - returns an unsigned short with the HTTP response status (or 0 if the response has not been recieved)
+* `status` - returns an unsigned short with the HTTP response status (or 0 if the response has not been received)
 * `statusText` - returns a string containing the response string fro the server, i.e. `"200 OK"`
 * `timeout` - the number of milliseconds the request can take before being terminated
 
@@ -37,11 +37,11 @@ The XMLHttpRequest object implements the `EventTarget` interface, just like the 
 
 * `abort` - fired when the request has been aborted (you can abort a request with the [XMLHttpRequest.abort()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/abort) method)
 * `error` - fired when the request encountered an error 
-* `load` - fired when the request completes sucessfully
-* `loadend` - fired wehn the request has completed, either because of success or after an abort or error.
-* `loadstart` - fired wehn the request has started to load data
-* `progress` - fired periodically as the request recieves data 
-* `timeout` - fired wehn the progress is expired due to taking too long
+* `load` - fired when the request completes successfully
+* `loadend` - fired when the request has completed, either because of success or after an abort or error.
+* `loadstart` - fired when the request has started to load data
+* `progress` - fired periodically as the request receives data 
+* `timeout` - fired when the progress is expired due to taking too long
 
 Several of these events have properties you can assign a function to directly to capture the event:
 
@@ -104,7 +104,7 @@ Much like when we manually made requests, we first need to open the connection t
 xhr.open('GET', 'https://imgs.xkcd.com/comics/blogofractal.png');
 ```
 
-The first arguement is the [HTTP request method]({{<ref "/02-http/04-request-methods" >}}) to use, and the second is the [URL]({{<ref "/02-http/05-uris-and-urls">}}) to open.  
+The first argument is the [HTTP request method]({{<ref "/02-http/04-request-methods" >}}) to use, and the second is the [URL]({{<ref "/02-http/05-uris-and-urls">}}) to open.  
 
 There are also three optional parameters that can be used to follow - a boolean determining if the request should be made asynchronously (default `true`) and a user and password for HTTP authentication.  Since AJAX requests are normally made asynchronously, and HTTP authentication has largely been displaced by more secure authentication approaches, these are rarely used.
 
@@ -117,7 +117,7 @@ xhr.setRequestHeader('Accept', 'image/png');
 ```
 
 #### Sending the XMLHttpRequest 
-Finally, the [XMLHttpRequest.send()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send) method will send the request asynchronously (unless the `async` parameter in `XMLHttpRequest.open()` was set to `false`).  As the response is recieved (or fails) the appropriate event handlers will be triggered.  To finish our example:
+Finally, the [XMLHttpRequest.send()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send) method will send the request asynchronously (unless the `async` parameter in `XMLHttpRequest.open()` was set to `false`).  As the response is received (or fails) the appropriate event handlers will be triggered.  To finish our example:
 
 ```js
 xhr.send();
