@@ -1,0 +1,47 @@
+baseURL = "https://ksu-cs-textbooks.github.io/cis526"
+languageCode = "en-us"
+title = "K-State CIS 526 Textbook"
+canonifyURLs = true
+
+# Change the default theme to be use when building the site with Hugo
+theme = "ksucs-hugo-theme"
+
+# For search functionality 
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+page = [ "HTML", "Iframeable", "Teleprompter"]
+section = [ "HTML", "Iframeable", "Teleprompter"]
+
+[params]
+  textbookURL = "https://textbooks.cs.ksu.edu/cis526"
+  editURL = "https://gitlab.cs.ksu.edu/cs-textbooks/cis526-textbook/-/tree/master/content/"
+  description = "CIS 526 Textbook"
+  author = "Nathan H. Bean"
+  showVisitedLinks = false
+  themeVariant = "purple"
+  disableLanguageSwitchingButton = true
+  landingPageURL = "/"
+
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Custom output format for iframes
+[outputFormats]
+  [outputFormats.Iframeable]
+    name = "Iframeable"
+    baseName = "embed"
+    mediaType = "text/html"
+    isPlainText = false
+    isHTML = true
+  [outputFormats.Teleprompter]
+    name = "Teleprompter"
+    baseName = "tele"
+    mediaType = "text/html"
+    isPlainText = false
+    isHtml = true
