@@ -1,0 +1,3601 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="description" content="CIS 526 Textbook">
+<meta name="author" content="Nathan H. Bean">
+
+    <link rel="icon" href="https://ksu-cs-textbooks.github.io/cis526/images/favicon.png" type="image/png">
+
+    <title>Promises :: K-State CIS 526 Textbook</title>
+
+    
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/hybrid.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/featherlight.min.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/atom-one-dark-reasonable.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/tabs.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/hugo-theme.css?1657817644" rel="stylesheet">
+    
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-purple.css?1657817644" rel="stylesheet">
+    
+    
+    
+    
+      <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-tele.css?1657817644" rel="stylesheet">
+    
+
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/jquery-3.3.1.min.js?1657817644"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    
+
+     
+    
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+  
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body class="" data-url="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/07-promises/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://ksu-cs-textbooks.github.io/cis526">
+  K-State CIS 526 Textbook
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://ksu-cs-textbooks.github.io/cis526/js/lunr.min.js?1657817644"></script>
+<script type="text/javascript" src="https://ksu-cs-textbooks.github.io/cis526/js/auto-complete.js?1657817644"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/ksu-cs-textbooks.github.io\/cis526";
+    
+</script>
+<script type="text/javascript" src="https://ksu-cs-textbooks.github.io/cis526/js/search.js?1657817644"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='https://ksu-cs-textbooks.github.io/cis526/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/00-forward/" title="Course Information" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/00-forward/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>0. </b>Course Information
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/01-the-dom/" title="The DOM" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/01-the-dom/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>1. </b>The DOM
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/02-http/" title="Hyper-Text Transfer Protocol" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/02-http/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>2. </b>Hyper-Text Transfer Protocol
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/03-asynchronous-js/" title="Asynchronous JavaScript" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/">
+        
+        
+          
+          <i class="fas fa-angle-down fa-fw"></i>
+          
+        
+          <b>3. </b>Asynchronous JavaScript
+          
+
+      </a>
+    
+      
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03-asynchronous-js/01-introduction/" title="Introduction" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/01-introduction/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        1.Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03-asynchronous-js/02-concurrency-approaches/" title="Concurrency Approaches" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/02-concurrency-approaches/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        2. Concurrency Approaches
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03-asynchronous-js/03-concurrency-challenges/" title="Concurrency Challenges" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/03-concurrency-challenges/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        3. Concurrency Challenges
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03-asynchronous-js/04-asynchronous-programming/" title="Asynchronous Programming" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/04-asynchronous-programming/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        4. Asynchronous Programming
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03-asynchronous-js/05-web-workers/" title="Web Workers" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/05-web-workers/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        5. Web Workers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03-asynchronous-js/06-callbacks/" title="Callbacks" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        6. Callbacks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03-asynchronous-js/07-promises/" title="Promises" class="dd-item active">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/07-promises/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        7. Promises
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03-asynchronous-js/08-async-await/" title="Async and Await" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/08-async-await/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        8. Async and Await
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03-asynchronous-js/09-summary/" title="Summary" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/09-summary/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        9. Summary
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/04-node/" title="Introduction to Node" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/04-node/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>4. </b>Introduction to Node
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/05-web-servers/" title="Basic Web Servers" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/05-web-servers/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>5. </b>Basic Web Servers
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/06-dynamic-web-servers/" title="Dynamic Web Servers" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>6. </b>Dynamic Web Servers
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/07-persistent-storage/" title="Persistent Storage" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>7. </b>Persistent Storage
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/08-routing/" title="Routing" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/08-routing/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>8. </b>Routing
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/09-auth/" title="Authentication" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/09-auth/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>9. </b>Authentication
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/10-dynamic-web-frameworks/" title="Dynamic Web Frameworks" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>10. </b>Dynamic Web Frameworks
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/a-html/" title="Hyper-Text Markup Language" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/a-html/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>A. </b>Hyper-Text Markup Language
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/b-css/" title="Cascading Style Sheets" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/b-css/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>B. </b>Cascading Style Sheets
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/c-js/" title="JavaScript" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/c-js/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>C. </b>JavaScript
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/y-announcements/" title="Announcements" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/y-announcements/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>Y. </b>Announcements
+          
+
+      </a>
+    
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/russfeld/ksucs-hugo-theme">ksucs-hugo-theme</a>.</p>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                  <div id="top-github-link">
+                    <a id="themelink" class="github-link" title='Toggle Light or Dark Mode' href="#">
+                      <i class="fas fa-moon"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                    <a class="github-link" title='Teleprompter View' href="tele.html" target="blank">
+                      <i class="fas fa-tv"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                    <a class="github-link" title='Embed this page' href="embed.html" target="blank">
+                      <i class="fas fa-expand-arrows-alt"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                
+                  
+                  
+                  
+                    <a class="github-link" title='Edit this page' href="https://gitlab.cs.ksu.edu/cs-textbooks/cis526-textbook/-/tree/master/content/03-asynchronous-js/07-promises.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  
+                
+                  </div>
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://ksu-cs-textbooks.github.io/cis526/'>CIS 526 Textbook</a> > <a href='https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/'>Asynchronous JavaScript</a> > Promises
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Promises
+            </h1>
+          
+
+        
+
+
+<style>
+    .console {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      box-sizing: border-box;
+      z-index: 1000;
+      width: 100%;
+      height: 30vh;
+      background-color: #8451a1;
+      padding: 1rem;
+      transform: translateY(calc(30vh - 5px));
+      transition: transform 1s;
+    }
+    .console iframe {
+      width: 100%;
+      height: 100%;
+      background-color: white;
+    }
+    .console > .console-tab {
+      position: absolute;
+      top: -1.2rem;
+      right: 0px;
+      color: white;
+      background-color: #8451a1;
+      padding: 0 2rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .console.active {
+      transform: none;
+    }
+  </style>
+  <div class="console">
+  <div class="console-tab">CONSOLE</div>
+  <iframe src="https://jsconsole.com/"></iframe>
+  </div>
+  <script>
+    document.querySelector('.console-tab').addEventListener('click', (event) => {
+      console.log(event);
+      event.target.parentElement.classList.toggle('active');
+    });
+  </script>
+<p>Promises replace the callback mechanism with a JavaScript object, a <code>Promise</code>.  In many ways, this is similar to the <code>XMLHttpRequest</code> object that is at the heart of <a href="ref%20%22c-js/11-ajax%22">AJAX</a>.  You can think of it as a state machine that is in one of three states: <em>pending</em>, <em>fulfilled</em>, or <em>rejected</em>.</p>
+<p>A promise can be created by wrapping an asynchronous call within a new <code>Promise</code> object.  For example, we can turn a <code>setTimeout()</code> into a promise with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">threeSecondPromise</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;Timer elapsed&#34;</span>);
+</span></span><span style="display:flex;"><span>    }, <span style="color:#ae81ff">300</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>We can also create a promise that immediately resolves using <code>Promise.resolve()</code>, i.e.:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fifteenPromise</span> <span style="color:#f92672">=</span> Promise.<span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">15</span>);
+</span></span></code></pre></div><p>This promise is never in the <em>pending</em> state - it starts as <em>resolved</em>.  Similarly, you can create a promise that starts in the <em>rejected</em> state with <code>Promise.reject()</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">failedPromise</span> <span style="color:#f92672">=</span> Promise.<span style="color:#a6e22e">reject</span>(<span style="color:#e6db74">&#34;I am a failure...&#34;</span>);
+</span></span></code></pre></div><p>You can also pass an error object to <code>Promise.reject()</code>.</p>
+<h4 id="using-promiseprototypethen">Using Promise.prototype.then()</h4>
+<p>What makes promises especially useful is their <code>then()</code> method.  This method is invoked when the promise finishes, and is passed whatever the promise resolved to, i.e. the string <code>&quot;Timer elapsed&quot;</code> in the example above.  Say we want to log that result to the console:</p>
+<pre tabindex="0"><code>threeSecondPromise.then(result =&gt; {console.log(result)});
+</code></pre><p>This is a rather trivial example, but we can use the same approach to define a <em>new</em> method for creating timers that might seem more comfortable for object-oriented programmers:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createTimer</span>(<span style="color:#a6e22e">milliseconds</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">resolve</span>();
+</span></span><span style="display:flex;"><span>        }, <span style="color:#a6e22e">milliseconds</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>With this method, we can create a timer to do any arbitrary action, i.e.:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Say &#34;Hello Delayed World&#34; after five seconds
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">createTimer</span>(<span style="color:#ae81ff">5000</span>).<span style="color:#a6e22e">then</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Hello delayed World!&#34;</span>));
+</span></span></code></pre></div><h4 id="using-promiseprototypecatch">Using Promise.prototype.catch()</h4>
+<p>In addition to the <code>then()</code> method, promises also provide a <code>catch()</code> method.  This method handles any errors that were thrown by the promise.  Consider this function that returns a promise to compute an average:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">computeAverage</span>(<span style="color:#a6e22e">numbers</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Sum the numbers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">value</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Compute the average 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">average</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">average</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Try copying this code into the console, and then run some examples, i.e.:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">computeAverage</span>([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">average</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;The average is&#34;</span>, <span style="color:#a6e22e">average</span>));
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">computeAverage</span>([<span style="color:#ae81ff">0.3</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">20.5</span>]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">average</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;The average is&#34;</span>, <span style="color:#a6e22e">average</span>));
+</span></span></code></pre></div><p>But what if we use the <em>empty array</em>?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">computeAverage</span>([]).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">average</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;The average is&#34;</span>, <span style="color:#a6e22e">average</span>));
+</span></span></code></pre></div><p>Because the length of the empty array is 0, we are dividing by 0, and an error will be thrown.  Notice the error message reads &ldquo;Uncaught (in promise)&rdquo;&hellip; we can use the <code>catch()</code> method to capture this error, i.e.:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">computeAverage</span>([])
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">average</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;The average is&#34;</span>, <span style="color:#a6e22e">average</span>))
+</span></span><span style="display:flex;"><span>    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;Encountered an error:&#34;</span>, <span style="color:#a6e22e">err</span>));
+</span></span></code></pre></div>
+<div class="notices info" ><p>Info</p><p>Note when chaining JavaScript method calls, our dot <code>.</code> can be separated from the object it belongs to by whitespace.  This can help keep our code readable by putting it on multiple lines.</p>
+</div>
+
+<p>Now when we run this code, the error is handled by our <code>catch()</code>.  We&rsquo;re still printing it to the console as an error - but notice the message now reads <code>&quot;Encountered an error&quot; ...</code>, i.e. it&rsquo;s <em>our</em> error message!</p>
+<p>Let&rsquo;s try one more - an array that <em>cannot</em> be averaged, i.e.:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">computeAverage</span>([<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;banana&#39;</span>, <span style="color:#66d9ef">true</span>])
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">average</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;The average is&#34;</span>, <span style="color:#a6e22e">average</span>))
+</span></span><span style="display:flex;"><span>    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;Encountered an error:&#34;</span>, <span style="color:#a6e22e">err</span>));
+</span></span></code></pre></div><p>Here we see the promise resolves successfully, but the result is <code>NaN</code> (not a number).  This is because that is the normal result of this operation in JavaScript.  But what if we want that to be treated as an error?  That&rsquo;s where the <code>reject()</code> callback provided to the promise comes in - it is used to indicate the promise should fail.  We&rsquo;ll need to rewrite our <code>computeAverage()</code> method to use this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">computeAverage</span>(<span style="color:#a6e22e">numbers</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Sum the numbers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">value</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Compute the average 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">average</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(isNaN(<span style="color:#a6e22e">average</span>)) <span style="color:#a6e22e">reject</span>(<span style="color:#e6db74">&#34;Average cannot be computed.&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">average</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Rejected promises are also handled by the <code>catch()</code> method, so if we rerun the last example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">computeAverage</span>([<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;bannana&#39;</span>, <span style="color:#66d9ef">true</span>])
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">average</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;The average is&#34;</span>, <span style="color:#a6e22e">average</span>))
+</span></span><span style="display:flex;"><span>    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;Encountered an error:&#34;</span>, <span style="color:#a6e22e">err</span>));
+</span></span></code></pre></div><p>Notice we now see our error message!</p>
+<h4 id="chaining-promiseprototypethen-and-promiseprototypecatch">Chaining Promise.prototype.then() and Promise.prototype.catch()</h4>
+<p>Where <code>Promise.prototype.then()</code> and <code>Promise.prototype.catch()</code> really shine is when we <em>chain</em> a series of promises together.  Remember our callback hell example?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">webapp</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/login&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">parseFormData</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, (<span style="color:#a6e22e">form</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">username</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">password</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">findUserInDatabase</span>(<span style="color:#a6e22e">username</span>, (<span style="color:#a6e22e">user</span>) =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">encryptPassword</span>(<span style="color:#a6e22e">password</span>, <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">salt</span>, (<span style="color:#a6e22e">hash</span>) =&gt; {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">hash</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">passwordHash</span>) 
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">setCookie</span>({<span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">user</span>});
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#ae81ff">200</span>, <span style="color:#e6db74">&#34;Logged in successfully!&#34;</span>);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#ae81ff">403</span>, <span style="color:#e6db74">&#34;Unknown username/password combo&#34;</span>);
+</span></span><span style="display:flex;"><span>            });
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>If each of our methods returned a promise, we could re-write this as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">webapp</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/login&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>))
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">parseFormData</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">formData</span> =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">username</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">formData</span>.<span style="color:#a6e22e">password</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">username</span>;
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">findUserInDatabase</span>)
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">user</span> =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">encryptPassword</span>(<span style="color:#a6e22e">password</span>, <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">salt</span>);
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">hash</span> =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">hash</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">passwordHash</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">setCookie</span>({<span style="color:#a6e22e">user</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">user</span>});
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#ae81ff">200</span>, <span style="color:#e6db74">&#34;Logged in successfully&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#ae81ff">403</span>, <span style="color:#e6db74">&#34;Unknown username/password combo&#34;</span>);
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">err</span> =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">end</span>(<span style="color:#ae81ff">500</span>, <span style="color:#e6db74">&#34;A server error occurred&#34;</span>);
+</span></span><span style="display:flex;"><span>    });
+</span></span></code></pre></div>
+<div class="notices info" ><p>Info</p><p>The <code>Promise.prototype.catch()</code> method catches any error or promise rejection that occurs before it in the chain - basically as soon as an error or rejection occurs, further <code>.then()</code> calls are skipped until a <code>.catch()</code> is encountered.  You can also chain additional <code>.then()</code> calls after a <code>.catch()</code>, and they will be processed until another error or rejection occurs!</p>
+</div>
+
+<h4 id="promiseall">Promise.All()</h4>
+<p>In addition to processing promises in serial (one after another) by chaining <code>.then()</code> methods, sometimes we want to do them in <em>parallel</em> (all at the same time).  For example, say we have several independent processes (perhaps each running on a webworker or separate Node thread) that when finished, we want to average together.</p>
+<p>The <code>Promise.All()</code> method is the answer; it returns a promise to execute an arbitrary number of promises, and when all have finished, it itself resolves to an array of their results.</p>
+<p>Let&rsquo;s do a quick example using this method.  We&rsquo;ll start by declaring a function to wrap a fake asynchronous process - basically creating a random number (between 1 and 100) after a random number of seconds (between 0 and 3):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mockTask</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise((<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">ceil</span>(Math.<span style="color:#a6e22e">random</span>()<span style="color:#f92672">*</span><span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Computed value&#34;</span>, <span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>        }, Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> <span style="color:#ae81ff">3000</span>)
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Now let&rsquo;s say we want to compute an average of the results once they&rsquo;ve finished.  As <code>Promise.All()</code> returns a <code>Promise</code> that resolves to a an array of the results, we can invoke our <code>computeAverage()</code> (which we declared previously) in a chained <code>.then()</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Promise.<span style="color:#a6e22e">all</span>([
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mockTask</span>(),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mockTask</span>(),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mockTask</span>(),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">mockTask</span>()
+</span></span><span style="display:flex;"><span>])
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">computeAverage</span>)
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>);
+</span></span></code></pre></div><p>Note that because <code>computeAverage</code> takes as a parameter an array, and <code>console.log</code> takes as its parameter a value, and those are what the previous promises resolve to, we don&rsquo;t have to define anonymous functions to pass into <code>.then()</code> - we can pass the function name instead.</p>
+<p>Many JavaScript programmers found this format more comfortable to write and read than a series of nested callbacks.  However, the <code>async</code> and <code>await</code> syntax offers a <em>third</em> option, which we&rsquo;ll look at next.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/" title="Callbacks"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/08-async-await/" title="Async and Await" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.jquery.min.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/jquery.sticky.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/featherlight.min.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/highlight.pack.js?1657817644"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/modernizr.custom-3.6.0.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/learn.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/hugo-learn.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/themer.js?1657817644"></script>
+
+    
+        
+            <script src="https://ksu-cs-textbooks.github.io/cis526/mermaid/mermaid.js?1657817644"></script>
+        
+        <script>
+            var mer_theme = localStorage.getItem('theme');
+            if(mer_theme !== 'dark'){
+                mer_theme = 'neutral'
+            }
+            mermaid.initialize({ 
+                startOnLoad: true,
+                'securityLevel': 'loose', 
+                'theme': mer_theme });
+        </script>
+    
+
+    
+        <script src="https://ksu-cs-textbooks.github.io/cis526/js/tele-scroll.js?1657817644"></script>
+        <script src="https://ksu-cs-textbooks.github.io/cis526/js/hideyt.js?1657817644"></script>
+    
+
+    
+    
+
+    
+<script 
+src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+</script>
+<script 
+src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownKatex.js">
+</script>
+<script 
+src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownHighlight.js">
+</script>
+<script>quizdown.register(quizdownHighlight).register(quizdownKatex).init()</script> 
+  </body>
+</html>
+
+
+
+

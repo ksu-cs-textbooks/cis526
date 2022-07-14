@@ -1,0 +1,3674 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="description" content="CIS 526 Textbook">
+<meta name="author" content="Nathan H. Bean">
+
+    <link rel="icon" href="https://ksu-cs-textbooks.github.io/cis526/images/favicon.png" type="image/png">
+
+    <title>Template Rendering :: K-State CIS 526 Textbook</title>
+
+    
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/hybrid.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/featherlight.min.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/atom-one-dark-reasonable.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/tabs.css?1657817644" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/hugo-theme.css?1657817644" rel="stylesheet">
+    
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-purple.css?1657817644" rel="stylesheet">
+    
+    
+    
+      <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-iframe.css?1657817644" rel="stylesheet">
+    
+    
+
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/jquery-3.3.1.min.js?1657817644"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    
+
+     
+    
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        processEnvironments: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  
+    window.addEventListener('load', (event) => {
+        document.querySelectorAll("mjx-container").forEach(function(x){
+          x.parentElement.classList += 'has-jax'})
+      });
+  
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body class="" data-url="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/10-template-rendering/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://ksu-cs-textbooks.github.io/cis526">
+  K-State CIS 526 Textbook
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://ksu-cs-textbooks.github.io/cis526/js/lunr.min.js?1657817644"></script>
+<script type="text/javascript" src="https://ksu-cs-textbooks.github.io/cis526/js/auto-complete.js?1657817644"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/ksu-cs-textbooks.github.io\/cis526";
+    
+</script>
+<script type="text/javascript" src="https://ksu-cs-textbooks.github.io/cis526/js/search.js?1657817644"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='https://ksu-cs-textbooks.github.io/cis526/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/00-forward/" title="Course Information" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/00-forward/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>0. </b>Course Information
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/01-the-dom/" title="The DOM" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/01-the-dom/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>1. </b>The DOM
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/02-http/" title="Hyper-Text Transfer Protocol" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/02-http/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>2. </b>Hyper-Text Transfer Protocol
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/03-asynchronous-js/" title="Asynchronous JavaScript" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>3. </b>Asynchronous JavaScript
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/04-node/" title="Introduction to Node" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/04-node/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>4. </b>Introduction to Node
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/05-web-servers/" title="Basic Web Servers" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/05-web-servers/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>5. </b>Basic Web Servers
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/06-dynamic-web-servers/" title="Dynamic Web Servers" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/">
+        
+        
+          
+          <i class="fas fa-angle-down fa-fw"></i>
+          
+        
+          <b>6. </b>Dynamic Web Servers
+          
+
+      </a>
+    
+      
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/01-introduction/" title="Introduction" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/01-introduction/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        1. Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/02-cgi-scripts/" title="CGI Scripts" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/02-cgi-scripts/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        2. CGI Scripts
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/03-server-pages/" title="Server Pages" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/03-server-pages/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        3. Server Pages
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/04-custom-servers/" title="Custom Servers" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/04-custom-servers/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        4. Custom Servers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/05-query-and-hash-strings/" title="Query and Hash Strings" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/05-query-and-hash-strings/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        5. Query and Hash Strings
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/06-form-encoding/" title="Form Encoding" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/06-form-encoding/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        6. Form Encoding
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/07-req-body/" title="Request Body" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/07-req-body/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        7. Request Body
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/08-cookies/" title="Cookies" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/08-cookies/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        8. Cookies
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/09-sessions/" title="Sessions" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/09-sessions/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        9. Sessions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/10-template-rendering/" title="Template Rendering" class="dd-item active">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/10-template-rendering/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        10. Template Rendering
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/11-script-injection/" title="Script Injection" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/11-script-injection/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        11. Script Injection
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/12-full-stack/" title="Full Stack Development" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/12-full-stack/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        12. Full Stack Development
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/06-dynamic-web-servers/13-summary/" title="Summary" class="dd-item ">
+        <a href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/13-summary/">
+        <i class="fas fa-angle-down fa-fw" style="color: transparent;"></i>
+        13. Summary
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/07-persistent-storage/" title="Persistent Storage" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>7. </b>Persistent Storage
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/08-routing/" title="Routing" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/08-routing/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>8. </b>Routing
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/09-auth/" title="Authentication" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/09-auth/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>9. </b>Authentication
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/10-dynamic-web-frameworks/" title="Dynamic Web Frameworks" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>10. </b>Dynamic Web Frameworks
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/a-html/" title="Hyper-Text Markup Language" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/a-html/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>A. </b>Hyper-Text Markup Language
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/b-css/" title="Cascading Style Sheets" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/b-css/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>B. </b>Cascading Style Sheets
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/c-js/" title="JavaScript" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/c-js/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>C. </b>JavaScript
+          
+
+      </a>
+    
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/y-announcements/" title="Announcements" class="dd-item
+        
+        
+        
+        ">
+      <a href="https://ksu-cs-textbooks.github.io/cis526/y-announcements/">
+        
+        
+          
+          <i class="fas fa-angle-right fa-fw"></i>
+          
+        
+          <b>Y. </b>Announcements
+          
+
+      </a>
+    
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built using <a href="http://gohugo.io/">Hugo</a> and <a href="https://github.com/russfeld/ksucs-hugo-theme">ksucs-hugo-theme</a>.</p>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; margin: .5rem auto" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</a>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                  <div id="top-github-link">
+                    <a id="themelink" class="github-link" title='Toggle Light or Dark Mode' href="#">
+                      <i class="fas fa-moon"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                    <a class="github-link" title='Teleprompter View' href="tele.html" target="blank">
+                      <i class="fas fa-tv"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                    <a class="github-link" title='Embed this page' href="embed.html" target="blank">
+                      <i class="fas fa-expand-arrows-alt"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                
+                  
+                  
+                  
+                    <a class="github-link" title='Edit this page' href="https://gitlab.cs.ksu.edu/cs-textbooks/cis526-textbook/-/tree/master/content/06-dynamic-web-servers/10-template-rendering.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  
+                
+                  </div>
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://ksu-cs-textbooks.github.io/cis526/'>CIS 526 Textbook</a> > <a href='https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/'>Dynamic Web Servers</a> > Template Rendering
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#template-libraries">Template Libraries</a>
+      <ul>
+        <li><a href="#partials">Partials</a></li>
+        <li><a href="#layouts">Layouts</a></li>
+        <li><a href="#concise-templating-languages">Concise Templating Languages</a></li>
+      </ul>
+    </li>
+    <li><a href="#components">Components</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+
+        
+
+
+<p>While skilled programmers may have chafed at the restrictions imposed by server pages, there was one aspect that came to be greatly valued - the ability to embed script directly in HTML, and have it evaluated and concatenated into the HTML text.</p>
+<h2 id="template-libraries">Template Libraries</h2>
+<p>This is where template libraries come in.  A template library allows you to write your HTML content <em>as HTML in a separate file</em> with a special syntax to inject dynamic programming script.  This is often some variation of <code>&lt;&gt;</code> or <code>{}</code>.  This approach allows you to validate the HTML, as the script portions are ignored as unknown tags (when using <code>&lt;&gt;</code>) or as static text.</p>
+<p>When the server is running, these templates are rendered, evaluating any code and supplying the applicable variables. This process generates the HTML snippet.</p>
+<p>This is similar to what server pages do. However, server pages represent an <em>integrated</em> approach - the server page framework defined all aspects of how you could interact with the OS, the web server, and other programs.  In contrast, a template library provides the option of using templates within any project - obviously for generating HTML as part of a dynamic website, but potentially for other kinds of applications as well.</p>
+<p>Thus, a template rendering library gives us a lot of flexibility in how and when we use it. For example, in using the <a href="https://ejs.co/" target="_blank">Embedded JavaScript</a> template library, we could rewrite our directory listing as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;Directory Listing&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h2</span>&gt;Directory Listing for <span style="color:#960050;background-color:#1e0010">&lt;</span>%= pathname %&gt;&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;display: flex; flex-direction: column; padding: 2rem 0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>% entries.forEach((entry) =&gt;{ %&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;%= path.posix.join(pathname, entry) %&gt;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                <span style="color:#960050;background-color:#1e0010">&lt;</span>%= entry %&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>% }) %&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>% if (pathname !== &#34;/&#34;) { %&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;%= path.dirname(pathname) %&gt;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                Parent directory
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>% } %&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>Notice how we can embed the JavaScript <em>directly into the file</em>.  In a Node server, we can use this template to render html:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Build the dynamic HTML snippets
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pathname</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">pathname</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">entries</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">entries</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ejs</span>.<span style="color:#a6e22e">renderFile</span>(<span style="color:#e6db74">&#34;templates/directory-listing.ejs&#34;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">html</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// TODO: render the HTML in the string variable html
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span></code></pre></div><p>While this may <em>seem</em> like just as much work as the concatenation approach, where it really shines is the ability to combine multiple templates, separating parts of the pages out into different, reusable template files.  These are typically separated into two categories based on how they are used, <em>partials</em> and <em>layouts</em>.</p>
+<h3 id="partials">Partials</h3>
+<p>A partial is simply a <em>part</em> of a larger page.  For example, the entries we are rendering in the listing could be defined in their own template file, <em>directory-listing-entry.ejs</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;%= path %&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">&lt;</span>%= entry %&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">a</span>&gt;
+</span></span></code></pre></div><p>And then <em>included</em> in the <em>directory-listing.ejs</em> template:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;Directory Listing&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">h2</span>&gt;Directory Listing for <span style="color:#960050;background-color:#1e0010">&lt;</span>%= pathname %&gt;&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;display: flex; flex-direction: column; padding: 2rem 0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>% entries.forEach((entry) =&gt;{ %&gt;
+</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">&lt;</span>%- include(&#39;directory-listing-entry&#39; {entry: entry, path: path.posix.join(pathname, entry) }) %&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>% }) %&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>% if (pathname !== &#34;/&#34;) { %&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;%= path.dirname(pathname) %&gt;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>                Parent directory
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>% } %&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>While this may seem overkill for this simple example, it works incredibly well for complex objects.  It also makes our code far more modular - we can use the same partial in many parts of our web application.</p>
+<h3 id="layouts">Layouts</h3>
+<p>A second common use of templates is to define a <em>layout</em> - the parts that every page holds in common.  Consider this template file, <em>layout.ejs</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">title</span>&gt;<span style="color:#960050;background-color:#1e0010">&lt;</span>%= title %&gt;&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>%- include(&#39;header&#39;) %&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>%- content %&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">&lt;</span>%- include(&#39;footer&#39;) %&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>Now our directory listing can focus entirely on the directory listing:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">h2</span>&gt;Directory Listing for <span style="color:#960050;background-color:#1e0010">&lt;</span>%= pathname %&gt;&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;display: flex; flex-direction: column; padding: 2rem 0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;</span>% entries.forEach((entry) =&gt;{ %&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">&lt;</span>%- include(&#39;directory-listing-entry&#39; {entry: entry, path: path.posix.join(pathname, entry) }) %&gt;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;</span>% }) %&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;</span>% if (pathname !== &#34;/&#34;) { %&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;%= path.dirname(pathname) %&gt;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        Parent directory
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">a</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&lt;</span>% } %&gt;
+</span></span></code></pre></div><p>And we can render our page using the layout:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Build the dynamic HTML snippets
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pathname</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">pathname</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">entries</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">entries</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ejs</span>.<span style="color:#a6e22e">renderFile</span>(<span style="color:#e6db74">&#34;templates/directory-listing.ejs&#34;</span>, <span style="color:#a6e22e">data</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">content</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">err</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// TODO: handle error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ejs</span>.<span style="color:#a6e22e">renderFile</span>(<span style="color:#e6db74">&#34;templates/layout.ejs&#34;</span>, {<span style="color:#a6e22e">content</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">content</span>}, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">html</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// TODO: render the HTML in the string variable html
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    });
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>This layout can be re-used by all pages within our site, allowing us to write the HTML shared in common by the whole website once.</p>
+<p>Also, while these examples show reading the template files as the response is being generated, most template engines support <em>compiling</em> the templates into a function that can be called at any time.  This effectively caches the template, and also speeds up the rendering process dramatically.</p>
+<h3 id="concise-templating-languages">Concise Templating Languages</h3>
+<p>Some template libraries have leveraged the compilation idea to provide a more concise syntax for generating HTML code.  For example, the directory listing written using <a href="https://pugjs.org/api/getting-started.html" target="_blank">Pug</a> templates would be:</p>
+<pre tabindex="0"><code class="language-pug" data-lang="pug">doctype html
+html(lang=&#34;en&#34;)
+    head
+        title= Directory Listing
+    body
+        h2= &#39;Directory Listing for &#39; + pathname 
+        div(style=&#34;display: flex; flex-direction: column; padding: 2rem 0&#34;)
+        each entry in entries
+            a(href=path.posix.join(pathname, entry)) entry 
+        if pathname !== &#34;/&#34;
+            a(href=path.dirname(pathname))
+                Parent directory
+</code></pre><p>Concise templating languages can significantly reduce the amount of typing involved in creating web pages, but they come with a trade-off.  As you can see from the code above, learning Pug effectively requires you to learn a new programming language, including its own iteration and conditional syntax.</p>
+
+<div class="notices info" ><p>Info</p><p>EJS is just one template library available in JavaScript.  Some of the most popular ones include:</p>
+<ul>
+<li><a href="https://mustache.github.io/" target="_blank">Mustache</a></li>
+<li><a href="https://handlebarsjs.com/" target="_blank">Handlebars</a></li>
+<li><a href="https://mozilla.github.io/nunjucks/" target="_blank">Nunjucks</a></li>
+<li><a href="http://underscorejs.org/" target="_blank">Underscore</a></li>
+<li><a href="https://pugjs.org/api/getting-started.html" target="_blank">Pug</a></li>
+</ul>
+<p>It is useful to compare how these different libraries approach templates as there are often large differences, not only in syntax but also in function.</p>
+</div>
+
+<h2 id="components">Components</h2>
+<p>A newer approach, popularized by the <a href="https://reactjs.org/" target="_blank">React</a> framework, emphasizes building <em>components</em> rather than <em>pages</em>.  A component can be thought of as a single control or widget on a page.  While conceptually similar to the partials described above, it organizes its structure, styling, and scripting into a cohesive and reuseable whole.</p>
+<p>This represents a move away from the separation of concerns we described earlier.  It often incorporates aspects of <a href="https://en.wikipedia.org/wiki/Declarative_programming" target="_blank">declarative programming</a> rather than thinking of programming in terms of control flow.  This component-based approach also lends itself to developing <a href="https://en.wikipedia.org/wiki/Progressive_web_application" target="_blank">progressive web applications</a>, which only download the script needed to run the portion of the app the user is interacting with at a given time.</p>
+<p>As this approach is significantly different from the more traditional templating libraries, we&rsquo;ll discuss these ideas in a later chapter.</p>
+
+
+<script>
+
+	 
+
+	iframeString = (height, uri) => `<iframe style="width: 100%; height: ${height}px; border: none;" src="${uri}"></iframe>`
+
+
+	function updateClipboard(newClip) {
+		navigator.clipboard.writeText(newClip).then(function() {
+		}, function() {
+			alert("clipboard failed");
+		});
+	  }	  
+
+	function onLoad() {
+		navigator.permissions.query({name: "clipboard-write"}).then(result => {
+			let uri = window.location.href;
+			let height = document.documentElement.scrollHeight;
+			if (result.state == "granted" || result.state == "prompt") {
+				updateClipboard(iframeString(height, uri));
+			}
+			else{
+				navigator.permissions.query({name:'clipboard-write'}).then(function(result) {
+					if (result.state == "granted" || result.state == "prompt") {
+						updateClipboard(iframeString(height, uri));
+					}
+				  });
+			}
+		  });
+	}
+	window.onload = onLoad();
+
+</script>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/09-sessions/" title="Sessions"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/11-script-injection/" title="Script Injection" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.jquery.min.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/jquery.sticky.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/featherlight.min.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/highlight.pack.js?1657817644"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/modernizr.custom-3.6.0.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/learn.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/hugo-learn.js?1657817644"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/themer.js?1657817644"></script>
+
+    
+        
+            <script src="https://ksu-cs-textbooks.github.io/cis526/mermaid/mermaid.js?1657817644"></script>
+        
+        <script>
+            var mer_theme = localStorage.getItem('theme');
+            if(mer_theme !== 'dark'){
+                mer_theme = 'neutral'
+            }
+            mermaid.initialize({ 
+                startOnLoad: true,
+                'securityLevel': 'loose', 
+                'theme': mer_theme });
+        </script>
+    
+
+    
+
+    
+    
+
+    
+<script 
+src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
+</script>
+<script 
+src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownKatex.js">
+</script>
+<script 
+src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownHighlight.js">
+</script>
+<script>quizdown.register(quizdownHighlight).register(quizdownKatex).init()</script> 
+  </body>
+</html>
+
+
+
+

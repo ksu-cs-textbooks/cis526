@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Web Worker Example</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Web Worker Example</h1>
+    <p>
+      This example demonstrates how to use web workers, a HTML5
+      technology that allows for parallel threads to be run
+      by a webpage.  Essentially, a new thread running a JavaScript
+      interpreter is spawned for each web worker, which can communicate
+      with the main thread (the browser's main JavaScript interpreter)
+      through message passing.
+    </p>
+    <h2>Long-Running Process</h2>
+    <p>
+      One of the primary uses of web workers is to move long-running
+      processes out of the main thread.  This is important as the
+      main thread is used for event handling.  If a long-running process
+      is running there, it blocks event handling until it finishes.
+      The browser quits responding and may even inform the user that
+      a script is misbehaiving.
+    </p>
+    <p>
+      We can see this with the process triggered by the button below,
+      which simulates an intense calculation lasting the number of seconds 
+      specifed.
+    </p>
+    <p>
+        While the simulated calculation is running, you can click the squares 
+        below to change their color.  If the main thread is busy, then the 
+        change won't happen.  However, once the permutatons have finished, any 
+        queued events will be processed, changing the colors accordingly.
+    </p>
+
+    <div class="squares">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <p>
+      <label for="n">Number of seconds for the long-running process to last:
+        <input name="n" id="n" type="number" value="1" min="0"/>
+      </label>
+    </p>
+    <p>
+      <button id="calculate-in-main">Calculate in Main Thread</button>
+      <button id="calculate-in-web-worker">Calculate in Web Worker</button>
+    </p>
+    <strong id="calculation-message"></strong>
+    </pre>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
