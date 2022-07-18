@@ -1423,5 +1423,14 @@ Email PreferredThe CourseGated Modules on Canvas1 Module Per WeekCheck Due D
       <description>Week 6 AnnouncementsThis WeekMon: Milestone 4Fri: Week 6 LessonsNext Mon: Milestone 5Week 6AuthenticationAPIsWeb HooksWeb FrameworksBlog TutorialMilestone 5Add AuthenticationUser RoutesProtect RoutesLink Request to UserDB ChangesKeep in Touch!Discussions on Discord&#34;Tea Time&#34; Office HoursTuesday 3:30 | Friday 10:30One-on-One Office Hours</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week07/slides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week07/slides/</guid>
+      <description>Week 7 AnnouncementsThis WeekMon: Milestone 5Next Mon: Week 7 &amp; 8 LessonsNext Fri: Milestone 6Week 7 &amp; 8Single Sign-OnCAS AuthenticationASP.NET MVCReactMilestone 6Fulfilling RequestsUser RolesUser ManagementCreate New BoxesAesthetics &amp; Usability200 PointsAesthetics &amp; UsabilityConsistent Look &amp; FeelMinimize &#34;Clicks&#34;Smart RoutingHelpful Labels &amp; ErrorsIconographyNavigation &amp; ContextHover AnimationsKeep in Touch!</description>
+    </item>
+    
   </channel>
 </rss>
