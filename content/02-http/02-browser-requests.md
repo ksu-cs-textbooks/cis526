@@ -7,13 +7,13 @@ date: 2018-08-24T10:53:26-05:00
 
 Before we get too deep in the details of what a request is, and how it works, let's explore the primary kind of request you're already used to making - requests originating from a browser.  Every time you use a browser to browse the Internet, you are creating a series of HTTP (or HTTPS) requests that travel across the networks between you and a web server, which responds to your requests.
 
-To help illustrate how these requests are made, we'll once again turn to our developer tools.  Open the example page <a href='{{<static "examples/2.2.1/index.html">}}' target='_blank'>this link</a>.  On that tab, open your developer tools with `CTRL + SHIFT + i` or by right-clicking the page and selecting "Inspect" from the context menu.  Then choose the "Network" tab:
+To help illustrate how these requests are made, we'll once again turn to our developer tools.  Open the example page <a href='/examples/2.2.1/index.html' target='_blank'>this link</a>.  On that tab, open your developer tools with `CTRL + SHIFT + i` or by right-clicking the page and selecting "Inspect" from the context menu.  Then choose the "Network" tab:
 
-![Selecting the network tab in the developer tools]({{<static "images/2.2.1.png">}})
+![Selecting the network tab in the developer tools](/images/2.2.1.png)
 
 The network tab displays details about each request the browser makes.  Initially it will probably be empty, as it does not log requests while not open.  Try refreshing the page - you should see it populate with information:
 
-![The populated network tab]({{<static "images/2.2.2.png">}})
+![The populated network tab](/images/2.2.2.png)
 
 The first entry is the page itself - the HTML file.  But then you should see entries for _site.css_, _brazil.gif_, *fiber-4814456_960_720.jpg*, _jquery-3.5.1.slim.min.js_, and _site.js_.  Each of these entries represents an additional resource the browser fetched from the web in order to display the page.
 
@@ -46,6 +46,6 @@ Notice too that the jQuery `<script>` element also uses the `integrity` attribut
 
 You can use the network tab to help debug issues with resources.  Click on one of the requested resources, and it will open up details about the request:
 
-![Request details in the Network Tab]({{<static "images/2.2.3.png">}})
+![Request details in the Network Tab](/images/2.2.3.png)
 
 Notice that it reports the status code along with details about the request and response, and provides a preview of the requested resource.  We'll cover what these all are over the remainder of this chapter.  As you learn about each topic, you may want to revisit the tab with the example to see how these details correspond to what you are learning.

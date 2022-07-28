@@ -10,7 +10,7 @@ In JavaScript, this notification is pushed into the event queue, and the main th
 
 Let's reconsider a topic we've already discussed with this new understanding - timers.  When we invoke `setTimer()`, we are creating a timer that is managed asynchronously.  When the timer elapses, it creates a timer 'event' and adds it to the event queue.  We can see this in the diagram below.
 
-![The timer and event loop]({{<static "images/3.4.1.png">}})
+![The timer and event loop](/images/3.4.1.png)
 
 However, the timer is not actually an _event_, in the same sense that a `'click'` or `'keydown'` event is... in that those events are provided to the browser from the operating system, and the browser passes them along into the JavaScript interpreter, possibly with some transformation.  In contrast, the timer is created from within the JavaScript code, though its triggering is managed asynchronously.
 

@@ -17,16 +17,16 @@ This loop has no possible exit condition, so if you ran it in the browser, it wo
 
 Thus, browsers instead post warning messages after execution has run for a significant amount of time, like this one:
 
-![The Chrome not responding dialog]({{<static "images/3.5.1.jpg">}})
+![The Chrome not responding dialog](/images/3.5.1.jpg)
 
 So, if we want to do a long-running computation, and _not_ have the browser freeze up, we needed to be able to run it separately from the thread our event loop is running on.  The [web worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) provides just this functionality.
 
 A web worker is essentially another JavaScript interpreter, running a script separate from the main thread.  As an interpreter, it has its own event loop and its own memory space.  Workers and the main thread can communicate by passing messages, which are copied onto their respective event queues. Thus, communication between the threads is _asynchronous_.
 
-![The web worker and main thread interpreters passing messages]({{<static "images/3.5.2.png">}})
+![The web worker and main thread interpreters passing messages](/images/3.5.2.png)
 
 ## An Example
-You can see an example of such a web worker by using <a href='{{<static "examples/3.5.1/index.html">}}' target='_blank'>this link</a> to open another tab in your browser.  This example simulates a long-running process of **n** seconds either in the browser's main thread or in a web worker.  On the page is also three colored squares that when clicked, shift colors.  Try changing the colors of the squares while simulating a several-second process in both ways.  See how running the process on the main thread freezes the user interface?
+You can see an example of such a web worker by using <a href='/examples/3.5.1/index.html' target='_blank'>this link</a> to open another tab in your browser.  This example simulates a long-running process of **n** seconds either in the browser's main thread or in a web worker.  On the page is also three colored squares that when clicked, shift colors.  Try changing the colors of the squares while simulating a several-second process in both ways.  See how running the process on the main thread freezes the user interface?
 
 ## Using Web Workers
 

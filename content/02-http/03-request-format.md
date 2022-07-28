@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 So now that we've seen HTTP Requests in action, let's examine what they _are_.  A HTTP Request is just a stream text that follows a specific format and sent from a client to a server.  
 
-![Http Request as a stream of text]({{<static "images/2.3.1.png">}})
+![Http Request as a stream of text](/images/2.3.1.png)
 
 It consists of one or more lines terminated by a CRLF (a carriage return and a line feed character, typically written `\r\n` in most programming languages).
 

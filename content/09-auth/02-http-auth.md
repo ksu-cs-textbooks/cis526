@@ -13,7 +13,7 @@ https://willie:purpleandwhite@cs.ksu.edu/
 
 However, the use of authentication URLS is now highly discouraged and has been stripped from most browsers, as it is considered a security risk.  Instead, if you are using [HTTP-based authentication](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication) the server needs to issue a challenge **401 Unauthorized** response, along with a `WWW-Authenticate` header specifying the challenge.  This will prompt the browser to display a username/password form and will re-submit the request with the credentials using an `Authorization` header.  The process looks something like this:
 
-![The HTTP Authentication process]({{<static "images/9.2.1.png">}})
+![The HTTP Authentication process](/images/9.2.1.png)
 
 As you can see, when the client makes a request that requires authentication, the server issues a **401 Unauthorized** status code, along with an `WWW-Authenticate` header specifying the authentication scheme.  This prompts the browser to request the user credentials via a dialog (much like the one created by the JavaScript functions `alert()`, `confirm()`, and `prompt()`).  If the user supplies credentials, the request is re-sent, with those credentials included in an `Authentication` header.  The server then decides, based on the credentials, if it will allow the request (typically a **200** response), or refuse (a **403 Unauthorized** response).
 

@@ -6,7 +6,7 @@ date: 2018-08-24T10:53:26-05:00
 ---
 Node is an open-source, cross-platform JavaScript runtime environment build on Google's V8 engine.  It was created by Ryan Dahl in 2009 to allow for server-side scripting in JavaScript.  
 
-![Ryan Dahl]({{< static "images/Ryan_Dahl.jpg" >}})
+![Ryan Dahl](/images/Ryan_Dahl.jpg)
 
 ## ECMAScript Support
 

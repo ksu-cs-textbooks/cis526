@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 As the World Wide Web was gaining popularity in the mid-nineties, browser manufacturers started experimenting with interpreting program scripts embedded within webpages.  By far the most successful of these was JavaScript, initally developed by Brandon Eich for Netscape.
 
-![Brandon Eich]({{<static "images/Brendan_Eich.jpg">}})
+![Brandon Eich](/images/Brendan_Eich.jpg)
 
 Brandon Eich was hired to integrate the [Scheme programming langauge](https://en.wikipedia.org/wiki/Scheme_(programming_language)) into the Netscape browser.  But when Netscape cut a deal with Sun Microsystems to bring Java Applets to their browser, his mission was altered to create a more Java-like langauge.  He developed a prototype in only ten days, that blended [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) syntax, the [Self](https://en.wikipedia.org/wiki/Self_(programming_language)) object-orientation approach, and [Scheme](https://en.wikipedia.org/wiki/Scheme_(programming_language)) functionality. 
 

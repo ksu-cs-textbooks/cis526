@@ -11,7 +11,7 @@ We've seen then how the request conveys information useful to selecting the appr
 
 Now that we're thinking of the URL as a tool for passing information to the server, let's reexamine its parts:
 
-![A diagram of a URL]({{<static "images/6.3.1.png">}})
+![A diagram of a URL](/images/6.3.1.png)
 
 The **protocol** is the protocol used for communication, and the **host** is the domain or IP address of the server.  Note that these are _not_ included in Node's `req.url` parameter, as these are used to find the right server and talk to it using the right protocol - by the time your Node server is generating the `req` object, the request has already found your server and is communicating with the protocol.  
 

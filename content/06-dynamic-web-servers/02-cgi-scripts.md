@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 Before we dig too deeply into dynamic web servers, we should review our technologies used in the web.  On the client side, we have HTML, CSS, and JavaScript.  Managing communication between the client and server, we have HTTP.  But on the server side of the equation, what standard web technologies do we use?
 
-![The Web Technologies]({{<static "images/5.2.1.png">}})
+![The Web Technologies](/images/5.2.1.png)
 
 The answer is _none_.  There **is no standard server development language**.  In fact, web servers can be written in _almost every programming language_.  This gives web application developers a tremendous amount of flexibility.  Of course, that also means the choice of server-side technologies can quickly become overwhelming.
 

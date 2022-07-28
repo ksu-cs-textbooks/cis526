@@ -202,7 +202,7 @@ You should restrict your use of code libraries to those specified in the assignm
 While code libraries are an important and common tool in professional practice, at this point in your learning they can obscure how tasks are being accomplished, leaving your foundational knowledge incomplete.  It is for this reason that we restrict the use of code libraries in the course.
 {{% /notice %}}
 
-{{% include "themes/ksucs-hugo-theme/static/files/syllabus-no-copyright-no-honesty.md" %}}
+{{< include "themes/hugo-theme-relearn/static/files/syllabus-no-copyright-no-honesty.md" >}}
 
 ### Copyright Notice
 

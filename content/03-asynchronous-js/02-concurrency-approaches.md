@@ -38,7 +38,7 @@ In fact, modern operating systems use both multitasking and parallel processing 
 
 Remember our earlier discussion about scaling web servers?  This is _also_ a parallel processing approach.  Incoming HTTP requests are directed by a load balancer to a less-busy server, and that server formulates the response.
 
-![Horizontal Scaling]({{<static "images/3.2.1.png">}})
+![Horizontal Scaling](/images/3.2.1.png)
 
 ### Multithreading
 Individual programs can _also_ be written to execute on multiple cores.  We typically call this approach [Multithreading](https://en.wikipedia.org/wiki/Thread_(computing)#Multithreading), and the individually executing portions of the program code _threads_.  

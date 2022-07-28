@@ -7,9 +7,9 @@ date: 2018-08-24T10:53:26-05:00
 
 The DOM tree is also accessible from JavaScript running in the page.  It is accessed through the global [window](https://developer.mozilla.org/en-US/docs/Web/API/Window) object, i.e. `window.document` or `document`.
 
-Let's use the 'Console' tab of the developer tools to access this object.  Open the previous example page again from <a href='{{<static "examples/1.3.1/index.html">}}' target='_blank'>this link</a>.  Click the console tab to open the expanded console, or use the console area in the bottom panel of the elements tab:
+Let's use the 'Console' tab of the developer tools to access this object.  Open the previous example page again from <a href='/examples/1.3.1/index.html' target='_blank'>this link</a>.  Click the console tab to open the expanded console, or use the console area in the bottom panel of the elements tab:
 
-![The console tab in the developer tools]({{<static "images/1.4.1.png">}})
+![The console tab in the developer tools](/images/1.4.1.png)
 
 With the console open, type:
 
@@ -23,7 +23,7 @@ When instructed to type something into the console, I will use the `>` symbol to
 
 Once you hit the enter key, the console will report the value of the expression `document`, which exposes the document object.  You can click the arrow next to the `#document` to expose its properties:
 
-![The reported document object]({{<static "images/1.4.2.png">}})
+![The reported document object](/images/1.4.2.png)
 
 The document is an instance of the [Document](https://developer.mozilla.org/en-US/docs/Web/API/document) class.  It is the entry point (and the root) of the DOM tree data structure.  It also implements the [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node) and [EventTarget](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget) interfaces, which we'll discuss next.
 
@@ -39,7 +39,7 @@ Let's try walking the tree manually.  In the console, type:
 
 The `body` property of the document directly references the `<body>` element of the webpage, which also implements the [Node](https://developer.mozilla.org/en-US/docs/Web/API/Node) interface.  The `firstElementChild` references the first HTML element that is a child of the node, so in using that twice, we are drilling down to the `<h1>` element.
 
-![The reported h1 object]({{<static "images/1.4.3.png">}})
+![The reported h1 object](/images/1.4.3.png)
 
 ## The EventTarget Interface 
 
@@ -55,7 +55,7 @@ The first argument to [EventTarget.addEventListener](https://developer.mozilla.o
 
 Now try clicking on the _Hello DOM!_ `<h1>` element.  You should see the event being logged:
 
-![The logged event]({{<static "images/1.4.4.png">}})
+![The logged event](/images/1.4.4.png)
 
 We can also remove event listeners with [EventTarget.removeEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener) and trigger them programmatically with [EventTarget.dispatchEvent](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent).
 
@@ -91,7 +91,7 @@ Let's tweak the color of the `<h1>` element we saved a reference to in the `head
 
 This will turn the header blue:
 
-![The blue header]({{<static "images/1.4.5.png">}})
+![The blue header](/images/1.4.5.png)
 
 All of the CSS properties can be manipulated through the `style` property.  
 
@@ -119,7 +119,7 @@ document.querySelector('div.banner').appendChild(p);
 
 As soon as it is appended, it appears on the page:
 
-![The new p element]({{<static "images/1.4.6.png">}})
+![The new p element](/images/1.4.6.png)
 
 Note too that the CSS rules already in place are automatically applied!
 

@@ -47,7 +47,7 @@ function handleRequest(req, res) {
 
 Notice that at each branching point of our control flow, we serve some kind of response to the requesting web client.  _Every_ request should be sent a response - even unsuccessful ones.  If we do not, then the browser will _timeout_, and report a timeout error to the user.
 
-![handleRequest() flowchart]({{<static "images/5.3.1.png">}})
+![handleRequest() flowchart](/images/5.3.1.png)
 
 ## Working with the Response Object
 The second half of responding to requests is putting together the response.  You will use the `http.ServerResponse` object to assemble and send the response.  This response consists of a [status code and message]({{<ref "02-http/09-status-codes">}}), [response headers]({{<ref "02-http/10-response-headers">}}), and a [body]({{<ref "02-http/11-response-body">}}) which could be text, binary data, or nothing.

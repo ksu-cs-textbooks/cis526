@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 Similar to an HTTP Request, an HTTP response is typically a stream of text and possibly data:
 
-![HTTP Response as a stream of text and data]({{<static "images/2.8.1.png">}})
+![HTTP Response as a stream of text and data](/images/2.8.1.png)
 
 It consists of one or more lines of text, terminated by a CRLF (sequential carriage return and line feed characters):
 

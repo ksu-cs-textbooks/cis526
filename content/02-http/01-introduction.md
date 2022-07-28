@@ -9,7 +9,7 @@ At the heart of the world wide web is the Hyper-Text Transfer Protocol (HTTP).  
 
 It starts with a request initiated from the web browser (the client).  This request is sent over the Internet using the TCP protocol to a web server.  Once the web server receives the request, it must decide the appropriate response - ideally sending the requested resource back to the browser to be displayed.  The following diagram displays this typical request-response pattern.
 
-![HTTP's request-response pattern]({{<static "images/2.0.1.png">}})
+![HTTP's request-response pattern](/images/2.0.1.png)
 
 This HTTP request-response pattern is at the core of how all web applications communicate.  Even those that use websockets begin with an HTTP request.
 

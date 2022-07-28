@@ -24,7 +24,7 @@ Consider if we implemented one of the file serving options using the synchronous
 
 It does not look that different from the asynchronous version, but consider what happens if _site.js_ cannot be opened immediately (perhaps it is locked by a system process that is modifying it).  With the synchronous version, we wait for the file to become available.  While we wait, incoming requests are added to our event queue... and none are processed, as the event loop is paused while we are waiting for `fs.readFileSync('site.js')` to resolve.  If it takes more than three seconds, the clients that are waiting will start seeing timeouts in their browsers, and will probably assume our site is down.
 
-![Async vs Sync operations in the Event Loop]({{<static "images/5.4.1.png">}})
+![Async vs Sync operations in the Event Loop](/images/5.4.1.png)
 
 In contrast, if we used the asynchronous version, the reading of the file is handed off to another thread when `fs.readFile()` is invoked.  Any additional processing to do within the event loop for this request is finished, and the next task is pulled from the event queue.  Even if our request for the original file never completes, we still are serving requests as quickly as we get them.
 

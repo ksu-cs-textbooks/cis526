@@ -21,7 +21,7 @@ end function
 
 It's basically an infinite loop that responds to messages, one message at a time.  It might be more useful to see a visual representation:
 
-![The JS Event Loop]({{<static "images/1.6.1.png">}})
+![The JS Event Loop](/images/1.6.1.png)
 
 Here we see not just the event loop, but also the _event queue_.  This is a queue that holds events until the event loop is ready to process them.  It works like the first-in-first-out queues you built in your data structures course (although it may also consider priorities of events).  
 

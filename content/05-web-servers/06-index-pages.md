@@ -9,7 +9,7 @@ The original purpose of the World-Wide-Web was to share webpages and other digit
 
 So, just like when you browse your hard drive using Windows Explorer or other software, it was necessary for these early web pages to display an _index_ - a listing of all the contents of a directory.  You've seen similar in Codio if you ever used the "Project Index" option in the run menu - it displays an index of the project directory:
 
-![Codio Project Index Page]({{<static "images/5.6.1.png">}})
+![Codio Project Index Page](/images/5.6.1.png)
 
 This is a pretty standard auto-generated directory listing - it provides the path to the directory being displayed, and all the contents of the directory as hyperlinks.  Clicking on a file will open or download it, and clicking a directory will open _that_ directory's auto-generated directory listing.
 
