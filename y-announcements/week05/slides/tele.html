@@ -1,19 +1,25 @@
 
 
+<!doctype html>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://ksu-cs-textbooks.github.io/cis526/reveal/css/reveal.css">
-		<link rel="stylesheet" href="https://ksu-cs-textbooks.github.io/cis526/reveal/css/theme/black.css">
-		<link rel="stylesheet" href="https://ksu-cs-textbooks.github.io/cis526/css/atom-one-dark-reasonable.css">
-		<link rel="shortcut icon" href="https://ksu-cs-textbooks.github.io/cis526/images/favicon.png" type="image/x-icon" />
-		<link rel="icon" href="https://ksu-cs-textbooks.github.io/cis526/images/favicon.png" type="image/x-icon" />
-		<script type="text/javascript" async src="https://ksu-cs-textbooks.github.io/cis526/mathjax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-		<meta charset="utf-8" >
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title></title>
+
+		<link rel="stylesheet" href="https://ksu-cs-textbooks.github.io/cis526/reveal/dist/reset.css">
+		<link rel="stylesheet" href="https://ksu-cs-textbooks.github.io/cis526/reveal/dist/reveal.css">
+		<link rel="stylesheet" href="https://ksu-cs-textbooks.github.io/cis526/reveal/dist/theme/black.css">
+		<link rel="stylesheet" href="https://ksu-cs-textbooks.github.io/cis526/css/reveal-theme.css">
+
+		
+		<link rel="stylesheet" href="https://ksu-cs-textbooks.github.io/cis526/reveal/plugin/highlight/monokai.css">
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				  <section>
+				<section>
 	<h3>Week 5 Announcements</h3>
 </section>
 <section>
@@ -60,21 +66,30 @@
 
 			</div>
 		</div>
-		<script src="https://ksu-cs-textbooks.github.io/cis526/js/highlight.pack.js"></script>"/js/highlight.pack.js"
+
+		<script src="https://ksu-cs-textbooks.github.io/cis526/reveal/dist/reveal.js"></script>
+		<script src="https://ksu-cs-textbooks.github.io/cis526/reveal/plugin/markdown/markdown.js"></script>
+		<script src="https://ksu-cs-textbooks.github.io/cis526/reveal/plugin/highlight/highlight.js"></script>
+		<script src="https://ksu-cs-textbooks.github.io/cis526/reveal/plugin/math/math.js"></script>
 		<script>
-		  hljs.initHighlightingOnLoad();
-	  </script>
-		<script src="https://ksu-cs-textbooks.github.io/cis526/reveal/js/reveal.js"></script>
-		<script>
+			
+			
+			
 			Reveal.initialize({
-        controls: false,
-        controlsTutorial: false,
-        progress: false,
-        transition: 'fade',
+				hash: true,
+				controls: false,
+				controlsTutorial:false,
+				progress: false,
+				transition: 'fade',
 				width: 1440,
 				height: 1080,
-				history: true,
-      });
+				highlight: {
+					escapeHTML: false
+				},
+
+				
+				plugins: [ RevealMarkdown, RevealHighlight, RevealMath ]
+			});
 
 			window.addEventListener("mousedown", handleClick, false);
 			window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);

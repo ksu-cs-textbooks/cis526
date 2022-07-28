@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+
+
+
+	
+	
+			
+
+	
+	
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+			
+
+	
+	
+			
+
+	
+	
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+
+	
+	
+			
+			
+			
+			
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dynamic Web Servers on CIS 526 Textbook</title>
+    <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/</link>
+    <description>Recent content in Dynamic Web Servers on CIS 526 Textbook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Aug 2018 10:53:05 -0500</lastBuildDate><atom:link href="https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/01-introduction/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/01-introduction/</guid>
+      <description>While the first generation of webservers was used to serve static content (i.e. files), it was not long before developers began to realize that a lot more potential existed in the technologies of the web. A key realization here is that the resources served by the web server don&amp;rsquo;t need to exist to be served.
+Consider the directory listing from the previous chapter. It is not based on an existing file, but rather is dynamically created when requested by querying the file system of the server.</description>
+    </item>
+    <item>
+      <title>CGI Scripts</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/02-cgi-scripts/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/02-cgi-scripts/</guid>
+      <description>Before we dig too deeply into dynamic web servers, we should review our technologies used in the web. On the client side, we have HTML, CSS, and JavaScript. Managing communication between the client and server, we have HTTP. But on the server side of the equation, what standard web technologies do we use?
+The answer is none. There is no standard server development language. In fact, web servers can be written in almost every programming language.</description>
+    </item>
+    <item>
+      <title>Server Pages</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/03-server-pages/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/03-server-pages/</guid>
+      <description>The CGI scripting approach eventually evolved into a concept known as server pages and embodied in the technologies of PHP and Microsoft’s Active Server Pages (ASP), as well as Java Server Pages, and many other less-well-known technologies. While each of these use different scripting languages, the basic idea is the same: Take a traditional static webserver functionality, and couple it with a script interpreter. When most files are requested from the server, the file is served using the same techniques we used in the last chapter.</description>
+    </item>
+    <item>
+      <title>Custom Servers</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/04-custom-servers/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/04-custom-servers/</guid>
+      <description>While CGI Scripts and Server Pages offered ways to build dynamic websites using off-the shelf web server technologies (Apache, IIS), many programmers found these approaches limiting. Instead, they sought to build the entire web server as a custom program.
+Node was actually developed for exactly this approach - it provides abstractions around the fundamental aspects of HTTP in its http library. This library handles the listening for HTTP requests, and parses the request and uses it to populate a http.</description>
+    </item>
+    <item>
+      <title>Query and Hash Strings</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/05-query-and-hash-strings/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/05-query-and-hash-strings/</guid>
+      <description>Query strings (aka search strings) are the part of the URL that appear after the ? and before the optional #. The hash string is the portion of the url after the #. We&amp;rsquo;ve mentioned them a bit before, but as we dig into dynamic web servers it makes sense to do a deeper dive, as this is where they really come into play.
+The Hash String First, let&amp;rsquo;s briefly visit the hash string.</description>
+    </item>
+    <item>
+      <title>Form Encoding</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/06-form-encoding/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/06-form-encoding/</guid>
+      <description>When a form is submitted as a POST request, its inputs are serialized according to the form&amp;rsquo;s encoding strategy. This value is also used as the Content-Type header of the request. The three form encoding values are:
+application/x-www-form-urlencoded (the default) multipart/form-data (used for file uploads) text/plain (used for debugging) The &amp;lt;form&amp;gt; element&amp;rsquo;s enctype attribute can be set to any of these three possible values.
+application/x-www-form-urlencoded This serialization format consists of key/value pairs where the keys and values are url (percent) encoded, and between each key and value is a = and between each pair is a &amp;amp;.</description>
+    </item>
+    <item>
+      <title>Request Body</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/07-req-body/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/07-req-body/</guid>
+      <description>While many HTTP libraries will process the entire incoming request before passing control to the program, Node&amp;rsquo;s http module takes a different approach. It constructs and passes the http.IncomingMessage and http.ServerResponse objects as soon as it has received the header portion of the request. This means the body may still be being transmitted to the server as you start to process the request.
+This is fine for GET requests, as they don&amp;rsquo;t have a body.</description>
+    </item>
+    <item>
+      <title>Cookies</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/08-cookies/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/08-cookies/</guid>
+      <description>HTML was designed as a stateless protocol. This means that there is no expectation for the server to keep track of prior requests made to it. Each incoming HTTP request is effectively treated as if it is the first request ever made to the server.
+This was an important consideration for making the web possible. Consider what would happen if our server needed to keep track of what every visitor did on the site - especially when you have thousands of unique visitors every second?</description>
+    </item>
+    <item>
+      <title>Sessions</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/09-sessions/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/09-sessions/</guid>
+      <description>If HTTP is stateless, how do e-commerce websites manage to keep track of the contents of your shopping cart as you navigate from page to page? The answer is the use of a session - a technique by which state is added to a web application.
+Info The term session appears a lot in web development, and can mean different things in different contexts. But there is a common thread in each - a session is a form of connection between the client and server.</description>
+    </item>
+    <item>
+      <title>Template Rendering</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/10-template-rendering/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/10-template-rendering/</guid>
+      <description>While skilled programmers may have chafed at the restrictions imposed by server pages, there was one aspect that came to be greatly valued - the ability to embed script directly in HTML, and have it evaluated and concatenated into the HTML text.
+Template Libraries This is where template libraries come in. A template library allows you to write your HTML content as HTML in a separate file with a special syntax to inject dynamic programming script.</description>
+    </item>
+    <item>
+      <title>Script Injection</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/11-script-injection/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/11-script-injection/</guid>
+      <description>Whenever we render content created by users, we open the door to script injection, a kind of attack where a malicious user adds script tags to the content they are posting. Consider this form:
+&amp;lt;form action=&amp;#34;post&amp;#34;&amp;gt; &amp;lt;label for=&amp;#34;comment&amp;#34;&amp;gt; &amp;lt;textarea name=&amp;#34;comment&amp;#34;&amp;gt;&amp;lt;/textarea&amp;gt; &amp;lt;/label&amp;gt; &amp;lt;input type=&amp;#34;submit&amp;#34;/&amp;gt; &amp;lt;/form&amp;gt; The intent is to allow the user to post comments on the page. But a malicious user could enter something like:
+What an awesome site &amp;lt;script src=&amp;#34;http://malic.</description>
+    </item>
+    <item>
+      <title>Full Stack Development</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/12-full-stack/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/12-full-stack/</guid>
+      <description>Server pages represented one approach to tackling the dynamic web server challenge, and one that was especially suitable for those web developers who primarily worked with static HTML, CSS, and JavaScript backgrounds.
+For those that were already skilled programmers, the custom server approach provided less confinement and greater control. But it came at a cost - the programmer had to author the entire server. Writing a server from scratch is both a lot of work, and also introduces many more points where design issues can lead to poor performance and vulnerable web apps.</description>
+    </item>
+    <item>
+      <title>Summary</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/13-summary/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/13-summary/</guid>
+      <description>In this chapter we have learned about several approaches to creating dynamic web servers, including server pages, custom web servers, and full stack development, often using a web development framework. We also learned how dynamic webservers can handle data and file uploads from HTML forms, as well as some security concerns involved. We also saw how state can be introduced to web apps using cookies and sessions.
+In the next few chapters, we&amp;rsquo;ll explore these ideas in more detail.</description>
+    </item>
+  </channel>
+</rss>
