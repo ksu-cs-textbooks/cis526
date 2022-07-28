@@ -99,6 +99,10 @@ theme = "hugo-theme-relearn"
   # Custom parameters
   commitURL = "https://gitlab.cs.ksu.edu/cs-textbooks/cis526-textbook/-/commit/"
 
+  # [x] nhbean
+  # Custom paramters
+  textbookURL = "https://textbooks.cs.ksu.edu/cis526"
+
 [markup]
   [markup.highlight]
     # if set to `guessSyntax = true`, there will be no unstyled code even if no language
