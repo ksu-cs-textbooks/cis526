@@ -1,10 +1,7 @@
 +++
-title = "CIS 526 Textbook"
-date = 2018-08-24T10:53:05-05:00
-chapter = true
+title = "Web Application Development"
+archetype = "home"
 +++
-
-# Web Application Development
 
 CIS 526 Course Textbook
 
