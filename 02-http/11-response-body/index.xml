@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -934,7 +934,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Response Body on CIS 526 Textbook</title>
-    <link>https://ksu-cs-textbooks.github.io/cis526/02-http/11-response-body/</link>
+    <link>https://ksu-cs-textbooks.github.io/cis526/02-http/11-response-body/index.html</link>
     <description>Recent content in Response Body on CIS 526 Textbook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>

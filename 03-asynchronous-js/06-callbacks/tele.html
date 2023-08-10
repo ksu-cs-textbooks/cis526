@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -931,36 +931,36 @@
 		
 		
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0">
-    <meta name="generator" content="Relearn 5.2.0+tip">
+    <meta name="generator" content="Hugo 0.117.0">
+    <meta name="generator" content="Relearn 5.18.0">
     <meta name="description" content="CIS 526 Textbook">
     <meta name="author" content="Nathan Bean">
     <title>Callbacks :: CIS 526 Textbook</title>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/" rel="canonical" type="text/html" title="CIS 526 Textbook">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/index.xml" rel="alternate" type="application/rss+xml" title="CIS 526 Textbook">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/index.print.html" rel="alternate" type="text/html" title="CIS 526 Textbook">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/embed.html" rel="alternate" type="text/html" title="CIS 526 Textbook">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/index.html" rel="canonical" type="text/html" title="Callbacks :: CIS 526 Textbook">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/index.xml" rel="alternate" type="application/rss+xml" title="Callbacks :: CIS 526 Textbook">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/index.print.html" rel="alternate" type="text/html" title="Callbacks :: CIS 526 Textbook">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/embed.html" rel="alternate" type="text/html" title="Callbacks :: CIS 526 Textbook">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1683040585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1683040585" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/featherlight.min.css?1683040585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/featherlight.min.css?1683040585" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1683040585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1683040585" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1683040585" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1683040585" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1683040585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1683040585" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1683040585" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-light-theme.css?1683040585" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/ie.css?1683040585" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/variant.css?1683040585" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/print.css?1683040585" rel="stylesheet" media="print">
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/variant.js?1683040585"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1691704127" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1691704127" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1691704127" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1691704127" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1691704127" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1691704127" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1691704127" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1691704127" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1691704127" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-auto.css?1691704127" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/variant.css?1691704127" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/print.css?1691704127" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/ie.css?1691704127" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/url.js?1691704127"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/variant.js?1691704127"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
-      var index_url="https://ksu-cs-textbooks.github.io/cis526/index.json";
+      window.index_js_url="https://ksu-cs-textbooks.github.io/cis526/index.search.js";
       var root_url="https://ksu-cs-textbooks.github.io/cis526/";
       var baseUri=root_url.replace(/\/$/, '');
       // translations
@@ -968,16 +968,17 @@
       window.T_Copied_to_clipboard = 'Copied to clipboard!';
       window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
       window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
       // some further base stuff
       var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/cis526/';
-      window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
+      window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/custom.css?1683040585" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/jquery.min.js?1683040585" defer></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/custom.css?1691704127" rel="stylesheet">
 
   </head>
-  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/">
+  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/index.html">
     
     <div id="tele" class="tele mirror">
     
@@ -987,10 +988,11 @@
       
       <main id="body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
-          <div id="head-tags">
-          </div>
           <article class="default">
-<h1>Callbacks</h1>
+            <header class="headline">
+            </header>
+<h1 id="callbacks">Callbacks</h1>
+
 <style>
     .console {
       position: fixed;
@@ -1035,32 +1037,27 @@
     });
   </script>
 <p>JavaScript implements its asynchronous nature through <em>callbacks</em> - functions that are invoked when an asynchronous process completes.  We see this in our discussion of timers like <code>setTimeout()</code> and with our web workers with the <code>onmessage</code> event handler.  These demonstrate two possible ways of setting a callback.  With <code>setTimeout()</code> we pass the callback as a function parameter, i.e.:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">timeElapsed</span>() {
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">timeElapsed</span>() {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Time has elapsed!&#34;</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Set a timer for 1 second, and trigger timeElapsed() when the timer expires
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">timeElapsed</span>, <span style="color:#ae81ff">1000</span>);
-</span></span></code></pre></div><p>With webworkers, we assign a function to a property of the worker (the <code>onmessage</code> variable):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">messageReceived</span>(<span style="color:#a6e22e">message</span>) {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">timeElapsed</span>, <span style="color:#ae81ff">1000</span>);</span></span></code></pre></div><p>With webworkers, we assign a function to a property of the worker (the <code>onmessage</code> variable):</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">messageReceived</span>(<span style="color:#a6e22e">message</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Received &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">message</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Set the event listener
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">onmessage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">messageReceived</span>;
-</span></span></code></pre></div><p>Remember, a callback is a function, and in JavaScript, functions are first-order: we can assign them as a variable or pass them as an argument to a function!  We can also define a callback asynchronously as part of the argument, as we do here:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">onmessage</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">messageReceived</span>;</span></span></code></pre></div><p>Remember, a callback is a function, and in JavaScript, functions are first-order: we can assign them as a variable or pass them as an argument to a function!  We can also define a callback asynchronously as part of the argument, as we do here:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>() {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;time elapsed&#34;</span>)
-</span></span><span style="display:flex;"><span>}, <span style="color:#ae81ff">1000</span>);
-</span></span></code></pre></div><p>Or using lambda syntax:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>}, <span style="color:#ae81ff">1000</span>);</span></span></code></pre></div><p>Or using lambda syntax:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(() =&gt; {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;time elapsed&#34;</span>)
-</span></span><span style="display:flex;"><span>}, <span style="color:#ae81ff">1000</span>);
-</span></span></code></pre></div><p>These are roughly equivalent to passing <code>timeElapsed()</code> in the first example - and you&rsquo;ll likely see all three approaches when you read others&rsquo; code.</p>
+</span></span><span style="display:flex;"><span>}, <span style="color:#ae81ff">1000</span>);</span></span></code></pre></div><p>These are roughly equivalent to passing <code>timeElapsed()</code> in the first example - and you&rsquo;ll likely see all three approaches when you read others&rsquo; code.</p>
 <h3 id="callback-hell">Callback Hell</h3>
-<p>Callbacks are a powerful mechanism for expressing asynchronicity, but overuse can lead to difficult to read code - a situation JavaScript programmers refer to as &ldquo;callback hell&rdquo;.  This problem became especially pronounced once programmers began using Node to build server-side code, as Node adopted the event-based callback asynchronous model of JavaScript for interactions with the file system,databases, etc. (we&rsquo;ll cover Node in the 
-
-<a href="https://ksu-cs-textbooks.github.io/cis526/04-node/">next chapter</a>).</p>
+<p>Callbacks are a powerful mechanism for expressing asynchronicity, but overuse can lead to difficult to read code - a situation JavaScript programmers refer to as &ldquo;callback hell&rdquo;.  This problem became especially pronounced once programmers began using Node to build server-side code, as Node adopted the event-based callback asynchronous model of JavaScript for interactions with the file system,databases, etc. (we&rsquo;ll cover Node in the <a href="https://ksu-cs-textbooks.github.io/cis526/04-node/">next chapter</a>
+).</p>
 <p>Consider this example, which logs a user into a website:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">webapp</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/login&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">webapp</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/login&#39;</span>, (<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) =&gt; {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">parseFormData</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, (<span style="color:#a6e22e">form</span>) =&gt; {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">username</span>;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">form</span>.<span style="color:#a6e22e">password</span>;
@@ -1074,8 +1071,7 @@
 </span></span><span style="display:flex;"><span>            });
 </span></span><span style="display:flex;"><span>        });
 </span></span><span style="display:flex;"><span>    });
-</span></span><span style="display:flex;"><span>});
-</span></span></code></pre></div><p>Don&rsquo;t work about the exact details of the code, but count the number of nested callbacks.  There are four!  And reasoning about this deeply nested code starts getting pretty challenging even for an experienced programmer.  Also, handling errors in this nested structure requires thinking through the nested structure.</p>
+</span></span><span style="display:flex;"><span>});</span></span></code></pre></div><p>Don&rsquo;t work about the exact details of the code, but count the number of nested callbacks.  There are four!  And reasoning about this deeply nested code starts getting pretty challenging even for an experienced programmer.  Also, handling errors in this nested structure requires thinking through the nested structure.</p>
 <p>There are strategies to mitigate this challenge in writing your code, including:</p>
 <ol>
 <li>Keeping your code shallow</li>
@@ -1086,23 +1082,23 @@
 <p>As JavaScript matured, additional options were developed for handling this complexity - Promises and the <code>async</code> and <code>await</code> keywords.  We&rsquo;ll talk about them next.</p>
 
             <footer class="footline">
+
             </footer>
           </article>
         </div>
       </main>
     </div>
     
-  </div>
+    </div>
     
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1683040585" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1683040585" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/featherlight.min.js?1683040585" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/theme.js?1683040585" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1691704127" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1691704127" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/theme.js?1691704127" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/tele-scroll.js?1683040585 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/tele-scroll.js?1691704127 defer"></script>
     
   </body>
 </html>

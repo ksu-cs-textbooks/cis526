@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -934,7 +934,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Caching for the Win on CIS 526 Textbook</title>
-    <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/05-caching-win/</link>
+    <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/05-caching-win/index.html</link>
     <description>Recent content in Caching for the Win on CIS 526 Textbook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>

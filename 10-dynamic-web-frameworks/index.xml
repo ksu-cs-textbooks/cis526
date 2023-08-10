@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -934,47 +934,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dynamic Web Frameworks on CIS 526 Textbook</title>
-    <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/</link>
+    <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/index.html</link>
     <description>Recent content in Dynamic Web Frameworks on CIS 526 Textbook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Aug 2018 10:53:05 -0500</lastBuildDate><atom:link href="https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/01-introduction/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/01-introduction/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/01-introduction/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/01-introduction/index.html</guid>
       <description>You have now learned about and built examples of several early implementations for web applications - file servers and server pages. These kinds of web applications dominated the Internet in the 90&amp;rsquo;s, and continue to play a major role today. However, the needs of web applications grew increasingly more dynamic as the web continued to evolve, leading to the development of truly dynamic web servers built around a stack of technologies.</description>
     </item>
     <item>
       <title>Web Frameworks</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/02-web-frameworks/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/02-web-frameworks/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/02-web-frameworks/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/02-web-frameworks/index.html</guid>
       <description>Web frameworks were designed meet these challenges, and to help programmers develop web applications more quickly and with less errors. They do so through providing a standardized approach to building a web application, including imposing a software architecture, providing commonly-needed functionality, libraries for database communication, and generators to create boilerplate code. These frameworks built upon existing Web Stacks, allowing the programmer to focus almost exclusively on the scripting aspect.
 A slew of frameworks for various scripting languages emerged in 2005:</description>
     </item>
     <item>
       <title>Web Framework Characteristics</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/03-web-framework-characteristics/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/03-web-framework-characteristics/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/03-web-framework-characteristics/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/03-web-framework-characteristics/index.html</guid>
       <description>Web frameworks can be classified in a number of ways, but there are several that you will see pop up in discussions. For example, an opinionated web framework is one that was developed with a strict software architecture that developers are expected to follow. While it may be possible to deviate from this expected structure, to do so often causes significant headaches and coding challenges. Ruby on Rails is a good example of an opinionated framework - there is a Rails Way of writing a Ruby on Rails application, and deviating from that way will require a lot more work on your part.</description>
     </item>
     <item>
       <title>Single Page Apps</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/04-single-page-apps/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/04-single-page-apps/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/04-single-page-apps/</guid>
-      <description>Client-side frameworks often focus on creating single page apps. In this pattern, the entire website consists of a single HTML page with very little content, mostly the &amp;lt;script&amp;gt; elements to download a large client-side JavaScript library. Once downloaded, this library populates the page with HTML content by directly manipulating the DOM.
+      <guid>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/04-single-page-apps/index.html</guid>
+      <description>Client-side frameworks often focus on creating single page apps . In this pattern, the entire website consists of a single HTML page with very little content, mostly the &amp;lt;script&amp;gt; elements to download a large client-side JavaScript library. Once downloaded, this library populates the page with HTML content by directly manipulating the DOM.
 Consider a drawing application for creating pixel art. It is entirely possible to write a single-page application that only needs a webserver to serve its static HTML and JavaScript files.</description>
     </item>
     <item>
       <title>Progressive Web Apps</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/05-progressive-web-apps/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/05-progressive-web-apps/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/05-progressive-web-apps/</guid>
-      <description>A next step in the evolution of single-page apps is the progressive web application (PWA). While these are web applications, they also provide a native-like feel when running in a phone or tablet, and can usually have a shortcut saved to the desktop. It is built around several new web standards that provide specific functionality:
+      <guid>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/05-progressive-web-apps/index.html</guid>
+      <description>A next step in the evolution of single-page apps is the progressive web application (PWA) . While these are web applications, they also provide a native-like feel when running in a phone or tablet, and can usually have a shortcut saved to the desktop. It is built around several new web standards that provide specific functionality:
 Secure Context A PWA is always served with https. Also, many features that a PWA might want to use (geolocation, the camera) are only available to a site served over http.</description>
     </item>
   </channel>

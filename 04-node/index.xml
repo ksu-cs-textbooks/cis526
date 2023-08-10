@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -934,75 +934,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Introduction to Node on CIS 526 Textbook</title>
-    <link>https://ksu-cs-textbooks.github.io/cis526/04-node/</link>
+    <link>https://ksu-cs-textbooks.github.io/cis526/04-node/index.html</link>
     <description>Recent content in Introduction to Node on CIS 526 Textbook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Aug 2018 10:53:05 -0500</lastBuildDate><atom:link href="https://ksu-cs-textbooks.github.io/cis526/04-node/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/01-introduction/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/01-introduction/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/01-introduction/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/01-introduction/index.html</guid>
       <description>Node is an open-source, cross-platform JavaScript runtime environment build on Google&amp;rsquo;s V8 engine. It was created by Ryan Dahl in 2009 to allow for server-side scripting in JavaScript.
-ECMAScript Support Node supports most of the features of ECMAScript 2015 (ES6), with the notable exception of ES6 modules (as Node adopted the CommonJS module approach before the ES6 proposal, and the two approaches are not interchangeable). You can learn more about Node&amp;rsquo;s ES6 support here.</description>
+ECMAScript Support Node supports most of the features of ECMAScript 2015 (ES6), with the notable exception of ES6 modules (as Node adopted the CommonJS module approach before the ES6 proposal, and the two approaches are not interchangeable). You can learn more about Node&amp;rsquo;s ES6 support here .</description>
     </item>
     <item>
       <title>Event Loop &amp; Console</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/index.html</guid>
       <description>Node adopts an asynchronous event-driven approach to computing, much like JavaScript does in the browser. For example, when we set up a HTTP server in Node, we define a function to call when a HTTP request (an event) is received. As requests come in, they are added to a queue which is processed in a FIFO (first-in, first-out) manner.
 In addition to events, Node implements many asynchronous functions for potentially blocking operations.</description>
     </item>
     <item>
       <title>Asynchronous Functions</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/03-asynchronous-functions/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/03-asynchronous-functions/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/03-asynchronous-functions/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/03-asynchronous-functions/index.html</guid>
       <description>The benefit of the asynchronous approach is that all user-written code runs in a single-threaded environment while avoiding blocking. This means for the most part, we can write code the way we are used to, with a few tweaks for asynchronous functions.
 Consider the two approaches for reading and printing the contents of a file, below:
 const fs = require(&amp;#39;fs&amp;#39;); // Synchronous approach var data = fs.readFileSync(&amp;#39;file.txt&amp;#39;); console.log(data); // Asynchronous approach fs.</description>
     </item>
     <item>
       <title>Modules</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/04-modules/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/04-modules/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/04-modules/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/04-modules/index.html</guid>
       <description>One major feature Node introduced to JavaScript was the ability to encapsulate code into separate files using modules. The approach adopted by Node is the CommonJS module pattern.
 Warning Node&amp;rsquo;s use of modules predates ECMA6&amp;rsquo;s adoption of modules, and the CommonJS approach Node adopted is fundamentally different than the ECMA6 version. For Node 16 (installed on your Codio Box), ECMA6 modules are an optional feature that has to be enabled with a flag when invoking the node command, i.</description>
     </item>
     <item>
       <title>Packages</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/05-packages/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/05-packages/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/05-packages/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/05-packages/index.html</guid>
       <description>The Node Package Manager allows you to create a package representing your project. This is similar to Visual Studio&amp;rsquo;s idea of a project - a package is a complete Node program.
 Just as Visual Studio adds solution and project files, a Node package adds a file named package.json and a directory named node_modules.
 The Package File Every node package has in its top-level directory a file named package.json. This JSON file provides important information about the project, including:</description>
     </item>
     <item>
       <title>Dependencies</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/06-dependencies/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/06-dependencies/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/06-dependencies/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/06-dependencies/index.html</guid>
       <description>A second great benefit of creating your project as a Node package is that dependencies can be managed using the Node Package Manager (npm). You can install any Node package with the command $npm install [package name]. This command looks for the corresponding package in an online repository, and if it is found, downloads it and saves it to the subdirectory node_modules in your package directory.
 It also creates an entry in the package.</description>
     </item>
     <item>
       <title>Git</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/07-git/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/07-git/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/07-git/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/07-git/index.html</guid>
       <description>Most Node packages are made available as git repositories, and npm has built-in support for using git.
 The Repository Property In your package.json file, you can specify a &amp;quot;repository&amp;quot; property, which specifies where the repository for this project exists. Consider the following example of the npm command-line interface package:
-&amp;#34;repository&amp;#34;: { &amp;#34;type&amp;#34; : &amp;#34;git&amp;#34;, &amp;#34;url&amp;#34; : &amp;#34;https://github.com/npm/cli.git&amp;#34; } For many open-source projects, the repository is located on Github, a GitHub gist, BitBucket, or a GitLab instance.</description>
+&amp;#34;repository&amp;#34;: { &amp;#34;type&amp;#34; : &amp;#34;git&amp;#34;, &amp;#34;url&amp;#34; : &amp;#34;https://github.com/npm/cli.git&amp;#34; }For many open-source projects, the repository is located on Github, a GitHub gist, BitBucket, or a GitLab instance.</description>
     </item>
     <item>
       <title>Summary</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/08-summary/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/04-node/08-summary/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/08-summary/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/04-node/08-summary/index.html</guid>
       <description>Node, and its package manager, npm, are powerful tools for developing server-side applications in JavaScript. In the past chapter, we&amp;rsquo;ve discussed the event loop that drives Node&amp;rsquo;s asynchronous, event-driven approach, and the asynchronous function pattern employed by many node libraries. We&amp;rsquo;ve also talked about how Node.js code can be organized into modules, how those modules can be imported with a require() call, and how the node package manager (npm) can be used to download and install open-source packages locally.</description>
     </item>
   </channel>

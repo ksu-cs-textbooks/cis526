@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -934,76 +934,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Asynchronous JavaScript on CIS 526 Textbook</title>
-    <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/</link>
+    <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/index.html</link>
     <description>Recent content in Asynchronous JavaScript on CIS 526 Textbook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Aug 2018 10:53:05 -0500</lastBuildDate><atom:link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/01-introduction/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/01-introduction/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/01-introduction/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/01-introduction/index.html</guid>
       <description>JavaScript makes extensive use of asynchronous processing to tackle the challenge of concurrency. This includes the events we&amp;rsquo;ve already talked about (user events, network events and timers), but it has also been expanded to provide even more powerful features. The XMLHTTPRequest object allows JavaScript to request additional resources directly in an asynchronous manner, and the more recent Fetch API updates that approach. Web workers allow parallel JavaScript processes to be run in the browser.</description>
     </item>
     <item>
       <title>Concurrency Approaches</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/02-concurrency-approaches/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/02-concurrency-approaches/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/02-concurrency-approaches/</guid>
-      <description>Concurrency means &amp;ldquo;doing more than one thing at the same time.&amp;rdquo; In computer science, concurrency can refer to ( 1) structuring a program or algorithm so that it can be executed out-of-order or in partial order, or ( 2) actually executing computations in parallel. In modern-day programming, we&amp;rsquo;re often talking about both. But to help us develop a stronger understanding, let&amp;rsquo;s look at the two ideas one-at-a-time, and then bring it together.</description>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/02-concurrency-approaches/index.html</guid>
+      <description>Concurrency means &amp;ldquo;doing more than one thing at the same time.&amp;rdquo; In computer science, concurrency can refer to (1 ) structuring a program or algorithm so that it can be executed out-of-order or in partial order, or (2 ) actually executing computations in parallel. In modern-day programming, we&amp;rsquo;re often talking about both. But to help us develop a stronger understanding, let&amp;rsquo;s look at the two ideas one-at-a-time, and then bring it together.</description>
     </item>
     <item>
       <title>Concurrency Challenges</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/03-concurrency-challenges/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/03-concurrency-challenges/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/03-concurrency-challenges/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/03-concurrency-challenges/index.html</guid>
       <description>Implementing concurrency in computing systems comes with some specific challenges. Consider the multitasking approach where we have your text editor and your music player running at the same time. As the text editor process yields to the music player, the data and program elements it had loaded up into working memory, needs to be cleared out and replaced with the music player&amp;rsquo;s data and program. However, the music player&amp;rsquo;s data and program need to be retained somewhere so that they can be swapped back in when the music player yields.</description>
     </item>
     <item>
       <title>Asynchronous Programming</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/04-asynchronous-programming/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/04-asynchronous-programming/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/04-asynchronous-programming/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/04-asynchronous-programming/index.html</guid>
       <description>In asynchronous programming, memory collisions are avoided by not sharing memory between threads. A unit of work that can be done in parallel is split off and handed to another thread, and any data it needs is copied into that threads&amp;rsquo; memory space. When the work is complete, the second thread notifies the primary thread if the work was completed successfully or not, and provides the resulting data or error.</description>
     </item>
     <item>
       <title>Web Workers</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/05-web-workers/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/05-web-workers/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/05-web-workers/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/05-web-workers/index.html</guid>
       <description>As JavaScript began to be used to add more and more functionality to web applications, an important limitation began to appear. When the JavaScript interpreter is working on a big task, it stays in the event loop a long time, and does not pull events from the event queue. The result is the browser stops responding to user events&amp;hellip; and seems to be frozen. On the other hand - some programs will never end.</description>
     </item>
     <item>
       <title>Callbacks</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/index.html</guid>
       <description>CONSOLE JavaScript implements its asynchronous nature through callbacks - functions that are invoked when an asynchronous process completes. We see this in our discussion of timers like setTimeout() and with our web workers with the onmessage event handler. These demonstrate two possible ways of setting a callback. With setTimeout() we pass the callback as a function parameter, i.e.:
-function timeElapsed() { console.log(&amp;#34;Time has elapsed!&amp;#34;); } // Set a timer for 1 second, and trigger timeElapsed() when the timer expires setTimeout(timeElapsed, 1000); With webworkers, we assign a function to a property of the worker (the onmessage variable):</description>
+function timeElapsed() { console.log(&amp;#34;Time has elapsed!&amp;#34;); } // Set a timer for 1 second, and trigger timeElapsed() when the timer expires setTimeout(timeElapsed, 1000);With webworkers, we assign a function to a property of the worker (the onmessage variable):</description>
     </item>
     <item>
       <title>Promises</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/07-promises/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/07-promises/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/07-promises/</guid>
-      <description>CONSOLE Promises replace the callback mechanism with a JavaScript object, a Promise. In many ways, this is similar to the XMLHttpRequest object that is at the heart of AJAX. You can think of it as a state machine that is in one of three states: pending, fulfilled, or rejected.
+      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/07-promises/index.html</guid>
+      <description>CONSOLE Promises replace the callback mechanism with a JavaScript object, a Promise. In many ways, this is similar to the XMLHttpRequest object that is at the heart of AJAX . You can think of it as a state machine that is in one of three states: pending, fulfilled, or rejected.
 A promise can be created by wrapping an asynchronous call within a new Promise object. For example, we can turn a setTimeout() into a promise with:</description>
     </item>
     <item>
       <title>Async and Await</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/08-async-await/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/08-async-await/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/08-async-await/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/08-async-await/index.html</guid>
       <description>The async and await keywords are probably more familiar to you from languages like C#. JavaScript introduced them to play much the same role - a function declared async is asynchronous, and returns a Promise object.
 With this in mind, we can redeclare our createTimer() method using the async keyword:
-async function createTimer(milliseconds) { return new Promise((resolve, reject) =&amp;gt; { setTimeout(() =&amp;gt; { resolve(); }, milliseconds); }); } Now, instead of using the promise directly, we can use the await keyword in other code to wait on the promise to resolve, i.</description>
+async function createTimer(milliseconds) { return new Promise((resolve, reject) =&amp;gt; { setTimeout(() =&amp;gt; { resolve(); }, milliseconds); }); }Now, instead of using the promise directly, we can use the await keyword in other code to wait on the promise to resolve, i.</description>
     </item>
     <item>
       <title>Summary</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/09-summary/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/09-summary/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/09-summary/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/09-summary/index.html</guid>
       <description>In this chapter we learned about many of the approaches and challenges involved in concurrent programming, including asynchronous programming. JavaScript adopts the asynchronous approach through its use of the event loop and queue, allowing asynchronous processes to be invoked, processed on separate threads, and posting their results as new messages on the event queue to be processed when the main thread gets to them.
 We saw how this approach allows for multi-threaded programs in the browser through the use of web workers, each of which runs a separate JavaScript interpreter with its own event loop and queue.</description>
     </item>

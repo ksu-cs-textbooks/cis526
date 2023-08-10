@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -934,15 +934,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Previous Semesters on CIS 526 Textbook</title>
-    <link>https://ksu-cs-textbooks.github.io/cis526/y-announcements/old/</link>
+    <link>https://ksu-cs-textbooks.github.io/cis526/y-announcements/old/index.html</link>
     <description>Recent content in Previous Semesters on CIS 526 Textbook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://ksu-cs-textbooks.github.io/cis526/y-announcements/old/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Summer 2021</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/y-announcements/old/summer2021/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/y-announcements/old/summer2021/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/y-announcements/old/summer2021/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/y-announcements/old/summer2021/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Summer 2022</title>
+      <link>https://ksu-cs-textbooks.github.io/cis526/y-announcements/old/summer2022/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/y-announcements/old/summer2022/index.html</guid>
       <description></description>
     </item>
   </channel>

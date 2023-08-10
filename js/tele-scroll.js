@@ -98,8 +98,8 @@ var onDocumentKeyDown = function( event ) {
       autoScroll = 0;
       break;
     case 77:
-      $('#body').toggleClass('mirror');
-      if($('#body').hasClass('mirror')){
+      document.getElementById("tele").classList.toggle("mirror");
+      if(document.getElementById("tele").classList.contains("mirror")){
         localStorage.setItem('mirror', 'on');
       }else{
         localStorage.setItem('mirror', 'off');
@@ -140,11 +140,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var mirror = localStorage.getItem('mirror');
     if(mirror == "on"){
-        $('#body').addClass('mirror');
+      document.getElementById("tele").classList.add("mirror");
     } else if (mirror == "off"){
-      $('#body').removeClass('mirror');
+      document.getElementById("tele").classList.remove("mirror");
     } else {
-      $('#body').addClass('mirror');
+      document.getElementById("tele").classList.add("mirror");
     }
 });
 

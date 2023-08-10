@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -933,605 +933,605 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/</loc>
-    <lastmod>2022-05-19T17:00:02-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week01/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week01/index.html</loc>
     <lastmod>2023-01-17T10:30:44-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/01-introduction/index.html</loc>
     <lastmod>2022-05-27T14:12:23-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/01-introduction/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/01-introduction/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/01-introduction/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/01-introduction/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/01-introduction/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/01-introduction/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/01-introduction/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/01-introduction/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/01-introduction/index.html</loc>
     <lastmod>2022-05-31T14:43:59-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/01-introduction/index.html</loc>
     <lastmod>2020-08-04T13:02:29-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/01-introduction/index.html</loc>
     <lastmod>2020-05-25T14:34:56-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/01-introduction/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/01-introduction/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/01-introduction/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/</loc>
-    <lastmod>2020-06-04T13:45:22-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week03/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week03/index.html</loc>
     <lastmod>2023-01-31T10:24:17-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week05/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week05/index.html</loc>
     <lastmod>2023-02-14T10:39:24-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/02-basic-syntax/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/02-basic-syntax/index.html</loc>
     <lastmod>2020-06-13T16:25:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/02-browser-requests/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/02-browser-requests/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/02-cgi-scripts/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/02-cgi-scripts/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/02-concurrency-approaches/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/02-concurrency-approaches/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/02-rule-format/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/02-rule-format/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/02-data-serialization/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/02-data-serialization/index.html</loc>
     <lastmod>2021-07-01T15:48:20-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/02-document-object-model/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/02-document-object-model/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/02-html-element-structure/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/02-html-element-structure/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/02-http-auth/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/02-http-auth/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/02-http-in-node/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/02-http-in-node/index.html</loc>
     <lastmod>2022-05-25T17:39:06-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/02-navigating-canvas/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/02-navigating-canvas/index.html</loc>
     <lastmod>2022-05-27T14:12:23-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/02-routing/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/02-routing/index.html</loc>
     <lastmod>2022-05-27T11:48:36-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/03-resources/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/03-resources/index.html</loc>
     <lastmod>2022-07-11T11:23:27-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/02-web-frameworks/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/02-web-frameworks/index.html</loc>
     <lastmod>2020-08-04T13:02:29-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/</loc>
-    <lastmod>2022-05-24T20:05:03-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/03-asynchronous-functions/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/03-asynchronous-functions/index.html</loc>
     <lastmod>2021-06-17T20:37:48-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/03-concurrency-challenges/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/03-concurrency-challenges/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/03-css-and-the-dom/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/03-css-and-the-dom/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/03-selectors/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/03-selectors/index.html</loc>
     <lastmod>2020-06-08T08:44:45-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/03-databases/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/03-databases/index.html</loc>
     <lastmod>2022-05-26T14:31:28-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/03-html-document-structure/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/03-html-document-structure/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/03-functions/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/03-functions/index.html</loc>
     <lastmod>2020-06-13T16:25:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/03-password-auth/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/03-password-auth/index.html</loc>
     <lastmod>2022-06-02T10:35:21-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/03-request-format/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/03-request-format/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/03-request-handling/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/03-request-handling/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/03-server-pages/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/03-server-pages/index.html</loc>
     <lastmod>2022-05-26T12:42:57-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/03-web-framework-characteristics/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/03-web-framework-characteristics/index.html</loc>
     <lastmod>2022-06-02T10:35:21-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/03-where-to-find-help/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/03-where-to-find-help/index.html</loc>
     <lastmod>2022-05-27T14:12:23-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/</loc>
-    <lastmod>2020-06-08T08:44:45-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/04-applying-rules/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/04-applying-rules/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/04-arrays-and-lists/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/04-arrays-and-lists/index.html</loc>
     <lastmod>2020-06-13T16:25:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/04-asynchronous-programming/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/04-asynchronous-programming/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/04-custom-servers/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/04-custom-servers/index.html</loc>
     <lastmod>2021-06-25T22:27:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/04-inline-vs-block/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/04-inline-vs-block/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/04-js-and-the-dom/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/04-js-and-the-dom/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/04-modules/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/04-modules/index.html</loc>
     <lastmod>2022-05-24T20:05:03-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/04-relational-databases/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/04-relational-databases/index.html</loc>
     <lastmod>2022-07-06T10:20:05-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/04-request-methods/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/04-request-methods/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/04-request-revisited/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/04-request-revisited/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/04-single-page-apps/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/04-single-page-apps/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/04-stronger-passwords/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/04-stronger-passwords/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/04-importance-of-async/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/04-importance-of-async/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/04-what-you-will-learn/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/04-what-you-will-learn/index.html</loc>
     <lastmod>2022-05-27T11:48:36-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/</loc>
-    <lastmod>2020-06-08T08:44:45-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/05-caching-win/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/05-caching-win/index.html</loc>
     <lastmod>2020-06-19T20:51:18-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/05-textbooks/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/05-textbooks/index.html</loc>
     <lastmod>2022-05-20T14:08:23-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/05-cascade-algorithm/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/05-cascade-algorithm/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/05-js-events/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/05-js-events/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/05-objects-and-classes/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/05-objects-and-classes/index.html</loc>
     <lastmod>2020-06-13T16:25:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/05-packages/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/05-packages/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/05-progressive-web-apps/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/05-progressive-web-apps/index.html</loc>
     <lastmod>2021-07-10T10:16:43-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/05-query-and-hash-strings/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/05-query-and-hash-strings/index.html</loc>
     <lastmod>2022-05-26T12:42:57-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/05-rest/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/05-rest/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/05-single-sign-on/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/05-single-sign-on/index.html</loc>
     <lastmod>2021-07-10T10:16:43-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/05-sql-injection/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/05-sql-injection/index.html</loc>
     <lastmod>2022-05-26T14:31:28-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/05-tables/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/05-tables/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/05-uris-and-urls/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/05-uris-and-urls/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/05-web-workers/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/05-web-workers/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/</loc>
-    <lastmod>2020-06-19T20:51:18-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/06-attaching-scripts/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/06-attaching-scripts/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/06-callbacks/index.html</loc>
     <lastmod>2021-06-04T12:12:26-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/06-cas/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/06-cas/index.html</loc>
     <lastmod>2021-07-10T10:16:43-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/06-specificity/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/06-specificity/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/06-dependencies/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/06-dependencies/index.html</loc>
     <lastmod>2022-05-24T20:05:03-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/06-form-encoding/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/06-form-encoding/index.html</loc>
     <lastmod>2021-06-25T22:27:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/06-forms/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/06-forms/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/06-index-pages/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/06-index-pages/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/06-orm/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/06-orm/index.html</loc>
     <lastmod>2022-05-26T14:31:28-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/06-request-headers/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/06-request-headers/index.html</loc>
     <lastmod>2022-05-24T20:05:03-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/06-routers/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/06-routers/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/06-syllabus/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/00-forward/06-syllabus/index.html</loc>
     <lastmod>2022-08-02T14:24:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/06-dom-resource-loading/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/06-dom-resource-loading/index.html</loc>
     <lastmod>2022-05-24T14:24:59-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/</loc>
-    <lastmod>2020-08-04T13:02:29-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/07-apis/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/07-apis/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/07-common-elements/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/07-common-elements/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/07-units/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/07-units/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/07-git/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/07-git/index.html</loc>
     <lastmod>2021-06-05T19:37:55-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/07-partial-downloads/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/07-partial-downloads/index.html</loc>
     <lastmod>2022-05-25T17:39:06-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/07-promises/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/07-promises/index.html</loc>
     <lastmod>2022-05-24T20:05:03-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/07-request-body/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/07-request-body/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/07-req-body/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/07-req-body/index.html</loc>
     <lastmod>2021-06-25T22:27:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/07-saml/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/07-saml/index.html</loc>
     <lastmod>2022-06-02T10:35:21-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/07-summary/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/07-summary/index.html</loc>
     <lastmod>2021-06-04T12:08:05-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/07-the-dom/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/07-the-dom/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/</loc>
-    <lastmod>2020-08-04T13:02:29-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/07-persistent-storage/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week07/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week07/index.html</loc>
     <lastmod>2023-03-01T10:35:19-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/08-async-await/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/08-async-await/index.html</loc>
     <lastmod>2021-06-04T12:08:05-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/08-cookies/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/08-cookies/index.html</loc>
     <lastmod>2021-07-01T14:13:35-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/08-functions/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/08-functions/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/08-jwt/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/08-jwt/index.html</loc>
     <lastmod>2022-02-28T16:21:40-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/08-response-format/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/08-response-format/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/08-strict-mode/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/08-strict-mode/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/08-summary/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/04-node/08-summary/index.html</loc>
     <lastmod>2022-05-24T20:05:03-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/08-web-hooks/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/08-web-hooks/index.html</loc>
     <lastmod>2022-05-31T14:43:59-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/</loc>
-    <lastmod>2020-08-04T13:02:29-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/09-colors/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/09-colors/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/09-oauth/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/09-oauth/index.html</loc>
     <lastmod>2022-06-02T10:38:23-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/09-regexp/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/09-regexp/index.html</loc>
     <lastmod>2022-05-25T17:39:06-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/09-sessions/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/09-sessions/index.html</loc>
     <lastmod>2022-05-26T12:42:57-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/09-status-codes/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/09-status-codes/index.html</loc>
     <lastmod>2021-06-08T20:53:34-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/09-summary/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/09-summary/index.html</loc>
     <lastmod>2021-06-05T19:37:55-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/09-summary/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/08-routing/09-summary/index.html</loc>
     <lastmod>2021-01-23T20:26:01-06:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/</loc>
-    <lastmod>2020-08-04T13:02:29-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week09/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week09/index.html</loc>
     <lastmod>2023-03-21T13:39:01-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/10-text/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/10-text/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/10-json/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/10-json/index.html</loc>
     <lastmod>2022-05-24T20:05:03-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/10-response-headers/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/10-response-headers/index.html</loc>
     <lastmod>2022-05-24T14:24:59-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/10-summary/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/09-auth/10-summary/index.html</loc>
     <lastmod>2021-07-10T10:16:43-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/10-template-rendering/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/10-template-rendering/index.html</loc>
     <lastmod>2022-05-26T14:31:28-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/</loc>
-    <lastmod>2020-08-04T13:02:29-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/10-dynamic-web-frameworks/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/</loc>
-    <lastmod>2020-05-29T15:48:39-05:00</lastmod>
-  </url>
-  <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/11-ajax/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/11-ajax/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/11-box-model/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/11-box-model/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/11-response-body/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/11-response-body/index.html</loc>
     <lastmod>2020-06-04T13:45:22-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/11-script-injection/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/11-script-injection/index.html</loc>
     <lastmod>2021-07-01T14:13:35-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/</loc>
-    <lastmod>2020-06-04T13:45:22-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/a-html/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/12-positioning/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/12-positioning/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/12-full-stack/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/12-full-stack/index.html</loc>
     <lastmod>2022-05-26T14:31:28-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/12-http-2-0/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/12-http-2-0/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/</loc>
-    <lastmod>2020-06-04T13:45:22-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week12/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week12/index.html</loc>
     <lastmod>2023-04-11T09:25:42-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/13-layouts/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/13-layouts/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/13-statelessness-and-scaling/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/13-statelessness-and-scaling/</loc>
-    <lastmod>2022-07-28T18:52:31-05:00</lastmod>
-  </url>
-  <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/13-summary/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/06-dynamic-web-servers/13-summary/index.html</loc>
     <lastmod>2021-07-01T14:13:35-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/14-responsive-web-design/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/c-js/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/b-css/14-responsive-web-design/index.html</loc>
     <lastmod>2022-07-28T18:52:31-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/14-summary/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/02-http/14-summary/index.html</loc>
     <lastmod>2021-06-04T12:08:05-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week15/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/y-announcements/week15/index.html</loc>
     <lastmod>2023-05-02T10:15:39-05:00</lastmod>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/</loc>
-    <lastmod>2020-05-25T14:34:56-05:00</lastmod>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/categories/index.html</loc>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/categories/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/tags/index.html</loc>
   </url>
   <url>
-    <loc>https://ksu-cs-textbooks.github.io/cis526/tags/</loc>
+    <loc>https://ksu-cs-textbooks.github.io/cis526/index.html</loc>
+    <lastmod>2023-08-10T16:48:12-05:00</lastmod>
   </url>
 </urlset>

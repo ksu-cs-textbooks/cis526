@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -934,64 +934,64 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Basic Web Servers on CIS 526 Textbook</title>
-    <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/</link>
+    <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/index.html</link>
     <description>Recent content in Basic Web Servers on CIS 526 Textbook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Aug 2018 10:53:05 -0500</lastBuildDate><atom:link href="https://ksu-cs-textbooks.github.io/cis526/05-web-servers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/01-introduction/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/01-introduction/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/01-introduction/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/01-introduction/index.html</guid>
       <description>The first web servers were developed to fulfill a simple role - they responded to requests for HTML documents that were (hopefully) located in their physical storage by streaming the contents of those documents to the client.
 This is embodied in our request-response pattern. The client requests a resource (such as a HTML document), and receives either a status 200 response (containing the document), or an error status code explaining why it couldn&amp;rsquo;t be retrieved.</description>
     </item>
     <item>
       <title>HTTP in Node</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/02-http-in-node/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/02-http-in-node/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/02-http-in-node/</guid>
-      <description>Node was written primarily to provide tools to develop web servers. So it should come as no surprise that it supports HTTP through a built-in library, the http module. This module provides support for creating both web servers and web clients, as well as working with http requests and responses. Let&amp;rsquo;s start by examining the latter.
-Node HTTP Request Remember that a HTTP request is nothing more than a stream of text formatted according to the HTTP standards, as we discussed in Chapter 2.</description>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/02-http-in-node/index.html</guid>
+      <description>Node was written primarily to provide tools to develop web servers. So it should come as no surprise that it supports HTTP through a built-in library, the http module . This module provides support for creating both web servers and web clients, as well as working with http requests and responses. Let&amp;rsquo;s start by examining the latter.
+Node HTTP Request Remember that a HTTP request is nothing more than a stream of text formatted according to the HTTP standards, as we discussed in Chapter 2 .</description>
     </item>
     <item>
       <title>Request Handling</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/03-request-handling/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/03-request-handling/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/03-request-handling/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/03-request-handling/index.html</guid>
       <description>An important aspect to recognize about how Node&amp;rsquo;s http library operates is that all requests to the server are passed to the request handler function. Thus, you need to determine what to do with the incoming request as part of that function.
 Working with the Request Object You will most likely use the information contained within the http.IncomingMessage object supplied as the first parameter to your request handler. We often use the name req for this parameter, short for request, as it represents the incoming HTTP request.</description>
     </item>
     <item>
       <title>The Importance of Being Async</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/04-importance-of-async/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/04-importance-of-async/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/04-importance-of-async/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/04-importance-of-async/index.html</guid>
       <description>You may have noticed that we used the asynchronous version of fs.readFile() in our response handler. This is critical to good performance with a Node-based webserver - any potentially blocking action taken in the request handler should be asynchronous, because all incoming requests must be processed on the same thread. If our event loop gets bogged down handling a blocked process, then nobody gets a response!
 Consider if we implemented one of the file serving options using the synchronous fs.</description>
     </item>
     <item>
       <title>Caching for the Win</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/05-caching-win/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/05-caching-win/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/05-caching-win/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/05-caching-win/index.html</guid>
       <description>In our example web server, we argued that asynchronous file reading was better than synchronous because reading from a file is a potentially blocking operation that can take a long time to perform. But even when it doesn&amp;rsquo;t block, it can still take a lot of time, making it the most expensive part of our request handling operation in terms of the time it takes to perform.
-If we really want to squeeze all the performance we can out of our server (and therefore handle as many users as possible), we need to consider the strategy of caching.</description>
+If we really want to squeeze all the performance we can out of our server (and therefore handle as many users as possible), we need to consider the strategy of caching .</description>
     </item>
     <item>
       <title>Index Pages</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/06-index-pages/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/06-index-pages/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/06-index-pages/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/06-index-pages/index.html</guid>
       <description>The original purpose of the World-Wide-Web was to share webpages and other digital resources across the Internet. In many ways, an early web server was like a hard drive that was open to the world. Think about the HTTP methods, &amp;quot;GET&amp;quot; is like a file read, &amp;quot;POST&amp;quot; is like a write, &amp;quot;PUT&amp;quot; and &amp;quot;PATCH&amp;quot; like a file modification, and &amp;quot;DELETE&amp;quot; was a file erasure.
 So, just like when you browse your hard drive using Windows Explorer or other software, it was necessary for these early web pages to display an index - a listing of all the contents of a directory.</description>
     </item>
     <item>
       <title>Partial Downloads</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/07-partial-downloads/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/07-partial-downloads/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/07-partial-downloads/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/05-web-servers/07-partial-downloads/index.html</guid>
       <description>While we normally think of downloading an entire file from the web, there are some situations where it makes sense to download only part of a file. One case is with a large file download that gets interrupted - it makes a lot of sense to start downloading the remaining bytes from where you left off, rather than starting over again. A second case is when you are streaming media; often the user may not watch or listen to the entire media file, so why download the bytes they don&amp;rsquo;t need?</description>
     </item>
   </channel>

@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -931,36 +931,36 @@
 		
 		
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0">
-    <meta name="generator" content="Relearn 5.2.0+tip">
+    <meta name="generator" content="Hugo 0.117.0">
+    <meta name="generator" content="Relearn 5.18.0">
     <meta name="description" content="CIS 526 Textbook">
     <meta name="author" content="Nathan Bean">
     <title>Event Loop &amp; Console :: CIS 526 Textbook</title>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/" rel="canonical" type="text/html" title="CIS 526 Textbook">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/index.xml" rel="alternate" type="application/rss+xml" title="CIS 526 Textbook">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/index.print.html" rel="alternate" type="text/html" title="CIS 526 Textbook">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/embed.html" rel="alternate" type="text/html" title="CIS 526 Textbook">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/index.html" rel="canonical" type="text/html" title="Event Loop &amp; Console :: CIS 526 Textbook">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/index.xml" rel="alternate" type="application/rss+xml" title="Event Loop &amp; Console :: CIS 526 Textbook">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/index.print.html" rel="alternate" type="text/html" title="Event Loop &amp; Console :: CIS 526 Textbook">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/embed.html" rel="alternate" type="text/html" title="Event Loop &amp; Console :: CIS 526 Textbook">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1683040585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1683040585" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/featherlight.min.css?1683040585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/featherlight.min.css?1683040585" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1683040585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1683040585" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1683040585" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1683040585" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1683040585" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1683040585" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1683040585" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-light-theme.css?1683040585" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/ie.css?1683040585" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/variant.css?1683040585" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/print.css?1683040585" rel="stylesheet" media="print">
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/variant.js?1683040585"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1691704127" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1691704127" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1691704127" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1691704127" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1691704127" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1691704127" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1691704127" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1691704127" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1691704127" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-auto.css?1691704127" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/variant.css?1691704127" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/print.css?1691704127" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/ie.css?1691704127" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/url.js?1691704127"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/variant.js?1691704127"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
-      var index_url="https://ksu-cs-textbooks.github.io/cis526/index.json";
+      window.index_js_url="https://ksu-cs-textbooks.github.io/cis526/index.search.js";
       var root_url="https://ksu-cs-textbooks.github.io/cis526/";
       var baseUri=root_url.replace(/\/$/, '');
       // translations
@@ -968,16 +968,17 @@
       window.T_Copied_to_clipboard = 'Copied to clipboard!';
       window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
       window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
       // some further base stuff
       var baseUriFull='https:\/\/ksu-cs-textbooks.github.io\/cis526/';
-      window.variants && variants.init( [ 'light-theme', 'dark-theme' ] );
+      window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/custom.css?1683040585" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/jquery.min.js?1683040585" defer></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/custom.css?1691704127" rel="stylesheet">
 
   </head>
-  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/">
+  <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/cis526/04-node/02-event-loop/index.html">
     
     <div id="tele" class="tele mirror">
     
@@ -987,26 +988,36 @@
       
       <main id="body-inner" class="highlightable default" tabindex="-1">
         <div class="flex-block-wrapper">
-          <div id="head-tags">
-          </div>
           <article class="default">
-<h1>Event Loop &amp; Console</h1>
+            <header class="headline">
+            </header>
+<h1 id="event-loop--console">Event Loop &amp; Console</h1>
+
 <p>Node adopts an asynchronous event-driven approach to computing, much like JavaScript does in the browser.  For example, when we set up a HTTP server in Node, we define a function to call when a HTTP request (an event) is received.  As requests come in, they are added to a queue which is processed in a FIFO (first-in, first-out) manner.</p>
-<p><img src="https://ksu-cs-textbooks.github.io/cis526/images/4.2.1.png" alt="JavaScript Event Loop"></p>
+<p>
+<a href="#image-c6b5dc9a0c0b2183bfa7aa13ef641916" class="lightbox-link">
+<img src="https://ksu-cs-textbooks.github.io/cis526/images/4.2.1.png" alt="JavaScript Event Loop" style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-c6b5dc9a0c0b2183bfa7aa13ef641916">
+<img src="https://ksu-cs-textbooks.github.io/cis526/images/4.2.1.png" alt="JavaScript Event Loop" class="lightbox-image" loading="lazy">
+</a></p>
 <p>In addition to events, Node implements many asynchronous functions for potentially blocking operations.  For example, consider file I/O.  If you write a program that needs to read a file, but when it attempts to do so the file is already open in another program, your program must wait for it to become available.  In the meantime, your program is <em>blocked</em>, and its execution pauses.  A real-world analogue would be a checkout line at a store.  If the cashier is ringing up a customer and finds an item without a price tag, they may leave their station to go find the item on the shelves.  While they are away, the line is <em>blocked</em>, everyone in line must wait for the cashier to return.</p>
 <p>There are two basic strategies to deal with potentially blocking operations - <strong>multi-threading</strong> and <strong>asynchronous processing</strong>.  A multi-threading strategy involves parallelizing the task; in our store example, we&rsquo;d have additional cash registers, cashiers, and lines.  Even if one line is blocked, the others continue to ring up customers.  In contrast, asynchronous processing moves the potentially blocking task into another process, and continues with the task at hand.  When the asynchronous process finishes, it queues its results for the main process to resume.  In our store example, this would be the cashier sending another employee to find the price, suspending the sale on the register, and continuing to check out other customers while the first customer waits. When the other employee returns with a price, the cashier finishes checking out the current customer, then resumes the first customer&rsquo;s transactions.</p>
 <p>Node uses this asynchronous model to handle most potentially blocking operations (and often provides a synchronous approach as well).  When possible, the asynchronous process is handled by the operating system, but the Node runtime also maintains a pool of threads to farm tasks out to.</p>
 <p>The Node event loop is divided into a series of phases - each queues the associated kinds of events and processes them in a round-robin fashion.  This helps ensure that one kind of event can&rsquo;t overwhelm the system:</p>
-<p><img src="https://ksu-cs-textbooks.github.io/cis526/images/4.2.2.png" alt="JavaScript "></p>
-<p>For a more detailed breakdown of the Node event loop, check out 
-
-<a href="https://medium.com/the-node-js-collection/what-you-should-know-to-really-understand-the-node-js-event-loop-and-its-metrics-c4907b19da4c" target="_blank" rel="noopener">this blog post</a> by Daniel Khan or the 
-
-<a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/" target="_blank" rel="noopener">Node Event Loop Documentation</a>.</p>
+<p>
+<a href="#image-b546193d340227981adba1c8d0e477f8" class="lightbox-link">
+<img src="https://ksu-cs-textbooks.github.io/cis526/images/4.2.2.png" alt="JavaScript " style="height: auto; width: auto;" loading="lazy">
+</a>
+<a href="javascript:history.back();" class="lightbox" id="image-b546193d340227981adba1c8d0e477f8">
+<img src="https://ksu-cs-textbooks.github.io/cis526/images/4.2.2.png" alt="JavaScript " class="lightbox-image" loading="lazy">
+</a></p>
+<p>For a more detailed breakdown of the Node event loop, check out <a href="https://medium.com/the-node-js-collection/what-you-should-know-to-really-understand-the-node-js-event-loop-and-its-metrics-c4907b19da4c" target="_blank">this blog post</a>
+ by Daniel Khan or the <a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/" target="_blank">Node Event Loop Documentation</a>
+.</p>
 <h2 id="console">Console</h2>
-<p>To produce output on the terminal, Node provides a global instance of a 
-
-<a href="https://nodejs.org/api/console.html" target="_blank" rel="noopener">Console</a> called <code>console</code> that is accessible throughout the code. The typical way to produce text output on the terminal in Node is using the <code>console.log()</code> method.</p>
+<p>To produce output on the terminal, Node provides a global instance of a <a href="https://nodejs.org/api/console.html" target="_blank">Console</a>
+ called <code>console</code> that is accessible throughout the code. The typical way to produce text output on the terminal in Node is using the <code>console.log()</code> method.</p>
 <p>Node actually defines multiple log functions corresponding to different <em>log levels</em>, indicating the importance of the message.  These are (in order of severity, least to most):</p>
 <ol>
 <li><code>console.debug()</code></li>
@@ -1018,23 +1029,23 @@
 <p>But remember, JavaScript is a <em>dynamic</em> language, so we can re-define the <code>console</code> object with our own custom implementation that <em>does</em> do something unique with these various versions.  But because they exist, they can <em>also</em> be used with the built-in console.  This way our code can be compatible with both approaches!</p>
 
             <footer class="footline">
+
             </footer>
           </article>
         </div>
       </main>
     </div>
     
-  </div>
+    </div>
     
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1683040585" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1683040585" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/featherlight.min.js?1683040585" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/theme.js?1683040585" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1691704127" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1691704127" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/theme.js?1691704127" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/tele-scroll.js?1683040585 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/tele-scroll.js?1691704127 defer"></script>
     
   </body>
 </html>

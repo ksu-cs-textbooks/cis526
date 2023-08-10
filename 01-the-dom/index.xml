@@ -18,21 +18,6 @@
 	
 	
 		
-
-	
-	
-		
-		
-		
-
-	
-	
-		
-		
-		
-
-	
-	
 		
 
 	
@@ -63,6 +48,21 @@
 
 	
 	
+		
+		
+
+	
+	
+		
+
+	
+	
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -933,67 +933,67 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The DOM on CIS 526 Textbook</title>
-    <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/</link>
-    <description>Recent content in The DOM on CIS 526 Textbook</description>
+    <title>The Document Object Model on CIS 526 Textbook</title>
+    <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/index.html</link>
+    <description>Recent content in The Document Object Model on CIS 526 Textbook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Aug 2018 10:53:05 -0500</lastBuildDate><atom:link href="https://ksu-cs-textbooks.github.io/cis526/01-the-dom/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introduction</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/01-introduction/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/01-introduction/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/01-introduction/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/01-introduction/index.html</guid>
       <description>At this point, you should be familiar with the big three technologies of the world-wide-web HTML, CSS, and JavaScript (Feel free to visit the appendices for a quick review). These three technologies work together to create the web pages you interact with every day. Each has a role to play in defining the final appearance of a web page:
-Hyper-Text Markup Language (HTML) provides the structure and content Cascading Style Sheets (CSS) determine how that content should appear visually JavaScript provides interactivity, allowing both the structure and appearance of the page to change dynamically We often refer to this division of responsibility as the separation of concerns.</description>
+Hyper-Text Markup Language (HTML) provides the structure and content Cascading Style Sheets (CSS) determine how that content should appear visually JavaScript provides interactivity, allowing both the structure and appearance of the page to change dynamically We often refer to this division of responsibility as the separation of concerns .</description>
     </item>
     <item>
       <title>Document Object Model</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/02-document-object-model/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/02-document-object-model/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/02-document-object-model/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/02-document-object-model/index.html</guid>
       <description>The Document Object Model (or DOM) is a data structure representing the content of a web page, created by the browser as it parses the website. The browser then makes this data structure accessible to scripts running on the page. The DOM is essentially a tree composed of objects representing the HTML elements and text on the page.
 Consider this HTML:
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Hello DOM!&amp;lt;/title&amp;gt; &amp;lt;link href=&amp;#34;site.css&amp;#34;/&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div class=&amp;#34;banner&amp;#34;&amp;gt; &amp;lt;h1&amp;gt;Hello DOM!</description>
     </item>
     <item>
       <title>CSS and the DOM</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/03-css-and-the-dom/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/03-css-and-the-dom/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/03-css-and-the-dom/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/03-css-and-the-dom/index.html</guid>
       <description>Cascading style sheets (CSS) also interact with the DOM. Consider this CSS code:
-.banner { border: 4px solid gold; border-radius: 5rem; background-color: goldenrod; padding: 5rem; color: brown; } .banner &amp;gt; h1 { font-style: italic; } .banner p { text-decoration: line-through; font-size: 1.2rem; } When it is placed in the site.css file referenced by the HTML we discussed in the last section, the rules it defines are evaluated in terms of the DOM tree.</description>
+.banner { border: 4px solid gold; border-radius: 5rem; background-color: goldenrod; padding: 5rem; color: brown; } .banner &amp;gt; h1 { font-style: italic; } .banner p { text-decoration: line-through; font-size: 1.2rem; }When it is placed in the site.css file referenced by the HTML we discussed in the last section, the rules it defines are evaluated in terms of the DOM tree.</description>
     </item>
     <item>
       <title>JavaScript and the DOM</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/04-js-and-the-dom/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/04-js-and-the-dom/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/04-js-and-the-dom/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/04-js-and-the-dom/index.html</guid>
       <description>The DOM tree is also accessible from JavaScript running in the page. It is accessed through the global window object, i.e. window.document or document.
 Let&amp;rsquo;s use the &amp;lsquo;Console&amp;rsquo; tab of the developer tools to access this object. Open the previous example page again from this link. Click the console tab to open the expanded console, or use the console area in the bottom panel of the elements tab:
 With the console open, type:</description>
     </item>
     <item>
       <title>JavaScript Events</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/05-js-events/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/05-js-events/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/05-js-events/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/05-js-events/index.html</guid>
       <description>It should be no surprise that JavaScript features events - after all, we&amp;rsquo;ve already seen how the EventTarget interface allows us to attach event listeners to elements in the DOM tree. What might not be clear yet is how events are handled by JavaScript. JavaScript uses an event loop to process events. This is similar to Windows and other operating systems also handle events.
 An event loop expressed in code looks something like:</description>
     </item>
     <item>
       <title>The DOM and External Resource Loading</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/06-dom-resource-loading/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/06-dom-resource-loading/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/06-dom-resource-loading/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/06-dom-resource-loading/index.html</guid>
       <description>One of the important aspects of working with HTML is understanding that an HTML page is more than just the HTML. It also involves a collection of resources that are external to the HTML document, but displayed or utilized by the document. These include elements like &amp;lt;link&amp;gt;, &amp;lt;script&amp;gt;, &amp;lt;video&amp;gt;, &amp;lt;img&amp;gt;, and &amp;lt;source&amp;gt; with src or href attributes set.
 As the DOM tree is parsed and loaded and these external resources are encountered, the browser requests those resources as well.</description>
     </item>
     <item>
       <title>Summary</title>
-      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/07-summary/</link>
+      <link>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/07-summary/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
-      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/07-summary/</guid>
+      <guid>https://ksu-cs-textbooks.github.io/cis526/01-the-dom/07-summary/index.html</guid>
       <description>In this chapter, we reviewed the Document Object Model (the DOM), the tree-like structure of HTML elements built by the browser as it parses an HTML document. We discussed how CSS rules are applied to nodes in this tree to determine how the final webpage will be rendered, and how JavaScript can be used to manipulate and transform the DOM (and the resulting webpage appearance).
 We also discussed how JavaScript events work, and how this event-driven approach is the basis for implementing concurrency within the language.</description>
     </item>
