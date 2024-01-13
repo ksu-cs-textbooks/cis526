@@ -28,6 +28,16 @@
 	
 		
 		
+
+	
+	
+		
+		
+
+	
+	
+		
+		
 		
 		
 
@@ -57,6 +67,11 @@
 
 	
 	
+		
+
+	
+	
+		
 		
 
 	
@@ -945,7 +960,7 @@
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis526/00-forward/01-introduction/index.html</guid>
       <description>Web Only This textbook was authored for the CIS 526 - Web Application Development course at Kansas State University. This front matter is specific to that course. If you are not enrolled in the course, please disregard this section.
-Course Resources Previous Versions Slides Syllabus Textbook Video Script Hello, and welcome to CIS 526 - Web Application Development, and also CC 515 - Full Stack Web Development. Even though these are two different courses in the catalog, they teach the same content and will use the same Canvas course.</description>
+Course Resources Previous Versions Syllabus Textbook Hello, and welcome to CIS 526 - Web Application Development, and also CC 515 - Full Stack Web Development. Even though these are two different courses in the catalog, they teach the same content and will use the same Canvas course.</description>
     </item>
     <item>
       <title>Navigating Canvas</title>
@@ -981,13 +996,12 @@ Warning This course is still under development, so some of the content listed he
 This course does not have a required print textbook. The resources presented in the modules are also organized into an online textbook that can be accessed here: https://textbooks.cs.ksu.edu/cis526 . You may find this a useful reference if you prefer a traditional textbook layout.</description>
     </item>
     <item>
-      <title>Summer 2022 Syllabus</title>
+      <title>Spring 2024 Syllabus</title>
       <link>https://ksu-cs-textbooks.github.io/cis526/00-forward/06-syllabus/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis526/00-forward/06-syllabus/index.html</guid>
-      <description>Web Only This textbook was authored for the CIS 526 - Web Application Development course at Kansas State University. This front matter is specific to that course. If you are not enrolled in the course, please disregard this section.
-CIS 526 - Web Application Development CC 515 - Full Stack Web Development Previous Versions This syllabus covers both courses. They are taught using the same content.
-Instructor Contact Information Instructor: Russell Feldhausen (russfeld AT ksu DOT edu)</description>
+      <description>Web Only This textbook was authored for the CIS 526 - Web Application Development | CC 515 - Full Stack Web Development course at Kansas State University. This front matter is specific to that course. If you are not enrolled in the course, please disregard this section.
+CIS 526 - Web Application Development CC 515 - Full Stack Web Development This syllabus covers both courses. They are taught using the same content.</description>
     </item>
   </channel>
 </rss>
