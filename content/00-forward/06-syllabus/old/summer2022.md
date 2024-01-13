@@ -1,12 +1,12 @@
 ---
-title: "Spring 2024 Syllabus"
+title: "Summer 2022 Syllabus"
 pre: "6."
 weight: 60
 date: 2018-08-24T10:53:26-05:00
 ---
 
 {{% notice noiframe %}}
-This textbook was authored for the **CIS 526 - Web Application Development | CC 515 - Full Stack Web Development** course at Kansas State University.  This front matter is specific to that course.  If you are not enrolled in the course, please disregard this section.
+This textbook was authored for the **CIS 526 - Web Application Development** course at Kansas State University.  This front matter is specific to that course.  If you are not enrolled in the course, please disregard this section.
 {{% /notice %}}
 
 ## CIS 526 - Web Application Development
@@ -17,22 +17,21 @@ _This syllabus covers both courses. They are taught using the same content._
 
 ### Instructor Contact Information
 
-* **Instructor:** Nathan Bean (nhbean AT ksu DOT edu)<br> _I use **he/him** pronouns. Feel free to share your own pronouns with me, and I'll do my best to use them!_
-* **Office:** DUE 2216
-* **Phone:** (785) 483-9264 (Call/Text)
-* **Website:** https://nathanhbean.com
-* **In-Person Office Hours:** TBD
-* **Virtual Office Hours:** By appointment via [Zoom](https://ksu.zoom.us/). 
+* **Instructor:** Russell Feldhausen (russfeld AT ksu DOT edu)<br> _I use **he/him** pronouns. Feel free to share your own pronouns with me, and I'll do my best to use them!_
+* **Office:** DUE 2213, but I mostly work remotely from Kansas City, MO
+* **Phone:** (785) 292-3121 (Call/Text)
+* **Website:** https://russfeld.me
+* **Virtual Office Hours:** By appointment via [Zoom](https://ksu.zoom.us/). Schedule a meeting at [https://calendly.com/russfeld](https://calendly.com/russfeld)
 
 ### Preferred Methods of Communication:
 
 * **Email**: Email is the official method of communication for this course. Any emails sent to the instructor regarding this course should be answered within one class day.
-* **Ed Discussions**: For short questions and discussions of course content and assignments, Ed Discussions is preferred since questions can be asked once and answered for all students. The Ed Discussion board can be accesssed through the course navigation on Canvas.  Students are encouraged to post questions there and use that space for discussion, and the instructor will strive to answer questions there as well.
+* **Discord**: For short questions and discussions of course content and assignments, Discord is preferred since questions can be asked once and answered for all students. There is a [#cis-526_cc-515 channel](https://discord.com/channels/746402471718682694/976932659177594931) on the [K-State CS Discord Server](https://discordbot.cs.ksu.edu) for this course.  Students are encouraged to post questions there and use that space for discussion, and the instructor will strive to answer questions there as well.
 * **Phone/Text:** _Emergencies only!_ I will do my best to respond as quickly as I can.
 
 ### Prerequisites
 
-* **CIS 526**: CIS 501, CIS 560 (Prerequisite or Concurrent Enrollment), and either CC 120,CMST 135, or equivalent experience in HTML, CSS, and JavaScript with instructor permission.
+* **CIS 526**: CIS 501, CIS 560 (Prerequisite or Concurrent Enrollment), and either CMST 135 or equivalent experience in HTML, CSS, and JavaScript with instructor permission.
 * **CC 515**: CC 315, CC 410 (Prerequisite or Concurrent Enrollment), and either CC 120, CMST 135, or equivalent experience in HTML, CSS, and JavaScript with instructor permission. 
 
 _Students may enroll in CIS or CC courses only if they have earned a grade of C or better for each prerequisite to those courses._
@@ -131,6 +130,10 @@ In this course, all work submitted by a student should be created solely by the 
 That said, the field of web development requires the use of lots of online documentation and reference materials, and the point of the class is to learn how to effectively use those resources instead of "reinventing the wheel from scratch" in each assignment. Whenever content in an assignment is taken from an outside source, this should be noted somewhere in the assignment. 
 
 ### Late Work
+
+{{% notice warning %}}
+I've found that students prefer having more strict deadlines than more flexibility in a summer course, and many times they will perform better in the course when deadlines are enforced. Therefore, deadlines will be strictly enforced this semester. Read this late work policy very carefully! If you are unsure how to interpret it, please contact the instructors via email. Not understanding the policy does not mean that it won't apply to you!
+{{% /notice %}}
 
 In this class, there is a tremendous amount of new skills to develop in a short amount of time. Falling behind _will_ jeopardize your chances of successfully completing the course. Trying to complete late assignments while also working on new material will also make it unlikely that you will retain what you are trying to learn.  It is critical that you keep on-track. 
 
