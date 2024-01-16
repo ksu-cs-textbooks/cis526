@@ -172,7 +172,7 @@ In particular you are encouraged to use:
 
 This course offers an instructor-written textbook, which is broken up into a specific reading order and interleaved with activities and quizzes in the modules. It can also be directly accessed at [{{< param textbookURL >}}]({{< param textbookURL >}}).
 
-Students who would like additional textbooks should refer to resources available on the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
+Students who would like additional textbooks should refer to resources available on the [O'Reilley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
 
 ### Subject to Change
 
