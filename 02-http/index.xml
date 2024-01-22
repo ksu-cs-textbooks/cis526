@@ -974,7 +974,7 @@ It starts with a request initiated from the web browser (the client). This reque
       <link>https://ksu-cs-textbooks.github.io/cis526/02-http/03-request-format/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis526/02-http/03-request-format/index.html</guid>
-      <description>So now that we&amp;rsquo;ve seen HTTP Requests in action, let&amp;rsquo;s examine what they are. A HTTP Request is just a stream text that follows a specific format and sent from a client to a server.
+      <description>So now that we&amp;rsquo;ve seen HTTP Requests in action, let&amp;rsquo;s examine what they are. A HTTP Request is just a stream of text that follows a specific format and sent from a client to a server.
 It consists of one or more lines terminated by a CRLF (a carriage return and a line feed character, typically written \r\n in most programming languages).
 A request-line describing the request Additional optional lines containing HTTP headers.</description>
     </item>

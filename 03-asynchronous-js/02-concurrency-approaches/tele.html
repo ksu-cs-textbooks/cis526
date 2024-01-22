@@ -960,18 +960,18 @@
     <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/02-concurrency-approaches/index.print.html" rel="alternate" type="text/html" title="Concurrency Approaches :: CIS 526 Textbook">
     <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/02-concurrency-approaches/embed.html" rel="alternate" type="text/html" title="Concurrency Approaches :: CIS 526 Textbook">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705957577" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705957577" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1705957577" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705957577" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705957577" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1705957577" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705957577" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705957577" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1705957577" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-auto.css?1705957577" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/variant.css?1705957577" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/print.css?1705957577" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/ie.css?1705957577" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/url.js?1705957577"></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/variant.js?1705957577"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705957980" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705957980" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1705957980" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705957980" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705957980" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1705957980" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705957980" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705957980" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1705957980" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-auto.css?1705957980" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/variant.css?1705957980" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/print.css?1705957980" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/ie.css?1705957980" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/url.js?1705957980"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/variant.js?1705957980"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -990,7 +990,7 @@
       window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/custom.css?1705957577" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/custom.css?1705957980" rel="stylesheet">
 
   </head>
   <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/02-concurrency-approaches/index.html">
@@ -1036,10 +1036,10 @@
 <p>In fact, modern operating systems use both multitasking and parallel processing in tandem, spreading out the work to do across however many cores are available, and swapping between active processes to on those cores.  Some programs also organize their own computation to run on multiple processors - your text editor might actually be handling your input on one core, running a spellcheck on a second, and a grammar check on a third.</p>
 <p>Remember our earlier discussion about scaling web servers?  This is <em>also</em> a parallel processing approach.  Incoming HTTP requests are directed by a load balancer to a less-busy server, and that server formulates the response.</p>
 <p>
-<a href="#image-86846d01aa01e80a9f35a45bbbb7c39b" class="lightbox-link">
+<a href="#image-7c19e07d1f80f92e159b582105748a08" class="lightbox-link">
 <img src="https://ksu-cs-textbooks.github.io/cis526/images/3.2.1.png" alt="Horizontal Scaling" style="height: auto; width: auto;" loading="lazy">
 </a>
-<a href="javascript:history.back();" class="lightbox" id="image-86846d01aa01e80a9f35a45bbbb7c39b">
+<a href="javascript:history.back();" class="lightbox" id="image-7c19e07d1f80f92e159b582105748a08">
 <img src="https://ksu-cs-textbooks.github.io/cis526/images/3.2.1.png" alt="Horizontal Scaling" class="lightbox-image" loading="lazy">
 </a></p>
 <h3 id="multithreading">Multithreading</h3>
@@ -1060,11 +1060,11 @@
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1705957577" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1705957577" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/theme.js?1705957577" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1705957980" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1705957980" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/theme.js?1705957980" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/tele-scroll.js?1705957577 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/tele-scroll.js?1705957980 defer"></script>
     
   </body>
 </html>
