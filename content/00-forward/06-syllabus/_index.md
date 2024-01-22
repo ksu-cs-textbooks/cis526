@@ -21,13 +21,13 @@ _This syllabus covers both courses. They are taught using the same content._
 * **Office:** DUE 2216
 * **Phone:** (785) 483-9264 (Call/Text)
 * **Website:** https://nathanhbean.com
-* **In-Person Office Hours:** TBD
+* **In-Person Office Hours:** Wednesday 1:20pm-3:30pm
 * **Virtual Office Hours:** By appointment via [Zoom](https://ksu.zoom.us/). 
 
 ### Preferred Methods of Communication:
 
 * **Email**: Email is the official method of communication for this course. Any emails sent to the instructor regarding this course should be answered within one class day.
-* **Ed Discussions**: For short questions and discussions of course content and assignments, Ed Discussions is preferred since questions can be asked once and answered for all students. The Ed Discussion board can be accesssed through the course navigation on Canvas.  Students are encouraged to post questions there and use that space for discussion, and the instructor will strive to answer questions there as well.
+* **Ed Discussions**: For short questions and discussions of course content and assignments, Ed Discussions is preferred since questions can be asked once and answered for all students. The Ed Discussion board can be accessed through the course navigation on Canvas.  Students are encouraged to post questions there and use that space for discussion, and the instructor will strive to answer questions there as well.
 * **Phone/Text:** _Emergencies only!_ I will do my best to respond as quickly as I can.
 
 ### Prerequisites

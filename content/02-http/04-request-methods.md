@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 The first line of the HTTP request includes the __request method__, which indicates what kind of action the request is making of the web server (these methods are also known as __HTTP Verbs__).  The two most common are _GET_ and _POST_, as these are supported by most browsers.  
 
-### Commonly HTTP Methods
+### Commonly Used HTTP Methods
 The following requests are those most commonly used in web development.  As noted before GET and POST requests are the most commonly used by web browsers, while GET, PUT, PATCH, and DELETE are used by RESTful APIs. Finally, HEAD can be used to optimize web communications by minimizing unnecessary data transfers.
 
 #### GET 
