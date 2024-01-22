@@ -1068,7 +1068,7 @@ In this understanding, CSS is often tasked with the role of laying out elements 
       <link>https://ksu-cs-textbooks.github.io/cis526/b-css/14-responsive-web-design/index.html</link>
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis526/b-css/14-responsive-web-design/index.html</guid>
-      <description>Modern websites are displayed on a wide variety of devices, with screen sizes from 640x480 pixels (VGA resolution) to 3840x2160 pixels (4K resolution). It should be obvious therefore that one-size-fits-all approach to laying out web applications does not work well. Instead, the current best practice is a technique known as Responsive Web Design . When using this strategy your web app should automatically adjusts the layout of the page based on how large the device screen it is rendered on.</description>
+      <description>Modern websites are displayed on a wide variety of devices, with screen sizes from 640x480 pixels (VGA resolution) to 3840x2160 pixels (4K resolution). It should be obvious therefore that one-size-fits-all approach to laying out web applications does not work well. Instead, the current best practice is a technique known as Responsive Web Design . When using this strategy your web app should automatically adjust the layout of the page based on how large the device screen it is rendered on.</description>
     </item>
   </channel>
 </rss>
