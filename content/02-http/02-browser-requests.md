@@ -36,7 +36,7 @@ Similarly, we have two JavaScript files:
 <script src="site.js"></script>
 ```
 
-As with the images, one is hosted on our website, _site.css_, and one is hosted on another server, [jquery.com](https://code.jquery.com/jquery-3.5.1.slim.min.js).  
+As with the images, one is hosted on our website, _site.js_, and one is hosted on another server, [jquery.com](https://code.jquery.com/jquery-3.5.1.slim.min.js).  
 
 Both the Pixabay image and the jQuery library are hosted by a [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)- a network of proxy servers that are distributed geographically in such a way that a request for a resource they hold can be processed from a nearby server.  Remember that the theoretical maximum speed for internet transmissions is the speed of light (for fiber optics) or electrons in copper wiring. Communication is further slowed at each network switch encountered.  Serving files from a nearby server can prove very efficient at speeding up page loads because of the shorter distance and smaller number of switches involved.
 

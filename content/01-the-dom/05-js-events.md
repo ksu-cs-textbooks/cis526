@@ -76,7 +76,7 @@ There are many kinds of events in JavaScript; you can find a complete list in th
 
 ## Timers
 
-Timers play a special role in JavaScript's concurrency model, and in many ways behave like events.  For example, to cause the phrase "Hello time!" to be logged to the console in three minutes, you would write the code:
+Timers play a special role in JavaScript's concurrency model, and in many ways behave like events.  For example, to cause the phrase "Hello time!" to be logged to the console in three seconds, you would write the code:
 
 ```js
 setTimeout(function() { console.log("Hello time!")}, 3000);
