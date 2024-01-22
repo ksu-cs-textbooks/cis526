@@ -960,18 +960,18 @@
     <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/04-asynchronous-programming/index.print.html" rel="alternate" type="text/html" title="Asynchronous Programming :: CIS 526 Textbook">
     <link href="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/04-asynchronous-programming/embed.html" rel="alternate" type="text/html" title="Asynchronous Programming :: CIS 526 Textbook">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705416238" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705416238" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1705416238" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705416238" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705416238" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1705416238" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705416238" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705416238" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1705416238" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-auto.css?1705416238" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/variant.css?1705416238" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/print.css?1705416238" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/ie.css?1705416238" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/url.js?1705416238"></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/variant.js?1705416238"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705956880" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705956880" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1705956880" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705956880" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705956880" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1705956880" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705956880" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705956880" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1705956880" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-auto.css?1705956880" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/variant.css?1705956880" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/print.css?1705956880" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/ie.css?1705956880" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/url.js?1705956880"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/variant.js?1705956880"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -990,7 +990,7 @@
       window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/custom.css?1705416238" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/custom.css?1705956880" rel="stylesheet">
 
   </head>
   <body class="mobile-support tele disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/cis526/03-asynchronous-js/04-asynchronous-programming/index.html">
@@ -1012,10 +1012,10 @@
 <p>In JavaScript, this notification is pushed into the event queue, and the main thread processes it when the event loop pulls the result off the event queue.  Thus, the only memory that is shared between the code you&rsquo;ve written in the Event Loop and the code running in the asynchronous process is the memory invovled in the event queue.  Keeping this memory thread-safe is managed by the JavaScript interpreter.  Thus, the code you write (which runs in the Event Loop) is essentially single-threaded, even if your JavaScript application is using some form of parallel processing!</p>
 <p>Let&rsquo;s reconsider a topic we&rsquo;ve already discussed with this new understanding - timers.  When we invoke <code>setTimer()</code>, we are creating a timer that is managed asynchronously.  When the timer elapses, it creates a timer &rsquo;event&rsquo; and adds it to the event queue.  We can see this in the diagram below.</p>
 <p>
-<a href="#image-b6a9ba18db9e4a1a6ec935fb7ad97e62" class="lightbox-link">
+<a href="#image-2bddc8a8b247cdec02f9f6a9b5a0409b" class="lightbox-link">
 <img src="https://ksu-cs-textbooks.github.io/cis526/images/3.4.1.png" alt="The timer and event loop" style="height: auto; width: auto;" loading="lazy">
 </a>
-<a href="javascript:history.back();" class="lightbox" id="image-b6a9ba18db9e4a1a6ec935fb7ad97e62">
+<a href="javascript:history.back();" class="lightbox" id="image-2bddc8a8b247cdec02f9f6a9b5a0409b">
 <img src="https://ksu-cs-textbooks.github.io/cis526/images/3.4.1.png" alt="The timer and event loop" class="lightbox-image" loading="lazy">
 </a></p>
 <p>However, the timer is not actually an <em>event</em>, in the same sense that a <code>'click'</code> or <code>'keydown'</code> event is&hellip; in that those events are provided to the browser from the operating system, and the browser passes them along into the JavaScript interpreter, possibly with some transformation.  In contrast, the timer is created from within the JavaScript code, though its triggering is managed asynchronously.</p>
@@ -1094,11 +1094,11 @@
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1705416239" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1705416239" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/theme.js?1705416239" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1705956880" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1705956880" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/theme.js?1705956880" defer></script>
     
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/tele-scroll.js?1705416239 defer"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/tele-scroll.js?1705956880 defer"></script>
     
   </body>
 </html>

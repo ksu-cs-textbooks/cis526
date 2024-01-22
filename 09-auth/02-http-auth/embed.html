@@ -960,18 +960,18 @@
     <link href="https://ksu-cs-textbooks.github.io/cis526/09-auth/02-http-auth/index.print.html" rel="alternate" type="text/html" title="HTTP Authentication :: CIS 526 Textbook">
     <link href="https://ksu-cs-textbooks.github.io/cis526/09-auth/02-http-auth/tele.html" rel="alternate" type="text/html" title="HTTP Authentication :: CIS 526 Textbook">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705416232" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705416232" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1705416232" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705416232" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705416232" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1705416232" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705416232" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705416232" rel="stylesheet"></noscript>
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1705416232" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-auto.css?1705416232" rel="stylesheet" id="variant-style">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/variant.css?1705416232" rel="stylesheet">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/print.css?1705416232" rel="stylesheet" media="print">
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/ie.css?1705416232" rel="stylesheet">
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/url.js?1705416232"></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/variant.js?1705416232"></script>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705956874" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fontawesome-all.min.css?1705956874" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/nucleus.css?1705956874" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705956874" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/auto-complete.css?1705956874" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/perfect-scrollbar.min.css?1705956874" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705956874" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="https://ksu-cs-textbooks.github.io/cis526/css/fonts.css?1705956874" rel="stylesheet"></noscript>
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme.css?1705956874" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/theme-auto.css?1705956874" rel="stylesheet" id="variant-style">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/variant.css?1705956874" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/print.css?1705956874" rel="stylesheet" media="print">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/ie.css?1705956874" rel="stylesheet">
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/url.js?1705956874"></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/variant.js?1705956874"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -990,7 +990,7 @@
       window.variants && variants.init( [ 'auto', 'light-theme', 'dark-theme' ] );
     </script>
     
-    <link href="https://ksu-cs-textbooks.github.io/cis526/css/custom.css?1705416232" rel="stylesheet">
+    <link href="https://ksu-cs-textbooks.github.io/cis526/css/custom.css?1705956874" rel="stylesheet">
 
   </head>
   <body class="mobile-support embed disableInlineCopyToClipboard" data-url="https://ksu-cs-textbooks.github.io/cis526/09-auth/02-http-auth/embed.html">
@@ -1008,10 +1008,10 @@
 <div class="wrap-code highlight"><pre tabindex="0"><code>https://willie:purpleandwhite@cs.ksu.edu/</code></pre></div><p>However, the use of authentication URLS is now highly discouraged and has been stripped from most browsers, as it is considered a security risk.  Instead, if you are using <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication" target="_blank">HTTP-based authentication</a>
  the server needs to issue a challenge <strong>401 Unauthorized</strong> response, along with a <code>WWW-Authenticate</code> header specifying the challenge.  This will prompt the browser to display a username/password form and will re-submit the request with the credentials using an <code>Authorization</code> header.  The process looks something like this:</p>
 <p>
-<a href="#image-07454cf6c74eba732670d2087ebd9e5a" class="lightbox-link">
+<a href="#image-3c9834078b96c93f599ec1a0242036c6" class="lightbox-link">
 <img src="https://ksu-cs-textbooks.github.io/cis526/images/9.2.1.png" alt="The HTTP Authentication process" style="height: auto; width: auto;" loading="lazy">
 </a>
-<a href="javascript:history.back();" class="lightbox" id="image-07454cf6c74eba732670d2087ebd9e5a">
+<a href="javascript:history.back();" class="lightbox" id="image-3c9834078b96c93f599ec1a0242036c6">
 <img src="https://ksu-cs-textbooks.github.io/cis526/images/9.2.1.png" alt="The HTTP Authentication process" class="lightbox-image" loading="lazy">
 </a></p>
 <p>As you can see, when the client makes a request that requires authentication, the server issues a <strong>401 Unauthorized</strong> status code, along with an <code>WWW-Authenticate</code> header specifying the authentication scheme.  This prompts the browser to request the user credentials via a dialog (much like the one created by the JavaScript functions <code>alert()</code>, <code>confirm()</code>, and <code>prompt()</code>).  If the user supplies credentials, the request is re-sent, with those credentials included in an <code>Authentication</code> header.  The server then decides, based on the credentials, if it will allow the request (typically a <strong>200</strong> response), or refuse (a <strong>403 Unauthorized</strong> response).</p>
@@ -1041,8 +1041,8 @@
     
     
     
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1705416234" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1705416234" defer></script>
-    <script src="https://ksu-cs-textbooks.github.io/cis526/js/theme.js?1705416234" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/clipboard.min.js?1705956876" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/perfect-scrollbar.min.js?1705956876" defer></script>
+    <script src="https://ksu-cs-textbooks.github.io/cis526/js/theme.js?1705956876" defer></script>
   </body>
 </html>

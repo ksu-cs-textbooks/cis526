@@ -984,7 +984,7 @@ A request-line describing the request Additional optional lines containing HTTP 
       <pubDate>Fri, 24 Aug 2018 10:53:26 -0500</pubDate>
       <guid>https://ksu-cs-textbooks.github.io/cis526/02-http/04-request-methods/index.html</guid>
       <description>The first line of the HTTP request includes the request method, which indicates what kind of action the request is making of the web server (these methods are also known as HTTP Verbs). The two most common are GET and POST, as these are supported by most browsers.
-Commonly HTTP Methods The following requests are those most commonly used in web development. As noted before GET and POST requests are the most commonly used by web browsers, while GET, PUT, PATCH, and DELETE are used by RESTful APIs.</description>
+Commonly Used HTTP Methods The following requests are those most commonly used in web development. As noted before GET and POST requests are the most commonly used by web browsers, while GET, PUT, PATCH, and DELETE are used by RESTful APIs.</description>
     </item>
     <item>
       <title>URIs and URLs</title>
