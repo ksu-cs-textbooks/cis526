@@ -30,6 +30,11 @@ _This syllabus covers both courses. They are taught using the same content._
 * **Ed Discussions**: For short questions and discussions of course content and assignments, Ed Discussions is preferred since questions can be asked once and answered for all students. The Ed Discussion board can be accessed through the course navigation on Canvas.  Students are encouraged to post questions there and use that space for discussion, and the instructor will strive to answer questions there as well.
 * **Phone/Text:** _Emergencies only!_ I will do my best to respond as quickly as I can.
 
+### GTA Contact Information
+* **GTA:** Joshua Garcia (josh98 AT ksu DOT edu)
+* **Office:** DUE 1118
+* **In-Person Office Hours:** 9:30am-10:30am Tuesdays and Thursdays
+
 ### Prerequisites
 
 * **CIS 526**: CIS 501, CIS 560 (Prerequisite or Concurrent Enrollment), and either CC 120,CMST 135, or equivalent experience in HTML, CSS, and JavaScript with instructor permission.
