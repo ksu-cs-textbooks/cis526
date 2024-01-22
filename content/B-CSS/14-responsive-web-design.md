@@ -5,10 +5,10 @@ weight: 140
 date: 2018-08-24T10:53:26-05:00
 ---
 
-Modern websites are displayed on a wide variety of devices, with screen sizes from 640x480 pixels (VGA resolution) to 3840x2160 pixels (4K resolution). It should be obvious therefore that one-size-fits-all approach to laying out web applications does not work well.  Instead, the current best practice is a technique known as [Responsive Web Design](https://en.wikipedia.org/wiki/Responsive_web_design).  When using this strategy your web app should automatically adjusts the layout of the page based on how large the device screen it is rendered on.
+Modern websites are displayed on a wide variety of devices, with screen sizes from 640x480 pixels (VGA resolution) to 3840x2160 pixels (4K resolution). It should be obvious therefore that one-size-fits-all approach to laying out web applications does not work well.  Instead, the current best practice is a technique known as [Responsive Web Design](https://en.wikipedia.org/wiki/Responsive_web_design).  When using this strategy your web app should automatically adjust the layout of the page based on how large the device screen it is rendered on.
 
 ## Media Queries
-At the heart of the responsive CSS approach is a CSS technique called _media queries_.  These are implemented with a CSS media at-rule (at-rules modify the behavior of CSS, and are proceeded by an at symbol (`@`), hence the name).  The original purpose of the media rule was to define different media types - i.e. `screen` and `print`, which would be selectively applied based on the media in play.  For example, the rule:
+At the heart of the responsive CSS approach is a CSS technique called _media queries_.  These are implemented with a CSS media at-rule (at-rules modify the behavior of CSS, and are preceded by an _at symbol_ (`@`), hence the name).  The original purpose of the media rule was to define different media types - i.e. `screen` and `print`, which would be selectively applied based on the media in play.  For example, the rule:
 
 ```css 
 @media print {
@@ -21,7 +21,7 @@ At the heart of the responsive CSS approach is a CSS technique called _media que
 }
 ```
 
-would hide all images and elements with the `advertisement` class when printing a web page.  You can also specify the media type with the `media` attribute in a `<link>` element, i.e. `<link href="print.css" rel="stylsheet" media="print">` would apply the rules from `print.css` only when printing the website.
+would hide all images and elements with the `advertisement` class when printing a web page.  You can also specify the media type with the `media` attribute in a `<link>` element, i.e. `<link href="print.css" rel="stylesheet" media="print">` would apply the rules from `print.css` only when printing the website.
 
 However, the real usefulness of the `@media` rule is when it is combined with a _media query_, which determines if its nested rules should be applied based on some aspect of the display.  
 

@@ -30,7 +30,7 @@ __port:__ The port refers to the port number on the host machine.  If it is not 
 
 __path:__ The path refers to the path to the desired resource on the server.  It consists of segments separated by forward slashes (`/`).  
 
-__query:__ The query consists of optional collection of key-value pairs (expressed as key:value), separated by ampersands (`&`), and proceeded by a question mark (`?`).  The query string is used to supply modifiers to the requested resource (for example, applying a filter or searching for a term).  
+__query:__ The query consists of optional collection of key-value pairs (expressed as key:value), separated by ampersands (`&`), and preceded by a question mark (`?`).  The query string is used to supply modifiers to the requested resource (for example, applying a filter or searching for a term).  
 
 __fragment:__ The fragment is an optional string proceeded by a hashtag (`#`).  It identifies a portion of the resource to retrieve.  It is most often used to auto-scroll to a section of an HTML document, and also for navigation in some single-page web applications.
 

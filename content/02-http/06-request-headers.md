@@ -11,7 +11,7 @@ Request headers take the form of key-value pairs, separated by colons `:` and te
 Accept-Encoding: gzip
 ``` 
 
-Indicates that the browser knows how to accepted content compressed in the [Gzip format](https://en.wikipedia.org/wiki/Gzip).
+Indicates that the browser knows how to accept content compressed in the [Gzip format](https://en.wikipedia.org/wiki/Gzip).
 
 Note that request headers are a subset of _message headers_ that apply specifically to requests.  There are also message headers that apply only to HTTP responses, and some that apply to both.
 
