@@ -59,6 +59,6 @@ Also, in-memory sessions are lost when the server reboots (as they are held in v
 
 ## Database Sessions
 
-When a website is backed by a database (as we'll cover [soon]({{<ref "07-persistent-storage/03-databases">}})), storing the session in that database becomes an option.  Functionally, it is similar to an In-Memory session, except that the database becomes the storage mechanism.  Because the database offers persistent storage, the session also could be persistent (i.e. you remain "logged on" every time you visit from the same computer).  Still, database sessions typically are cleaned out periodically to keep the sessions table from growing overlarge.
+When a website is backed by a database (as we'll cover [soon]({{% ref "07-persistent-storage/03-databases" %}})), storing the session in that database becomes an option.  Functionally, it is similar to an In-Memory session, except that the database becomes the storage mechanism.  Because the database offers persistent storage, the session also could be persistent (i.e. you remain "logged on" every time you visit from the same computer).  Still, database sessions typically are cleaned out periodically to keep the sessions table from growing overlarge.
 
 Database sessions are a good choice if your website is already using a database.  For a website with registered users, the session id can be the user's id, as defined in the database schema.

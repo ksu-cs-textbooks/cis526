@@ -16,8 +16,8 @@ This textbook was authored for the **CIS 526 - Web Application Development** cou
 
 ## Course Resources
 
-* [Syllabus]({{<ref "00-forward/06-syllabus">}})
-* [Textbook]({{<param textbookURL>}})
+* [Syllabus]({{% ref "00-forward/06-syllabus" %}})
+* [Textbook](https://textbooks.cs.ksu.edu/cis526)
 
 ## Welcome Message 
 Hello students, and welcome to CIS 526 – Web App Design.  My name is Nathan Bean, and I will be your instructor for this course.  I wanted to briefly discuss the structure and delivery of the course here, and you can find more detail in the sections to come.

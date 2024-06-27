@@ -8,7 +8,7 @@ date: 2018-08-24T10:53:26-05:00
 Node was written primarily to provide tools to develop web servers.  So it should come as no surprise that it supports HTTP through a built-in library, the [http module](https://nodejs.org/api/http.html).  This module provides support for creating _both_ web servers and web clients, as well as working with http requests and responses.  Let's start by examining the latter.
 
 ## Node HTTP Request
-Remember that a HTTP request is nothing more than a stream of text formatted according to the HTTP standards, as we discussed in [Chapter 2]({{<ref "02-http/03-request-format">}}).  Node makes this information easier to work with in your server code by parsing it into an object, an instance of [http.IncomingMessage](https://nodejs.org/api/http.html#http_class_http_incomingmessage).  Its properties expose the data of the request, and include:
+Remember that a HTTP request is nothing more than a stream of text formatted according to the HTTP standards, as we discussed in [Chapter 2]({{% ref "02-http/03-request-format" %}}).  Node makes this information easier to work with in your server code by parsing it into an object, an instance of [http.IncomingMessage](https://nodejs.org/api/http.html#http_class_http_incomingmessage).  Its properties expose the data of the request, and include:
 
 * [message.headers](https://nodejs.org/api/http.html#http_message_headers) - the request headers as a JavaScript object, with the keys corresponding to the HTTP header key, and the values corresponding to the HTTP header values.
 * [message.method](https://nodejs.org/api/http.html#http_message_method) - request method, i.e. `'GET'`, `'POST'`, `'PUT'`, `'PATCH'`, or `'DELETE'`
@@ -17,7 +17,7 @@ Remember that a HTTP request is nothing more than a stream of text formatted acc
 You typically won't create an `http.IncomingMessage`, rather it will be provided to you by an instance of `http.Server`, which we'll talk about shortly.
 
 ## Node HTTP Response
-The HTTP response is also nothing more than a stream of text formatted according to the HTTP standards, as laid out in [Chapter 2]({{<ref "02-http/08-response-format">}}).  Node also wraps the response with an object, an instance of [http.ServerResponse](https://nodejs.org/api/http.html#http_class_http_serverresponse).  However, this object is used to _build_ the response (which is the primary job of a web server).  This process proceeds in several steps:
+The HTTP response is also nothing more than a stream of text formatted according to the HTTP standards, as laid out in [Chapter 2]({{% ref "02-http/08-response-format" %}}).  Node also wraps the response with an object, an instance of [http.ServerResponse](https://nodejs.org/api/http.html#http_class_http_serverresponse).  However, this object is used to _build_ the response (which is the primary job of a web server).  This process proceeds in several steps:
 
 1. Setting the status code & message
 2. Setting the headers

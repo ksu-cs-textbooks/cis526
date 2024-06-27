@@ -15,9 +15,9 @@ This textbook was authored for the **CIS 526 - Web Application Development** cou
 
 ## Course Resources
 
-* [Previous Versions]({{<relref "./old">}})
-* [Syllabus]({{<ref "00-forward/06-syllabus">}})
-* [Textbook]({{<param textbookURL>}})
+* [Previous Versions]({{% relref "./old" %}})
+* [Syllabus]({{% ref "00-forward/06-syllabus" %}})
+* [Textbook](https://textbooks.cs.ksu.edu/cis526)
 
 <!-- #### Video Script -->
 

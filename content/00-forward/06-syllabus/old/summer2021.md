@@ -16,7 +16,7 @@ This textbook was authored for the **CIS 526 - Web Application Development** cou
 * **Office:** DUE 2216
 * **Phone:** (785)483-9264 (Call/Text)
 * **Website:** [https://nathanhbean.com](https://nathanhbean.com)
-* **Virtual Office Hours:** By appointment via [Zoom](ksu.zoom.us).  Schedule a meeting via email or Discord
+* **Virtual Office Hours:** By appointment via [Zoom](https://ksu.zoom.us).  Schedule a meeting via email or Discord
 
 ### Preferred Methods of Communication:
 * **Chat:** Quick questions via Discord are the preferred means of communication.   Questions whose answers may benefit the class I would encourage you to post in the` #cis526` channel, as this keeps a public history your classmates can review.  More personal questions should be direct messaged to `@Nathan Bean`.
@@ -118,7 +118,7 @@ In particular you are encouraged to use:
 * [CSS-Tricks](https://css-tricks.com/) - A collectiotn of guides and articles on using CSS to accomplish a variety of tasks
 * [w3c.org](https://www.w3.org/) - The online home of the World-Wide-Web Consortium, the organization that sets web technology standards
 
-This course offers an instructor-written textbook, which is broken up into a specific reading order and interleaved with activities and quizzes in the modules. It can also be directly accessed at [{{< param textbookURL >}}]({{< param textbookURL >}}).
+This course offers an instructor-written textbook, which is broken up into a specific reading order and interleaved with activities and quizzes in the modules. It can also be directly accessed at [https://textbooks.cs.ksu.edu/cis526](https://textbooks.cs.ksu.edu/cis526).
 
 Students who would like additional textbooks should refer to resources available on the [O'Riley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
 
@@ -145,7 +145,7 @@ While code libraries are an important and common tool in professional practice, 
 
 ### Students with Disabilities
 
-Students with disabilities who need classroom accommodations, access to technology, or information about emergency building/campus evacuation processes should contact the Student Access Center and/or their instructor. Services are available to students with a wide range of disabilities including, but not limited to, physical disabilities, medical conditions, learning disabilities, attention deficit disorder, depression, and anxiety. If you are a student enrolled in campus/online courses through the Manhattan or Olathe campuses, contact the Student Access Center at [accesscenter@k-state.edu](accesscenter@k-state.edu), 785-532-6441; for K-State Polytechnic campus, contact Academic and Student Services at [polytechnicadvising@ksu.edu](polytechnicadvising@ksu.edu) or call 785-826-2674.
+Students with disabilities who need classroom accommodations, access to technology, or information about emergency building/campus evacuation processes should contact the Student Access Center and/or their instructor. Services are available to students with a wide range of disabilities including, but not limited to, physical disabilities, medical conditions, learning disabilities, attention deficit disorder, depression, and anxiety. If you are a student enrolled in campus/online courses through the Manhattan or Olathe campuses, contact the Student Access Center at [accesscenter@k-state.edu](mailto:accesscenter@k-state.edu), 785-532-6441; for K-State Polytechnic campus, contact Academic and Student Services at [polytechnicadvising@ksu.edu](mailto:polytechnicadvising@ksu.edu) or call 785-826-2674.
 
 ### Diversity and Inclusion
 
@@ -199,4 +199,4 @@ Moreover, academic freedom supports collaborative work in the pursuit of truth a
 ### Copyright Notice
 ©2020 The materials in this online course fall under the protection of all intellectual property, copyright and trademark laws of the U.S. The digital materials included here come with the legal permissions and releases of the copyright holders. These course materials should be used for educational purposes only; the contents should not be distributed electronically or otherwise beyond the confines of this online course. The URLs listed here do not suggest endorsement of either the site owners or the contents found at the sites. Likewise, mentioned brands (products and services) do not suggest endorsement. Students own copyright to what they create.
 
-Original content in the course textbook at [{{< param textbookURL >}}]({{< param textbookURL >}}) is licensed under a Creative Commons BY-SA license by Nathan Bean unless otherwise stated.
+Original content in the course textbook at [https://textbooks.cs.ksu.edu/cis526](https://textbooks.cs.ksu.edu/cis526) is licensed under a Creative Commons BY-SA license by Nathan Bean unless otherwise stated.

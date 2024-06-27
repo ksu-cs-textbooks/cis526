@@ -46,7 +46,7 @@ setTimeout(() => {
 These are roughly equivalent to passing `timeElapsed()` in the first example - and you'll likely see all three approaches when you read others' code.
 
 ### Callback Hell
-Callbacks are a powerful mechanism for expressing asynchronicity, but overuse can lead to difficult to read code - a situation JavaScript programmers refer to as "callback hell".  This problem became especially pronounced once programmers began using Node to build server-side code, as Node adopted the event-based callback asynchronous model of JavaScript for interactions with the file system,databases, etc. (we'll cover Node in the [next chapter]({{<ref "04-node">}})). 
+Callbacks are a powerful mechanism for expressing asynchronicity, but overuse can lead to difficult to read code - a situation JavaScript programmers refer to as "callback hell".  This problem became especially pronounced once programmers began using Node to build server-side code, as Node adopted the event-based callback asynchronous model of JavaScript for interactions with the file system,databases, etc. (we'll cover Node in the [next chapter]({{% ref "04-node" %}})). 
 
 Consider this example, which logs a user into a website:
 

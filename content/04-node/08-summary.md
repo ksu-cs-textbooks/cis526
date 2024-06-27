@@ -8,6 +8,6 @@ Node, and its package manager, npm, are powerful tools for developing server-sid
 
 ## Resources
 
-Node can be downloaded from [nodejs.org](nodejs.org) or installed using [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm).
+Node can be downloaded from [nodejs.org](https://nodejs.org) or installed using [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm).
 
 The latest Node documentation can be found at [https://nodejs.org/en/docs/](https://nodejs.org/en/docs/)

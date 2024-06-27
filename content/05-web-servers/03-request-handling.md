@@ -13,7 +13,7 @@ You will most likely use the information contained within the `http.IncomingMess
 
 Some of its properties we might use:
 
-* The `req.method` parameter indicates what [HTTP method]({{<ref "02-http/04-request-methods">}}) the request is using.  For example, if the method is `"GET"`, we would expect that the client is requesting a resource like an HTML page or image file.  If it were a `"POST"` request, we would think they are submitting something.
+* The `req.method` parameter indicates what [HTTP method]({{% ref "02-http/04-request-methods" %}}) the request is using.  For example, if the method is `"GET"`, we would expect that the client is requesting a resource like an HTML page or image file.  If it were a `"POST"` request, we would think they are submitting something.
 
 * The `req.url` parameter indicates the specific resource path the client is requesting, i.e. `"/about.html"` suggests they are looking for the "about" page.  The url can have more parts than just the path.  It also can contain a query string and a hash string.  We'll talk more about these soon.
 
@@ -50,7 +50,7 @@ Notice that at each branching point of our control flow, we serve some kind of r
 ![handleRequest() flowchart](/images/5.3.1.png)
 
 ## Working with the Response Object
-The second half of responding to requests is putting together the response.  You will use the `http.ServerResponse` object to assemble and send the response.  This response consists of a [status code and message]({{<ref "02-http/09-status-codes">}}), [response headers]({{<ref "02-http/10-response-headers">}}), and a [body]({{<ref "02-http/11-response-body">}}) which could be text, binary data, or nothing.
+The second half of responding to requests is putting together the response.  You will use the `http.ServerResponse` object to assemble and send the response.  This response consists of a [status code and message]({{% ref "02-http/09-status-codes" %}}), [response headers]({{% ref "02-http/10-response-headers" %}}), and a [body]({{% ref "02-http/11-response-body"   %}}) which could be text, binary data, or nothing.
 
 There are a number of properties and methods defined in the `http.ServerResponse` to help with this, including:
 

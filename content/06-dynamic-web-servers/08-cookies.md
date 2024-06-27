@@ -95,7 +95,7 @@ Using Secure HTTP helps prevent cookies from being intercepted during transit, a
 
 A good general strategy is to store as little of importance in the cookie as possible. This also helps keep the size of a site's cookies down, which means less traffic across the network, and less to store on a user's computer.  The RFC suggests browsers support a minimum size of 4096 bytes per cookie - but this is not a requirement.
 
-But where do we store the session information, if not in the cookie?  This is the subject of the next section, {{<ref "06-dynamic-web-servers/09-sessions.md">}}.  This strategy usually entails storing nothing more than a session identifier in the cookie, and storing the actual data that corresponds to that session identifier on the server.  Effectively, we make our server _statefull_ instead of _stateless_.
+But where do we store the session information, if not in the cookie?  This is the subject of the next section, {{% ref "06-dynamic-web-servers/09-sessions.md" %}}.  This strategy usually entails storing nothing more than a session identifier in the cookie, and storing the actual data that corresponds to that session identifier on the server.  Effectively, we make our server _statefull_ instead of _stateless_.
 
 ### Encrypting Cookie Values
 

@@ -7,7 +7,7 @@ date: 2018-08-24T10:53:26-05:00
 
 {{< console >}}
 
-Promises replace the callback mechanism with a JavaScript object, a `Promise`.  In many ways, this is similar to the `XMLHttpRequest` object that is at the heart of [AJAX](<ref "c-js/11-ajax">).  You can think of it as a state machine that is in one of three states: _pending_, _fulfilled_, or _rejected_.  
+Promises replace the callback mechanism with a JavaScript object, a `Promise`.  In many ways, this is similar to the `XMLHttpRequest` object that is at the heart of [AJAX]({{% ref "C-JS/11-ajax" %}}).  You can think of it as a state machine that is in one of three states: _pending_, _fulfilled_, or _rejected_.  
 
 A promise can be created by wrapping an asynchronous call within a new `Promise` object.  For example, we can turn a `setTimeout()` into a promise with:
 
