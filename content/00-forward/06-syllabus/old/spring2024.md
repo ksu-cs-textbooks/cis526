@@ -1,5 +1,5 @@
 ---
-title: "Spring 2025 Syllabus"
+title: "Spring 2024 Syllabus"
 pre: "6."
 weight: 60
 date: 2018-08-24T10:53:26-05:00
@@ -21,14 +21,8 @@ _This syllabus covers both courses. They are taught using the same content._
 * **Office:** DUE 2216
 * **Phone:** (785) 483-9264 (Call/Text)
 * **Website:** https://nathanhbean.com
-* **In-Person Office Hours:** TBD
+* **In-Person Office Hours:** Wednesday 1:20pm-3:30pm
 * **Virtual Office Hours:** By appointment via [Zoom](https://ksu.zoom.us/). 
-<br>
-* **Instructor:** Russell Feldhausen (russfeld AT ksu DOT edu)<br> _I use **he/him** pronouns. Feel free to share your own pronouns with me, and I'll do my best to use them!_
-* **Office:** DUE 2213, but I mostly work remotely from Kansas City, MO
-* **Phone:** (785) 292-3121 (Call/Text)
-* **Website:** https://russfeld.me
-* **Virtual Office Hours:** By appointment via [Zoom](https://ksu.zoom.us/). Schedule a meeting at [https://calendly.com/russfeld](https://calendly.com/russfeld)
 
 ### Preferred Methods of Communication:
 
@@ -37,9 +31,9 @@ _This syllabus covers both courses. They are taught using the same content._
 * **Phone/Text:** _Emergencies only!_ I will do my best to respond as quickly as I can.
 
 ### GTA Contact Information
-* **GTA:** Josh Barron (jrbarron AT ksu DOT edu)
-* **Office:** DUE 2208
-* **Office Hours:** TBD
+* **GTA:** Joshua Garcia (josh98 AT ksu DOT edu)
+* **Office:** DUE 1118
+* **In-Person Office Hours:** 9:30am-10:30am Tuesdays and Thursdays
 
 ### Prerequisites
 
@@ -173,7 +167,7 @@ Unless otherwise noted in writing on a signed [Incomplete Agreement Form](https:
 
 ### Recommended Texts & Supplies
 
-To participate in this course, students must have access to a modern web browser and broadband internet connection. All course materials will be provided via Canvas, Codio, and GitHub. Modules may also contain links to external resources for additional information, such as programming language documentation.
+To participate in this course, students must have access to a modern web browser and broadband internet connection. All course materials will be provided via Canvas and Codio. Modules may also contain links to external resources for additional information, such as programming language documentation.
 
 In particular you are encouraged to use:
 * [Node Docs](https://nodejs.org/en/docs/) - THe documentation for the Nodejs platform and APIs.
