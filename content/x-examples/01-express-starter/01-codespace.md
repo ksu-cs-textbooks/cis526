@@ -42,7 +42,7 @@ Once you've created your GitHub Codespace, you can always find it again by visit
 
 When we first create a GitHub Codespace, GitHub will use a [default dev container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers#using-the-default-dev-container-configuration) configuration. It includes many tools that are preinstalled for working on a wide variety of projects. Inside of the Codespace, you can run the following command in the terminal to get a URL that contains a list of all tools installed and their versions:
 
-```bash
+```bash {title="terminal"}
 $ devcontainer-info content-url
 ```
 
@@ -70,7 +70,7 @@ Finally, the last question will ask if we'd like to add any additional features 
 
 Once that is done, a `.devcontainer` folder will be created, with a `devcontainer.json` file inside of it. The content of that file should match what is shown below:
 
-```js
+```js {title=".devcontainer/devcontainer.json"}
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
@@ -109,16 +109,16 @@ Now, we can sit back and be patient while GitHub Codespaces rebuilds our environ
 
 Once it is complete, we can confirm that Node.js is installed and running the correct version by running the following command and checking the output matches our expected version of Node.js:
 
-```bash
+```bash {title="terminal"}
 $ node --version
 v22.12.0
 ```
 
 If that works, then our dev container environment in GitHub Codespaces should be set up and ready to go!
 
-Now is a good time to commit our current work to git and push it to GitHub. Even though we are working in a GitHub Codespace, we still have to commit and push our work to get it saved. You can do this using the Source Control sidebar tab on the page, or using the classic terminal commands as shown below.
+Now is a good time to commit our current work to git and push it to GitHub. Even though we are working in a GitHub Codespace, we still have to **commit and push** our work to get it saved. You can do this using the Source Control sidebar tab on the page, or using the classic terminal commands as shown below.
 
-```bash
+```bash {title="terminal"}
 $ git add .
 $ git commit -m "Dev Container"
 $ git push -u origin main

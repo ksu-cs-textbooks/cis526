@@ -18,7 +18,7 @@ You may also want to bookmark the [Express Documentation](https://expressjs.com/
 
 For this project, we'll use the following command to build our application:
 
-```bash
+```bash {title="terminal"}
 $ npx express-generator --no-view --git server
 ```
 
@@ -34,7 +34,7 @@ When we run that command, we may be prompted to install the `express-generator` 
 
 That command will produce a large amount of output, similar to what is shown below:
 
-```
+``` {title="output"}
 Need to install the following packages:
 express-generator@4.16.1
 Ok to proceed? (y) y
@@ -83,7 +83,7 @@ Since we are only building a RESTful API application, there are a few files that
 
 At this point, we should also update the contents of the `package.json` file to describe our project. It currently contains information similar to this:
 
-```json
+```json {title="package.json"}
 {
   "name": "server",
   "version": "0.0.0",
@@ -102,7 +102,7 @@ At this point, we should also update the contents of the `package.json` file to 
 
 For now, let's update the `name` and `version` entries to match our project:
 
-```json
+```json {title="package.json"}
 {
   "name": "example-project",
   "version": "0.0.1",
@@ -125,7 +125,7 @@ In a stand-alone application like ours, these values really don't matter, but if
 
 Let's quickly take a look at the contents of the `app.js` file to get an idea of what this application does:
 
-```js
+```js {title="app.js"}
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -154,6 +154,8 @@ Next, we see the line `var app = express()` - this line actually creates the Exp
 
 The next few lines add various middlewares to the Express application using the `app.use()` function. Each of these is effectively a function that is called each time the application receives a request, one after the other, until a response is generated and sent. See [Using middleware](https://expressjs.com/en/guide/using-middleware.html) in the Express documentation for more details.
 
+The last line of that group uses the `express.static` middleware to serve static files from the `public` directory (it uses the `path` library and the `__dirname` global variable to construct the correct absolute path to those files). So, if the user requests any path that matches a static file, that file will be sent to the user. This will happen even if a static file matches an existing route, since this middleware is added to the application before the routes. So, there are some instances where we may want to connect this middleware to the application _after_ adding some important routes - we'll discuss that in the future as we continue to build this application. 
+
 After that, the two routers are added as well. Each router is given a base path - the `index` router is given the `/` path, then the `users` router is given the `/users` path. These are the URL paths that are used to determine where each incoming request should be sent in the application. See [routing](https://expressjs.com/en/guide/routing.html) in the Express documentation for more details.
 
 Finally, the Express application referenced in `app` is exported from this file. It is used by the `bin/www` file and attached to an `http` server to listen for incoming requests.
@@ -172,7 +174,7 @@ Now that we've generated a basic Express web application, we need to install all
 
 To do this, we need to go to the terminal and change directory to the `server` folder:
 
-```bash
+```bash {title="terminal"}
 $ cd server
 ```
 
@@ -188,13 +190,13 @@ Remember that we can always see the current working directory by looking at the 
 
 Once inside of the `server` folder, we can install all our dependencies using the following command:
 
-```bash
+```bash {title="terminal"}
 $ npm install
 ```
 
 When we run that command, we'll see output similar to the following:
 
-```
+``` {title="output"}
 added 53 packages, and audited 54 packages in 4s
 
 7 vulnerabilities (3 low, 4 high)
@@ -211,13 +213,13 @@ It looks like we have some out of date packages and vulnerabilities to fix!
 
 Thankfully, there is a very useful command called [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) that we can use to update our dependencies anytime there is a problem. We can run that package's command using `npx` as we saw earlier:
 
-```bash
+```bash {title="terminal"}
 $ npx npm-check-updates
 ``` 
 
 As before, we'll be prompted to install the package if it isn't installed already. Once it is done, we'll see output like this:
 
-```
+``` {title="output"}
 Need to install the following packages:
 npm-check-updates@17.1.14
 Ok to proceed? (y) y
@@ -260,13 +262,13 @@ Thankfully, the latest version of the `debug` library is compatible with our exi
 
 Now that we know which dependencies can be updated, we can use the same command with the `-u` option to update our `package.json` file easily:
 
-```bash
+```bash {title="terminal"}
 $ npx npm-check-updates -u
 ```
 
 We should see output similar to this:
 
-```
+``` {title="output"}
 Upgrading /workspaces/example-project/server/package.json
 [====================] 4/4 100%
 
@@ -280,7 +282,7 @@ Run npm install to install new versions.
 
 We can also check our `package.json` file to see the changes:
 
-```json
+```json {title="package.json"}
 {
   "name": "example-project",
   "version": "0.0.1",
@@ -299,13 +301,13 @@ We can also check our `package.json` file to see the changes:
 
 Finally, we can install those dependencies:
 
-```bash
+```bash {title="terminal"}
 $ npm install
 ```
 
 Now when we run that command, we should see that everything is up to date!
 
-```
+``` {title="output"}
 added 36 packages, changed 24 packages, and audited 90 packages in 4s
 
 14 packages are looking for funding
@@ -320,13 +322,13 @@ There we go! We now have a sample Express application configured with updated de
 
 At this point, we are ready to actually test our application. To do this, we can run the following command from within the `server` directory in our project:
 
-```bash
+```bash {title="terminal"}
 $ npm start
 ```
 
 When we do, we'll see a bit of information on the terminal:
 
-```
+``` {title="output"}
 > example-project@0.0.1 start
 > node ./bin/www
 ```
@@ -359,7 +361,7 @@ Great! It looks like our example application in running correctly.
 
 ## Committing to GitHub
 
-Now is a great time to commit our project to GitHub. Before we do, however, we should double-check that our project has a proper `server/.gitignore` file. It should have been created by the Express application generator if we used the `--git` option, but it is always important to double-check that it is there before trying to commit a new project.
+Now is a great time to commit and push our project to GitHub. Before we do, however, we should double-check that our project has a proper `server/.gitignore` file. It should have been created by the Express application generator if we used the `--git` option, but it is always important to double-check that it is there before trying to commit a new project.
 
 ![Gitignore File](images/examples/01/express_7.png)
 
@@ -375,4 +377,4 @@ If your project does not have a `.gitignore` file, you can usually find one for 
 
 {{% /notice %}}
 
-At long last, we are ready to commit and push all of our changes to this project. If it works correctly, it should only commit the code files we've created, but none of the files that are ignored in the `.gitignore` file.
+At long last, we are ready to **commit and push** all of our changes to this project. If it works correctly, it should only commit the code files we've created, but none of the files that are ignored in the `.gitignore` file.
