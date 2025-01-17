@@ -54,6 +54,10 @@ However, JavaScript _does_ retain many of the benefits of concurrency within its
 
 Think of the JavaScript event loop as a busy manager that only works on one thing at a time.  The manager might send several workers out to get information.  When they return, they form a line in front of the manager's desk and wait patiently.  Once the manager is finished with the task they have been working on, they take the report from the first worker in line, and starts doing what is needed to be done with the returned information.  Once the manager finishes that, the next employee will report, and so on.
 
+{{% notice info %}}
+Although the JavaScript execution model is single-threaded, there are ways of introducing multi-threaded programming in JavaScript - specifically, the [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API) in the browser and [Worker Threads](https://nodejs.org/api/worker_threads.html) in Node. These technologies essentially run additional JavaScript interpreters in parallel and enable communiation between them using events.
+{{% /notice %}}
+
 ## Common Events
 
 There are many kinds of events in JavaScript; you can find a complete list in the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/Events).  However some of the ones you will likely find yourself using are:
