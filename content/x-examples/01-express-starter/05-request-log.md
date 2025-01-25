@@ -51,7 +51,7 @@ import express from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 // import logger from 'morgan';
-import requestLogger from './middlewares/request-logger.js'
+import requestLogger from './middlewares/request-logger.js';
 
 import indexRouter from './routes/index.js';
 import usersRouter from './routes/users.js';
@@ -59,7 +59,7 @@ import usersRouter from './routes/users.js';
 var app = express();
 
 // app.use(logger('dev'));
-app.use(requestLogger)
+app.use(requestLogger);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -87,7 +87,7 @@ We should now see output from `morgan` included as `http` logs from `winston`:
 [2025-01-17 06:39:45.424 PM] http:      GET /users 304 1.670 ms - -
 ```
 
-When viewed on a modern Linux terminal, they should even be colorized!
+When viewed on a modern terminal, they should even be colorized!
 
 ![Request Logging](images/examples/01/request_1.png)
 

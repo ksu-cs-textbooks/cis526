@@ -348,7 +348,7 @@ Now we should see some debug messages in the output:
 [2025-01-17 06:23:03.622 PM] debug:     Listening on port 3000
 ```
 
-Great! Notice how the logger outputs a timestamp, the log level, and the message, all on the same line? This matches the configuration we used in the `configs/logger.js` file. On most Linux terminals, each log level will even be a different color!
+Great! Notice how the logger outputs a timestamp, the log level, and the message, all on the same line? This matches the configuration we used in the `configs/logger.js` file. On most terminals, each log level will even be a different color!
 
 ![Debug Logging in Color](images/examples/01/debug_1.png)
 
