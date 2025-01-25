@@ -20,9 +20,10 @@ At the end of this example, we will have a project with the following features:
 2. A bare-bones Express application
 3. Update Express application from CommonJS to ES Modules 
 4. Application logs with Winston and Morgan
-5. A better development server using Nodemon
-6. Install other useful Express libraries
-7. Code documentation with JSDoc and OpenAPI comments
-8. Linting and Formatting with ESLint and Prettier
+5. Install other useful Express libraries
+6. A better development server using Nodemon
+7. A tool for managing environment variables
+8. Code documentation with JSDoc and OpenAPI comments
+9. Linting and Formatting with ESLint and Prettier
 
 Let's get started!
