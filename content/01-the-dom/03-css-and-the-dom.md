@@ -48,7 +48,7 @@ Similarly, the `.banner p` tag uses the [descendant combinator](https://develope
 
 ![DOM tree visualization with marked .banner p nodes](/images/1.3.4.png)
 
-You can see the example with the styling applied by following <a href='/examples/1.3.1/index.html' target='_blank'>this link</a>.  Try adding the div and two paragraphs with the developer tools.  See how the styles are automatically applied to the new nodes in the DOM tree?
+You can see the example with the styling applied by following <a href='../../examples/1.3.1/index.html' target='_blank'>this link</a>.  Try adding the div and two paragraphs with the developer tools.  See how the styles are automatically applied to the new nodes in the DOM tree?
 
 ### CSS and Developer Tools
 

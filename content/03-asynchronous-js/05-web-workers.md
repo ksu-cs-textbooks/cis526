@@ -26,7 +26,7 @@ A web worker is essentially another JavaScript interpreter, running a script sep
 ![The web worker and main thread interpreters passing messages](/images/3.5.2.png)
 
 ## An Example
-You can see an example of such a web worker by using <a href='/examples/3.5.1/index.html' target='_blank'>this link</a> to open another tab in your browser.  This example simulates a long-running process of **n** seconds either in the browser's main thread or in a web worker.  On the page is also three colored squares that when clicked, shift colors.  Try changing the colors of the squares while simulating a several-second process in both ways.  See how running the process on the main thread freezes the user interface?
+You can see an example of such a web worker by using <a href='../../examples/3.5.1/index.html' target='_blank'>this link</a> to open another tab in your browser.  This example simulates a long-running process of **n** seconds either in the browser's main thread or in a web worker.  On the page is also three colored squares that when clicked, shift colors.  Try changing the colors of the squares while simulating a several-second process in both ways.  See how running the process on the main thread freezes the user interface?
 
 ## Using Web Workers
 

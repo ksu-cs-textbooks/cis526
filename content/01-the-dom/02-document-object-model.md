@@ -33,7 +33,7 @@ When it is parsed by the browser, it is transformed into this tree:
 
 ### The DOM Tree and Developer Tools
 
-Most browsers also expose the DOM tree through their developer tools.  Try opening the example page in Chrome or your favorite browser using <a href="/examples/1.2.1/index.html" target='_blank'>this link</a>.
+Most browsers also expose the DOM tree through their developer tools.  Try opening the example page in Chrome or your favorite browser using <a href="../../examples/1.2.1/index.html" target='_blank'>this link</a>. 
 
 Now open the developer tools for your browser:
 * **Chrome** `CTRL + SHIFT + i` or right-click and select 'Inspect' from the context menu.
