@@ -38,8 +38,9 @@ _This syllabus covers both courses. They are taught using the same content._
 
 ### GTA Contact Information
 * **GTA:** Josh Barron (jrbarron AT ksu DOT edu)
-* **Office:** DUE 2208
-* **Office Hours:** TBD
+* **Office:** DUE 2208, Office Hours held in DUE 1118
+* **In-Person Office Hours:** Mondays 1 - 3 PM, Tuesdays 9 - 10 AM
+* **Remote Office Hours:** By appointment via [Zoom](https://ksu.zoom.us/). Schedule a meeting at [https://calendly.com/joshbarron2222](https://calendly.com/joshbarron2222)
 
 ### Prerequisites
 

@@ -72,7 +72,7 @@ We should also take a minute to add the `OPENAPI_HOST` environment variable to o
 
 So, the item we need to add to our `.env` file will look something like this:
 
-``` {title=".env"}
+```env {title=".env"}
 LOG_LEVEL=debug
 PORT=3000
 OPENAPI_HOST=https://$CODESPACE_NAME-$PORT.$GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN
@@ -82,7 +82,7 @@ This is one of the key features of the `dotenvx` library we are using - it will 
 
 In our `.env.example` file, we might want to make a note of this in a comment, just to be helpful for future developers. Comments in the `.env` file format are prefixed with hashes `#`.
 
-``` {title=".env.example"}
+```env {title=".env.example"}
 LOG_LEVEL=debug
 PORT=3000
 OPENAPI_HOST=http://localhost:3000
@@ -132,7 +132,7 @@ Notice that we are using the `OPENAPI_VISIBLE` environment variable to control w
 
 Of course, to make the documentation appear, we'll have to set the `OPENAPI_VISIBLE` value  to `true` in our `.env` file, and also add a default entry to the `.env.example` file as well:
 
-``` {title=".env"}
+```env {title=".env"}
 LOG_LEVEL=debug
 PORT=3000
 OPENAPI_HOST=https://$CODESPACE_NAME-$PORT.$GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN

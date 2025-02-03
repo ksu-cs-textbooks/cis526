@@ -88,7 +88,7 @@ This is one of the many benefits that comes from using the newer `dotenvx` libra
 
 So, now let's create the `.env` file in the `server` folder of our application, and add an environment variable to that file:
 
-``` {title=".env"}
+```env {title=".env"}
 LOG_LEVEL=error
 ```
 
@@ -164,7 +164,7 @@ Now, when we run our program, we should not see any logging output (unless we ca
 
 Finally, let's go ahead and set the value in our `.env` file back to the `debug` setting:
 
-``` {title=".env"}
+```env {title=".env"}
 LOG_LEVEL=debug
 ```
 
@@ -210,7 +210,7 @@ The code `process.env.PORT || '3000'` is a commonly used shorthand in JavaScript
 
 So, we can set that value explicitly in our `.env` file:
 
-``` {title=".env"}
+```env {title=".env"}
 LOG_LEVEL=debug
 PORT=3000
 ```
@@ -229,7 +229,7 @@ We can enforce this by ensuring that our `.gitignore` file inside of our `server
 
 Instead, it is common practice to create a second file called `.env.example` (or similar) that contains a list of all configurable environment variables, along with safe default values for each. So, for this application, we might create a `.env.example` file that looks like this:
 
-``` {title=".env.example"}
+```env {title=".env.example"}
 LOG_LEVEL=http
 PORT=3000
 ```
