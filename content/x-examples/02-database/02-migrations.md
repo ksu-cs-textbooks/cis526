@@ -88,6 +88,11 @@ We can refer to both the [Umzug Documentation](https://github.com/sequelize/umzu
 // Import Libraries
 import {Sequelize} from 'sequelize';
 
+/**
+ * Apply the migration
+ * 
+ * @param {queryInterface} context the database context to use 
+ */
 export async function up({context: queryInterface}) {
     await queryInterface.createTable('users', {
         id: {
@@ -110,6 +115,11 @@ export async function up({context: queryInterface}) {
     })
 }
 
+/**
+ * Roll back the migration
+ * 
+ * @param {queryInterface} context the database context to use 
+ */
 export async function down({context: queryInterface}) {
     await queryInterface.dropTable('users');
 }
