@@ -111,7 +111,7 @@ import Sequelize from 'sequelize';
  *     Role:
  *       type: object
  *       required:
- *         - username
+ *         - role
  *       properties:
  *         id:
  *           type: integer
@@ -177,7 +177,7 @@ const UserRoleSchema = {
         references: { model: 'User', key: 'id' },
     },
     roleId: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         primaryKey: true,
         references: { model: 'Role', key: 'id' },
     }
@@ -388,6 +388,47 @@ export async function down({context: queryInterface}) {
 ```
 
 Once again, this seed is very similar to what we've seen before. Notice that we use the `truncate` option to remove all entries in the `user_roles` table when we undo this seed, instead of searching for individual entries to remove.
+
+{{% notice tip "Seeding from a CSV File" %}}
+
+It is also possible to seed the database from a CSV or other data file using a bit of JavaScript code. Here's an example for seeding a table that contains all of the counties in Kansas using a CSV file with that data that is read with the [convert-csv-to-json](https://www.npmjs.com/package/convert-csv-to-json) library:
+
+```js {title="seeds/02_counties.js"}
+// Import libraries
+const csvToJson = import("convert-csv-to-json");
+
+// Timestamp in the appropriate format for the database
+const now = new Date().toISOString().slice(0, 19).replace("T", " ");
+
+export async function up({ context: queryInterface }) {
+  // Read data from CSV file
+  // id,name,code,seat,population,est_year
+  // 1,Allen,AL,Iola,"12,464",1855
+  let counties = (await csvToJson)
+    .formatValueByType()
+    .supportQuotedField(true)
+    .fieldDelimiter(",")
+    .getJsonFromCsv("./seeds/counties.csv");
+
+  // append timestamps and parse fields
+  counties.map((c) => {
+    // handle parsing numbers with comma separators
+    c.population = parseInt(c.population.replace(/,/g, ""));
+    c.createdAt = now;
+    c.updatedAt = now;
+    return c;
+  });
+  
+  // insert into database
+  await queryInterface.bulkInsert("counties", counties);
+}
+
+export async function down({ context: queryInterface }) {
+  await queryInterface.bulkDelete("counties", {}, { truncate: true });
+}
+```
+
+{{% /notice %}}
 
 ## Update User Model
 
