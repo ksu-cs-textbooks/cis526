@@ -92,20 +92,17 @@ The `user_roles` table also includes a great example for adding a foreign key re
 
 ## Models
 
-Next, we need to create two models to represent these tables. The first is the `role` model, stored in `models/role.js` with the following content:
+Next, we need to create two models to represent these tables. The first is the `role` model schema, stored in `models/role.js` with the following content:
 
 ```js {title="models/role.js"}
 /**
  * @file Role model
  * @author Russell Feldhausen <russfeld@ksu.edu>
- * @exports Role a Sequelize model
+ * @exports RoleSchema the schema for the Role model
  */
 
 // Import libraries
 import Sequelize from 'sequelize';
-
-// Import database
-import database from "../configs/database.js";
 
 /**
  * @swagger
@@ -136,79 +133,108 @@ import database from "../configs/database.js";
  *           createdAt: 2025-02-04T15:36:32.000Z
  *           updatedAt: 2025-02-04T15:36:32.000Z
  */
+const RoleSchema = {
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    role: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    createdAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+    },
+    updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+    },
+}
+
+export default RoleSchema
+```
+
+Notice that this file is very similar to the `models/user.js` file created earlier, with a few careful changes made to match the table schema.
+
+We also need to create a model schema for the `user_roles` table, which we will store in the `models/user_role.js` file with the following content:
+
+```js {title="models/user_role.js"}
+/**
+ * @file User role junction model
+ * @author Russell Feldhausen <russfeld@ksu.edu>
+ * @exports RoleSchema the schema for the UserRole model
+ */
+
+// Import libraries
+import Sequelize from 'sequelize';
+
+const UserRoleSchema = {
+    userId: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        references: { model: 'User', key: 'id' },
+    },
+    roleId: {
+        type: Sequelize.STRING,
+        primaryKey: true,
+        references: { model: 'Role', key: 'id' },
+    }
+}
+
+export default UserRoleSchema
+```
+
+Finally, we can now update our `models/models.js` file to create the `Role` and `UserRole` models, and also to define the associations between them and the `User` model.
+
+```js {title="models/models.js" hl_lines="5-6 14-15 29-39 41-53 55-57 61-62"}
+/**
+ * @file Database models
+ * @author Russell Feldhausen <russfeld@ksu.edu>
+ * @exports User a Sequelize User model
+ * @exports Role a Sequelize Role model
+ * @exports UserRole a Sequelize UserRole model
+ */
+
+// Import database connection
+import database from "../configs/database.js";
+
+// Import Schemas
+import UserSchema from './user.js';
+import RoleSchema from "./role.js";
+import UserRoleSchema from "./user_role.js";
+
+// Create User Model
+const User = database.define(
+    // Model Name
+    'User',
+    // Schema
+    UserSchema,
+    // Other options
+    {
+        tableName: 'users'
+    }
+)
+
+// Create Role Model
 const Role = database.define(
     // Model Name
     'Role',
-    
-    // Attributes (match with migration)
-    {
-        id: {
-            type: Sequelize.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        role: {
-            type: Sequelize.STRING,
-            allowNull: false,
-        },
-        createdAt: {
-            type: Sequelize.DATE,
-            allowNull: false,
-        },
-        updatedAt: {
-            type: Sequelize.DATE,
-            allowNull: false,
-        },
-    },
-
+    // Schema
+    RoleSchema,
     // Other options
     {
         tableName: 'roles'
     }
 )
 
-export default Role
-```
-
-Notice that this file is very similar to the `models/user.js` file created earlier, with a few careful changes made to match the table schema.
-
-We also need to create a model for the `user_roles` table, which we will store in the `models/user_role.js` file with the following content:
-
-```js {title="models/user_role.js"}
-/**
- * @file User role junction model
- * @author Russell Feldhausen <russfeld@ksu.edu>
- * @exports Role a Sequelize model
- */
-
-// Import libraries
-import Sequelize from 'sequelize';
-
-// Import database
-import database from "../configs/database.js";
-
-// Import models
-import Role from "./role.js"
-import User from "./user.js"
-
+// Create UserRole Model
 const UserRole = database.define(
     // Model Name
     'UserRole',
-    
-    // Attributes (match with migration)
-    {
-        userId: {
-            type: Sequelize.INTEGER,
-            primaryKey: true,
-            references: { model: User, key: 'id' },
-        },
-        roleId: {
-            type: Sequelize.STRING,
-            primaryKey: true,
-            references: { model: Role, key: 'id' },
-        }
-    },
-
+    // Schema
+    UserRoleSchema,
     // Other options
     {
         tableName: 'user_roles',
@@ -217,19 +243,28 @@ const UserRole = database.define(
     }
 )
 
-// Define associations
+// Define Associations
 Role.belongsToMany(User, { through: UserRole, unique: false, as: "users" })
 User.belongsToMany(Role, { through: UserRole, unique: false, as: "roles" })
 
-
-export default UserRole
+export {
+    User,
+    Role,
+    UserRole,
+}
 ```
 
 Notice that this file contains two lines at the bottom to define the associations included as part of this table, so that `sequelize` will know how to handle it. This will instruct `sequelize` to add additional attributes and features to the `User` and `Role` models for querying the related data, as we'll see shortly.
 
-We also added the line `timestamps: false` to the other options for this table to disable the creation and management of timestamps (the `createdAt` and `updatedAt` attributes), since they may not be needed for this relation. 
+We also added the line `timestamps: false` to the other options for the `User_roles` table to disable the creation and management of timestamps (the `createdAt` and `updatedAt` attributes), since they may not be needed for this relation. 
 
 Finally, we added the `underscored: true` line to tell `sequelize` that it should interpret the `userId` and `roleId` attributes (written in camel case as preferred by Sequelize) as `user_id` and `role_id`, respectively (written in snake case as we did in the migration). 
+
+{{% notice note "Camel Case vs. Snake Case" %}}
+
+The choice of either CamelCase or snake_case naming for database attributes is a matter of preference. In this example, we show both methods, and it is up to each developer to select their own preferred style. 
+
+{{% /notice %}}
 
 ## Seed
 
@@ -405,7 +440,7 @@ Finally, let's update the `User` model schema to include related roles. At this 
 
 Now we can modify our route in `routes/users.js` to include the data from the related `Role` model in our query:
 
-```js {title="routes/users.js" hl_lines="20-21 47-56" }
+```js {title="routes/users.js" hl_lines="19 45-54" }
 /**
  * @file Users router
  * @author Russell Feldhausen <russfeld@ksu.edu>
@@ -424,9 +459,7 @@ import express from "express";
 const router = express.Router();
 
 // Import models
-import User from '../models/user.js'
-import Role from '../models/role.js'
-import UserRole from '../models/user_role.js'
+import { User, Role } from '../models/models.js'
 
 /**
  * Gets the list of users
@@ -550,5 +583,4 @@ That should also exactly match the schema and route information in our Open API 
 
 There we go! That's a quick example of adding an additional table to our application, including a relationship and more.
 
-
-
+As a last step before finalizing our code, we should run the `lint` and `format` commands and deal with any errors they find. Finally, we can **commit and push** our work. 

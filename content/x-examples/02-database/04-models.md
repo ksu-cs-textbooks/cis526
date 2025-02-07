@@ -10,7 +10,7 @@ weight: 40
 
 Now that we have our database table structure and sample data set up, we can finally configure `sequelize` to query our database by defining a [model](https://sequelize.org/docs/v6/core-concepts/model-basics/) representing that data. At its core, a model sis simply an abstraction that represents the structure of the data in a table of our database. We can equate this to a `class` in object-oriented programming - each row or _record_ in our database can be thought of as an _instance_ of our model class. You can learn more about models in the [Sequelize Documentation](https://sequelize.org/docs/v6/core-concepts/model-basics/)
 
-To create a model, let's first create a `models` folder in our app, then we can create a file `user.js` that contains the model for the `users` table.
+To create a model, let's first create a `models` folder in our app, then we can create a file `user.js` that contains the schema for the `User` model, based on the `users` table.
 
 {{% notice note "Singular vs. Plural" %}}
 
@@ -18,58 +18,78 @@ By convention, model names are usually singular like "user" while table names ar
 
 {{% /notice %}}
 
-The `user` model should look very similar to the table definition used in the migration created earlier in this example:
+The `User` model schema should look very similar to the table definition used in the migration created earlier in this example:
 
 ```js {title="models/user.js"}
 /**
- * @file Users model
+ * @file User schema
  * @author Russell Feldhausen <russfeld@ksu.edu>
- * @exports User a Sequelize model
+ * @exports UserSchema the schema for the User model
  */
 
 // Import libraries
 import Sequelize from 'sequelize';
 
-// Import database
+const UserSchema = {
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    username: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    createdAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+    },
+    updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+    },
+}
+
+export default UserSchema
+```
+
+At a minimum, a model schema defines the attributes that are stored in the database, but there are many more features that can be added over time, such as additional computed fields (for example, a `fullName` field that concatenates the `giveName` and `familyName` fields stored in the database). We'll explore ways to improve our models in later examples.
+
+Once we have the model schema created, we'll create a second file named `models.js` that will pull together all of our schemas and actually build the `sequelize` models that can be used throughout our application.
+
+```js {title="models/models.js"}
+/**
+ * @file Database models
+ * @author Russell Feldhausen <russfeld@ksu.edu>
+ * @exports User a Sequelize User model
+ */
+
+// Import database connection
 import database from "../configs/database.js";
 
+// Import Schemas
+import UserSchema from './user.js';
+
+// Create User Model
 const User = database.define(
     // Model Name
     'User',
-    
-    // Attributes (match with migration)
-    {
-        id: {
-            type: Sequelize.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        username: {
-            type: Sequelize.STRING,
-            allowNull: false,
-        },
-        createdAt: {
-            type: Sequelize.DATE,
-            allowNull: false,
-        },
-        updatedAt: {
-            type: Sequelize.DATE,
-            allowNull: false,
-        },
-    },
-
+    // Schema
+    UserSchema,
     // Other options
     {
         tableName: 'users'
     }
 )
 
-export default User
+export {
+    User
+}
 ```
 
-At a minimum, a model defines the attributes that are stored in the database, but there are many more features that can be added over time, such as additional computed fields (for example, a `fullName` field that concatenates the `giveName` and `familyName` fields stored in the database). We'll explore ways to improve our models in later examples.
-
 It is also important to note that we can define the name of the table that stores instances of the model in the `tableName` option. 
+
+We will see why it is important to use this `models.js` file (instead of just defining the model itself and not just the schema in the `users.js` file) once we start adding relations between the models. For now, we'll start with this simple scaffold that we can expand upon in the future.
 
 {{% notice note "Models vs. Migrations" %}}
 
@@ -102,7 +122,7 @@ import express from "express";
 const router = express.Router();
 
 // Import models
-import User from '../models/user.js'
+import { User } from '../models/models.js'
 
 /**
  * Gets the list of users
@@ -129,7 +149,7 @@ router.get("/", async function (req, res, next) {
 export default router;
 ```
 
-The only change we need to make is to import our `User` model we just created, and then use the `User.findAll()` query method inside of our first route method. A full list of all the querying functions in `sequelize` can be found in the [Sequelize Documentation](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/)
+The only change we need to make is to import our `User` model we just created in the `models/models.js` file, and then use the `User.findAll()` query method inside of our first route method. A full list of all the querying functions in `sequelize` can be found in the [Sequelize Documentation](https://sequelize.org/docs/v6/core-concepts/model-querying-basics/)
 
 Now, let's start our application and see if it works! We should make sure we have migrated and seeded the database recently before starting. If everything works correctly, we should be able to navigate to the `/users` path and see the following JSON output on the page:
 

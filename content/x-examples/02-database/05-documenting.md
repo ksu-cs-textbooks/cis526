@@ -70,7 +70,7 @@ Next, at the top of our `models/user.js` file, we can add information in an `@sw
  *           createdAt: 2025-02-04T15:36:32.000Z
  *           updatedAt: 2025-02-04T15:36:32.000Z
  */
-const User = database.define(
+const UserSchema = {
 
 // -=-=- other code omitted here -=-=-
 ```
