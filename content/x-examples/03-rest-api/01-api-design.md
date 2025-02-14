@@ -116,6 +116,9 @@ const router = express.Router();
 // Import models
 import { Role } from "../../../models/models.js";
 
+// Import logger
+import logger from "../../../configs/logger.js"
+
 /**
  * Gets the list of roles
  *
@@ -140,12 +143,29 @@ import { Role } from "../../../models/models.js";
  *                 $ref: '#/components/schemas/Role'
  */
 router.get("/", async function (req, res, next) {
-  const roles = await Role.findAll();
-  res.json(roles);
+  try {
+    const roles = await Role.findAll();
+    res.json(roles);
+  } catch (error) {
+    logger.error(error)
+    res.status(500).end()
+  }
 });
 
 export default router;
 ```
+
+Notice that we have added an additional `try` and `catch` block to the route function. This will ensure any errors that are thrown by the database get caught and logged without leaking any sensitive data from our API. It is always a good practice to wrap each API method in a `try` and `catch` block.
+
+{{% notice note "Controllers and Services" %}}
+
+More complex RESTful API designs may include additional files such as **controllers** and **services** to add additional structure to the application. For example, there might be multiple API routes that access the same method in a controller, which then uses a service to perform business logic on the data before storing it in the database. 
+
+For this example project, we will place most of the functionality directly in our routes to simplify our structure. 
+
+You can read more about how to use controllers and services in the [MDN Express Tutorial](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes).
+
+{{% /notice %}}
 
 Since we are creating routes in a new subfolder, we also need to update our Open API configuration in `configs/openapi.js` so that we can see the documentation contained in those routes:
 
@@ -220,7 +240,7 @@ If everything is working correctly, we should see our roles listed in the output
 
 We should also be able to query the list of API versions at the path `/api`:
 
-![List of Roles](images/examples/03/api_3.png)
+![List of API Versions](images/examples/03/api_3.png)
 
 Finally, we should also check and make sure our Open API documentation at the `/docs` path is up to date and includes the new routes:
 
