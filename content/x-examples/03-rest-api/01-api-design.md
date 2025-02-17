@@ -157,6 +157,14 @@ export default router;
 
 Notice that we have added an additional `try` and `catch` block to the route function. This will ensure any errors that are thrown by the database get caught and logged without leaking any sensitive data from our API. It is always a good practice to wrap each API method in a `try` and `catch` block.
 
+{{% notice info "Get All Route Only" %}}
+
+For this particular application's API design, we will only be creating the **get all** RESTful method for the `Role` model. This is because we don't actually want any users of the application modifying the roles themselves, since those roles will eventually be used in the overall authorization structure of the application (to be added in a later example). However, when creating or updating users, we need to be able to access a full list of all available roles, which can be found using this particular API endpoint.
+
+We'll explore the rest of the RESTful API methods in the `User` model later in this example.
+
+{{% /notice %}}
+
 {{% notice note "Controllers and Services" %}}
 
 More complex RESTful API designs may include additional files such as **controllers** and **services** to add additional structure to the application. For example, there might be multiple API routes that access the same method in a controller, which then uses a service to perform business logic on the data before storing it in the database. 

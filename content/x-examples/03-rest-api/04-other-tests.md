@@ -188,7 +188,7 @@ describe('/api', () => {
   })
 
   describe('version: 1.0', () => {
-    let version = {
+    const version = {
       version: "1.0",
       url: "/api/v1/"
     }
@@ -298,7 +298,7 @@ describe('/api', () => {
   })
 
   describe('version: 1.0', () => {
-    let version = {
+    const version = {
       version: "1.0",
       url: "/api/v1/"
     }
@@ -309,7 +309,7 @@ describe('/api', () => {
   })
 
   describe('version: 2.0', () => {
-    let version = {
+    const version = {
       version: "2.0",
       url: "/api/v2/"
     }
