@@ -221,50 +221,45 @@ import sendSuccess from "../../../utilities/send-success.js";
  *               - id: 7
  *     responses:
  *       201:
- *         description: success
+ *         $ref: '#/components/responses/Success'
  *       422:
- *         description: failure
+ *         $ref: '#/components/responses/ValidationError'         
  */
 router.post("/", async function (req, res, next) {
   try {
-    const user = await User.create(
-      // Build the user object using body attributes
-      {
-        username: req.body.username,
-      },
-    );
-    if (user === null) {
-      res.status(422).json("User could not be created");
-      return;
-    }
-
-    // If roles are included in the body
-    if (req.body.roles) {
-      // Find all roles listed
-      const roles = await Promise.all(
-        req.body.roles.map(({ id, ...next }) => {
-          return Role.findByPk(id);
-        }),
+    // Use a database transaction to roll back if any errors are thrown
+    await database.transaction(async t => {
+      const user = await User.create(
+        // Build the user object using body attributes
+        {
+          username: req.body.username,
+        },
+        // Assign to a database transaction
+        {
+          transaction: t
+        }
       );
-
-      if (roles.some((r) => r === null)) {
-        res.status(422).json("Invalid role");
-        return;
+  
+      // If roles are included in the body
+      if (req.body.roles) {
+        // Find all roles listed
+        const roles = await Promise.all(
+          req.body.roles.map(({ id, ...next }) => {
+            return Role.findByPk(id);
+          }),
+        );
+  
+        // Attach roles to user
+        await user.setRoles(roles, { transaction: t });
       }
-
-      // Attach roles to user
-      await user.setRoles(roles);
-    }
-
-    res.status(201).end();
+  
+      // Send the success message
+      sendSuccess("User saved!", res);
+    })
+    
   } catch (error) {
-    // Gracefully handle Sequelize Validation Errors
     if (error instanceof ValidationError) {
-      const errors = error.errors
-        .map((e) => {
-          return {attribute: e.path, message: e.message}
-        })
-      res.status(422).json(errors);
+      handleValidationError(error, res);
     } else {
       logger.error(error);
       res.status(500).end();
@@ -363,5 +358,19 @@ Finally, at the bottom of the file we have a `catch` block that will catch any e
 Inside, we check to see if the error is an instance of the `ValidationError` class from Sequelize. If so, we can use our new `handleValidationError` method to process that error and send a well-structured JSON response back to the user about the error. If not, we'll simply log the error and send back a generic HTTP 500 response code. 
 
 ## Manual Testing with Open API
+
+Before we start unit testing this route, let's quickly do some manual testing using the Open API documentation site. It is truly a very handy way to work with our RESTful APIs as we are developing them, allowing us to test them quickly in isolation to make sure everything is working properly.
+
+So, let's start our server:
+
+```bash {title="terminal"}
+$ npm run dev
+```
+
+Once it starts, we can navigate to the `/docs` URL, and we should see the Open API documentation for our site, including a new `POST` route for the `users` section:
+
+![Create API Documentation](/images/examples/03/create_1.png)
+
+If we documented our route correctly, we can see that this documentation includes not only an example for what a new submission should look like, but also examples of the **success** and **model validation error** outputs should be. To test it, we can use the **Try it out** button on the 
 
 ## Unit Testing

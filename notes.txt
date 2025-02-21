@@ -6,7 +6,7 @@ Week 8: https://www.youtube.com/watch?v=Lq7pBppl-oU
 
 ## Web Development Stack
 
-2022-05-20
+## 2022-05-20
 
 Ran Updates
 
@@ -53,6 +53,47 @@ To add these packages to the node path, each autograder references a script in t
 
 ```bash
 export NODE_PATH=/home/codio/.nvm/versions/node/v16.15.0/lib/node_modules/
+```
+
+Update the path above to match the node version. This file will need to be created as root and given execute permissions `sudo chmod a+x nodejs.sh`
+
+## 2025-02-21
+
+Web Development Stack 2025
+
+* Run updates: `sudo apt update && sudo apt upgrade`
+* Install Linux packages:
+  * `build-essential`
+  * `git` 
+  * `sqlite3`
+  * `dotnet-sdk-6.0` - see https://docs.microsoft.com/en-us/dotnet/core/install/
+  * `dotnet-runtime-6.0` - see https://docs.microsoft.com/en-us/dotnet/core/install/ 
+* Install NVM: https://github.com/nvm-sh/nvm
+* Use NVM to install Node 22: `nvm install 22 && nvm use 22`
+* Create symlink for `node` to `/usr/local/bin`
+  * `sudo ln -s /home/codio/.nvm/versions/node/v22.14.0/bin/node /usr/local/bin/node`
+* Install global node packages:
+  * `ansi-to-html`
+  * `https://github.com/alt-cs-lab/avow` (Custom library by Nathan)
+  * `axios`
+  * `better-sqlite3`
+  * `chalk@4.1.2`  (newer versions of Chalk are pure ESM which doesn't play nice with current autograder. See https://github.com/microsoft/TypeScript/issues/46930)
+  * `cheerio`
+  * `https://github.com/cis526-codio/codio-css-utils` (Custom fork of https://bitbucket.org/dwarfy/codio-css-utils/src/master/)
+  * `highlight.js` (replacement for https://www.npmjs.com/package/highlight)
+  * `jest-cli`
+  * `jest-environment-jsdom`
+  * `jest`
+  * `jquery`
+  * `phantomjs-prebuilt`
+  * `showdown`
+
+Use `npm install -g --force <package>` to install packages globally. They will be in the `/home/codio/.nvm/versions/node/v22.14.0/lib/node_modules/` folder. 
+
+To add these packages to the node path, each autograder references a script in this location: `/etc/profile.d/nodejs.sh`. So, on the stack, create that file with the following content:
+
+```bash
+export NODE_PATH=/home/codio/.nvm/versions/node/v22.14.0/lib/node_modules/
 ```
 
 Update the path above to match the node version. This file will need to be created as root and given execute permissions `sudo chmod a+x nodejs.sh`
