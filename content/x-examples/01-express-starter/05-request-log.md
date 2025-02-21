@@ -80,7 +80,7 @@ We should now see output from `morgan` included as `http` logs from `winston`:
 > example-project@0.0.1 dev
 > LOG_LEVEL=debug node ./bin/www
 
-[2025-01-17 06:39:30.975 PM] debug:     Listening on port 3000
+[2025-01-17 06:39:30.975 PM] info:      Listening on port 3000
 [2025-01-17 06:39:37.430 PM] http:      GET / 200 3.851 ms - 120
 [2025-01-17 06:39:40.665 PM] http:      GET /users 200 3.184 ms - 23
 [2025-01-17 06:39:43.069 PM] http:      GET / 304 0.672 ms - -

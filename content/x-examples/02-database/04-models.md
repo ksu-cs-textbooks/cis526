@@ -38,6 +38,7 @@ const UserSchema = {
     },
     username: {
         type: Sequelize.STRING,
+        unique: true,
         allowNull: false,
     },
     createdAt: {

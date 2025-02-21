@@ -279,7 +279,7 @@ Finally, let's create a new seed file in `seeds/01_roles.js` to add some default
  */
 
 // Timestamp in the appropriate format for the database
-const now = new Date().toISOString().slice(0, 19).replace('T', ' ')
+const now = new Date().toISOString().slice(0, 23).replace("T", " ") + " +00:00";
 
 // Array of objects to add to the database
 const roles = [
@@ -398,7 +398,7 @@ It is also possible to seed the database from a CSV or other data file using a b
 const csvToJson = import("convert-csv-to-json");
 
 // Timestamp in the appropriate format for the database
-const now = new Date().toISOString().slice(0, 19).replace("T", " ");
+const now = new Date().toISOString().slice(0, 23).replace("T", " ") + " +00:00";
 
 export async function up({ context: queryInterface }) {
   // Read data from CSV file

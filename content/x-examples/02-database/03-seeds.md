@@ -66,7 +66,7 @@ Finally, we can create a new folder `seeds` to store our seeds, and then create 
  */
 
 // Timestamp in the appropriate format for the database
-const now = new Date().toISOString().slice(0, 19).replace('T', ' ')
+const now = new Date().toISOString().slice(0, 23).replace("T", " ") + " +00:00";
 
 // Array of objects to add to the database
 const users = [

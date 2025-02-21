@@ -102,6 +102,7 @@ export async function up({context: queryInterface}) {
         },
         username: {
             type: Sequelize.STRING,
+            unique: true,
             allowNull: false,
         },
         createdAt: {

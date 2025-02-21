@@ -128,7 +128,7 @@ If it works correctly, we should see that our application is able to connect to 
 [2025-02-04 06:56:12.296 PM] info:      { event: 'migrating', name: '00_users.js' }
 [2025-02-04 06:56:12.321 PM] info:      { event: 'migrated', name: '00_users.js', durationSeconds: 0.024 }
 [2025-02-04 06:56:12.321 PM] debug:     Database seeding complete
-[2025-02-04 06:56:12.323 PM] debug:     Listening on port 3000
+[2025-02-04 06:56:12.323 PM] info:      Listening on port 3000
 ```
 
 There we go! Our application will now always make sure the database is properly migrated, and optionally seeded, before it starts. Now, when another developer or user starts our application, it will be sure to have a working database. 

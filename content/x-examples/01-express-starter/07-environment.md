@@ -81,7 +81,7 @@ Now, when we run our application, we should get a helpful message letting us kno
 [MISSING_ENV_FILE] missing .env file (/workspaces/example-project/server/.env)
 [MISSING_ENV_FILE] https://github.com/dotenvx/dotenvx/issues/484
 [dotenvx@1.34.0] injecting env (0)
-[2025-01-25 08:15:56.135 PM] debug:     Listening on port 3000
+[2025-01-25 08:15:56.135 PM] info:      Listening on port 3000
 ```
 
 This is one of the many benefits that comes from using the newer `dotenvx` library - it will helpfully remind us when we are running without an environment file, just in case we forgot to create one. 
@@ -110,7 +110,7 @@ However, when we do, we notice that we are still getting **http** logging in the
 [nodemon] watching extensions: js,mjs,cjs,json
 [nodemon] starting `node ./bin/www`
 [dotenvx@1.34.0] injecting env (0) from .env
-[2025-01-25 08:20:17.438 PM] debug:     Listening on port 3000
+[2025-01-25 08:20:17.438 PM] info:      Listening on port 3000
 [2025-01-25 08:23:56.896 PM] http:      GET / 304 3.405 ms -
 ```
 
@@ -180,7 +180,7 @@ Now, when we run our application, we can see that it is following that configura
 [nodemon] watching extensions: js,mjs,cjs,json
 [nodemon] starting `node ./bin/www`
 [dotenvx@1.34.0] injecting env (1) from .env
-[2025-01-25 08:28:54.587 PM] debug:     Listening on port 3000
+[2025-01-25 08:28:54.587 PM] info:      Listening on port 3000
 [2025-01-25 08:28:58.625 PM] http:      GET / 200 3.475 ms - -
 ```
 

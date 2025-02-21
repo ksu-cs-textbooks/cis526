@@ -345,12 +345,27 @@ Now we should see some debug messages in the output:
 > example-project@0.0.1 dev
 > LOG_LEVEL=debug node ./bin/www
 
-[2025-01-17 06:23:03.622 PM] debug:     Listening on port 3000
+[2025-01-17 06:23:03.622 PM] info:      Listening on port 3000
 ```
 
 Great! Notice how the logger outputs a timestamp, the log level, and the message, all on the same line? This matches the configuration we used in the `configs/logger.js` file. On most terminals, each log level will even be a different color!
 
 ![Debug Logging in Color](images/examples/01/debug_1.png)
+
+Finally, since we really should make sure the message that the application is successfully listening on a port is printed by default, let's change it to the `info` log level in our `bin/www` file:
+
+```js {title="bin/www" hl_lines="9"}
+// -=-=- other code omitted here -=-=-
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  // debug('Listening on ' + bind);
+  logger.info('Listening on ' + bind)
+}
+```
 
 {{% notice info "Why Not Use NODE_ENV?" %}}
 

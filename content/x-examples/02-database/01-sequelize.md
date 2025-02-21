@@ -54,14 +54,14 @@ import logger from "./logger.js";
 // Create Sequelize instance
 const sequelize = new Sequelize({
     dialect: 'sqlite',
-    storage: process.env.DATABASE_FILE,
+    storage: process.env.DATABASE_FILE || ":memory:",
     logging: logger.sql.bind(logger)
 })
 
 export default sequelize;
 ```
 
-This file creates a very simple configuration for `sequelize` that uses the `sqlite` dialect. It uses the `DATABASE_FILE` environment variable to control the location of the database in the file system, and it also uses the `logger.sql` log level to log any data produced by the library.
+This file creates a very simple configuration for `sequelize` that uses the `sqlite` dialect. It uses the `DATABASE_FILE` environment variable to control the location of the database in the file system, and it also uses the `logger.sql` log level to log any data produced by the library. If a `DATABASE_FILE` environment variable is not provided, it will default to storing data in the SQLite [In-Memory Database](https://www.sqlite.org/inmemorydb.html), which is great for testing and quick development.
 
 Of course, a couple of those items don't actually exist yet, so let's add those in before we move on! First, we need to add a `DATABASE_FILE` environment variable to both our `.env` and `.env.example` files:
 

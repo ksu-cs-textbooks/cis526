@@ -248,7 +248,7 @@ We should see additional output from `nodemon` to see that it is working:
 [nodemon] watching path(s): *.*
 [nodemon] watching extensions: js,mjs,cjs,json
 [nodemon] starting `node ./bin/www`
-[2025-01-25 09:37:24.734 PM] debug:     Listening on port 3000
+[2025-01-25 09:37:24.734 PM] info:      Listening on port 3000
 ```
 
 Now, with our application running, we can make any change to a file in our application, such as `app.js`, and it will automatically restart our application:
@@ -256,7 +256,7 @@ Now, with our application running, we can make any change to a file in our appli
 ``` {title="output"}
 [nodemon] restarting due to changes...
 [nodemon] starting `node ./bin/www`
-[2025-01-25 09:39:02.858 PM] debug:     Listening on port 3000
+[2025-01-25 09:39:02.858 PM] info:      Listening on port 3000
 ```
 
 We can also always manually type `rs` in the terminal to restart the application when it is running inside of `nodemon`. 

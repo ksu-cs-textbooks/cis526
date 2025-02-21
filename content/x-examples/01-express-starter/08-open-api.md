@@ -158,7 +158,7 @@ We should see the following output when our application initializes:
 [nodemon] starting `node ./bin/www`
 [dotenvx@1.34.0] injecting env (4) from .env
 [2025-01-25 09:10:37.646 PM] warn:      OpenAPI documentation visible!
-[2025-01-25 09:10:37.649 PM] debug:     Listening on port 3000
+[2025-01-25 09:10:37.649 PM] info:      Listening on port 3000
 ```
 
 Now, let's load our application in a web browser, and go to the `/docs` path. We should see our OpenAPI Documentation website!

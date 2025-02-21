@@ -19,7 +19,7 @@ To do this, we'll create several RESTful routes, which pair HTTP verbs and paths
 
 As we build this new API router, we'll see each one of these in action.
 
-### Retrieve All
+## Retrieve All Route
 
 The first operation we'll look at is the **retrieve all** operation, which is one we're already very familiar with. To begin, we should start by copying the existing file at `routes/users.js` to `routes/api/v1/users.js` and modifying it a bit to contain this content:
 
@@ -146,11 +146,11 @@ Once it loads, we can navigate to the `/api/v1/users` URL to see the output:
 
 ![Retrieve All Ouptut](/images/examples/03/retrieveall_1.png)
 
-### Retrieve All Unit Tests
+## Retrieve All Unit Tests
 
 As we write each of these routes, we'll also explore the related unit tests. The first three unit tests for this route are very similar to the ones we wrote for the `roles` routes earlier, so we won't go into too much detail on these. As expected, we'll place all of the unit tests for the `users` routes in the `test/api/v1/users.js` file:
 
-```js {title="test/api/v1/users.js" hl_lines="58-68"}
+```js {title="test/api/v1/users.js" hl_lines="35-45"}
 /**
  * @file /api/v1/users Route Tests
  * @author Russell Feldhausen <russfeld@ksu.edu>
@@ -176,6 +176,30 @@ use(chaiShallowDeepEqual);
 // Modify Object.prototype for BDD style assertions
 should();
 
+// User Schema
+const userSchema = {
+  type: "object",
+  required: ["id", "username"],
+  properties: {
+    id: { type: "number" },
+    username: { type: "string" },
+    createdAt: { type: "string", format: "iso-date-time" },
+    updatedAt: { type: "string", format: "iso-date-time" },
+    roles: {
+      type: "array",
+      items: {
+          type: 'object',
+          required: ['id', 'role'],
+          properties: {
+              id: { type: 'number' },
+              role: { type: 'string' },
+          },
+      },
+    }
+  },
+  additionalProperties: false,
+};
+
 /**
  * Get all Users
  */
@@ -200,28 +224,7 @@ const getUsersSchemaMatch = () => {
   it("all users should match schema", (done) => {
     const schema = {
       type: "array",
-      items: {
-        type: "object",
-        required: ["id", "username"],
-        properties: {
-          id: { type: "number" },
-          username: { type: "string" },
-          createdAt: { type: "string", format: "iso-date-time" },
-          updatedAt: { type: "string", format: "iso-date-time" },
-          roles: {
-            type: "array",
-            items: {
-                type: 'object',
-                required: ['id', 'role'],
-                properties: {
-                    id: { type: 'number' },
-                    role: { type: 'string' },
-                },
-            },
-          }
-        },
-        additionalProperties: false,
-      },
+      items: userSchema
     };
     request(app)
       .get("/api/v1/users")
@@ -251,6 +254,26 @@ const findUser = (user) => {
   });
 };
 
+// List of all expected users in the application
+const users = [
+  {
+    id: 1,
+    username: "admin",
+  },
+  {
+    id: 2,
+    username: "contributor",
+  },
+  {
+    id: 3,
+    username: "manager",
+  },
+  {
+    id: 4,
+    username: "user",
+  }
+];
+
 /**
  * Test /api/v1/users route
  */
@@ -258,25 +281,7 @@ describe("/api/v1/users", () => {
   describe("GET /", () => {
     getAllUsers();
     getUsersSchemaMatch();
-    // List of all expected users in the application
-    const users = [
-      {
-        id: 1,
-        username: "admin",
-      },
-      {
-        id: 2,
-        username: "contributor",
-      },
-      {
-        id: 3,
-        username: "manager",
-      },
-      {
-        id: 4,
-        username: "user",
-      }
-    ];
+    
     users.forEach((u) => {
       findUser(u);
     });
@@ -286,6 +291,8 @@ describe("/api/v1/users", () => {
 ```
 
 The major difference to note is in the highlighted section, where we have to add some additional schema information to account for the `roles` associated attribute that is part of the `users` object. It is pretty self-explanatory; each object in the array has a set of attributes that match what we used in the unit test for the `roles` routes.
+
+We also moved the schema for the `User` response object out of that unit test so we can reuse it in other unit tests, as we'll see later in this example.
 
 However, we also should add a couple of additional unit tests to confirm that each user has the correct roles assigned, since that is a major part of the security and authorization mechanism we'll be building for this application. While we could do that as part of the `findUser` test, let's go ahead and add separate tests for each of these, which is helpful in debugging anything that is broken or misconfigured.
 
@@ -340,6 +347,28 @@ const findUserConfirmRole = (username, role) => {
   });
 };
 
+// -=-=- other code omitted here -=-=-
+
+// List of all users and expected roles
+const user_roles = [
+  {
+    username: "admin",
+    roles: ["manage_users", "manage_documents", "manage_communities"]
+  },
+  {
+    username: "contributor",
+    roles: ["add_documents", "add_communities"]
+  },
+  {
+    username: "manager",
+    roles: ["manage_documents", "manage_communities"]
+  },
+  {
+    username: "user",
+    roles: ["view_documents", "view_communities"]
+  },
+];
+
 /**
  * Test /api/v1/users route
  */
@@ -347,26 +376,7 @@ describe("/api/v1/users", () => {
   describe("GET /", () => {
 
     // -=-=- other code omitted here -=-=-
-
-    // List of all users and expected roles
-    const user_roles = [
-      {
-        username: "admin",
-        roles: ["manage_users", "manage_documents", "manage_communities"]
-      },
-      {
-        username: "contributor",
-        roles: ["add_documents", "add_communities"]
-      },
-      {
-        username: "manager",
-        roles: ["manage_documents", "manage_communities"]
-      },
-      {
-        username: "user",
-        roles: ["view_documents", "view_communities"]
-      },
-    ];
+    
     user_roles.forEach((u) => {
       // Check that user has correct number of roles
       findUserCountRoles(u.username, u.roles.length)
