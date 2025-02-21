@@ -98,10 +98,18 @@ export const mochaHooks = {
       done();
     })
   },
+
+  // Hook runs after each individual test
+  afterEach(done) {
+    // Remove all data from the database
+    seeds.down({to: 0}).then(() => {
+      done();
+    });
+  }
 }
 ```
 
-This file contains two hooks. First, the `beforeAll` hook, which is executed once before any tests are executed, is used to migrate the database. Then, we have the `beforeEach()` hook, which is executed before each individual test, which will seed the database with some sample data for us to use in our unit tests.
+This file contains three hooks. First, the `beforeAll` hook, which is executed once before any tests are executed, is used to migrate the database. Then, we have the `beforeEach()` hook, which is executed before each individual test, which will seed the database with some sample data for us to use in our unit tests. Finally, we have an `afterEach()` hook that will remove any data from the database by undoing all of the seeds, which will truncate each table in the database.
 
 Notice at the top that we are also loading our environment from a new environment file, `.env.test`. This allows us to use a different environment configuration when we perform testing. So, let's create that file and populate it with the following content:
 

@@ -356,21 +356,3 @@ Finally, if everything is correct, we can send the success message back to the u
 Finally, at the bottom of the file we have a `catch` block that will catch any exceptions thrown while trying to create our `User` and associate the correct `Role` objects. Notice that this `catch` block is **outside** the database transaction, so any database changes will not be saved if we reach this block of code.
 
 Inside, we check to see if the error is an instance of the `ValidationError` class from Sequelize. If so, we can use our new `handleValidationError` method to process that error and send a well-structured JSON response back to the user about the error. If not, we'll simply log the error and send back a generic HTTP 500 response code. 
-
-## Manual Testing with Open API
-
-Before we start unit testing this route, let's quickly do some manual testing using the Open API documentation site. It is truly a very handy way to work with our RESTful APIs as we are developing them, allowing us to test them quickly in isolation to make sure everything is working properly.
-
-So, let's start our server:
-
-```bash {title="terminal"}
-$ npm run dev
-```
-
-Once it starts, we can navigate to the `/docs` URL, and we should see the Open API documentation for our site, including a new `POST` route for the `users` section:
-
-![Create API Documentation](/images/examples/03/create_1.png)
-
-If we documented our route correctly, we can see that this documentation includes not only an example for what a new submission should look like, but also examples of the **success** and **model validation error** outputs should be. To test it, we can use the **Try it out** button on the 
-
-## Unit Testing

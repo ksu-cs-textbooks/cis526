@@ -111,7 +111,7 @@ export async function up({context: queryInterface}) {
  * @param {queryInterface} context the database context to use 
  */
 export async function down({context: queryInterface}) {
-    await queryInterface.bulkDelete('users', { id: users.map(u => u.id) });
+    await queryInterface.bulkDelete("users", {}, { truncate: true });
 }
 ```
 

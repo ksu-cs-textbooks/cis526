@@ -383,11 +383,11 @@ export async function up({context: queryInterface}) {
  */
 export async function down({context: queryInterface}) {
     await queryInterface.bulkDelete('user_roles', {} , { truncate: true });
-    await queryInterface.bulkDelete('roles', { id: roles.map(r => r.id) });
+  await queryInterface.bulkDelete("roles", {}, { truncate: true });
 }
 ```
 
-Once again, this seed is very similar to what we've seen before. Notice that we use the `truncate` option to remove all entries in the `user_roles` table when we undo this seed, instead of searching for individual entries to remove.
+Once again, this seed is very similar to what we've seen before. Notice that we use the `truncate` option to remove all entries in the `user_roles` table when we undo this seed as well as the `roles` table.
 
 {{% notice tip "Seeding from a CSV File" %}}
 
