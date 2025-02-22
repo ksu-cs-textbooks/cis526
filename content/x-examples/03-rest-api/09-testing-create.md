@@ -336,13 +336,17 @@ Finally, we should write a unit test that makes sure a user won't be created if 
  */
 const createUserFailsOnInvalidRole = (user, role_id) => {
   it("should fail when invalid role id '" + role_id + "' is used", (done) => {
+    // Create a copy of the user object
+    const updated_user = { ...user };
+    // Make a shallow copy of the roles array
+    updated_user.roles = [... user.roles]
     // Add invalid role ID to user object
-    user.roles.push({
-      id: role_id
-    })
+    updated_user.roles.push({
+      id: role_id,
+    });
     request(app)
       .post("/api/v1/users/")
-      .send(user)
+      .send(updated_user)
       .expect(422)
       .end((err, res) => {
         if (err) return done(err);
@@ -354,12 +358,15 @@ const createUserFailsOnInvalidRole = (user, role_id) => {
           .expect(200)
           .end((err, res) => {
             if (err) return done(err);
-            expect(res.body.some((u) => u.username === user.username)).to.equal(false);
+            expect(res.body.some((u) => u.username === updated_user.username)).to.equal(
+              false,
+            );
             done();
           });
       });
   });
-}
+};
+
 
 // -=-=- other code omitted here -=-=-
 

@@ -31,8 +31,8 @@ In our `routes/api/v1/users.js` file, we can add a new route to retrieve a singl
  * @swagger
  * /api/v1/users/{id}:
  *   get:
- *     summary: users list page
- *     description: Gets the list of all users in the application
+ *     summary: get single user
+ *     description: Gets a single user from the application
  *     tags: [users]
  *     parameters:
  *       - in: path

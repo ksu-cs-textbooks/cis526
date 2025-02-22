@@ -66,11 +66,13 @@ export async function up({context: queryInterface}) {
             type: Sequelize.INTEGER,
             primaryKey: true,
             references: { model: 'users', key: 'id' },
+            onDelete: "cascade"
         },
         role_id: {
             type: Sequelize.STRING,
             primaryKey: true,
             references: { model: 'roles', key: 'id' },
+            onDelete: "cascade"
         }
     })
 }
@@ -86,7 +88,7 @@ export async function down({context: queryInterface}) {
 }
 ```
 
-In this migration, we are creating two tables. The first, named `roles`, stores the list of roles in the application. The second, named `user_roles`, is the junction table used for the many-to-many relationship between the `users` and `roles` table. Notice that we have to add the tables in the correct order, and also in the `down` method we have to remove them in reverse order.
+In this migration, we are creating two tables. The first, named `roles`, stores the list of roles in the application. The second, named `user_roles`, is the junction table used for the many-to-many relationship between the `users` and `roles` table. Notice that we have to add the tables in the correct order, and also in the `down` method we have to remove them in reverse order. Finally, it is important to include the `onDelete: "cascade"` option for each of our reference fields in the `user_roles` table, as that will handle deleting associated entries in the junction table when a user or role is deleted. 
 
 The `user_roles` table also includes a great example for adding a foreign key reference between two tables. More information can be found in the [Sequelize Documentation](https://sequelize.org/docs/v6/core-concepts/assocs/).
 
@@ -175,11 +177,13 @@ const UserRoleSchema = {
         type: Sequelize.INTEGER,
         primaryKey: true,
         references: { model: 'User', key: 'id' },
+        onDelete: "cascade"
     },
     roleId: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         references: { model: 'Role', key: 'id' },
+        onDelete: "cascade"
     }
 }
 

@@ -25,20 +25,21 @@ So, let's create a new `utilities` folder inside of our `server` folder, and the
 
 /**
  * Send JSON Success Messages
- * 
+ *
  * @param {string} message - the message to send
+ * @param {integer} status - the HTTP status to use
  * @param {Object} res - Express response object
- * 
+ *
  * @swagger
  * components:
  *   responses:
  *     Success:
  *       description: success
  *       content:
- *         appliation/json:
+ *         application/json:
  *           schema:
  *             type: object
- *             required: 
+ *             required:
  *               - message
  *             properties:
  *               message:
@@ -47,9 +48,9 @@ So, let's create a new `utilities` folder inside of our `server` folder, and the
  *             example:
  *               message: User successfully saved!
  */
-function sendSuccess(message, res) {
-  res.status(201).json({
-    message: message
+function sendSuccess(message, status, res) {
+  res.status(status).json({
+    message: message,
   });
 }
   
@@ -254,7 +255,7 @@ router.post("/", async function (req, res, next) {
       }
   
       // Send the success message
-      sendSuccess("User saved!", res);
+      sendSuccess("User saved!", 201, res);
     })
     
   } catch (error) {
@@ -333,7 +334,7 @@ After that, we check to see if the `roles` attribute was provided as part of the
 
 ```js {title="routes/api/v1/users.js"}
       // Send the success message
-      sendSuccess("User saved!", res);
+      sendSuccess("User saved!", 201, res);
 ```
 
 Finally, if everything is correct, we can send the success message back to the user using the `sendSuccess` utility method that we created earlier. 
