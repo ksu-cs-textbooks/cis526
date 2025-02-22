@@ -1,0 +1,317 @@
+<!doctype html><html lang=en-us dir=ltr itemscope itemtype=http://schema.org/Article><head><meta charset=utf-8><meta name=viewport content="height=device-height,width=device-width,initial-scale=1,minimum-scale=1"><meta name=generator content="Hugo 0.128.0"><meta name=generator content="Relearn 6.0.0"><meta name=robots content="noindex, nofollow, noarchive, noimageindex"><meta name=description content="Update Route Next, let’s look at adding an additional route in our application that allows us to update a User model. This route is very similar to the route used to create a user, but there are a few key differences as well.
+​ routes/api/v1/users.js // -=-=- other code omitted here -=-=- /** * Update a user * * @param {Object} req - Express request object * @param {Object} res - Express response object * @param {Function} next - Express next middleware function * * @swagger * /api/v1/users/{id}: * put: * summary: update user * tags: [users] * parameters: * - in: path * name: id * required: true * schema: * type: integer * description: user ID * requestBody: * description: user * required: true * content: * application/json: * schema: * $ref: '#/components/schemas/User' * example: * username: updateduser * roles: * - id: 6 * - id: 7 * responses: * 201: * $ref: '#/components/responses/Success' * 422: * $ref: '#/components/responses/ValidationError' */ router."><meta name=author content="Nathan Bean"><meta name=twitter:card content="summary"><meta name=twitter:title content="Update :: CIS 526 Textbook"><meta name=twitter:description content="Update Route Next, let’s look at adding an additional route in our application that allows us to update a User model. This route is very similar to the route used to create a user, but there are a few key differences as well.
+​ routes/api/v1/users.js // -=-=- other code omitted here -=-=- /** * Update a user * * @param {Object} req - Express request object * @param {Object} res - Express response object * @param {Function} next - Express next middleware function * * @swagger * /api/v1/users/{id}: * put: * summary: update user * tags: [users] * parameters: * - in: path * name: id * required: true * schema: * type: integer * description: user ID * requestBody: * description: user * required: true * content: * application/json: * schema: * $ref: '#/components/schemas/User' * example: * username: updateduser * roles: * - id: 6 * - id: 7 * responses: * 201: * $ref: '#/components/responses/Success' * 422: * $ref: '#/components/responses/ValidationError' */ router."><meta property="og:url" content="https://textbooks.cs.ksu.edu/cis526/x-examples/03-rest-api/10-update/embed.html"><meta property="og:site_name" content="CIS 526 Textbook"><meta property="og:title" content="Update :: CIS 526 Textbook"><meta property="og:description" content="Update Route Next, let’s look at adding an additional route in our application that allows us to update a User model. This route is very similar to the route used to create a user, but there are a few key differences as well.
+​ routes/api/v1/users.js // -=-=- other code omitted here -=-=- /** * Update a user * * @param {Object} req - Express request object * @param {Object} res - Express response object * @param {Function} next - Express next middleware function * * @swagger * /api/v1/users/{id}: * put: * summary: update user * tags: [users] * parameters: * - in: path * name: id * required: true * schema: * type: integer * description: user ID * requestBody: * description: user * required: true * content: * application/json: * schema: * $ref: '#/components/schemas/User' * example: * username: updateduser * roles: * - id: 6 * - id: 7 * responses: * 201: * $ref: '#/components/responses/Success' * 422: * $ref: '#/components/responses/ValidationError' */ router."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="Example Projects"><meta property="article:modified_time" content="2025-02-21T19:36:16-06:00"><meta itemprop=name content="Update :: CIS 526 Textbook"><meta itemprop=description content="Update Route Next, let’s look at adding an additional route in our application that allows us to update a User model. This route is very similar to the route used to create a user, but there are a few key differences as well.
+​ routes/api/v1/users.js // -=-=- other code omitted here -=-=- /** * Update a user * * @param {Object} req - Express request object * @param {Object} res - Express response object * @param {Function} next - Express next middleware function * * @swagger * /api/v1/users/{id}: * put: * summary: update user * tags: [users] * parameters: * - in: path * name: id * required: true * schema: * type: integer * description: user ID * requestBody: * description: user * required: true * content: * application/json: * schema: * $ref: '#/components/schemas/User' * example: * username: updateduser * roles: * - id: 6 * - id: 7 * responses: * 201: * $ref: '#/components/responses/Success' * 422: * $ref: '#/components/responses/ValidationError' */ router."><meta itemprop=dateModified content="2025-02-21T19:36:16-06:00"><meta itemprop=wordCount content="1335"><title>Update :: CIS 526 Textbook</title>
+<link href=/cis526/css/fontawesome-all.min.css?1740188212 rel=stylesheet media=print onload='this.media="all",this.onload=null'><noscript><link href=/cis526/css/fontawesome-all.min.css?1740188212 rel=stylesheet></noscript><link href=/cis526/css/nucleus.css?1740188212 rel=stylesheet><link href=/cis526/css/auto-complete.css?1740188212 rel=stylesheet media=print onload='this.media="all",this.onload=null'><noscript><link href=/cis526/css/auto-complete.css?1740188212 rel=stylesheet></noscript><link href=/cis526/css/perfect-scrollbar.min.css?1740188212 rel=stylesheet><link href=/cis526/css/fonts.css?1740188212 rel=stylesheet media=print onload='this.media="all",this.onload=null'><noscript><link href=/cis526/css/fonts.css?1740188212 rel=stylesheet></noscript><link href=/cis526/css/theme.css?1740188212 rel=stylesheet><link href=/cis526/css/theme-light-theme.css?1740188212 rel=stylesheet id=R-variant-style><link href=/cis526/css/chroma-relearn-light.css?1740188212 rel=stylesheet id=R-variant-chroma-style><link href=/cis526/css/variant.css?1740188212 rel=stylesheet><link href=/cis526/css/print.css?1740188212 rel=stylesheet media=print><script>window.relearn=window.relearn||{},window.relearn.relBasePath="../../..",window.relearn.relBaseUri="../../../..",window.relearn.absBaseUri="https://textbooks.cs.ksu.edu/cis526",window.index_js_url="/cis526/index.search.js",window.variants&&variants.init(["light-theme"]),window.T_Copy_to_clipboard=`Copy to clipboard`,window.T_Copied_to_clipboard=`Copied to clipboard!`,window.T_Copy_link_to_clipboard=`Copy link to clipboard`,window.T_Link_copied_to_clipboard=`Copied link to clipboard!`,window.T_Reset_view=`Reset view`,window.T_View_reset=`View reset!`,window.T_No_results_found=`No results found for "{0}"`,window.T_N_results_found=`{1} results found for "{0}"`</script><link href=/cis526/css/custom.css?1740188212 rel=stylesheet></head><body class="mobile-support embed disableInlineCopyToClipboard" data-url=/cis526/x-examples/03-rest-api/10-update/embed.html><div id=R-body class=default-animation><div id=R-body-overlay></div><div id=R-main-overlay></div><main id=R-body-inner class="highlightable default" tabindex=-1><div class=flex-block-wrapper><article class=default><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe src=https://www.youtube.com/embed/id style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe></div><h2 id=update-route>Update Route</h2><p>Next, let&rsquo;s look at adding an additional route in our application that allows us to update a <code>User</code> model. This route is very similar to the route used to create a user, but there are a few key differences as well.</p><div class=tab-panel data-tab-group=9a65064127a884ed0a2e28688b136753><div class=tab-nav><div class=tab-nav-title>&#8203;</div><button data-tab-item=routesapiv1usersjs class="tab-nav-button tab-panel-style cstyle initial active" tabindex=-1 onclick='switchTab("9a65064127a884ed0a2e28688b136753","routesapiv1usersjs")'>
+<span class=tab-nav-text>routes/api/v1/users.js</span></button></div><div class=tab-content-container><div data-tab-item=routesapiv1usersjs class="tab-content tab-panel-style cstyle initial active"><div class=tab-content-text><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Update a user
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> * @param {Object} req - Express request object
+</span></span></span><span class=line><span class=cl><span class=cm> * @param {Object} res - Express response object
+</span></span></span><span class=line><span class=cl><span class=cm> * @param {Function} next - Express next middleware function
+</span></span></span><span class=line><span class=cl><span class=cm> *
+</span></span></span><span class=line><span class=cl><span class=cm> * @swagger
+</span></span></span><span class=line><span class=cl><span class=cm> * /api/v1/users/{id}:
+</span></span></span><span class=line><span class=cl><span class=cm> *   put:
+</span></span></span><span class=line><span class=cl><span class=cm> *     summary: update user
+</span></span></span><span class=line><span class=cl><span class=cm> *     tags: [users]
+</span></span></span><span class=line><span class=cl><span class=cm> *     parameters:
+</span></span></span><span class=line><span class=cl><span class=cm> *       - in: path
+</span></span></span><span class=line><span class=cl><span class=cm> *         name: id
+</span></span></span><span class=line><span class=cl><span class=cm> *         required: true
+</span></span></span><span class=line><span class=cl><span class=cm> *         schema:
+</span></span></span><span class=line><span class=cl><span class=cm> *           type: integer
+</span></span></span><span class=line><span class=cl><span class=cm> *         description: user ID
+</span></span></span><span class=line><span class=cl><span class=cm> *     requestBody:
+</span></span></span><span class=line><span class=cl><span class=cm> *       description: user
+</span></span></span><span class=line><span class=cl><span class=cm> *       required: true
+</span></span></span><span class=line><span class=cl><span class=cm> *       content:
+</span></span></span><span class=line><span class=cl><span class=cm> *         application/json:
+</span></span></span><span class=line><span class=cl><span class=cm> *           schema:
+</span></span></span><span class=line><span class=cl><span class=cm> *             $ref: &#39;#/components/schemas/User&#39;
+</span></span></span><span class=line><span class=cl><span class=cm> *           example:
+</span></span></span><span class=line><span class=cl><span class=cm> *             username: updateduser
+</span></span></span><span class=line><span class=cl><span class=cm> *             roles:
+</span></span></span><span class=line><span class=cl><span class=cm> *               - id: 6
+</span></span></span><span class=line><span class=cl><span class=cm> *               - id: 7
+</span></span></span><span class=line><span class=cl><span class=cm> *     responses:
+</span></span></span><span class=line><span class=cl><span class=cm> *       201:
+</span></span></span><span class=line><span class=cl><span class=cm> *         $ref: &#39;#/components/responses/Success&#39;
+</span></span></span><span class=line><span class=cl><span class=cm> *       422:
+</span></span></span><span class=line><span class=cl><span class=cm> *         $ref: &#39;#/components/responses/ValidationError&#39;
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=nx>router</span><span class=p>.</span><span class=nx>put</span><span class=p>(</span><span class=s2>&#34;/:id&#34;</span><span class=p>,</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>,</span> <span class=nx>next</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>try</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kr>const</span> <span class=nx>user</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>User</span><span class=p>.</span><span class=nx>findByPk</span><span class=p>(</span><span class=nx>req</span><span class=p>.</span><span class=nx>params</span><span class=p>.</span><span class=nx>id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>// if the user is not found, return an HTTP 404 not found status code
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=k>if</span> <span class=p>(</span><span class=nx>user</span> <span class=o>===</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>res</span><span class=p>.</span><span class=nx>status</span><span class=p>(</span><span class=mi>404</span><span class=p>).</span><span class=nx>end</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=kr>await</span> <span class=nx>database</span><span class=p>.</span><span class=nx>transaction</span><span class=p>(</span><span class=kr>async</span> <span class=p>(</span><span class=nx>t</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kr>await</span> <span class=nx>user</span><span class=p>.</span><span class=nx>update</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>          <span class=c1>// Update the user object using body attributes
+</span></span></span><span class=line><span class=cl><span class=c1></span>          <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nx>username</span><span class=o>:</span> <span class=nx>req</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>username</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=p>},</span>
+</span></span><span class=line><span class=cl>          <span class=c1>// Assign to a database transaction
+</span></span></span><span class=line><span class=cl><span class=c1></span>          <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=nx>transaction</span><span class=o>:</span> <span class=nx>t</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>          <span class=p>},</span>
+</span></span><span class=line><span class=cl>        <span class=p>);</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>        <span class=c1>// If roles are included in the body
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>if</span> <span class=p>(</span><span class=nx>req</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>roles</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=c1>// Find all roles listed
+</span></span></span><span class=line><span class=cl><span class=c1></span>          <span class=kr>const</span> <span class=nx>roles</span> <span class=o>=</span> <span class=kr>await</span> <span class=nb>Promise</span><span class=p>.</span><span class=nx>all</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>            <span class=nx>req</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>roles</span><span class=p>.</span><span class=nx>map</span><span class=p>(({</span> <span class=nx>id</span><span class=p>,</span> <span class=p>...</span><span class=nx>next</span> <span class=p>})</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>              <span class=k>return</span> <span class=nx>Role</span><span class=p>.</span><span class=nx>findByPk</span><span class=p>(</span><span class=nx>id</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=p>}),</span>
+</span></span><span class=line><span class=cl>          <span class=p>);</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>          <span class=c1>// Attach roles to user
+</span></span></span><span class=line><span class=cl><span class=c1></span>          <span class=kr>await</span> <span class=nx>user</span><span class=p>.</span><span class=nx>setRoles</span><span class=p>(</span><span class=nx>roles</span><span class=p>,</span> <span class=p>{</span> <span class=nx>transaction</span><span class=o>:</span> <span class=nx>t</span> <span class=p>});</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>          <span class=c1>// Remove all roles
+</span></span></span><span class=line><span class=cl><span class=c1></span>          <span class=kr>await</span> <span class=nx>user</span><span class=p>.</span><span class=nx>setRoles</span><span class=p>([],</span> <span class=p>{</span> <span class=nx>transaction</span><span class=o>:</span> <span class=nx>t</span> <span class=p>});</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>        <span class=c1>// Send the success message
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nx>sendSuccess</span><span class=p>(</span><span class=s2>&#34;User saved!&#34;</span><span class=p>,</span> <span class=mi>201</span><span class=p>,</span> <span class=nx>res</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=p>});</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=nx>error</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=nx>error</span> <span class=k>instanceof</span> <span class=nx>ValidationError</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>handleValidationError</span><span class=p>(</span><span class=nx>error</span><span class=p>,</span> <span class=nx>res</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>logger</span><span class=p>.</span><span class=nx>error</span><span class=p>(</span><span class=nx>error</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>      <span class=nx>res</span><span class=p>.</span><span class=nx>status</span><span class=p>(</span><span class=mi>500</span><span class=p>).</span><span class=nx>end</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>});</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span></code></pre></div></div></div></div></div><p>As we can see, overall this route is very similar to the create route. The only major difference is that we must first find the user we want to update based on the query parameter, and then we use the <code>update</code> database method to update the existing values in the database. The rest of the work updating the related <code>Roles</code> models is exactly the same. We can also reuse the utility functions we created for the previous route.</p><p>Just like we did earlier, we can test this route using the Open API documentation website to confirm that it is working correctly before we even move on to testing it.</p><h2 id=unit-testing-update-route>Unit Testing Update Route</h2><p>The unit tests for the route to update a user are very similar to the ones used for creating a user. First, we need a test that will confirm we can successfully update a user entry:</p><div class=tab-panel data-tab-group=e2706b61cb1be9fb859c7810f1dbdc9b><div class=tab-nav><div class=tab-nav-title>&#8203;</div><button data-tab-item=testapiv1usersjs class="tab-nav-button tab-panel-style cstyle initial active" tabindex=-1 onclick='switchTab("e2706b61cb1be9fb859c7810f1dbdc9b","testapiv1usersjs")'>
+<span class=tab-nav-text>test/api/v1/users.js</span></button></div><div class=tab-content-container><div data-tab-item=testapiv1usersjs class="tab-content tab-panel-style cstyle initial active"><div class=tab-content-text><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Update a user successfully
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>updateUser</span> <span class=o>=</span> <span class=p>(</span><span class=nx>id</span><span class=p>,</span> <span class=nx>user</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>it</span><span class=p>(</span><span class=s2>&#34;should successfully update user ID &#39;&#34;</span> <span class=o>+</span> <span class=nx>id</span> <span class=o>+</span> <span class=s2>&#34;&#39; to &#39;&#34;</span> <span class=o>+</span> <span class=nx>user</span><span class=p>.</span><span class=nx>username</span> <span class=o>+</span> <span class=s2>&#34;&#39;&#34;</span><span class=p>,</span> <span class=p>(</span><span class=nx>done</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>request</span><span class=p>(</span><span class=nx>app</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>put</span><span class=p>(</span><span class=s2>&#34;/api/v1/users/&#34;</span> <span class=o>+</span> <span class=nx>id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=nx>user</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>expect</span><span class=p>(</span><span class=mi>201</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>end</span><span class=p>((</span><span class=nx>err</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=k>return</span> <span class=nx>done</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>be</span><span class=p>.</span><span class=nx>an</span><span class=p>(</span><span class=s2>&#34;object&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>have</span><span class=p>.</span><span class=nx>property</span><span class=p>(</span><span class=s2>&#34;message&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// Find user in list of all users
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nx>request</span><span class=p>(</span><span class=nx>app</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s2>&#34;/api/v1/users&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>.</span><span class=nx>expect</span><span class=p>(</span><span class=mi>200</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>.</span><span class=nx>end</span><span class=p>((</span><span class=nx>err</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=k>return</span> <span class=nx>done</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=kr>const</span> <span class=nx>foundUser</span> <span class=o>=</span> <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>find</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>              <span class=p>(</span><span class=nx>u</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>u</span><span class=p>.</span><span class=nx>id</span> <span class=o>===</span> <span class=nx>id</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=nx>foundUser</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>shallowDeepEqual</span><span class=p>(</span><span class=nx>user</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=nx>done</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>          <span class=p>});</span>
+</span></span><span class=line><span class=cl>      <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Test /api/v1/users route
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=nx>describe</span><span class=p>(</span><span class=s2>&#34;/api/v1/users&#34;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>  <span class=nx>describe</span><span class=p>(</span><span class=s2>&#34;PUT /{id}&#34;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUser</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>});</span></span></span></code></pre></div></div></div></div></div><p>Next, we also want to check that any updated users have the correct roles attached, including instances where the roles were completely removed:</p><div class=tab-panel data-tab-group=a802fbc8028d2bdeb46bf1e2d701924d><div class=tab-nav><div class=tab-nav-title>&#8203;</div><button data-tab-item=testapiv1usersjs class="tab-nav-button tab-panel-style cstyle initial active" tabindex=-1 onclick='switchTab("a802fbc8028d2bdeb46bf1e2d701924d","testapiv1usersjs")'>
+<span class=tab-nav-text>test/api/v1/users.js</span></button></div><div class=tab-content-container><div data-tab-item=testapiv1usersjs class="tab-content tab-panel-style cstyle initial active"><div class=tab-content-text><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Update a user and roles successfully
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>updateUserAndRoles</span> <span class=o>=</span> <span class=p>(</span><span class=nx>id</span><span class=p>,</span> <span class=nx>user</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>it</span><span class=p>(</span><span class=s2>&#34;should successfully update user ID &#39;&#34;</span> <span class=o>+</span> <span class=nx>id</span> <span class=o>+</span> <span class=s2>&#34;&#39; roles&#34;</span><span class=p>,</span> <span class=p>(</span><span class=nx>done</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>request</span><span class=p>(</span><span class=nx>app</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>put</span><span class=p>(</span><span class=s2>&#34;/api/v1/users/&#34;</span> <span class=o>+</span> <span class=nx>id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=nx>user</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>expect</span><span class=p>(</span><span class=mi>201</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>end</span><span class=p>((</span><span class=nx>err</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=k>return</span> <span class=nx>done</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>be</span><span class=p>.</span><span class=nx>an</span><span class=p>(</span><span class=s2>&#34;object&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>have</span><span class=p>.</span><span class=nx>property</span><span class=p>(</span><span class=s2>&#34;message&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// Find user in list of all users
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nx>request</span><span class=p>(</span><span class=nx>app</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s2>&#34;/api/v1/users&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>.</span><span class=nx>expect</span><span class=p>(</span><span class=mi>200</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>.</span><span class=nx>end</span><span class=p>((</span><span class=nx>err</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=k>return</span> <span class=nx>done</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=kr>const</span> <span class=nx>foundUser</span> <span class=o>=</span> <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>find</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>              <span class=p>(</span><span class=nx>u</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>u</span><span class=p>.</span><span class=nx>id</span> <span class=o>===</span> <span class=nx>id</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=c1>// Handle case where user has no roles assigned
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=kr>const</span> <span class=nx>roles</span> <span class=o>=</span> <span class=nx>user</span><span class=p>.</span><span class=nx>roles</span> <span class=o>||</span> <span class=p>[]</span>
+</span></span><span class=line><span class=cl>            <span class=nx>foundUser</span><span class=p>.</span><span class=nx>roles</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>be</span><span class=p>.</span><span class=nx>an</span><span class=p>(</span><span class=s2>&#34;array&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=nx>foundUser</span><span class=p>.</span><span class=nx>roles</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>have</span><span class=p>.</span><span class=nx>lengthOf</span><span class=p>(</span><span class=nx>roles</span><span class=p>.</span><span class=nx>length</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=nx>roles</span><span class=p>.</span><span class=nx>forEach</span><span class=p>((</span><span class=nx>role</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>              <span class=nx>expect</span><span class=p>(</span><span class=nx>foundUser</span><span class=p>.</span><span class=nx>roles</span><span class=p>.</span><span class=nx>some</span><span class=p>((</span><span class=nx>r</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>r</span><span class=p>.</span><span class=nx>id</span> <span class=o>===</span> <span class=nx>role</span><span class=p>.</span><span class=nx>id</span><span class=p>)).</span><span class=nx>to</span><span class=p>.</span><span class=nx>equal</span><span class=p>(</span><span class=kc>true</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=p>})</span>
+</span></span><span class=line><span class=cl>            <span class=nx>done</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>          <span class=p>});</span>
+</span></span><span class=line><span class=cl>      <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Test /api/v1/users route
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=nx>describe</span><span class=p>(</span><span class=s2>&#34;/api/v1/users&#34;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>  <span class=nx>describe</span><span class=p>(</span><span class=s2>&#34;PUT /{id}&#34;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUser</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserAndRoles</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserAndRoles</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span> <span class=nx>new_user_no_roles</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>});</span></span></span></code></pre></div></div></div></div></div><p>We also should check that the username is unchanged if an update is sent with no username attribute, but the rest of the update will succeed. For this test, we can just create a new mock object with just roles and no username included.</p><div class=tab-panel data-tab-group=d1e27194fd41671504453cda7b64de78><div class=tab-nav><div class=tab-nav-title>&#8203;</div><button data-tab-item=testapiv1usersjs class="tab-nav-button tab-panel-style cstyle initial active" tabindex=-1 onclick='switchTab("d1e27194fd41671504453cda7b64de78","testapiv1usersjs")'>
+<span class=tab-nav-text>test/api/v1/users.js</span></button></div><div class=tab-content-container><div data-tab-item=testapiv1usersjs class="tab-content tab-panel-style cstyle initial active"><div class=tab-content-text><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// Update user structure with only roles
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>update_user_only_roles</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>roles</span><span class=o>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>id</span><span class=o>:</span> <span class=mi>6</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>id</span><span class=o>:</span> <span class=mi>7</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>  <span class=p>],</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Test /api/v1/users route
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=nx>describe</span><span class=p>(</span><span class=s2>&#34;/api/v1/users&#34;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>  <span class=nx>describe</span><span class=p>(</span><span class=s2>&#34;PUT /{id}&#34;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUser</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserAndRoles</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserAndRoles</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span> <span class=nx>new_user_no_roles</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserAndRoles</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=nx>update_user_only_roles</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>});</span></span></span></code></pre></div></div></div></div></div><p>Finally, we should include a couple of tests to handle the situation where a duplicate username is provided, or where an invalid role is provided. These are nearly identical to the tests used in the create route earlier in this example:</p><div class=tab-panel data-tab-group=c47489f375d9f0fe047713c38200a519><div class=tab-nav><div class=tab-nav-title>&#8203;</div><button data-tab-item=testapiv1usersjs class="tab-nav-button tab-panel-style cstyle initial active" tabindex=-1 onclick='switchTab("c47489f375d9f0fe047713c38200a519","testapiv1usersjs")'>
+<span class=tab-nav-text>test/api/v1/users.js</span></button></div><div class=tab-content-container><div data-tab-item=testapiv1usersjs class="tab-content tab-panel-style cstyle initial active"><div class=tab-content-text><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Fails to update user with a duplicate username
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>updateUserFailsOnDuplicateUsername</span> <span class=o>=</span> <span class=p>(</span><span class=nx>id</span><span class=p>,</span> <span class=nx>user</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>it</span><span class=p>(</span><span class=s2>&#34;should fail on duplicate username &#39;&#34;</span> <span class=o>+</span> <span class=nx>user</span><span class=p>.</span><span class=nx>username</span> <span class=o>+</span> <span class=s2>&#34;&#39;&#34;</span><span class=p>,</span> <span class=p>(</span><span class=nx>done</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>request</span><span class=p>(</span><span class=nx>app</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>put</span><span class=p>(</span><span class=s2>&#34;/api/v1/users/&#34;</span> <span class=o>+</span> <span class=nx>id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=nx>user</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>expect</span><span class=p>(</span><span class=mi>422</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>end</span><span class=p>((</span><span class=nx>err</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=k>return</span> <span class=nx>done</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>be</span><span class=p>.</span><span class=nx>an</span><span class=p>(</span><span class=s2>&#34;object&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>have</span><span class=p>.</span><span class=nx>property</span><span class=p>(</span><span class=s2>&#34;error&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>have</span><span class=p>.</span><span class=nx>property</span><span class=p>(</span><span class=s2>&#34;errors&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>errors</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>be</span><span class=p>.</span><span class=nx>an</span><span class=p>(</span><span class=s2>&#34;array&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// the error should be related to the username attribute
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nx>expect</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>          <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>errors</span><span class=p>.</span><span class=nx>some</span><span class=p>((</span><span class=nx>e</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>e</span><span class=p>.</span><span class=nx>attribute</span> <span class=o>===</span> <span class=s2>&#34;username&#34;</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>        <span class=p>).</span><span class=nx>to</span><span class=p>.</span><span class=nx>equal</span><span class=p>(</span><span class=kc>true</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>done</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>      <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Fails to update user with bad role ID
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=kr>const</span> <span class=nx>updateUserFailsOnInvalidRole</span> <span class=o>=</span> <span class=p>(</span><span class=nx>id</span><span class=p>,</span> <span class=nx>user</span><span class=p>,</span> <span class=nx>role_id</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>it</span><span class=p>(</span><span class=s2>&#34;should fail when invalid role id &#39;&#34;</span> <span class=o>+</span> <span class=nx>role_id</span> <span class=o>+</span> <span class=s2>&#34;&#39; is used&#34;</span><span class=p>,</span> <span class=p>(</span><span class=nx>done</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// Create a copy of the user object
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kr>const</span> <span class=nx>updated_user</span> <span class=o>=</span> <span class=p>{</span> <span class=p>...</span><span class=nx>user</span> <span class=p>};</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// Make a shallow copy of the roles array
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>updated_user</span><span class=p>.</span><span class=nx>roles</span> <span class=o>=</span> <span class=p>[...</span> <span class=nx>user</span><span class=p>.</span><span class=nx>roles</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// Add invalid role ID to user object
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>updated_user</span><span class=p>.</span><span class=nx>roles</span><span class=p>.</span><span class=nx>push</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>      <span class=nx>id</span><span class=o>:</span> <span class=nx>role_id</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>});</span>
+</span></span><span class=line><span class=cl>    <span class=nx>request</span><span class=p>(</span><span class=nx>app</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>put</span><span class=p>(</span><span class=s2>&#34;/api/v1/users/&#34;</span> <span class=o>+</span> <span class=nx>id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=nx>updated_user</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>expect</span><span class=p>(</span><span class=mi>422</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>      <span class=p>.</span><span class=nx>end</span><span class=p>((</span><span class=nx>err</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=k>return</span> <span class=nx>done</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>be</span><span class=p>.</span><span class=nx>an</span><span class=p>(</span><span class=s2>&#34;object&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>should</span><span class=p>.</span><span class=nx>have</span><span class=p>.</span><span class=nx>property</span><span class=p>(</span><span class=s2>&#34;error&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// User with invalid roles should not be updated
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=nx>request</span><span class=p>(</span><span class=nx>app</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s2>&#34;/api/v1/users&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>.</span><span class=nx>expect</span><span class=p>(</span><span class=mi>200</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>          <span class=p>.</span><span class=nx>end</span><span class=p>((</span><span class=nx>err</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=p>(</span><span class=nx>err</span><span class=p>)</span> <span class=k>return</span> <span class=nx>done</span><span class=p>(</span><span class=nx>err</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=nx>expect</span><span class=p>(</span><span class=nx>res</span><span class=p>.</span><span class=nx>body</span><span class=p>.</span><span class=nx>some</span><span class=p>((</span><span class=nx>u</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=nx>u</span><span class=p>.</span><span class=nx>username</span> <span class=o>===</span> <span class=nx>updated_user</span><span class=p>.</span><span class=nx>username</span><span class=p>)).</span><span class=nx>to</span><span class=p>.</span><span class=nx>equal</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>              <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>            <span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=nx>done</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>          <span class=p>});</span>
+</span></span><span class=line><span class=cl>      <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl><span class=c1>// Update user structure with duplicate username
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>const</span> <span class=nx>update_user_duplicate_username</span> <span class=o>=</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>username</span><span class=o>:</span> <span class=s2>&#34;admin&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Test /api/v1/users route
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=nx>describe</span><span class=p>(</span><span class=s2>&#34;/api/v1/users&#34;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// -=-=- other code omitted here -=-=-
+</span></span></span><span class=line><span class=cl><span class=c1></span>
+</span></span><span class=line><span class=cl>  <span class=nx>describe</span><span class=p>(</span><span class=s2>&#34;PUT /{id}&#34;</span><span class=p>,</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUser</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserAndRoles</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserAndRoles</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span> <span class=nx>new_user_no_roles</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserAndRoles</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=nx>update_user_only_roles</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserFailsOnDuplicateUsername</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span> <span class=nx>update_user_duplicate_username</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserFailsOnInvalidRole</span><span class=p>(</span><span class=mi>4</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>,</span> <span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserFailsOnInvalidRole</span><span class=p>(</span><span class=mi>4</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>,</span> <span class=o>-</span><span class=mi>1</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserFailsOnInvalidRole</span><span class=p>(</span><span class=mi>4</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>,</span> <span class=mi>8</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=nx>updateUserFailsOnInvalidRole</span><span class=p>(</span><span class=mi>4</span><span class=p>,</span> <span class=nx>new_user</span><span class=p>,</span> <span class=s2>&#34;test&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>})</span>
+</span></span><span class=line><span class=cl><span class=p>});</span></span></span></code></pre></div></div></div></div></div><p>There we go! We have a set of unit tests that cover most of the situations we can anticipate seeing with our route to update users. If we run all of these tests at this point, they should all pass:</p><div class=tab-panel data-tab-group=e7b93bde49384bf5cc4959a392f79362><div class=tab-nav><div class=tab-nav-title>&#8203;</div><button data-tab-item=output class="tab-nav-button tab-panel-style cstyle initial active" tabindex=-1 onclick='switchTab("e7b93bde49384bf5cc4959a392f79362","output")'>
+<span class=tab-nav-text>output</span></button></div><div class=tab-content-container><div data-tab-item=output class="tab-content tab-panel-style cstyle initial active"><div class=tab-content-text><div class=highlight><pre tabindex=0><code>    PUT /{id}
+      ✔ should successfully update user ID &#39;3&#39; to &#39;test_user&#39;
+      ✔ should successfully update user ID &#39;3&#39; roles
+      ✔ should successfully update user ID &#39;2&#39; roles
+      ✔ should successfully update user ID &#39;1&#39; roles
+      ✔ should fail on duplicate username &#39;admin&#39;
+      ✔ should fail when invalid role id &#39;0&#39; is used
+      ✔ should fail when invalid role id &#39;-1&#39; is used
+      ✔ should fail when invalid role id &#39;8&#39; is used
+      ✔ should fail when invalid role id &#39;test&#39; is used</code></pre></div></div></div></div></div><p>Great! Now is a great time to <strong>lint, format, and then commit and push</strong> our work to GitHub before continuing.</p><footer class=footline></footer></article></div></main></div><script src=/cis526/js/clipboard.min.js?1740188212 defer></script><script src=/cis526/js/perfect-scrollbar.min.js?1740188212 defer></script><script src=/cis526/js/theme.js?1740188212 defer></script><script src=/cis526/js/embed-iframe.js?1740188212 defer></script></body></html>
