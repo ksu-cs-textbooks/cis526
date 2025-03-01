@@ -41,23 +41,28 @@ So, let's create a new `utilities` folder inside of our `server` folder, and the
  *             type: object
  *             required:
  *               - message
+ *               - id
  *             properties:
  *               message:
  *                 type: string
  *                 description: the description of the successful operation
+ *               id:
+ *                 type: integer
+ *                 description: the id of the saved or created item
  *             example:
  *               message: User successfully saved!
  */
-function sendSuccess(message, status, res) {
+function sendSuccess(message, id, status, res) {
   res.status(status).json({
     message: message,
+    id: id
   });
 }
   
 export default sendSuccess;
 ```
 
-In this file, we are defining a **success** message from our application as a JSON object with a single `message` attribute. The code itself is very straightforward, but we are including the appropriate Open API documentation as well, which we can reuse in our routes elsewhere.
+In this file, we are defining a **success** message from our application as a JSON object with a `message` attribute, as well as the `id` of the object that was acted upon. The code itself is very straightforward, but we are including the appropriate Open API documentation as well, which we can reuse in our routes elsewhere.
 
 To make the Open API library aware of these new files, we need to add it to our `configs/openapi.js` file:
 
@@ -136,7 +141,7 @@ Likewise, we may also want to send a well-structured message anytime our databas
  *                   message: username must be unique
  */
 function handleValidationError(error, res) {
-  if (error.errors.length > 0) {
+  if (error.errors?.length > 0) {
     const errors = error.errors
     .map((e) => {
       return {attribute: e.path, message: e.message}
@@ -255,7 +260,7 @@ router.post("/", async function (req, res, next) {
       }
   
       // Send the success message
-      sendSuccess("User saved!", 201, res);
+      sendSuccess("User saved!", user.id, 201, res);
     })
     
   } catch (error) {
@@ -334,7 +339,7 @@ After that, we check to see if the `roles` attribute was provided as part of the
 
 ```js {title="routes/api/v1/users.js"}
       // Send the success message
-      sendSuccess("User saved!", 201, res);
+      sendSuccess("User saved!", user.id, 201, res);
 ```
 
 Finally, if everything is correct, we can send the success message back to the user using the `sendSuccess` utility method that we created earlier. 

@@ -69,7 +69,7 @@ export async function up({context: queryInterface}) {
             onDelete: "cascade"
         },
         role_id: {
-            type: Sequelize.STRING,
+            type: Sequelize.INTEGER,
             primaryKey: true,
             references: { model: 'roles', key: 'id' },
             onDelete: "cascade"

@@ -87,7 +87,7 @@ router.put("/:id", async function (req, res, next) {
         }
   
         // Send the success message
-        sendSuccess("User saved!", 201, res);
+        sendSuccess("User saved!", user.id, 201, res);
       });
     }
   } catch (error) {
@@ -127,6 +127,8 @@ const updateUser = (id, user) => {
         if (err) return done(err);
         res.body.should.be.an("object");
         res.body.should.have.property("message");
+        res.body.should.have.property("id");
+        expect(res.body.id).equal(id)
         // Find user in list of all users
         request(app)
           .get("/api/v1/users")
@@ -175,6 +177,8 @@ const updateUserAndRoles = (id, user) => {
         if (err) return done(err);
         res.body.should.be.an("object");
         res.body.should.have.property("message");
+        res.body.should.have.property("id");
+        expect(res.body.id).equal(id)
         // Find user in list of all users
         request(app)
           .get("/api/v1/users")

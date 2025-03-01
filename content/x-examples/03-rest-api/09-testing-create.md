@@ -139,13 +139,17 @@ const createUser = (user) => {
         if (err) return done(err);
         res.body.should.be.an("object");
         res.body.should.have.property("message");
+        res.body.should.have.property("id")
+        const created_id = res.body.id
         // Find user in list of all users
         request(app)
           .get("/api/v1/users")
           .expect(200)
           .end((err, res) => {
             if (err) return done(err);
-            const foundUser = res.body.find((u) => u.username === user.username);
+            const foundUser = res.body.find(
+              (u) => u.id === created_id,
+            );
             foundUser.should.shallowDeepEqual(user);
             done();
           });
@@ -267,7 +271,7 @@ We also should write a unit test that will make sure we cannot create a user wit
  * Fails to create user with a duplicate username
  */
 const createUserFailsOnDuplicateUsername = (user) => {
-  it("should fail on duplicate username '" + user.username + "'",(done) => {
+  it("should fail on duplicate username '" + user.username + "'", (done) => {
     request(app)
       .post("/api/v1/users/")
       .send(user)
@@ -276,13 +280,17 @@ const createUserFailsOnDuplicateUsername = (user) => {
         if (err) return done(err);
         res.body.should.be.an("object");
         res.body.should.have.property("message");
+        res.body.should.have.property("id")
+        const created_id = res.body.id
         // Find user in list of all users
         request(app)
           .get("/api/v1/users")
           .expect(200)
           .end((err, res) => {
             if (err) return done(err);
-            const foundUser = res.body.find((u) => u.username === user.username);
+            const foundUser = res.body.find(
+              (u) => u.id === created_id,
+            );
             foundUser.should.shallowDeepEqual(user);
             // Try to create same user again
             request(app)
@@ -293,16 +301,19 @@ const createUserFailsOnDuplicateUsername = (user) => {
                 if (err) return done(err);
                 res.body.should.be.an("object");
                 res.body.should.have.property("error");
-                res.body.should.have.property("errors")
-                res.body.errors.should.be.an("array")
+                res.body.should.have.property("errors");
+                res.body.errors.should.be.an("array");
                 // the error should be related to the username attribute
-                expect(res.body.errors.some((e) => e.attribute === "username")).to.equal(true);
+                expect(
+                  res.body.errors.some((e) => e.attribute === "username"),
+                ).to.equal(true);
                 done();
               });
           });
       });
   });
-}
+};
+
 
 // -=-=- other code omitted here -=-=-
 

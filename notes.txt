@@ -68,6 +68,7 @@ Web Development Stack 2025
   * `sqlite3`
   * `dotnet-sdk-6.0` - see https://docs.microsoft.com/en-us/dotnet/core/install/
   * `dotnet-runtime-6.0` - see https://docs.microsoft.com/en-us/dotnet/core/install/ 
+  * `mongodb` - https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/ 
 * Install NVM: https://github.com/nvm-sh/nvm
 * Use NVM to install Node 22: `nvm install 22 && nvm use 22`
 * Create symlink for `node` to `/usr/local/bin`
