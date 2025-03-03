@@ -8,7 +8,7 @@ This set of milestones is all about building a RESTful API and interface for the
 
 ## Milestone 6 - Vue.js CRUD App
 
-Building from the [previous milestone](../05-vue-crud-app/), expand upon the starter project by adding the following features:
+Building from the [previous milestone](../06-vue-crud-app/), expand upon the starter project by adding the following features:
 
 1.  
 
