@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vue.js CRUD App :: CIS 526 Textbook</title><link>https://textbooks.cs.ksu.edu/cis526/x-examples/06-vue-crud-app/</link><description>This example project builds on the previous Vue.js starter project by scaffolding a CRUD frontend for the basic users and roles tables.
+Project Deliverables At the end of this example, we will have a project with the following features:
+Prior Work This project picks up right where the last one left off, so if you haven’t completed that one yet, go back and do that before starting this one.
+Let’s get started!</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://textbooks.cs.ksu.edu/cis526/x-examples/06-vue-crud-app/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
