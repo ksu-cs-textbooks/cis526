@@ -24,7 +24,7 @@ $ npx express-generator --no-view --git server
 
 Let's break down that command to see what it is doing:
 
-* `npx` - The [npx] command is included with Node.js and `npm` and allows us to run a command from an `npm` package, including packages that _aren't currently installed!_. This is the preferred way to run commands that are available in any `npm` packages.
+* `npx` - The [npx](https://docs.npmjs.com/cli/v7/commands/npx) command is included with Node.js and `npm` and allows us to run a command from an `npm` package, including packages that _aren't currently installed!_. This is the preferred way to run commands that are available in any `npm` packages.
 * `express-generator` - This is the [express-generator](https://www.npmjs.com/package/express-generator) package in `npm` that contains the command we are using to build our Express application.
 * `--no-view` - This option will generate a project without a built-in view engine.
 * `--git` - This option will add a `.gitignore` file to our project
