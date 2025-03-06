@@ -4,6 +4,8 @@ pre: "1. "
 weight: 10
 ---
 
+{{< youtube 4NUyZMgtHEw >}}
+
 This example project is the first in a series toward building a complete full-stack web application using [Node.js](https://nodejs.org/en) and [Express](https://expressjs.com/) to create a RESTful API on the backend that connects to a database, and then a [Vue](https://vuejs.org/) single page application on the frontend. 
 
 In doing so, we'll explore some of the standard ways web developers use existing tools, frameworks, and libraries to perform many of the operations we've learned how to do manually throughout this course. In essence, you've already learned how to build these things _from scratch_, but now we'll look at how professionals use _dependencies_ to accomplish many of the same things.

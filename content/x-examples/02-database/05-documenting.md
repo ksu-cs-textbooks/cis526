@@ -4,7 +4,7 @@ pre: "5. "
 weight: 50
 ---
 
-{{< youtube id >}}
+{{< youtube ebVJ4R08ZZM >}}
 
 ## Documenting Models with Open API
 

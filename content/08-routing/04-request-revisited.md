@@ -25,9 +25,9 @@ This gives the URL object a placeholder for the missing protocol and host, so th
 
 The **path** is the path to the virtual resource requested, accessible in our parsed URL as `url.pathname`.  Traditionally, this corresponded to a file path, which is how we used it in our fileserver examples.  But as we have seen with Placeholder.com, it can also be used to convey other information - in that case, the size of the image, its background color, and foreground color.
 
-The **query** or **querystring** is a list of key-value pairs, proceeded by the `?`.  Traditionally this would be used to modify some aspect of the request, such as requesting a particular data format or portion of a dataset.  It is also how forms are submitted with a GET request - the form data is encoded into the query string.
+The **query** or **querystring** is a list of key-value pairs, preceded by the `?`.  Traditionally this would be used to modify some aspect of the request, such as requesting a particular data format or portion of a dataset.  It is also how forms are submitted with a GET request - the form data is encoded into the query string.
 
-The **hash** or **fragment** is proceeded by a `#`, and traditionally indicates an element on the page that the browser should auto-scroll to.  This element should have an `id` attribute that matches the one supplied by the hash.  For example, clicking this link: [#the-url-revisited](#the-url-revisited) will scroll back to the header for this section (note we left the path blank, so the browser assumes we want to stay on this page).
+The **hash** or **fragment** is preceded by a `#`, and traditionally indicates an element on the page that the browser should auto-scroll to.  This element should have an `id` attribute that matches the one supplied by the hash.  For example, clicking this link: [#the-url-revisited](#the-url-revisited) will scroll back to the header for this section (note we left the path blank, so the browser assumes we want to stay on this page).
 
 Clearly our URL can clearly convey a lot of data to our server. But that's not the only information that we can use in deciding how to respond to a request.
 
