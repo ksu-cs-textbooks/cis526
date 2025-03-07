@@ -227,6 +227,9 @@ const authenticateUser = function(username, next) {
 
     // User authenticated
     logger.debug("Login succeeded for user: " + user.username);
+
+    // Convert Sequelize object to plain JavaScript object
+    user = JSON.parse(JSON.stringify(user))
     return next(null, user);
   });
 }
@@ -238,11 +241,22 @@ passport.use(new UniqueTokenStrategy(
     return authenticateUser(token, next);
   }
 ))
+
+// Default functions to serialize and deserialize a session
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+
+passport.deserializeUser(function(user, done) {
+  done(null, user);
+});
 ```
 
 In this file, we created an `authenticateUser` function that will look for a user based on a given username. If found, it will return that user by calling the `next` middleware function. Otherwise, it will call that function and provide `false`. 
 
 Below, we configure Passport.js using the `passport.use` function to define the various authentication strategies we want to use. In this case, we'll start with the [Unique Token Strategy](https://www.passportjs.org/packages/passport-unique-token/), which uses a token provided as part of a query to the web server.
+
+In addition, we need to implement some default functions to handle serializing and deserializing a user from a session. These functions don't really have any content in our implementation; we just need to include the default code.
 
 Finally, since Passport.js acts as a global object, we don't even have to export anything from this file! 
 

@@ -1,10 +1,10 @@
 ---
 title: "Delete"
-pre: "10. "
-weight: 100
+pre: "11. "
+weight: 110
 ---
 
-{{< youtube id >}}
+{{< youtube ujGaXQjq_z4 >}}
 
 ## Delete Route
 
@@ -80,6 +80,8 @@ const deleteUser = (id) => {
         if (err) return done(err);
         res.body.should.be.an("object");
         res.body.should.have.property("message");
+        res.body.should.have.property("id")
+        expect(res.body.id).to.equal(String(id))
         // Ensure user is not found in list of users
         request(app)
           .get("/api/v1/users")
@@ -116,7 +118,7 @@ const deleteUserFailsInvalidId= (id) => {
 describe("/api/v1/users", () => {
   // -=-=- other code omitted here -=-=-
 
-    describe("DELETE /{id}", () => {
+  describe("DELETE /{id}", () => {
     deleteUser(4);
     deleteUserFailsInvalidId(0)
     deleteUserFailsInvalidId(-1)

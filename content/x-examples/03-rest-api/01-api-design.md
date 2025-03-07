@@ -4,7 +4,7 @@ pre: "1. "
 weight: 10
 ---
 
-{{< youtube id >}}
+{{< youtube FwJ139xkhTc >}}
 
 ## Good API Design
 
@@ -195,7 +195,7 @@ const options = {
       },
     ],
   },
-  apis: ["./routes/*.js", "./models/*.js", ".routes/api/v1/*.js"],
+  apis: ["./routes/*.js", "./models/*.js", "./routes/api/v1/*.js"],
 };
 
 export default swaggerJSDoc(options);
