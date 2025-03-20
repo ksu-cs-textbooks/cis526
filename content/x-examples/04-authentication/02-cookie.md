@@ -48,10 +48,12 @@ if (!process.env.SESSION_SECRET) {
 
 // Session configuration
 const sequelizeSession = session({
+    name: process.env.SESSION_NAME || 'connect.sid',
     secret: process.env.SESSION_SECRET,
     store: store, 
     resave: false,
     proxy: true,
+    saveUninitialized: false
 })
 
 export default sequelizeSession;
@@ -59,7 +61,7 @@ export default sequelizeSession;
 
 This file loads our Sequelize database connection and initializes the Express session middleware and the Sequelize session store. We also have a quick sanity check that will ensure there is a `SESSION_SECRET` environment variable set, otherwise an error will be printed. Finally, we export that session configuration to our application.
 
-So, we'll need to add a `SESSION_SECRET` environment variable to our `.env`, `.env.test` and `.env.example` files. This is a secret key used to secure our cookies and prevent them from being modified. 
+So, we'll need to add a `SESSION_NAME` and `SESSION_SECRET` environment variable to our `.env`, `.env.test` and `.env.example` files. The `SESSION_NAME` is a unique name for our cookie, and the `SESSION_SECRET` is a secret key used to secure our cookies and prevent them from being modified. 
 
 There are many ways to generate a secret key, but one of the simplest is to just use the built in functions in Node.js itself. We can launch the Node.js [REPL](https://nodejs.org/en/learn/command-line/how-to-use-the-nodejs-repl) environment by just running the `node` command in the terminal:
 
@@ -87,8 +89,9 @@ We can include that key in our `.env` file. To help remember how to do this in t
 
 ```env {title=".env"}
 # -=-=- other settings omitted here -=-=-
+SESSION_NAME=lostcommunities
 # require('crypto').randomBytes(64).toString('hex')
-SESSION_SECRET='46a5fdfe16fa710867102d1f0dbd2329f2eae69be3ed56ca084d9e0ad....'
+SESSION_SECRET=46a5fdfe16fa710867102d1f0dbd2329f2eae69be3ed56ca084d9e0ad....
 ```
 
 Finally, we can update our `app.js` file to use this session configuration:
