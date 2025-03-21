@@ -94,9 +94,9 @@ SESSION_NAME=lostcommunities
 SESSION_SECRET=46a5fdfe16fa710867102d1f0dbd2329f2eae69be3ed56ca084d9e0ad....
 ```
 
-Finally, we can update our `app.js` file to use this session configuration:
+Finally, we can update our `app.js` file to use this session configuration. We'll place this between the `/api` and `/auth` routes, since we only want to load cookie sessions if the user is accessing the authentication routes, to minimize the number of database requests:
 
-```js {title="app.js" hl_lines="10 15 26-28"}
+```js {title="app.js" hl_lines="10 15 23-25"}
 // -=-=- other code omitted here -=-=-
 
 // Import libraries
@@ -115,19 +115,16 @@ import sessions from "./configs/sessions.js";
 
 // -=-=- other code omitted here -=-=-
 
-// Use libraries
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(helmet());
-app.use(compression());
-app.use(cookieParser());
+// Use routers
+app.use("/", indexRouter);
+app.use("/api", apiRouter);
 
 // Use sessions
 app.use(sessions);
-app.use(passport.authenticate('session'));
+app.use(passport.authenticate("session"));
 
-// Use middlewares
-app.use(requestLogger);
+// Use auth routes
+app.use("/auth", authRouter);
 
 // -=-=- other code omitted here -=-=-
 ```

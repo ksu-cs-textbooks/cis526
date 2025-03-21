@@ -33,6 +33,11 @@ First, we'll need to create a new route file at `routes/auth.js` to contain our 
  *   name: auth
  *   description: Authentication Routes
  * components:
+ *   securitySchemes:
+ *     bearerAuth:
+ *       type: http
+ *       scheme: bearer
+ *       bearerFormat: JWT
  *   responses:
  *     AuthToken:
  *       description: authentication success

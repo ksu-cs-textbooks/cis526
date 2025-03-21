@@ -50,7 +50,7 @@ router.get("/token", function (req, res, next) {
     })
   } else {
     // Send unauthorized response
-    res.status(401).send()
+    res.status(401).end()
   }
 });
 ```
