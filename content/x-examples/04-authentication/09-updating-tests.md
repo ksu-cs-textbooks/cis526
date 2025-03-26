@@ -187,3 +187,5 @@ describe("/api/v1/roles", () => {
   });
 });
 ```
+
+This will ensure that each RESTful API action will work properly with an authenticated user, but it doesn't test whether the user has the proper role to perform the action (in this instance, we are using the `admin` user which has the appropriate role already). On the next page, we'll build a very flexible system to perform unit testing on our role-based authorization middleware. 

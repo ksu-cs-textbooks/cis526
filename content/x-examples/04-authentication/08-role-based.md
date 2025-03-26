@@ -172,7 +172,7 @@ import logger from "../configs/logger.js";
  * @returns a middleware function for those roles.
  */
 const roleBasedAuth = (...roles) => {
-  return function (req, res, next) {
+  return function roleAuthMiddleware (req, res, next) {
     logger.debug("Route requires roles: " + roles);
     logger.debug(
       "User " +
@@ -201,7 +201,7 @@ const roleBasedAuth = (...roles) => {
 export default roleBasedAuth;
 ```
 
-This file contains a function named `roleBasedAuth` that accepts a list of roles as parameters (they can be provided directly or as an array, but either way we can treat them like an array in our code). Then, we will _return_ a new middleware function that will check to see if the currently authenticated user (indicated by `req.token`) has at least one of the named roles. If so, then there is a match and the user should be able to perform the operation. If the user does not have any of the roles listed, then the user should not be able to perform the operation and a 401 Unauthorized response should be sent. This file also includes some helpful logging information to help ensure things are working properly. 
+This file contains a function named `roleBasedAuth` that accepts a list of roles as parameters (they can be provided directly or as an array, but either way we can treat them like an array in our code). Then, we will _return_ a new middleware function named `roleAuthMiddleware` that will check to see if the currently authenticated user (indicated by `req.token`) has at least one of the named roles. If so, then there is a match and the user should be able to perform the operation. If the user does not have any of the roles listed, then the user should not be able to perform the operation and a 401 Unauthorized response should be sent. This file also includes some helpful logging information to help ensure things are working properly. 
 
 ## Implementing Role-Based Authorization
 

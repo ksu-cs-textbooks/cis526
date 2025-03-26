@@ -210,6 +210,37 @@ const findRole = (role) => {
   });
 };
 
+// List of all expected roles in the application
+const roles = [ 
+  {
+    id: 1, 
+    role: "manage_users"
+  },
+  {
+    id: 2,
+    role: "manage_documents"
+  },
+  {
+    id: 3,
+    role: "add_documents"
+  },
+  {
+    id: 4,
+    role: "manage_communities"
+  },
+  {
+    id: 5,
+    role: "add_communities"
+  },
+  {
+    id: 6,
+    role: "view_documents"
+  },
+  {
+    id: 7,
+    role: "view_communities"
+  }
+]
 
 /**
  * Test /api/v1/roles route
@@ -218,37 +249,7 @@ describe("/api/v1/roles", () => {
   describe("GET /", () => {
     getAllRoles();
     getRolesSchemaMatch();
-    // List of all expected roles in the application
-    const roles = [ 
-      {
-        id: 1, 
-        role: "manage_users"
-      },
-      {
-        id: 2,
-        role: "manage_documents"
-      },
-      {
-        id: 3,
-        role: "add_documents"
-      },
-      {
-        id: 4,
-        role: "manage_communities"
-      },
-      {
-        id: 5,
-        role: "add_communities"
-      },
-      {
-        id: 6,
-        role: "view_documents"
-      },
-      {
-        id: 7,
-        role: "view_communities"
-      }
-    ]
+    
     roles.forEach( (r) => {
       findRole(r)
     })

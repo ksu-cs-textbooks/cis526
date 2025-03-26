@@ -244,11 +244,6 @@ const casAuthValidTicket = (user) => {
 
 // -=-=- other code omitted here -=-=-
 
-// Restore sinon stubs after each test
-afterEach(() => {
-  sinon.restore();
-});
-
 /**
  * Test /auth/ routes
  */
@@ -268,7 +263,31 @@ In this test, we create a `fetchStub` object that is used by our CAS authenticat
 
 We also are checking that the `fetch` method we mocked was actually called once, and that it contained the ticket we provided as part of the URL. This is just a sanity check to make sure that we mocked up the correct part of our application!
 
-We must also add a new `afterEach()` hook for Mocha, which will reset all functions and objects that are mocked by Sinon after each test. This ensures we are always working with a clean slate.
+We must also add a new item in the `afterEach()` hook for Mocha, which will reset all functions and objects that are mocked by Sinon after each test. This ensures we are always working with a clean slate. We'll update the function in `test/hooks.js` with this new content:
+
+```js {title="test/hooks.js" hl_lines="3-4 13-14"}
+// -=-=- other code omitted here -=-=-
+
+// Import libraries
+import sinon from "sinon";
+
+// Root Hook Runs Before Each Test
+export const mochaHooks = {
+  
+  // -=-=- other code omitted here -=-=-
+
+  // Hook runs after each individual test
+  afterEach(done) {
+    // Restore Sinon mocks
+    sinon.restore();
+
+    // Remove all data from the database
+    seeds.down({ to: 0 }).then(() => {
+      done();
+    });
+  },
+};
+```
 
 Finally, we also should confirm that logging in via CAS will create a new user if the username is not recognized. This test builds upon the previous CAS test in a way similar to the one used for bypass authentication above:
 
