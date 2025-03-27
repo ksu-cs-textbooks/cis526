@@ -248,7 +248,8 @@ import roleBasedAuth from "../../../middlewares/authorized-roles.js";
  *     description: Gets the list of all roles in the application
  *     tags: [roles]
  *     security:
- *       - bearerAuth: []
+ *       - bearerAuth:
+ *         - 'manage_users'
  *     responses:
  *       200:
  *         description: the list of roles
@@ -275,7 +276,7 @@ export default router;
 
 Notice here that we are calling the `roleBasedAuth` function when we add it to our endpoint, which in turn will return a new middleware function that will be called anytime this endpoint is accessed. It is a bit complicated and confusing at first, but hopefully it makes sense.
 
-We also have added a new `security` item to our Open API documentation, which allows us to test this route by providing a JWT through the Open API documentation website.
+We also have added a new `security` item to our Open API documentation, which allows us to test this route by providing a JWT through the Open API documentation website. We can even include the specific roles that are able to access this endpoint, but as of this writing it is only part of the Open API 3.1 spec but is not supported by the `swagger-ui` library so it won't appear on our documentation page.
 
 Let's test it now by starting our server in development mode:
 

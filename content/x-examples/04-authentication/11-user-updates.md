@@ -53,7 +53,9 @@ router.use(roleBasedAuth("manage_users"));
 // -=-=- other code omitted here -=-=-
 ```
 
-That's all it takes to add role-based authorization to an entire router! It is really simple.
+That's all it takes to add role-based authorization to an entire router! It is really simple. 
+
+We also should remember to add the new `security` section to our Open API documentation comments for each route to ensure that our documentation properly displays that each route requires authentication. 
 
 ## Users API Unit Tests - Authentication
 
