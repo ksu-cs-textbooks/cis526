@@ -155,7 +155,7 @@ We should also see a file named `database.sqlite` added to our file structure. I
 
 {{% notice note "Add Extension to Dev Container" %}}
 
-When installing a VS Code extension, we can also choose to have it added directly to our `devcontainer.json` file so it is available automatically whenever we close this repository into a new codespace or dev container. Just click the gear icon on the marketplace page and choose "Add to devcontainer.json` from the menu!
+When installing a VS Code extension, we can also choose to have it added directly to our `devcontainer.json` file so it is available automatically whenever we close this repository into a new codespace or dev container. Just click the gear icon on the marketplace page and choose "Add to devcontainer.json" from the menu!
 
 ![Add to Dev Container](images/examples/02/migrations_2.png)
 
@@ -167,4 +167,4 @@ If we need to roll back that migration, we can use a similar command:
 $ node migrate down
 ```
 
-There are many more commands available to apply migrations individually and more. Check the [Umzug Documentation](https://github.com/sequelize/umzug/?tab=readme-ov-file#cli) for more details
+There are many more commands available to apply migrations individually and more. Check the [Umzug Documentation](https://github.com/sequelize/umzug/?tab=readme-ov-file#cli) for more details.

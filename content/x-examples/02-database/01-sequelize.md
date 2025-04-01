@@ -12,7 +12,7 @@ To begin, we must first select a library to use when interfacing with our databa
 
 1) First and foremost, we can always just write raw SQL queries directly in our code. This is often very straightforward, but also can lead to very complex code and security issues. It also doesn't offer many of the more advanced features such as mapping database results to object types and automatically managing database schemas.
 
-2) Another option is an SQL query library, such as [Knex.js](https://knexjs.org/) or [Kysely](https://kysely.dev/). These libraries provide a helpful abstraction on top of SQL, allowing developers to build queries using syntax that is more comfortable and familiar to them. These libraries also have additional features do manage database schemas and sample data
+2) Another option is an SQL query library, such as [Knex.js](https://knexjs.org/) or [Kysely](https://kysely.dev/). These libraries provide a helpful abstraction on top of SQL, allowing developers to build queries using syntax that is more comfortable and familiar to them. These libraries also have additional features to manage database schemas and sample data
 
 3) The final option is an [Object-Relational Mapping (ORM)](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) library such as [Objection](https://vincit.github.io/objection.js/) or [Sequelize](https://sequelize.org/). These libraries provide the most abstraction away from raw SQL, often allowing developers to store and retrieve data in a database as if it were stored in a list or dictionary data structure. 
 

@@ -8,7 +8,7 @@ weight: 40
 
 ## Database Models
 
-Now that we have our database table structure and sample data set up, we can finally configure `sequelize` to query our database by defining a [model](https://sequelize.org/docs/v6/core-concepts/model-basics/) representing that data. At its core, a model sis simply an abstraction that represents the structure of the data in a table of our database. We can equate this to a `class` in object-oriented programming - each row or _record_ in our database can be thought of as an _instance_ of our model class. You can learn more about models in the [Sequelize Documentation](https://sequelize.org/docs/v6/core-concepts/model-basics/)
+Now that we have our database table structure and sample data set up, we can finally configure `sequelize` to query our database by defining a [model](https://sequelize.org/docs/v6/core-concepts/model-basics/) representing that data. At its core, a model is simply an abstraction that represents the structure of the data in a table of our database. We can equate this to a `class` in object-oriented programming - each row or _record_ in our database can be thought of as an _instance_ of our model class. You can learn more about models in the [Sequelize Documentation](https://sequelize.org/docs/v6/core-concepts/model-basics/)
 
 To create a model, let's first create a `models` folder in our app, then we can create a file `user.js` that contains the schema for the `User` model, based on the `users` table.
 
