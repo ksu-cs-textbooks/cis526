@@ -1,0 +1,19 @@
+---
+title: "Spring '25 Week 10"
+weight: 15
+pre: ""
+---
+
+{{< youtube PHUCINYZXZg >}}
+
+#### Video Script
+
+Hello and welcome to the week 10 announcements video for CIS 526 and CC 515 in spring 2025. So over spring break, we shifted over to a lot of the new content that I've been working on for the semester. And so I see a lot of you have already completed some of the content for weeks 8, 9 and 10, which is great. Hopefully if you're keeping up in the class, the content for week nine adding a database was due yesterday. So I see quite a few of you have done that. And then the third part, adding an API and unit tests is due this week. This is one of the larger milestones just because of the number of unit tests that you're going to add to your project. So I really encourage you to try and get the tutorial done as soon as you can so that you've got plenty of time to work on the API and unit tests. That's due next Monday. 
+
+The part after that is on authentication. I have all of this written. I just have not had a chance to do the videos. So my goal is to do the videos for this later this week and get this posted. This will be the content that you'll be working on next week. And then I'm going to start writing the next three tutorials. The first one is just going to be like the earlier tutorial where it's going to be a simple tutorial to set up your view front end. And then we'll work on doing a CRUD app, working on components. And if I get a chance by the end of the semester, I'm going to try and also write a short optional tutorial on how to build and deploy this using Docker. So we're getting toward the end of the semester. I need a little bit more time to get some videos and writing done, but I'm hoping to get that done in the next couple of weeks. 
+
+Also going backwards a little bit, I see that there are still several students in this class that have not submitted milestones four or five for the previous content. Please, please make sure you get those turned in as soon as possible. I will be reaching out to those of you that haven't done that later today. Please make sure you get those in soon. If if we don't get those in soon, I'm probably going to start assessing late penalties on things just to keep you on track and make sure that you're getting stuff done. We want to make sure that you get everything taken care of so that by the end of the semester milestones and that you'll be able to get everything complete. I know Josh is going through and grading the last couple of tutorials on the single page apps and the react chat app. apps, so watch out for those grades. 
+
+I will say for things like these starter tutorials, please make sure you test your code before you submit it. If you submit, for example, this Express Starter Project tutorial, and it does not compile and run, you're going to lose an awful lot of points in that tutorial. You really, really, really need to make sure that you test your own code and understand it and make sure it's working. I try, especially for these tutorials, I try and give you lots of context for the different code snippets and how they go together, but it's really up to you to test it and make sure that it works properly. So, especially for these tutorials, make sure you test them before you submit them. For the other parts, the milestones, make sure you go through and understand how they work when you submit them. 
+
+Hopefully things go well with this. It's kind of a new course structure we're trying. If we run into any errors or if you have any questions, just let us know. So that's really what we're doing this week Like I said, I should be able to post these next couple of milestones very shortly once I get the videos recorded If you have any questions, let us know otherwise best of luck and I'll follow up again in a week or two 
