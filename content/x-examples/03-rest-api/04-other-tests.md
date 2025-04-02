@@ -114,7 +114,7 @@ router.get('/', function (req, res, next) {
 })
 ```
 
-This is an example of [Broken Object Properly Level Authorization](https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/), one of the top 10 most common API security risks according to OWASP. Often our database models will include attributes that we don't want to expose to our users, so we want to make sure they aren't included in the output by accident.
+This is an example of [Broken Object Property Level Authorization](https://owasp.org/API-Security/editions/2023/en/0xa3-broken-object-property-level-authorization/), one of the top 10 most common API security risks according to OWASP. Often our database models will include attributes that we don't want to expose to our users, so we want to make sure they aren't included in the output by accident.
 
 If we run our test again, it should also fail:
 

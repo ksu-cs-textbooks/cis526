@@ -65,7 +65,7 @@ router.use("/v1/roles", rolesRouter);
  *     tags: [api]
  *     responses:
  *       200:
- *         description: the list of users
+ *         description: the list of API versions
  *         content:
  *           application/json:
  *             schema:
