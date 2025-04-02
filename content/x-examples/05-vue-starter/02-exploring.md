@@ -137,5 +137,37 @@ As we can see, our application is now much simpler - almost too simple! However,
 
 ![Vue About Page](/images/examples/05/vue_8.png)
 
+This is a great baseline for our application. Now we can start building up a structure for an application that has the features we'd like to see.
+
 ## Architecture of a Vue Page
 
+The vast majority of the work we'll be doing in Vue is creating [Single File Components](https://vuejs.org/guide/introduction.html#single-file-components), which are the building blocks for larger views and pages within our application. We'll be using the [Composition API Style](https://vuejs.org/guide/introduction.html#api-styles), which is a newer and more powerful API. It can be a bit daunting for new developers, but it provides a flexible way to define our components. It also differs from the API style used by React, making it a bit of a learning curve for experienced React developers. We can see more discussion in the [Composition API FAQ](https://vuejs.org/guide/extras/composition-api-faq.html) document.
+
+A Vue single file component using the Composition API style looks like this (taken from the [Vue Documentation](https://vuejs.org/guide/introduction.html#single-file-components)):
+
+```vue {title="Vue SFC Example"}
+<script setup>
+import { ref } from 'vue'
+const count = ref(0)
+</script>
+
+<template>
+  <button @click="count++">Count is: {{ count }}</button>
+</template>
+
+<style scoped>
+button {
+  font-weight: bold;
+}
+</style>
+```
+
+This file is divided into three important sections:
+
+* `<script setup>` - this section defines the functionality of the component, and is written using JavaScript syntax. It is the rough equivalent of the code you might put in a function called as the page begins to load in a traditional website. This code is used to configure all of the _reactive_ elements of the user interface, as we'll see later.
+* `<template>` - this section defines the structure of the component, and uses a syntax similar to HTML. It gives the overall layout of the component and includes all sub-components and other HTML elements. It also shows where the reactive elements defined earlier appear on the page itself.
+* `<style>` - this section defines the style of the component, and it is written using CSS. These style elements can be applied throughout the application, or we can use a `<style scoped>` section to ensure these styles are only applied within this component.
+
+As we can see, Vue follows the concept of [Separation of Concerns] just like we've seen in our earlier projects. However, instead of having a global HTML template, a site-wide CSS file, and a single JavaScript file for an entire page, each component itself contains just the HTML, CSS, and JavaScript needed for that single component to function. In this way, we can treat each component as a stand-alone part of our application, and as we learn more about how to build useful and flexible components, we'll see just how powerful this structure can be.
+
+On the next page, we'll start building our simple web application by using a few pre-built components from a Vue component library. 
