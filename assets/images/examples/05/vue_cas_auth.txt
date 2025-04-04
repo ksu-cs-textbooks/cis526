@@ -1,0 +1,65 @@
+title CAS Authentication
+
+actor User
+entity CAS
+participant Browser
+rparticipant Frontend
+rparticipant Token Store
+control API
+rparticipant Auth Router
+database Session
+
+entryspacing 0.3
+==User Not Logged In==
+User->Browser: Load Application
+Browser->Frontend: GET /
+Frontend-->Browser: Show Application
+User->Browser:Click Login Button
+Browser->Token Store: getToken(true)
+activate Token Store
+Token Store->API: GET /auth/token\n(no cookie set)
+space -2
+API->Auth Router: router.get(/token)
+activate Auth Router
+Auth Router->Session: Check for req.user
+Session--#red>Auth Router: req.user not found
+Auth Router--#red>Token Store: HTTP 401 Unauthorized
+deactivate Auth Router
+Token Store-->Browser: Redirect to /auth/cas
+deactivate Token Store
+Browser->API: GET /auth/cas
+space -2
+API->Auth Router: router.get(/cas)
+activate Auth Router
+Auth Router-->Browser: Redirect to CAS Server
+deactivate Auth Router
+create CAS
+Browser->CAS: GET /login
+User->CAS: Login
+CAS-->Browser: Redirect to\nService URL\nwith Ticket
+Browser->API: GET /auth/cas?ticket=<ticket>
+space -3
+API->Auth Router: router.get\n(/cas?ticket=<ticket>)
+activate Auth Router
+Auth Router->CAS: Validate Ticket
+CAS--#green>Auth Router: Ticket Valid!
+destroy CAS
+Auth Router-->Browser: Redirect to Index (Set Cookie)
+deactivate Auth Router
+==User Logged In==
+Browser->Frontend: GET /
+Frontend-->Browser: Show Application
+User->Browser:Click Login Button
+Browser->Token Store: getToken(true)
+activate Token Store
+Token Store->API: GET /auth/token\n(with cookie)
+space -2
+API->Auth Router: router.get(/token)
+activate Auth Router
+Auth Router->Session: Check for req.user
+Session--#green>Auth Router: req.user found
+Auth Router--#green>Token Store: Send Valid JWT
+deactivate Auth Router
+Token Store-->Frontend: Update Token State
+deactivate Token Store
+Frontend-->Browser: Show User Profile

@@ -63,7 +63,7 @@ In our `.env` file, we'll need to add two more settings. The `CAS_URL` is the ba
 
 ```env {title=".env"}
 # -=-=- other settings omitted here -=-=-
-CAS_URL=https://testcas.cs.ksu.edu/
+CAS_URL=https://testcas.cs.ksu.edu
 CAS_SERVICE_URL=https://$CODESPACE_NAME-$PORT.$GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN
 ```
 Notice that we already add the `/auth/cas` route to the end of the `CAS_SERVICE_URL` in the configuration above - since that path won't change, it makes sense to just include it there instead of having to remember to add it to the path in the `.env` file. We should also put sensible defaults in our `.env.example` and `.env.test` files as well.
