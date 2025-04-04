@@ -172,7 +172,7 @@ In fact, this code was actually constructed using a trial and error process by i
 
 ## Creating a New User
 
-Now that we have created helpers for our route, we can add the code to actually create that new user when an HTTP POST request is receive4d.
+Now that we have created helpers for our route, we can add the code to actually create that new user when an HTTP POST request is received.
 
 In our `routes/api/v1/users.js` file, let's add a new route we can use to create a new entry in the `users` table:
 
