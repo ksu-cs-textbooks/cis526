@@ -4,7 +4,7 @@ pre: "1. "
 weight: 10
 ---
 
-{{< youtube id >}}
+{{< youtube NjrWPg41_B4 >}}
 
 ## Authentication Libraries
 
@@ -182,7 +182,7 @@ We'll come back to this file once we are ready to link up our authentication str
 Next, let's install both `passport` and the `passport-unique-token` authentication strategy:
 
 ```bash {title="terminal"}
-$ passport passport-unique-token
+$ npm install passport passport-unique-token
 ```
 
 We'll configure that strategy in a new `configs/auth.js` file with the following content:

@@ -4,7 +4,7 @@ pre: "4. "
 weight: 40
 ---
 
-{{< youtube id >}}
+{{< youtube lz0AiqcQAV4 >}}
 
 ## Vue Router
 
@@ -112,7 +112,7 @@ This template structure properly includes a `<header>`, `<nav>`, `<main>`, and `
 
 Finally, let's go back to our `TopMenu` component and add routing to each link. There are many ways to do this, but one simple way is to add a `command` property to each menu item, which is a callback function that is executed when the button on the menu is activated. This function can simply use the Vue router to navigate to the correct view:
 
-```vue {title="src/components/layout/TopMenu.vue" hl_lines="8-9 19-21 25-27"}
+```vue {title="src/components/layout/TopMenu.vue" hl_lines="9-10 19-21 25-27"}
 <script setup>
 /**
  * @file Top menu bar of the entire application

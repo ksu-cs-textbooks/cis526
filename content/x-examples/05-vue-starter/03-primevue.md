@@ -4,7 +4,7 @@ pre: "3. "
 weight: 30
 ---
 
-{{< youtube id >}}
+{{< youtube SXfu755SIcM >}}
 
 ## Install PrimeVue
 

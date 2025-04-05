@@ -263,3 +263,4 @@ That should properly hide menu items from the user based on their roles. Feel fr
 ## Protecting Routes
 
 Of course, hiding the item from the menu does not prevent the user from manually typing in the route path in the URL and trying to access the page that way. So, we must also add some additional logic to our router to ensure that user's can't access. 
+

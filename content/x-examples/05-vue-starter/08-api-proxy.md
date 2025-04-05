@@ -4,7 +4,13 @@ pre: "8. "
 weight: 80
 ---
 
-{{< youtube id >}}
+{{< youtube SVQJatrP_98 >}}
+
+{{% notice warning %}}
+
+The video adds an extra slash to the `/auth` route in the `vite.config.js` file when setting up a proxy. That slash should be removed.
+
+{{% /notice %}}
 
 ## Connecting to our RESTful API
 
@@ -103,7 +109,7 @@ We can also access these tasks anytime from the VS Code Command Palette by press
 
 ## Vite Proxy
 
-The second major feature we need to configure for our application is a proxy that allows our frontend application to access our backend RESTful API directly. In many typical development scenarios, we typically run our backend application on one port (such as port `3000`, which if how our app is currently configured), and then we run our frontend application in a development server on a different port (such as `5273`, the default port used by Vite). However, in this scenario, our frontend must include a hard-coded IP address and port to access our backend server in development mode. 
+The second major feature we need to configure for our application is a proxy that allows our frontend application to access our backend RESTful API directly. In many typical development scenarios, we typically run our backend application on one port (such as port `3000`, which if how our app is currently configured), and then we run our frontend application in a development server on a different port (such as `5173`, the default port used by Vite). However, in this scenario, our frontend must include a hard-coded IP address and port to access our backend server in development mode. 
 
 In production, our frontend application and backend RESTful API server are generally running on the same system, so they will use the same IP address and port. So, to simplify things now, we can simulate that setup by adding a [Proxy](https://vite.dev/config/server-options#server-proxy) configuration to our frontend application's development server running in Vite. In this way, our frontend application can connect directly back to the port it is running on (port `5173` in this example), and if the connection matches one that should be sent to the backend API server instead, it will be proxied to that application (running on port `3000`). This greatly simplifies developing our application, since we don't have to worry about the configuration changing between development mode and production.
 

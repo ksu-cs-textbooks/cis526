@@ -4,7 +4,7 @@ pre: "6. "
 weight: 60
 ---
 
-{{< youtube id >}}
+{{< youtube 6NaPnajdLyo >}}
 
 ## Configuring Dark Mode
 

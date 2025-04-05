@@ -4,7 +4,7 @@ pre: "10. "
 weight: 100
 ---
 
-{{< youtube id >}}
+{{< youtube lolT-mwmFvc >}}
 
 ## Testing Role-Based Authorization Middleware
 
@@ -147,7 +147,7 @@ The comments in the function describe how it works pretty clearly. Most of the c
 
 The last thing we'll add to our `test/helpers.js` file is a helpful list of all of the roles available in the application, which we can use for our testing:
 
-```js {title="test/hooks.js"}
+```js {title="test/helpers.js"}
 // -=-=- other code omitted here -=-=-
 
 // List of global roles

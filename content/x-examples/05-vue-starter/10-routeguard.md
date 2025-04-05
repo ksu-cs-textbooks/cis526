@@ -4,7 +4,13 @@ pre: "10. "
 weight: 100
 ---
 
-{{< youtube id >}}
+{{< youtube sK_-Cyn89T4 >}}
+
+{{% notice warning %}}
+
+In this video, the new `api.js` file was accidentally created in the `router` folder. It should be moved to the `configs` folder, which is shown in the next video.
+
+{{% /notice %}}
 
 ## Automatically Logging In
 

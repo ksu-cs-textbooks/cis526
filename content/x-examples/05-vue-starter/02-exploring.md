@@ -4,7 +4,7 @@ pre: "2. "
 weight: 20
 ---
 
-{{< youtube id >}}
+{{< youtube bMU-fIjCV2s >}}
 
 ## Install the Vue Extension
 
@@ -168,6 +168,6 @@ This file is divided into three important sections:
 * `<template>` - this section defines the structure of the component, and uses a syntax similar to HTML. It gives the overall layout of the component and includes all sub-components and other HTML elements. It also shows where the reactive elements defined earlier appear on the page itself.
 * `<style>` - this section defines the style of the component, and it is written using CSS. These style elements can be applied throughout the application, or we can use a `<style scoped>` section to ensure these styles are only applied within this component.
 
-As we can see, Vue follows the concept of [Separation of Concerns] just like we've seen in our earlier projects. However, instead of having a global HTML template, a site-wide CSS file, and a single JavaScript file for an entire page, each component itself contains just the HTML, CSS, and JavaScript needed for that single component to function. In this way, we can treat each component as a stand-alone part of our application, and as we learn more about how to build useful and flexible components, we'll see just how powerful this structure can be.
+As we can see, Vue follows the concept of [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) just like we've seen in our earlier projects. However, instead of having a global HTML template, a site-wide CSS file, and a single JavaScript file for an entire page, each component itself contains just the HTML, CSS, and JavaScript needed for that single component to function. In this way, we can treat each component as a stand-alone part of our application, and as we learn more about how to build useful and flexible components, we'll see just how powerful this structure can be.
 
 On the next page, we'll start building our simple web application by using a few pre-built components from a Vue component library. 

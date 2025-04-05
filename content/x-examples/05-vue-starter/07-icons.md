@@ -4,7 +4,7 @@ pre: "7. "
 weight: 70
 ---
 
-{{< youtube id >}}
+{{< youtube KpEp43qcQNo >}}
 
 ## Adding Icons
 
@@ -31,7 +31,7 @@ Next, we can simply import the required CSS file in our `src/assets/main.css` fi
 @import 'primeicons/primeicons.css';
 ```
 
-With those two changes in place, we can start to use icons throughout our application! We can find a full list of icons available in the [PrimeIcons Documentation]
+With those two changes in place, we can start to use icons throughout our application! We can find a full list of icons available in the [PrimeIcons Documentation](https://primevue.org/icons/).
 
 ## Menubar Icons
 

@@ -4,7 +4,7 @@ pre: "8. "
 weight: 80
 ---
 
-{{< youtube id >}}
+{{< youtube KMiBMPzHRp8 >}}
 
 ## Token Middlewares
 
@@ -67,7 +67,7 @@ This middleware will extract our JWT from the `authorization: Bearer` header tha
 
 To use this middleware, we need to make a small change to the structure of our `routes/api.js` file to allow users to access the base API route without needing the token, but all other routes will require a valid token for access:
 
-```js {title="routes/api.js" hl_lines="15-16 68-69 71-77"}
+```js {title="routes/api.js" hl_lines="15-16 64-65"}
 /**
  * @file API main router
  * @author Russell Feldhausen <russfeld@ksu.edu>
@@ -88,10 +88,6 @@ import tokenMiddleware from "../middlewares/token.js";
 // Import v1 routers
 import rolesRouter from "./api/v1/roles.js";
 import usersRouter from "./api/v1/users.js";
-import countiesRouter from "./api/v1/counties.js";
-import communitiesRouter from "./api/v1/communities.js";
-import metadataRouter from "./api/v1/metadata.js";
-import documentsRouter from "./api/v1/documents.js";
 
 // Create Express router
 const router = express.Router();
@@ -141,10 +137,6 @@ router.use(tokenMiddleware);
 // Use v1 routers after API route
 router.use("/v1/roles", rolesRouter);
 router.use("/v1/users", usersRouter);
-router.use("/v1/counties", countiesRouter);
-router.use("/v1/communities", communitiesRouter);
-router.use("/v1/metadata", metadataRouter);
-router.use("/v1/documents", documentsRouter);
 
 export default router;
 ```
@@ -207,7 +199,7 @@ This file contains a function named `roleBasedAuth` that accepts a list of roles
 
 Finally, let's look at how we can use that middleware function to implement role-based authorization in our application. Let's start simple - in this instance, we can update our `GET /api/v1/roles/` operation to require the user to have the `manage_users` role in order to list all possible roles in the application. To do this, we can import our new middleware function in the `routes/api/v1/roles.js` file, and then call that function to create a new middleware function to use in that file:
 
-```js {title="routes/api/v1/roles.js" hl_lines="24-25 40-41 52"}
+```js {title="routes/api/v1/roles.js" hl_lines="24-25 40-42 53"}
 /**
  * @file Roles router
  * @author Russell Feldhausen <russfeld@ksu.edu>
