@@ -41,7 +41,9 @@ export const useTokenStore = defineStore('token', () => {
 
   // Getters
   const username = computed(() => token.value.length > 0 ? jwtDecode(token.value)['username'] : '')
-  const has_role = computed((role) => token.value.length > 0 ? jwtDecode(token.value)['roles'].some((r) => r.role == role) : false)
+  const has_role = computed(() =>
+    (role) => token.value.length > 0 ? jwtDecode(token.value)['roles'].some((r) => r.role == role) : false,
+  )
 
   // Actions
   /**
@@ -89,7 +91,7 @@ Let's take a look at each part of this Pinia store to understand how it works.
 * `export const useTokenStore = defineStore('token', () => {` - this first line creates a store with the unique name of `token` and exports a function that is used to make the store available in any component. We'll use this function later on this page to access the token in the store.
 * `const token = ref('')` - next, we have a section that defines the state variables we actually want to keep in this Pinia store. Each of these are reactive state variables, just like we've worked with before. In this store, we're just going to store the JWT we receive from our RESTful API backend server in the `token` variable here. 
 * `const username = computed(() =>...` - following the state, we have a couple of [Computed Properties](https://vuejs.org/guide/essentials/computed.html) that act as getters for our store. The first one will decode the JWT and extra the user's username for us to use in our application.
-* `const has_role = computed((role) =>...` - this getter will allow us to check if the user's token has a given role listed. This will help us make various parts of the application visible to the user, depending on which roles they have.
+* `const has_role = computed(() =>...` - this getter will allow us to check if the user's token has a given role listed. This will help us make various parts of the application visible to the user, depending on which roles they have. This getter is unique in that it is an anonymous function that _returns_ an anonymous function!
 * `async function getToken(redirect = false)` - finally, we have a couple of actions, which are functions that can be called as part of the store, typically to retrieve the state from the server or perform some other operation on the state. The `getToken` function will use the Axios library to try and retrieve a token from the server. We have to include the `{withCredentials: true}` to direct Axios to also send along any cookies available in the browser for this request. If we receive a response, we store it in the `token` state for this store, showing that the user is correctly logged in. If not, we check and see if the response is an HTTP 401 response, letting us know that the user is not correctly logged in. If not, we can optionally redirect the user to the login page, or we can just silently fail. We'll see how both options are useful a bit later on this page. This function is written using `async/await` so we can optionally choose to `await` this function if we want to make sure a user is logged in before doing any other actions.
 * `function logout()` - of course, the `logout` function does exactly what it says - it simply removes the token and then redirects the user to the logout route on the backend server. This is important to do, because it will tell the backend server to clear the cookie and also redirect us to the CAS server to make sure all of our sessions are closed. 
 
