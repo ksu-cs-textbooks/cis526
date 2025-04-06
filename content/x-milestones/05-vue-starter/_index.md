@@ -18,5 +18,6 @@ Follow the instructions in the [Example Project](../../x-examples/05-vue-starter
 6. A working [Vite](https://vite.dev/) server that will proxy requests to our backend RESTful API seamlessly.
 7. An [Axios](https://axios-http.com/) client that can access our RESTful API routes.
 8. A seamless system for authentication and requesting a JWT to access protected API routes.
+9. A demo of accessing the API on the `/profile` page listing all users and roles assigned to those users (this page should load correctly for the `admin` user)
 
 Effectively, just follow along with the example project and submit the resulting repository. This will be the starting point for the rest of the milestones!
