@@ -129,3 +129,9 @@ router.get('/logout', function (req, res, next) {
 
 Most CAS servers will automatically redirect the user back to the `service` request parameter, but not all of them. However, this will ensure that the CAS server knows the user has logged out and will invalidate any tickets for that user. 
 
+{{% notice note "Test CAS Server Updated" %}}
+
+The test CAS server was updated recently to properly redirect users back to the `service` request parameter, so you will probably no longer see the Logout page from that server in your testing. This should make developing and testing with that server a bit more straightforward
+
+{{% /notice %}}
+
