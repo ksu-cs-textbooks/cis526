@@ -262,5 +262,84 @@ That should properly hide menu items from the user based on their roles. Feel fr
 
 ## Protecting Routes
 
-Of course, hiding the item from the menu does not prevent the user from manually typing in the route path in the URL and trying to access the page that way. So, we must also add some additional logic to our router to ensure that user's can't access. 
+Of course, hiding the item from the menu does not prevent the user from manually typing in the route path in the URL and trying to access the page that way. So, we must also add some additional logic to our router to ensure that user's can't access. For that, we can add a [Per-Route Guard](https://router.vuejs.org/guide/advanced/navigation-guards.html#Per-Route-Guard) following a very similar approach. In our `src/router/index.js` file, we can add a new generator function to create a route guard based on roles, and then apply that guard as the `beforeEnter` property for a route:
+
+```js {title="src/router/index.js" hl_lines="3-21 51"}
+// -=-=- other code omitted here -=-=-
+
+/**
+ * Router Guard Function to check for role before entering route
+ * 
+ * @param roles a list of roles permitted to enter the route
+ * @return boolean true if the navigation is permitted, else returns to the home page
+ */
+const requireRoles = (...roles) => {
+  return () => {
+    const tokenStore = useTokenStore()
+    const allow = roles.some((r) => tokenStore.has_role(r))
+    if (allow) {
+      // allow navigation
+      return true;
+    } else {
+      // redirect to home
+      return { name: 'home'}
+    }
+  }
+}
+
+const router = createRouter({
+  // Configure History Mode
+  history: createWebHistory(import.meta.env.BASE_URL),
+
+  // Configure routes
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView,
+    },
+    {
+      path: '/about',
+      name: 'about',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/AboutView.vue'),
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('../views/ProfileView.vue'),
+    },
+    {
+      path: '/roles',
+      name: 'roles',
+      component: () => import('../views/RolesView.vue'),
+      beforeEnter: requireRoles("manage_users")
+    },
+  ],
+})
+
+// -=-=- other code omitted here -=-=-
+```
+
+Now, even if we try to type the `/roles` path into the address bar in our web browser, it won't allow us to reach that page unless we are logged in to a user account that has the correct role.
+
+## Reactive Style
+
+We can also use Tailwind to add some reactive style to our components. For example, we can use the [Grid](https://tailwindcss.com/docs/grid-template-columns) layout options to place the components in a grid view:
+
+```vue {title="src/components/roles/RolesList.vue" hl_lines="2"}
+<template>
+  <div class="grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-2">
+    <Card v-for="role in roles" :key="role.id">
+      <template #title>Role: {{ role.role }}</template>
+    </Card>
+  </div>
+</template>
+```
+
+This will give us a responsive layout that adjusts the number of columns based on the width of the screen:
+
+![Responsive Layout](/images/examples/06/vue_crud_1.png)
 

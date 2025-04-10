@@ -125,7 +125,7 @@ const { token } = storeToRefs(tokenStore)
 // Declare State
 const items = ref([
   {
-    label: 'Profile',
+    label: tokenStore.username,
     icon: 'pi pi-cog',
     command: () => {
       router.push({ name: 'profile' })
