@@ -175,7 +175,7 @@ const logger = winston.createLogger({
     align(),
     printf(
       (info) =>
-        `[${info.timestamp}] ${info.level}: ${info.stack ? info.stack : info.message}`,
+        `[${info.timestamp}] ${info.level}: ${info.stack ? info.message + "\n" + info.stack : info.message}`,
     ),
   ),
   // Output configuration

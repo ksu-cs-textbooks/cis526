@@ -226,7 +226,7 @@ const logger = winston.createLogger({
             format: 'YYYY-MM-DD hh:mm:ss.SSS A',
         }),
         align(),
-        printf((info) => `[${info.timestamp}] ${info.level}: ${info.stack ? info.stack : info.message}`)
+        printf((info) => `[${info.timestamp}] ${info.level}: ${info.stack ? info.message + "\n" + info.stack : info.message}`)
     ),
     // Output configuration
     transports: [new winston.transports.Console()]
