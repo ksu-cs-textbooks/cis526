@@ -8,7 +8,7 @@ weight: 10
 
 ## Authentication Libraries
 
-There are many different authentication libraries and methods available for Node.js and Express. For this project, we will use the [Passport.js](https://www.passportjs.org/) library. It supports many different authentication strategy, and is a very common way that authentication is handled within JavaScript applications.
+There are many different authentication libraries and methods available for Node.js and Express. For this project, we will use the [Passport.js](https://www.passportjs.org/) library. It supports many different authentication strategies, and is a very common way that authentication is handled within JavaScript applications.
 
 For our application, we'll end up using several strategies to authenticate our users:
 
@@ -153,7 +153,7 @@ This file includes a few items to take note of:
 
 * In the top-level Open API comment, we define a new `AuthToken` response that we'll send to the user when they request a token.
 * We create three routes. The first two, `/auth/bypass` and `/auth/cas`, for each of our authentication strategies. The last one, `/auth/token` will be used by our frontend to request a token to access the API.
-* Finally, we'll build a `authSuccess` function to handle actually sending the response to the user
+* Finally, we'll build a `authSuccess` function to handle actually sending the response to the user.
 
 Before moving on, let's go ahead and add this router to our `app.js` file along with the other routers:
 

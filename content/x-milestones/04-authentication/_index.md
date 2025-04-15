@@ -17,6 +17,8 @@ Building from the [previous milestone](../03-rest-api/), expand upon the starter
 5. Require a valid JWT to access ALL routes under the `/api/v1` path. 
 6. Implement role-based authorization for ALL routes under the `/api/v1` path. See below for a matrix of roles and allowed actions.
 7. Update unit tests for each route to use authentication and also to test role-based authorization as shown in the tutorial.
+8. Update the appropriate routes for both Communities and Metadata so that the `owner_user_id` foreign key is automatically set to the currently authenticated user (it should no longer be provided as part of the POST request to create a new community or metadata, nor should it be editable via PUT request.)
+9. Update the OpenAPI documentation and unit tests to match the change to Communities and Metadata above. 
 
 ### Authorization Matrix
 
