@@ -184,7 +184,7 @@ describe("/auth", () => {
 
 In this test, we are building the URL that the user should be redirected to, based on the settings we have already set in our environment file. Then, we simply check that the returned response is an HTTP 302 Found response with the correct location indicated.
 
-The next two tests are much more complex, because they require us to mock the step where our server confirms that the user is authenticated with the CAS server by sending a request with a ticket attached, and then getting a response for that ticket. We can do this using a bit of clever coding and the [Sinon] library.
+The next two tests are much more complex, because they require us to mock the step where our server confirms that the user is authenticated with the CAS server by sending a request with a ticket attached, and then getting a response for that ticket. We can do this using a bit of clever coding and the [Sinon](https://sinonjs.org/) library.
 
 First, we need to mock up a response object that mimics what the server would respond with. This is mocked just so it will be understood by our CAS authentication library and may not work in all cases:
 

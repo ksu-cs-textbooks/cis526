@@ -1,10 +1,10 @@
 ---
-title: "Deployment"
-pre: "8. "
-weight: 80
+title: "Advanced Topics"
+pre: "7. "
+weight: 70
 ---
 
-This example project builds on the previous tutorials by finally showing how to build and deploy this application using Docker.
+This example project builds on the previous Vue.js CRUD app by discussing some more advanced topics related to web application development.
 
 ## Project Deliverables
 
