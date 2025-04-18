@@ -4,7 +4,7 @@ pre: "1. "
 weight: 10
 ---
 
-{{< youtube id >}}
+{{< youtube n1TMdZpo-Wc >}}
 
 ## Roles View
 
@@ -12,7 +12,7 @@ To start this project, let's add a new view and a new component to explore the r
 
 First, let's create a simple component skeleton in a new `src/components/roles/` folder. We'll name it the `RolesList` component:
 
-```vue {title="src/components/roles/RolesList"}
+```vue {title="src/components/roles/RolesList.vue"}
 <script setup>
 /**
  * @file Roles List Component
