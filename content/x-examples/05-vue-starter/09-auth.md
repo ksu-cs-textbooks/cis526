@@ -120,12 +120,12 @@ const router = useRouter()
 // Stores
 import { useTokenStore } from '@/stores/Token'
 const tokenStore = useTokenStore()
-const { token } = storeToRefs(tokenStore)
+const { token, username } = storeToRefs(tokenStore)
 
 // Declare State
 const items = ref([
   {
-    label: tokenStore.username,
+    label: username,
     icon: 'pi pi-cog',
     command: () => {
       router.push({ name: 'profile' })
