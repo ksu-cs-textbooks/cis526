@@ -202,7 +202,7 @@ const router = useRouter()
   <span>{{ user }}</span>
   <TextField v-model="user.username" field="username" label="Username" icon="pi pi-user" />
   <Button severity="success" @click="save" label="Save" />
-  <Button severity="secondary" @click="router.push({ name: 'user' })" label="Cancel" />
+  <Button severity="secondary" @click="router.push({ name: 'users' })" label="Cancel" />
 </template>
 ```
 
