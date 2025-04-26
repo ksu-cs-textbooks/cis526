@@ -4,7 +4,7 @@ pre: "7. "
 weight: 70
 ---
 
-{{< youtube id >}}
+{{< youtube z95i3xT8DN4 >}}
 
 ## Connecting to an External Database
 
@@ -53,6 +53,39 @@ We'll also need to install the appropriate database libraries in our `server` ap
 $ npm install pg pg-hstore
 ```
 
+## Properly Update IDs after Seeding
+
+In addition, we also must handle a bug where Postgres will not properly keep track of any IDs that are added during the seeding process, so in each of our seeds we need to update the internal sequence used by Postgres to keep track of the next ID to use:
+
+```js {title="seeds/00_users.js" hl_lines="4-6"}
+// -=-=- other code omitted here -=-=-
+export async function up({ context: queryInterface }) {
+  await queryInterface.bulkInsert("users", users);
+  if (process.env.DATABASE_DIALECT == 'postgres') {
+    await queryInterface.sequelize.query("SELECT setval('users_id_seq', max(id)) FROM users;");
+  }
+}
+
+// -=-=- other code omitted here -=-=-
+```
+
+```js {title="seeds/01_roles.js" hl_lines="4-6"}
+// -=-=- other code omitted here -=-=-
+export async function up({ context: queryInterface }) {
+  await queryInterface.bulkInsert("roles", roles);
+  if (process.env.DATABASE_DIALECT == 'postgres') {
+    await queryInterface.sequelize.query("SELECT setval('roles_id_seq', max(id)) FROM roles;");
+  }
+  await queryInterface.bulkInsert("user_roles", user_roles);
+}
+
+// -=-=- other code omitted here -=-=-
+```
+
+This error is discussed at length in a [Sequelize GitHub Issue](https://github.com/sequelize/sequelize/issues/9295). 
+
+## Environment Variables
+
 We should also add these new environment variable entries to our `.env.example` file, including relocating the existing `DATABASE_FILE` entry to this section with the others. Since we aren't using them in development or testing, we can leave them out of the other files for now.
 
 ```env {title=".env.example"}
@@ -69,6 +102,8 @@ DATABASE_USERNAME=lostcommunities
 DATABASE_PASSWORD=lostcommunities
 DATABASE_NAME=lostcommunities
 ```
+
+## Update Docker Compose
 
 To test this, we'll need a running Postgres instance. While we can create one in our GitHub Codespaces by adding some additional configuration files, it is a bit more complex. So, let's just update our `compose.yml` file for deployment and test using another database there. 
 

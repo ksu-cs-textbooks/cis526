@@ -4,7 +4,7 @@ pre: "4. "
 weight: 40
 ---
 
-{{< youtube id >}}
+{{< youtube iX5whyRpZJ0 >}}
 
 ## Dockerfile
 
@@ -12,7 +12,7 @@ We are now ready to create a `Dockerfile` that will build our application into a
 
 {{% notice note "Docker Init" %}}
 
-In this tutorial, we'll go through building this `Dockerfile` manually. On systems that have Docker Desktop already installed, we can run `docker init` to scaffold some of this process. See the documentation for [Docker Init] for more details on how to use that tool.
+In this tutorial, we'll go through building this `Dockerfile` manually. On systems that have Docker Desktop already installed, we can run `docker init` to scaffold some of this process. See the documentation for [Docker Init](https://docs.docker.com/reference/cli/docker/init/) for more details on how to use that tool.
 
 {{% /notice %}}
 

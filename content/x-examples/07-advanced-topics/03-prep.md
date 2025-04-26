@@ -4,7 +4,7 @@ pre: "3. "
 weight: 30
 ---
 
-{{< youtube id >}}
+{{< youtube b1WeopVfwfU >}}
 
 ## Preparing for Deployment
 
@@ -74,7 +74,11 @@ With that change in place, our placeholder image will now load since it is using
 Another issue we'll quickly run into is that anytime we refresh our application on any page other than the homepage, we'll end up with a 404 error message! This is because the server does not know to properly redirect those requests back to the Vue application's router. We can get around that by installing one more middleware, the [connect-history-api-fallback
 ](https://www.npmjs.com/package/connect-history-api-fallback) middleware in our server's `app.js` file. We'll also need to disable the `indexRouter` since it is no longer needed, and move the static files and this new middleware to after the authentication routes to allow our application to properly redirect to CAS. 
 
-```js {title="app.js" hl_lines="12 29-30"}
+```bash {title="terminal"}
+$ npm install connect-history-api-fallback
+```
+
+```js {title="app.js" hl_lines="12 30-31"}
 // -=-=- other code omitted here -=-=-
 
 // Import libraries

@@ -4,7 +4,7 @@ pre: "1. "
 weight: 10
 ---
 
-{{< youtube id >}}
+{{< youtube YioSayQjW70 >}}
 
 ## Props
 
@@ -170,7 +170,7 @@ export const useUserStore = defineStore('user', () => {
     })
       .then(function (response) {
         // rehydrate data
-        this.hydrate()
+        hydrate()
         return response
       })
       .catch(function (error) {
@@ -188,7 +188,7 @@ export const useUserStore = defineStore('user', () => {
       .delete('/api/v1/users/' + id)
       .then(function (response) {
         // rehydrate data
-        this.hydrate()
+        hydrate()
         return response
       })
       .catch(function (error) {
@@ -306,8 +306,11 @@ Those are all of the changes needed to switch the `UsersList` component to use t
 
 We can also update our `UserEdit` component in a similar way:
 
-```vue {title="src/components/users/UserEdit.vue" hl_lines="5-6 9-13 15-18"}
+```vue {title="src/components/users/UserEdit.vue" hl_lines="3 8-9 12-16 18-21"}
 <script>
+// Import Libraries
+import { ref, computed, inject } from 'vue'
+
 // -=-=- other code omitted here -=-=-
 
 // Declare State

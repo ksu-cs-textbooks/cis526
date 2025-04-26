@@ -4,7 +4,7 @@ pre: "2. "
 weight: 20
 ---
 
-{{< youtube id >}}
+{{< youtube 6skldOnt7Sc >}}
 
 ## Reusing Components
 
@@ -203,8 +203,11 @@ Finally, we must make a few minor tweaks to the `UserEdit` component so that it 
 
 The PrimeVue DynamicDialog service uses Vue's [Provide / Inject](https://vuejs.org/guide/components/provide-inject) interface to send data to the component loaded in a dialog. So, in our component, we must declare a few additional state variables, as well as small piece of code to detect whether it is running in a dialog or as a standalone component in a view.
 
-```vue {title="src/components/users/UserEdit.vue" hl_lines="6-7 9-19"}
+```vue {title="src/components/users/UserEdit.vue" hl_lines="3 9-10 12-22"}
 <script setup>
+// Import Libraries
+import { ref, computed, inject } from 'vue'
+
 // -=-=- other code omitted here -=-=-
 
 // Declare State

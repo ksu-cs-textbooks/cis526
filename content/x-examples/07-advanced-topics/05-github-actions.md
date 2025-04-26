@@ -4,7 +4,7 @@ pre: "5. "
 weight: 50
 ---
 
-{{< youtube id >}}
+{{< youtube HRYpkcwdyIw >}}
 
 ## GitHub Actions
 
@@ -22,12 +22,10 @@ We'll start with a name for the workflow, as well as a list of triggers that wil
 # Workflow name
 name: Build Docker
 
-# Run only on pushes to main branch, as well as tags
+# Run only on new tags being pushed
 # https://docs.github.com/en/actions/using-workflows/triggering-a-workflow
 on:
   push:
-    branches:
-      - main
     tags:
       - 'v*.*.*'
 ```
