@@ -349,7 +349,7 @@ import RoleChip from '../roles/RoleChip.vue';
         </span>
       </template>
     </Column>
-    <Column field="updatedAt" header="Created">
+    <Column field="updatedAt" header="Updated">
       <template #body="{ data }">
         <span v-tooltip.bottom="new Date(data.updatedAt).toLocaleString()">
           {{ formatDistance(new Date(data.updatedAt), new Date(), { addSuffix: true }) }}
