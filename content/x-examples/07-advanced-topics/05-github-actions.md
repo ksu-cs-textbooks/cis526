@@ -111,6 +111,35 @@ As we can see, the basic steps are as follows:
 3. Build and Push the Docker Image to the GitHub Container Registry
 4. Create a Release on GitHub with the version information
 
+{{% notice note "Handling Uppercase Repository Names" %}}
+
+GitHub is case-preserving, and allows repository names and usernames to include uppercase letters. However, Docker tags must be lowercase, so any repository names with uppercase letters will cause issues with this process.
+
+To solve this, we can add a new step to convert our repository name to lowercase:
+
+```yml {title=".github/workflows/build_docker.yml"}
+      # Step 3a - Get Lowercase Repository Name
+      # See https://github.com/orgs/community/discussions/27086
+      - name: 3a - Get Lowercase Repository Name
+        run: |
+          echo: "REPO_LOWER=${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
+
+      # Step 3b - Build and Push Docker Image
+      # https://github.com/docker/build-push-action
+      - name: 3b - Build and Push Docker Image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/${{ env.REPO_LOWER }}:${{ github.ref_name }}
+            ghcr.io/${{ env.REPO_LOWER }}:latest
+```
+
+Alternatively, much of this is also handled by the [Docker Metadata Action](https://github.com/docker/metadata-action), which can be used to automatically configure tags and labels attached to a Docker container built by a GitHub action. For larger-scale projects, adding the Docker Metadata Action to this process is a helpful step. 
+
+{{% /notice %}}
+
 ## Triggering a Release
 
 Before we can trigger this workflow, we should commit and push it to GitHub along with our `Dockerfile` from the previous page.
