@@ -146,7 +146,7 @@ If we run into errors at either of these steps, we may need to ensure that each 
 
 {{% /notice %}}
 
-Once we have installed the libraries and copied the contents of the `server` folder into the `server` image, we can also copy the `/usr/src/app/dist` folder from the `client` image into the `public` folder of the `server image.
+Once we have installed the libraries and copied the contents of the `server` folder into the `server` image, we can also copy the `/usr/src/app/dist` folder from the `client` image into the `public` folder of the `server` image.
 
 ```docker {title="Dockerfile"}
 #  -=-=- other code omitted here -=-=-

@@ -122,7 +122,7 @@ To solve this, we can add a new step to convert our repository name to lowercase
       # See https://github.com/orgs/community/discussions/27086
       - name: 3a - Get Lowercase Repository Name
         run: |
-          echo: "REPO_LOWER=${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
+          echo "REPO_LOWER=${GITHUB_REPOSITORY,,}" >> ${GITHUB_ENV}
 
       # Step 3b - Build and Push Docker Image
       # https://github.com/docker/build-push-action
