@@ -106,6 +106,12 @@ volumes:
 
 Most of this file is pretty straightforward. The one unique bit to point out is the two `volume` mounts, which connect a Docker volume to both the `data` and the `public/uploads` folders of our container. The first folder was created to specifically store our database file, and the second one will store all uploaded files from the users. In our Docker Compose file we are simply storing these in Docker volumes, but an experienced system administrator could change these to link directly to a path on the host system, making it easy to access. 
 
+{{% notice tip "Update the Image Path" %}}
+
+Remember to update the image path in the Docker Compose file to match the path where your own Docker image can be found on the GitHub Container Registry - you can find it in your repository by clicking the Package name on the right side of the page.
+
+{{% /notice %}}
+
 ## Using Docker Compose
 
 To actually deploy this application, we can simply download a copy of this `compose.yml` file on any system with Docker installed, and then run the following command to deploy it:
