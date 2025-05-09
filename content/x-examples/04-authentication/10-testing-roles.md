@@ -73,6 +73,12 @@ const findMiddlewareFunction = (name, path, method, router = app._router) => {
 // -=-=- other code omitted here -=-=-
 ```
 
+{{% notice note "Express 5.0 Updates" %}}
+
+Starting with Express version 5.0, `app._router` has been moved to `app.router` to make accessing the built-in router easier. This should be updated in the code above if you are running Express 5.0 or later. [Changelog](https://expressjs.com/en/guide/migrating-5.html#app.router)
+
+{{% /notice %}}
+
 Using that function, we can now write another function to actually test our middleware using some mock objects:
 
 ```js {title="test/helpers.js" hl_lines="5-6"}
