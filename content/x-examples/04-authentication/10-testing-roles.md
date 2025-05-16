@@ -48,6 +48,10 @@ So, in our `test/helpers.js` file, we can write a new helper function to this fo
  * @returns
  */
 const findMiddlewareFunction = (name, path, method, router = app._router) => {
+  // Replace blank paths with the default / path
+  if (path.length == 0) {
+    path = "/"
+  }
   for (const layer of router.stack) {
     // Return if the middleware function is found
     if (layer.name === name) {
