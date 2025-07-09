@@ -6,6 +6,12 @@ weight: 80
 
 {{< youtube KMiBMPzHRp8 >}}
 
+{{% notice warning "Updated Authorized Roles Middleware" %}}
+
+The `authorized-roles.js` file shown in the video is out of date. Refer to the code below for a corrected version. Corrections are discussed in the Errata chapter.
+
+{{% /notice %}}
+
 ## Token Middlewares
 
 Now that we finally have a working authentication system, we can start to add role-based authorization to our application. This will ensure that only users with specific roles can perform certain actions within our RESTful API. To do this, we'll need to create a couple of new Express middlewares to help load the contents of our JWT into the request, and also to verify that the authenticated user has the appropriate roles to perform an action.
@@ -178,8 +184,10 @@ const roleBasedAuth = (...roles) => {
       // if the user has that role, then they can proceed
       if (req.token.roles.some((r) => r.role === role)) {
         logger.debug("Role match!");
-        match = true;
-        return next();
+        if (!match) {
+          match = true;
+          return next();
+        }
       }
     });
     if (!match) {

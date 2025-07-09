@@ -326,3 +326,38 @@ router.get("/token", async function (req, res, next) {
   }
 });
 ```
+
+### Fix Authorized Roles Middleware
+
+The original `authorized-roles.js` middleware would accidentally call the `next()` handler for each matching role, instead of just the first one. The fix is to wrap the call in an `if` statement to confirm that a match has not already been found.
+
+```js {title="middlewares/authorized-roles.js" hl_lines="16-19"}
+const roleBasedAuth = (...roles) => {
+  return function roleAuthMiddleware(req, res, next) {
+    // logger.debug("Route requires roles: " + roles);
+    // logger.debug(
+    //   "User " +
+    //     req.token.username +
+    //     " has roles: " +
+    //     req.token.roles.map((r) => r.role).join(","),
+    // );
+    let match = false;
+    // loop through each role given
+    roles.forEach((role) => {
+      // if the user has that role, then they can proceed
+      if (req.token.roles.some((r) => r.role === role)) {
+        // logger.debug("Role match!");
+        if (!match) {
+          match = true;
+          return next();
+        }
+      }
+    });
+    if (!match) {
+      // if no roles match, send an unauthenticated response
+      // logger.debug("No role match!");
+      return res.status(401).send();
+    }
+  };
+};
+```
