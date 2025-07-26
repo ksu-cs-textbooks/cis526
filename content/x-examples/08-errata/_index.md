@@ -172,6 +172,41 @@ async function hydrate() {
   }
 ```
 
+### Fix Data Type Errors in Form Components
+
+In several of the form components, I set the `invalid` attribute based on the `error` computed value. In theory, if `error` is `null`, then the `invalid` attribute will not be set. However, Vue properly tries to parse the `error` value into a Boolean, which will cause errors in the browser console.
+
+To fix this, we can convert the presence (or absence) of the `error` object into a boolean using `!!error`. It works like this:
+
+* If `error` is `null`, then `!error` is `true`, therefore `!!error` is `false`.
+* If `error` is not `null`, then `!error` is `false`, therefore `!!error` is `true`.
+
+To fix this, update the template in any `form` components in `client/src/components/forms` that use the `invalid` attribute as shown here, taken from the `TextField.vue` component:
+
+```vue {title="components/forms/TextField.vue" hl_lines="9"}
+<template>
+  <div>
+    <FloatLabel variant="on">
+      <IconField>
+        <InputIcon :class="props.icon" />
+        <InputText
+          :id="props.field"
+          :disabled="props.disabled"
+          :invalid="!!error"
+          v-model="model"
+          class="w-full"
+        />
+      </IconField>
+      <label :for="props.field">{{ props.label }}</label>
+    </FloatLabel>
+    <!-- Error Text -->
+    <Message v-if="error" severity="error" variant="simple" size="small">{{
+      error.message
+    }}</Message>
+  </div>
+</template>
+```
+
 ## Server
 
 ### Use Default Express Error Handlers
