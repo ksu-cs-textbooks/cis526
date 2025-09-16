@@ -396,3 +396,45 @@ const roleBasedAuth = (...roles) => {
   };
 };
 ```
+
+### Docker Outside Docker Devcontainer Feature
+
+If you plan on developing this application in GitHub Codespaces with a secondary PostgreSQL container, you may also want to add the `docker-outside-of-docker` feature to your `devcontainer.json` file - this allows you to see and control containers that are created as part of the GitHub codespace:
+
+```json {title=".devcontainer/devcontainer.json" hl_lines="18-20"}
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "Node.js & TypeScript",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"qwtel.sqlite-viewer",
+				"ms-vscode.live-server",
+				"Vue.volar"
+			]
+		}
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+      "ghcr.io/devcontainers/features/docker-outside-of-docker": {}
+    },
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [3000]
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
+```
+
+After adding that line, rebuild the codespace, and then use `docker ps` to see running containers. All other `docker` commands should work for managing or restarting other containers.
