@@ -1,5 +1,5 @@
 ---
-title: "Spring 2026 Syllabus"
+title: "Spring 2025 Syllabus"
 pre: "6."
 weight: 60
 date: 2018-08-24T10:53:26-05:00
@@ -21,15 +21,26 @@ _This syllabus covers both courses. They are taught using the same content._
 * **Office:** DUE 2216
 * **Phone:** (785) 483-9264 (Call/Text)
 * **Website:** https://nathanhbean.com
-* **In-Person Office Hours:** Wednesday 2:30pm to 4:30pm and by appointment
+* **In-Person Office Hours:** TBD
 * **Virtual Office Hours:** By appointment via [Zoom](https://ksu.zoom.us/). 
 <br>
+* **Instructor:** Russell Feldhausen (russfeld AT ksu DOT edu)<br> _I use **he/him** pronouns. Feel free to share your own pronouns with me, and I'll do my best to use them!_
+* **Office:** DUE 2213, but I mostly work remotely from Kansas City, MO
+* **Phone:** (785) 292-3121 (Call/Text)
+* **Website:** https://russfeld.me
+* **Virtual Office Hours:** By appointment via [Zoom](https://ksu.zoom.us/). Schedule a meeting at [https://calendly.com/russfeld](https://calendly.com/russfeld)
 
 ### Preferred Methods of Communication:
 
 * **Email**: Email is the official method of communication for this course. Any emails sent to the instructor regarding this course should be answered within one class day.
 * **Ed Discussions**: For short questions and discussions of course content and assignments, Ed Discussions is preferred since questions can be asked once and answered for all students. The Ed Discussion board can be accessed through the course navigation on Canvas.  Students are encouraged to post questions there and use that space for discussion, and the instructor will strive to answer questions there as well.
 * **Phone/Text:** _Emergencies only!_ I will do my best to respond as quickly as I can.
+
+### GTA Contact Information
+* **GTA:** Josh Barron (jrbarron AT ksu DOT edu)
+* **Office:** DUE 2208, Office Hours held in DUE 1118
+* **In-Person Office Hours:** Mondays 1 - 3 PM, Tuesdays 9 - 10 AM
+* **Remote Office Hours:** By appointment via [Zoom](https://ksu.zoom.us/). Schedule a meeting at [https://calendly.com/joshbarron2222](https://calendly.com/joshbarron2222)
 
 ### Prerequisites
 
