@@ -17,7 +17,7 @@ Please note that the materials presented in Canvas have additional graded assign
 
 ## O'Reilly for Higher Education
 
-If you are looking for additional resources to support your learning, a great resource that is available to Kansas State University students is the [O'Reilley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered through the Kansas State University Library.  These include electronic editions of thousands of popular textbooks as well as videos and tutorials.  As of this writing, a search for HTML returns 33,690 results, CSS 8,638 results, JavaScript 16,725 results, and Node.js 6,572 results.  
+If you are looking for additional resources to support your learning, a great resource that is available to Kansas State University students is the [O'Reilly For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered through the Kansas State University Library.  These include electronic editions of thousands of popular textbooks as well as videos and tutorials.  As of this writing, a search for HTML returns 33,690 results, CSS 8,638 results, JavaScript 16,725 results, and Node.js 6,572 results.  
 
 There are likewise materials for other computer science topics you may have an interest in - it is a great resource for all your CS coursework.  It costs you nothing (technically, your access was paid for by your tuition and fees), so you might as well make use of it!
 
