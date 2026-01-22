@@ -73,6 +73,10 @@ The `<textarea>` element provides a method for entering larger chunks of text th
 </textarea>
 ```
 
+<textarea name="exampleText">
+  This text is displayed within the textarea
+</textarea>
+
 In addition, the `rows` and `cols` attribute can be used to specify the size of the textarea in characters.
 
 ### Select 
@@ -93,13 +97,27 @@ An example `<select>` using these features is:
     <option value="derby">Derby</option>
     <option value="fedora">Fedora</option>
   </optgroup>
-  <optgroup value="Ceremonial">
+  <optgroup label="Ceremonial">
     <option value="crown">Crown</option>
     <option value="mitre">Mitre</option>
     <option value="war bonnet">War Bonnet</option>
   </optgroup>
 </select>
 ```
+
+<select name="headgear">
+  <option value="none">None</option>
+  <optgroup label="Hats">
+    <option value="ball cap">Ball Cap</option>
+    <option value="derby">Derby</option>
+    <option value="fedora">Fedora</option>
+  </optgroup>
+  <optgroup label="Ceremonial">
+    <option value="crown">Crown</option>
+    <option value="mitre">Mitre</option>
+    <option value="war bonnet">War Bonnet</option>
+  </optgroup>
+</select>
 
 Finally, multiple selections can be allowed by specifying a `multiple` attribute as `true`.  
 

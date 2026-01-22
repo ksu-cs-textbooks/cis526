@@ -88,11 +88,11 @@ It renders as:
       <td>The muscle</td>
     </tr>
     <tr>
-      <td>3PO</td>
+      <td>Threepio</td>
       <td>Comedic foil</td>
     </tr>
     <tr>
-      <td>R2-D2</td>
+      <td>Artoo Deetoo</td>
       <td>Plot driver</td>
     </tr>
   </tbody>

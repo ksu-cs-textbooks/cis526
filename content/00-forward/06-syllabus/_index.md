@@ -79,9 +79,7 @@ The following are the learning objectives of this course:
 
 ### Course Structure
 
-This course is divided in modules, which typically consist of a series of lesson content (as video lectures or online textbook materials) followed by a hands-on tutorial.  The tutorials show how to take the ideas just discussed in the lessons and apply them in creating web applications in a step-by-step manner.  Following every third module is a larger project assignment, where you will utilize the skills you've been developing from the lessons and tutorials to iteratively create a web application. 
-
-For the eight-week summer course, each cluster of three modules plus project should be completed in one week.  There is a lot to learn and much of the learning involved is hands-on as you work on the code for tutorials and your projects.  It is recommended you set aside 10-20 hours per week to focus on this course.
+This course is divided in weekly modules, organized around three topics and consisting of a series of lesson contents (as video lectures or online textbook materials) followed by a hands-on tutorial.  The tutorials show how to take the ideas just discussed in the lessons and apply them in creating web applications in a step-by-step manner.  At the end of each module is a larger project assignment, where you will utilize the skills you've been developing from the lessons and tutorials to iteratively create a web application.
 
 ### The Work
 
@@ -117,23 +115,23 @@ _* Note that CS Majors must earn a C or better to use the CIS 526 course for the
 
 As a rule, submissions in this course will not be graded until after they are due, even if submitted early. Students may resubmit assignments many times before the due date, and only the latest submission will be graded. For assignments submitted via GitHub release tag, only the tagged release that was submitted to Canvas will be graded, even if additional commits have been made. Students must create a new tagged release and resubmit that tag to have it graded for that assignment.
 
-Once an assignment is graded, students are not allowed to resubmit the assignment for regrading or additional credit without special permission from the instructor to do so. In essence, students are expected to ensure their work is complete and meets the requirements before submission, not after feedback is given by the instructor during grading. However, students should use that feedback to improve future assignments and milestones. 
+Once an assignment is graded, students are not allowed to resubmit the assignment for regrading or additional credit without special permission from the instructor to do so. In essence, students are expected to ensure their work is complete and meets the requirements before submission, not after feedback is given by the instructor during grading. However, students should use that feedback to improve future assignments and milestones.
 
 For the programming project milestones, it is solely at the discretion of the instructor whether issues noted in the feedback for a milestone will result in grade deductions in a later milestones if they remain unresolved, though the instructor will strive to give students ample time to resolve issues before any additional grade deductions are made.
 
 Likewise, students may ask questions of the instructor while working on the assignment and receive help, but the instructor will not perform a full code review nor give grading-level feedback until after the assignment is submitted and the due date has passed. Again, students are expected to be able to make their own judgments on the quality and completion of an assignment before submission.
 
-That said, a student may email the instructor to request early grading on an assignment before the due date, in order to move ahead more quickly. The instructor's receipt of that email will effectively mean that the assignment for that student is due immediately, and all limitations above will apply as if the assignment's due date has now passed. 
+That said, a student may email the instructor to request early grading on an assignment before the due date, in order to move ahead more quickly. The instructor's receipt of that email will effectively mean that the assignment for that student is due immediately, and all limitations above will apply as if the assignment's due date has now passed.
 
 ### Collaboration Policy
 
 In this course, all work submitted by a student should be created solely by the student without any outside assistance beyond the instructor and TA/GTAs. Students may seek outside help or tutoring regarding concepts presented in the course, but should not share or receive any answers, source code, program structure, or any other materials related to the course. Learning to debug problems is a vital skill, and students should strive to ask good questions and perform their own research instead of just sharing broken source code when asking for assistance. 
 
-That said, the field of web development requires the use of lots of online documentation and reference materials, and the point of the class is to learn how to effectively use those resources instead of "reinventing the wheel from scratch" in each assignment. Whenever content in an assignment is taken from an outside source, this should be noted somewhere in the assignment. 
+That said, the field of web development requires the use of lots of online documentation and reference materials, and the point of the class is to learn how to effectively use those resources instead of "reinventing the wheel from scratch" in each assignment. Whenever content in an assignment is taken from an outside source, this should be noted somewhere in the assignment.
 
 ### Late Work
 
-In this class, there is a tremendous amount of new skills to develop in a short amount of time. Falling behind _will_ jeopardize your chances of successfully completing the course. Trying to complete late assignments while also working on new material will also make it unlikely that you will retain what you are trying to learn.  It is critical that you keep on-track. 
+In this class, there is a tremendous amount of new skills to develop in a short amount of time. Falling behind _will_ jeopardize your chances of successfully completing the course. Trying to complete late assignments while also working on new material will also make it unlikely that you will retain what you are trying to learn.  It is critical that you keep on-track.
 
 Any work submitted and graded after the due date is subject to a deduction of **10% of the total points possible on the assignment for each day** that the assignment is late. For example, if an assignment is due on a Friday and is submitted the following Tuesday, it will be subject to a reduction of 40% of the total points possible, or 10% for each class day it was late. _These late penalties will be automatically entered by Canvas - contact the instructor if any grades appear to be incorrect._
 
@@ -143,7 +141,7 @@ However, even if a module is not submitted on time, it must still be completed b
 
 All course work must be submitted, and all interactively graded materials must be graded with the instructor, on or before the last day of the semester in which the student is enrolled in the course in order for it to be graded on time. No late work will be accepted after that date.
 
-If you have extenuating circumstances, please discuss them with the instructor as soon as they arise so other arrangements can be made. If you know you have upcoming events that will prevent you from completing work in this course, you should contact the instructor ASAP and plan on working ahead before your event instead of catching up afterwards. If you find that you are getting behind in the class, you are encouraged to speak to the instructor for options to catch up quickly. 
+If you have extenuating circumstances, please discuss them with the instructor as soon as they arise so other arrangements can be made. If you know you have upcoming events that will prevent you from completing work in this course, you should contact the instructor ASAP and plan on working ahead before your event instead of catching up afterwards. If you find that you are getting behind in the class, you are encouraged to speak to the instructor for options to catch up quickly.
 
 ### Incomplete Policy
 
@@ -173,7 +171,7 @@ In particular you are encouraged to use:
 
 This course offers an instructor-written textbook, which is broken up into a specific reading order and interleaved with activities and quizzes in the modules. It can also be directly accessed at [https://textbooks.cs.ksu.edu/cis526](https://textbooks.cs.ksu.edu/cis526).
 
-Students who would like additional textbooks should refer to resources available on the [O'Reilley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
+Students who would like additional textbooks should refer to resources available on the [O'Reiley For Higher Education](https://go.oreilly.com/kansas-state-university) digital library offered by the Kansas State University Library.  These include electronic editions of popular textbooks as well as videos and tutorials.
 
 ### Subject to Change
 
@@ -192,7 +190,7 @@ In this course, _unauthorized aid_ broadly consists of _giving or receiving code
 Authorized aid - which is not a violation of the honor policy - includes
 using the code snippets provided in the course materials, discussing strategies and techniques with classmates, instructors, TAs, and mentors. Additionally, you may use code snippets and algorithms found in textbooks and web sources if you clearly label them with comments indicating where the code came from and how it is being used in your project.
 
-You should restrict your use of code libraries to those specified in the assignment description or approved by the instructor.  You can ask for approval via Discord in the course channel, and if granted, this approval is valid for the entire class _for the specified assignment_.   
+You should restrict your use of code libraries to those specified in the assignment description or approved by the instructor.  You can ask for approval via Discord in the course channel, and if granted, this approval is valid for the entire class _for the specified assignment_.
 
 {{% notice info %}}
 While code libraries are an important and common tool in professional practice, at this point in your learning they can obscure how tasks are being accomplished, leaving your foundational knowledge incomplete.  It is for this reason that we restrict the use of code libraries in the course.
