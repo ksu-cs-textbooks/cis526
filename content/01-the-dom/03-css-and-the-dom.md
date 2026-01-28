@@ -13,7 +13,7 @@ Cascading style sheets (CSS) also interact with the DOM.  Consider this CSS code
     border-radius: 5rem;
     background-color: goldenrod;
     padding: 5rem;
-    color: brown;
+    color: #754907;
 }
 
 .banner > h1 {

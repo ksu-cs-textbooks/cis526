@@ -147,5 +147,5 @@ Workers can also send AJAX requests, and spawn additional web workers!  In the c
 The web workers we've discussed up to this point are basic _dedicated workers_.  There are also several other kinds of specialized web workers:
 
 * Shared workers are shared between several scripts, possibly even running in different `<iframe>` elements.  These are more complex than a dedicated worker and communicate via ports.  See MDN's [SharedWorker](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker) article for information.
-* Service workers act as proxy servers between the server and the web app, for the purpose of allowing web apps to be used offline.  We'll discuss these later in the semester, but you can read up on them in hte mdn [ServiceWorker](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API) article.
+* Service workers act as proxy servers between the server and the web app, for the purpose of allowing web apps to be used offline.  We'll discuss these later in the semester, but you can read up on them in the mdn [ServiceWorker](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API) article.
 * Audio workers allow for direct scripting of audio processing within a web worker context.  See the mdn [AudioWorker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API#Audio_Workers) article for details.

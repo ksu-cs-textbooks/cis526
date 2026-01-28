@@ -23,7 +23,7 @@ For example:
 
 Renders:
 
-<h1>Hello <i>World</i></h1>
+<h1>Hello <i>World</i>!</h1>
 
 
 ## Nesting Elements
