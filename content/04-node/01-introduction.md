@@ -10,7 +10,14 @@ Node is an open-source, cross-platform JavaScript runtime environment build on G
 
 ## ECMAScript Support
 
-Node supports most of the features of ECMAScript 2015 (ES6), with the notable exception of ES6 modules (as Node adopted the CommonJS module approach before the ES6 proposal, and the two approaches are not interchangeable).  You can learn more about Node's ES6 support [here](https://nodejs.org/en/docs/es6/).
+Node supports most of the features of ECMAScript 2015 (ES6). However, Node dopated the CommonJS module approach before ES6 modules were proposed, and as a result uses CommonJS modules by default.  To use ES6 modules instead, you must either:
+
+- Add `"type":"module"` to your _package.json_ file, or
+- Use the _.mjs_ extension for your files, instead of _.js_
+
+Examples in this text will use CommonJS modules, but feel free to switch to ES6 modules if you prefer. 
+
+You can learn more about Node's ES6 support [here](https://nodejs.org/en/docs/es6/).
 
 
 ## Differences between Browser JavaScript and Node
